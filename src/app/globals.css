@@ -1,26 +1,701 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   SINGLEGRAIN DESIGN SYSTEM
+   CSS Variables & Theme Configuration
+   ============================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ============================================
+     COLORS - Primary Brand
+     ============================================ */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Brand Orange (Primary CTA) */
+  --color-orange: #F27038;
+  --color-orange-hover: #EA580C;
+  --color-orange-accent: #FF6B35;
+  --color-orange-glow: rgba(242, 112, 56, 0.4);
+
+  /* Amber/Gold Accents */
+  --color-amber: #EFB438;
+  --color-amber-gradient-start: #F59E0B;
+  --color-amber-gradient-mid: #F97316;
+  --color-amber-gradient-end: #EA580C;
+
+  /* ============================================
+     COLORS - Dark Backgrounds
+     ============================================ */
+  --color-dark-primary: #2F333B;
+  --color-dark-secondary: #2F343A;
+  --color-dark-gradient-start: #2F343A;
+  --color-dark-gradient-end: #232020;
+  --color-dark-footer: #28282C;
+  --color-dark-input: #313033;
+  --color-dark-card: #34394D;
+
+  /* ============================================
+     COLORS - Light/Neutral Backgrounds
+     ============================================ */
+  --color-bg-page: #EEEEEE;
+  --color-bg-white: #FFFFFF;
+  --color-bg-off-white: #F8F8F8;
+  --color-bg-light-gray: #F1F1F1;
+
+  /* ============================================
+     COLORS - Text
+     ============================================ */
+  --color-text-dark: #2F333B;
+  --color-text-gray: #6B7280;
+  --color-text-muted: #6B7280;
+  --color-text-light: #E9EFF4;
+  --color-text-white: #FFFFFF;
+  --color-text-white-80: rgba(255, 255, 255, 0.8);
+  --color-text-white-50: rgba(255, 255, 255, 0.5);
+
+  /* ============================================
+     COLORS - Borders
+     ============================================ */
+  --color-border-light: #DDDDDD;
+  --color-border-dark: rgba(255, 255, 255, 0.07);
+  --color-border-medium: rgba(0, 0, 0, 0.5);
+
+  /* ============================================
+     COLORS - Accents
+     ============================================ */
+  --color-purple-accent: #BC68FF;
+  --color-blue-primary: #0048FF;
+  --color-blue-link: #2175A3;
+  --color-yellow-highlight: #FFF300;
+
+  /* ============================================
+     COLORS - Glass Effects
+     ============================================ */
+  --color-glass-border: rgba(217, 217, 217, 0.1);
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-bg-hover: rgba(255, 255, 255, 0.08);
+
+  /* ============================================
+     TYPOGRAPHY - Font Family
+     Using Inter as Sofia Pro substitute
+     ============================================ */
+  --font-family-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-family-display: var(--font-inter), system-ui, sans-serif;
+
+  /* ============================================
+     BORDER RADIUS - CRITICAL: buttons are 2px
+     ============================================ */
+  --radius-button: 2px;
+  --radius-card: 4px;
+  --radius-input: 4px;
+  --radius-secondary: 5px;
+  --radius-pill: 20px;
+  --radius-tag: 30px;
+
+  /* ============================================
+     SPACING - Container
+     ============================================ */
+  --container-max: 1148px;
+  --container-wrapper: 1460px;
+  --container-margin: 80px;
+  --container-margin-lg: 95px;
+
+  /* ============================================
+     SPACING - Section Padding
+     ============================================ */
+  --section-padding-sm: 50px;
+  --section-padding-md: 80px;
+  --section-padding-lg: 120px;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --shadow-card: rgba(0, 0, 0, 0.1) 0px 10px 15px 0px;
+  --shadow-crisp: 6px 6px 0px rgb(0, 0, 0);
+  --shadow-deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+  --shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+  --shadow-outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);
+  --shadow-sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+  --shadow-orange-glow: 0 4px 15px rgba(242, 112, 56, 0.3);
+  --shadow-orange-glow-lg: 0 6px 25px rgba(242, 112, 56, 0.5);
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.75s;
+
+  /* ============================================
+     ANIMATIONS
+     ============================================ */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-gradient: gradient 8s ease infinite;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out;
+  --animate-fade-in: fade-in 0.8s ease-out;
+  --animate-scale-in: scale-in 0.5s ease-out;
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px var(--color-orange-glow); }
+    50% { box-shadow: 0 0 40px var(--color-orange-glow), 0 0 60px var(--color-orange-glow); }
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 }
 
+/* ============================================
+   CSS CUSTOM PROPERTIES (for use outside Tailwind)
+   ============================================ */
+:root {
+  /* Colors */
+  --orange: #F27038;
+  --orange-hover: #EA580C;
+  --dark-primary: #2F333B;
+  --dark-gradient-start: #2F343A;
+  --dark-gradient-end: #232020;
+  --footer-bg: #28282C;
+  --text-muted: #6B7280;
+  --bg-page: #EEEEEE;
+  --text-light: #E9EFF4;
+  --amber: #EFB438;
+
+  /* Border Radius */
+  --radius-button: 2px;
+  --radius-card: 4px;
+  --radius-pill: 20px;
+
+  /* Container */
+  --container-max: 1148px;
+  --container-margin: 80px;
+
+  /* Section Padding */
+  --section-sm: 50px;
+  --section-md: 80px;
+  --section-lg: 120px;
+
+  /* Shadows */
+  --shadow-card: rgba(0, 0, 0, 0.1) 0px 10px 15px 0px;
+
+  /* Transitions */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-dark-gradient-end, #232020);
+  color: var(--color-text-light, #E9EFF4);
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(242, 112, 56, 0.3);
+}
+
+/* ============================================
+   TYPOGRAPHY BASE
+   ============================================ */
+h1, .h1 {
+  font-size: 46px;
+  line-height: 65px;
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: 48px;
+  line-height: 52.8px;
+  font-weight: 300;
+}
+
+h3, .h3 {
+  font-size: 29px;
+  line-height: 51px;
+  font-weight: 300;
+}
+
+/* ============================================
+   BUTTON STYLES - SINGLEGRAIN EXACT
+   ============================================ */
+
+/* Primary CTA Button - Orange */
+.btn-primary {
+  background-color: var(--orange);
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 17px 30px;
+  border: 1px solid var(--orange);
+  border-radius: 2px; /* CRITICAL: 2px, not rounded */
+  line-height: 19.2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal) ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--orange-hover);
+  border-color: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-orange-glow-lg, 0 6px 25px rgba(242, 112, 56, 0.5));
+}
+
+.btn-primary:hover .btn-arrow {
+  transform: rotate(-45deg);
+}
+
+/* Secondary Button - Ghost/Outlined */
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 6px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal) ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Ghost Button - For dark backgrounds */
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 17px 30px;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all var(--transition-normal) ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   INPUT STYLES - SINGLEGRAIN EXACT
+   ============================================ */
+
+/* Light Input */
+.input-light {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-size: 16px;
+  padding: 14px 18px;
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+  height: 55px;
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+.input-light:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.input-light::placeholder {
+  color: #999999;
+}
+
+/* Dark Input */
+.input-dark {
+  background-color: #313033;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  height: 54px;
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+.input-dark:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.input-dark::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   CONTAINER - SINGLEGRAIN EXACT
+   ============================================ */
+.container-sg {
+  max-width: 1148px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-sg {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-sg {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Wide container variant */
+.container-sg-wide {
+  max-width: 1460px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-sg-wide {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+/* Dark section with gradient background */
+.section-dark {
+  background: linear-gradient(257.07deg, #2F343A 0%, #232020 100%);
+  color: var(--text-light);
+}
+
+.section-dark-solid {
+  background-color: #232020;
+  color: var(--text-light);
+}
+
+/* Light section */
+.section-light {
+  background-color: #FFFFFF;
+  color: var(--dark-primary);
+}
+
+/* Page background section */
+.section-page {
+  background-color: #EEEEEE;
+  color: var(--dark-primary);
+}
+
+/* Footer section */
+.section-footer {
+  background-color: #28282C;
+  color: #FFFFFF;
+}
+
+/* Section padding utilities */
+.section-py-sm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section-py-md {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-py-lg {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Section header */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  color: var(--orange);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 48px;
+  line-height: 52.8px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.section-subtitle {
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--text-muted);
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+
+/* Glass Card */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+}
+
+.glass-card-hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal) ease;
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(242, 112, 56, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(242, 112, 56, 0.1);
+}
+
+/* Menu Card (navigation dropdown) */
+.menu-card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  padding: 26px;
+  box-shadow: var(--shadow-card);
+}
+
+/* ============================================
+   TAG & PILL STYLES
+   ============================================ */
+
+/* Category Tag */
+.tag {
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 30px;
+  color: var(--dark-primary);
+  background: transparent;
+  display: inline-block;
+}
+
+/* Filter Pills */
+.filter-pill {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 7px 20px;
+  font-size: 14px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.filter-pill:hover {
+  background-color: rgba(242, 112, 56, 0.1);
+}
+
+.filter-pill.active {
+  background-color: var(--orange);
+  color: white;
+}
+
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+
+/* Text Gradient */
+.text-gradient {
+  background-image: linear-gradient(to right, var(--orange), var(--amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-white {
+  background-image: linear-gradient(to right, white, var(--text-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Text colors */
+.text-orange { color: var(--orange); }
+.text-muted { color: var(--text-muted); }
+.text-dark { color: var(--dark-primary); }
+.text-light { color: var(--text-light); }
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ============================================
+   GLOW & EFFECTS
+   ============================================ */
+
+.glow-orange {
+  box-shadow: 0 0 40px rgba(242, 112, 56, 0.3);
+}
+
+.glow-orange-lg {
+  box-shadow: 0 0 60px rgba(242, 112, 56, 0.4);
+}
+
+/* Gradient Border */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(242, 112, 56, 0.5), rgba(239, 180, 56, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ============================================
+   BACKGROUND UTILITIES
+   ============================================ */
+
+.bg-gradient-dark {
+  background: linear-gradient(257.07deg, #2F343A 0%, #232020 100%);
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #EA580C 100%);
+}
+
+.bg-gradient-peach {
+  background: linear-gradient(135deg, #F8D7CB 0%, #F4E8E0 50%, #F8D7CB 100%);
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+.animate-in {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+@media (max-width: 768px) {
+  h1, .h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  h2, .h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  h3, .h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .section-py-md {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-py-lg {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
