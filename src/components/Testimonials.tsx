@@ -4,17 +4,17 @@ import { AnimateOnScroll } from './AnimateOnScroll';
 const testimonials = [
   {
     quote: "BKND Development delivered exactly what they promised. Their keyword strategy worked like a charm—almost immediately we saw a steady stream of high-intent inquiries. Not fluff, not vanity metrics. Real customers ready to buy.",
-    name: 'Randy Franco',
-    title: 'Owner',
-    company: 'Randy General Construction',
+    name: 'R.F.',
+    title: 'Construction Business Owner',
+    company: 'New Jersey',
     image: '/bknd-website/images/testimonials/randy-franco.jpg',
     rating: 5,
   },
   {
-    quote: "These guys definitely make things happen for small businesses. We are seeing nothing but results here at The Library Dispensary. If you want real visibility and customers who are actually searching for what you offer, BKND delivers.",
-    name: 'Andrew Williams',
-    title: 'Owner',
-    company: 'The Library Dispensary of New Jersey',
+    quote: "These guys definitely make things happen for small businesses. We are seeing nothing but results. If you want real visibility and customers who are actually searching for what you offer, BKND delivers.",
+    name: 'A.W.',
+    title: 'Retail Business Owner',
+    company: 'New Jersey',
     image: '/bknd-website/images/testimonials/andrew-williams.jpg',
     rating: 5,
   },
@@ -57,7 +57,7 @@ export default function Testimonials() {
               Testimonials
             </p>
             <h2 className="text-4xl lg:text-5xl font-semibold text-[#1D1D1F] tracking-tight">
-              People Love Working With Us
+              Real Results From Real Clients
             </h2>
           </div>
         </AnimateOnScroll>
