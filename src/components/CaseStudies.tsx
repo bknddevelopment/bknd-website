@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { AnimateOnScroll } from './AnimateOnScroll';
 
 const categories = ['All', 'SEO', 'Paid Media', 'Creative', 'Email'];
@@ -16,6 +17,7 @@ const caseStudies = [
     client: 'Velocity Labs',
     industry: 'B2B SaaS',
     gradient: 'from-blue-500/20 to-cyan-500/20',
+    image: '/images/case-studies/velocity-labs.jpg',
   },
   {
     category: 'SEO',
@@ -27,6 +29,7 @@ const caseStudies = [
     client: 'DataStack Pro',
     industry: 'Developer Tools',
     gradient: 'from-purple-500/20 to-indigo-500/20',
+    image: '/images/case-studies/datastack-pro.jpg',
   },
   {
     category: 'Paid Media',
@@ -38,6 +41,7 @@ const caseStudies = [
     client: 'Meridian Goods',
     industry: 'E-commerce',
     gradient: 'from-pink-500/20 to-orange-500/20',
+    image: '/images/case-studies/meridian-goods.jpg',
   },
   {
     category: 'Creative',
@@ -49,6 +53,7 @@ const caseStudies = [
     client: 'ClearPath Finance',
     industry: 'Fintech',
     gradient: 'from-green-500/20 to-teal-500/20',
+    image: '/images/case-studies/clearpath-finance.jpg',
   },
   {
     category: 'SEO',
@@ -60,6 +65,7 @@ const caseStudies = [
     client: 'Nimbus Cloud',
     industry: 'Cloud Infrastructure',
     gradient: 'from-sky-500/20 to-blue-500/20',
+    image: '/images/case-studies/nimbus-cloud.jpg',
   },
   {
     category: 'Email',
@@ -71,6 +77,7 @@ const caseStudies = [
     client: 'Forge Fitness',
     industry: 'Subscription App',
     gradient: 'from-amber-500/20 to-red-500/20',
+    image: '/images/case-studies/forge-fitness.jpg',
   },
 ];
 
@@ -107,8 +114,8 @@ export default function CaseStudies() {
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                 activeCategory === cat
-                  ? 'bg-sg-orange text-white shadow-lg'
-                  : 'bg-white/5 text-sg-light/70 hover:bg-white/10 hover:text-white'
+                  ? 'bg-[#F27038] text-white shadow-lg'
+                  : 'bg-white/5 text-[#E9EFF4]/70 hover:bg-white/10 hover:text-white'
               }`}
             >
               {cat}
@@ -123,15 +130,21 @@ export default function CaseStudies() {
             <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
               <div className="glass-card-hover overflow-hidden group cursor-pointer h-full">
               {/* Image/Gradient Area */}
-              <div className={`h-48 bg-gradient-to-br ${study.gradient} relative`}>
-                <div className="absolute inset-0 bg-sg-dark/40" />
-                <div className="absolute top-4 left-4">
+              <div className="h-48 relative overflow-hidden">
+                <Image
+                  src={study.image}
+                  alt={`${study.client} case study - ${study.title}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2F333B]/70 via-[#2F333B]/30 to-transparent" />
+                <div className="absolute top-4 left-4 z-10">
                   <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs text-white">
                     {study.category}
                   </span>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white/60 text-sm">{study.client} • {study.industry}</p>
+                <div className="absolute bottom-4 left-4 right-4 z-10">
+                  <p className="text-white/80 text-sm">{study.client} • {study.industry}</p>
                 </div>
               </div>
 
@@ -141,19 +154,19 @@ export default function CaseStudies() {
                 <div className="flex gap-6 mb-4">
                   {study.stats.map((stat, j) => (
                     <div key={j}>
-                      <div className="text-2xl font-bold text-sg-orange">{stat.value}</div>
+                      <div className="text-2xl font-bold text-[#F27038]">{stat.value}</div>
                       <div className="text-gray-300 text-xs">{stat.label}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-white group-hover:text-sg-orange transition-colors">
+                <h3 className="text-lg font-semibold text-white group-hover:text-[#F27038] transition-colors">
                   {study.title}
                 </h3>
 
                 {/* Read More Link */}
-                <div className="mt-4 flex items-center gap-2 text-sg-orange text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-4 flex items-center gap-2 text-[#F27038] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Read Case Study <span>→</span>
                 </div>
               </div>

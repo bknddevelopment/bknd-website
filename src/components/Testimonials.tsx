@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AnimateOnScroll } from './AnimateOnScroll';
 
 const testimonials = [
@@ -6,21 +7,21 @@ const testimonials = [
     name: 'Michael Chen',
     title: 'VP of Growth',
     company: 'TechFlow',
-    avatar: 'MC',
+    image: '/images/testimonials/michael-chen.jpg',
   },
   {
     quote: "First agency that actually cared about our revenue numbers, not just vanity metrics. Within 90 days, our pipeline doubled and cost per lead dropped 40%. They get that marketing exists to drive business outcomes.",
     name: 'Sarah Rodriguez',
     title: 'Marketing Director',
     company: 'CloudBase',
-    avatar: 'SR',
+    image: '/images/testimonials/sarah-rodriguez.jpg',
   },
   {
     quote: "Finally an agency that understands our tech stack. No hand-holding required on integrations, no amateur hour with our analytics setup. They plugged in and started driving results from week one.",
     name: 'David Kim',
     title: 'CEO',
     company: 'Nexus Digital',
-    avatar: 'DK',
+    image: '/images/testimonials/david-kim.jpg',
   },
 ];
 
@@ -29,37 +30,37 @@ export default function Testimonials() {
     <section className="bg-[#1a1a1a] relative overflow-hidden py-20 lg:py-28">
       {/* Orange pixel decorations - top left */}
       <div className="absolute top-8 left-8 flex gap-1">
-        <div className="w-2 h-2 bg-sg-orange" />
-        <div className="w-2 h-2 bg-sg-orange" />
-        <div className="w-2 h-2 bg-sg-orange opacity-60" />
+        <div className="w-2 h-2 bg-[#F27038]" />
+        <div className="w-2 h-2 bg-[#F27038]" />
+        <div className="w-2 h-2 bg-[#F27038] opacity-60" />
       </div>
       <div className="absolute top-12 left-8 flex gap-1">
-        <div className="w-2 h-2 bg-sg-orange opacity-60" />
-        <div className="w-2 h-2 bg-sg-orange" />
+        <div className="w-2 h-2 bg-[#F27038] opacity-60" />
+        <div className="w-2 h-2 bg-[#F27038]" />
       </div>
       <div className="absolute top-16 left-8">
-        <div className="w-2 h-2 bg-sg-orange opacity-40" />
+        <div className="w-2 h-2 bg-[#F27038] opacity-40" />
       </div>
 
       {/* Orange pixel decorations - bottom right */}
       <div className="absolute bottom-16 right-8">
-        <div className="w-2 h-2 bg-sg-orange opacity-40" />
+        <div className="w-2 h-2 bg-[#F27038] opacity-40" />
       </div>
       <div className="absolute bottom-12 right-8 flex gap-1">
-        <div className="w-2 h-2 bg-sg-orange" />
-        <div className="w-2 h-2 bg-sg-orange opacity-60" />
+        <div className="w-2 h-2 bg-[#F27038]" />
+        <div className="w-2 h-2 bg-[#F27038] opacity-60" />
       </div>
       <div className="absolute bottom-8 right-8 flex gap-1">
-        <div className="w-2 h-2 bg-sg-orange opacity-60" />
-        <div className="w-2 h-2 bg-sg-orange" />
-        <div className="w-2 h-2 bg-sg-orange" />
+        <div className="w-2 h-2 bg-[#F27038] opacity-60" />
+        <div className="w-2 h-2 bg-[#F27038]" />
+        <div className="w-2 h-2 bg-[#F27038]" />
       </div>
 
       <div className="container-sg relative">
         {/* Header */}
         <AnimateOnScroll>
           <div className="text-center mb-16">
-            <p className="text-sg-orange font-medium text-sm uppercase tracking-wider mb-4">
+            <p className="text-[#F27038] font-medium text-sm uppercase tracking-wider mb-4">
               Testimonials
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
@@ -78,7 +79,7 @@ export default function Testimonials() {
               >
                 {/* Quote mark */}
                 <svg
-                  className="w-10 h-10 text-sg-orange mb-6"
+                  className="w-10 h-10 text-[#F27038] mb-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -92,9 +93,13 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
-                  <div className="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-sg-orange to-sg-gold flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    {testimonial.avatar}
-                  </div>
+                  <Image
+                    src={testimonial.image}
+                    alt={`${testimonial.name} headshot`}
+                    width={60}
+                    height={60}
+                    className="rounded-full object-cover flex-shrink-0"
+                  />
                   <div>
                     <div className="text-white font-bold">
                       {testimonial.name}

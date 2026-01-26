@@ -19,8 +19,8 @@ export default function WhyUs() {
         {/* Section Label */}
         <AnimateOnScroll>
           <div className="flex items-center justify-center gap-2 mb-6">
-            <Flame className="w-5 h-5 text-sg-orange" />
-            <span className="text-sg-orange font-semibold text-sm uppercase tracking-wide">
+            <Flame className="w-5 h-5 text-[#F27038]" />
+            <span className="text-[#F27038] font-semibold text-sm uppercase tracking-wide">
               Why BKND
             </span>
           </div>
@@ -38,13 +38,13 @@ export default function WhyUs() {
           <div className="max-w-5xl mx-auto">
             {/* Table Headers */}
             <div className="flex items-stretch mb-1">
-              <div className="flex-1 bg-sg-dark rounded-tl-xl py-4 px-6">
+              <div className="flex-1 bg-[#2F333B] rounded-tl-xl py-4 px-6">
                 <span className="text-white font-semibold text-lg">Traditional Agencies</span>
               </div>
               <div className="w-16 lg:w-20 flex items-center justify-center bg-gray-200">
                 <span className="text-gray-500 font-bold text-sm">vs</span>
               </div>
-              <div className="flex-1 bg-sg-orange rounded-tr-xl py-4 px-6">
+              <div className="flex-1 bg-[#F27038] rounded-tr-xl py-4 px-6">
                 <span className="text-white font-semibold text-lg">BKND</span>
               </div>
             </div>
@@ -63,13 +63,13 @@ export default function WhyUs() {
 
                   {/* Arrow divider */}
                   <div className="w-16 lg:w-20 flex items-center justify-center bg-gray-100 border-l border-r border-gray-200">
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-sg-orange transition-colors" />
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-sg-orange transition-colors -ml-3" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#F27038] transition-colors" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#F27038] transition-colors -ml-3" />
                   </div>
 
                   {/* Right column - BKND */}
                   <div className="flex-1 py-5 px-6 flex items-center bg-white">
-                    <span className="text-gray-900 font-semibold text-base group-hover:text-sg-orange transition-colors">
+                    <span className="text-gray-900 font-semibold text-base group-hover:text-[#F27038] transition-colors">
                       {item.us}
                     </span>
                   </div>
@@ -84,7 +84,7 @@ export default function WhyUs() {
           <div className="text-center mt-12">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-sg-orange text-sg-orange font-semibold rounded-lg hover:bg-sg-orange hover:text-white transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#F27038] text-[#F27038] font-semibold rounded-lg hover:bg-[#F27038] hover:text-white transition-all duration-300"
             >
               Get Your Custom Growth Strategy
               <ChevronRight className="w-5 h-5" />
