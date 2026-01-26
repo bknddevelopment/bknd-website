@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 import { getPostBySlug, getAllPosts, formatDate } from '@/lib/blog';
 
 interface PageProps {
@@ -86,48 +87,54 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="container-sg">
             <div className="max-w-[720px] mx-auto">
               {/* Meta */}
-              <div className="mb-8">
-                <div className="flex items-center gap-2 text-[#86868B] text-sm mb-6">
-                  <span>{formatDate(post.date)}</span>
-                  <span>·</span>
-                  <span>{post.readTime}</span>
+              <AnimateOnScroll>
+                <div className="mb-8">
+                  <div className="flex items-center gap-2 text-[#86868B] text-sm mb-6">
+                    <span>{formatDate(post.date)}</span>
+                    <span>·</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h1 className="text-[32px] lg:text-[48px] font-semibold text-[#1D1D1F] tracking-[-0.02em] leading-[1.1] mb-6">
+                    {post.title}
+                  </h1>
+                  <p className="text-[#86868B]">
+                    By {post.author}
+                  </p>
                 </div>
-                <h1 className="text-[32px] lg:text-[48px] font-semibold text-[#1D1D1F] tracking-[-0.02em] leading-[1.1] mb-6">
-                  {post.title}
-                </h1>
-                <p className="text-[#86868B]">
-                  By {post.author}
-                </p>
-              </div>
+              </AnimateOnScroll>
 
               {/* Content */}
-              <div
-                className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: contentHtml }}
-              />
+              <AnimateOnScroll delay={0.15}>
+                <div
+                  className="prose prose-lg max-w-none"
+                  dangerouslySetInnerHTML={{ __html: contentHtml }}
+                />
+              </AnimateOnScroll>
 
               {/* Back Link */}
-              <div className="mt-16 pt-8 border-t border-[#D2D2D7]">
-                <Link
-                  href="/blog"
-                  className="text-[#1D1D1F] hover:text-[#00D4FF] transition-colors duration-200 inline-flex items-center gap-2"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+              <AnimateOnScroll delay={0.2}>
+                <div className="mt-16 pt-8 border-t border-[#D2D2D7]">
+                  <Link
+                    href="/blog"
+                    className="text-[#1D1D1F] hover:text-[#00D4FF] transition-colors duration-200 inline-flex items-center gap-2"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                    />
-                  </svg>
-                  Back to Insights
-                </Link>
-              </div>
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                      />
+                    </svg>
+                    Back to Insights
+                  </Link>
+                </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </article>

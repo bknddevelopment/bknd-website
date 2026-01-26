@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { AnimateOnScroll } from './AnimateOnScroll';
 
 const footerLinks = {
   Services: [
@@ -47,82 +50,88 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="max-w-[980px] mx-auto px-6 lg:px-4 py-12 lg:py-16">
         {/* Top Section: Logo and Social */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-8 border-b border-[#424245]">
-          {/* Logo - inverted/white for dark background */}
-          <div className="mb-6 md:mb-0">
-            <Image
-              src="/images/bknd-logo-new.png"
-              alt="BKND Development"
-              width={140}
-              height={40}
-              className="h-10 w-auto brightness-0 invert"
-            />
-          </div>
+        <AnimateOnScroll>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-8 border-b border-[#424245]">
+            {/* Logo - inverted/white for dark background */}
+            <div className="mb-6 md:mb-0">
+              <Image
+                src="/images/bknd-logo-new.png"
+                alt="BKND Development"
+                width={140}
+                height={40}
+                className="h-10 w-auto brightness-0 invert"
+              />
+            </div>
 
-          {/* Social Icon */}
-          <a
-            href={linkedInLink.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#86868B] hover:text-[#00D4FF] transition-colors duration-200"
-            aria-label={linkedInLink.label}
-          >
-            {linkedInLink.icon}
-          </a>
-        </div>
+            {/* Social Icon */}
+            <a
+              href={linkedInLink.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#86868B] hover:text-[#00D4FF] transition-colors duration-200"
+              aria-label={linkedInLink.label}
+            >
+              {linkedInLink.icon}
+            </a>
+          </div>
+        </AnimateOnScroll>
 
         {/* Link Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-10 border-b border-[#424245]">
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              {/* Column Header - Apple style: white, semibold, small */}
-              <h4 className="text-white font-semibold text-xs tracking-wide mb-4">
-                {title}
-              </h4>
+        <AnimateOnScroll delay={0.1}>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-10 border-b border-[#424245]">
+            {Object.entries(footerLinks).map(([title, links]) => (
+              <div key={title}>
+                {/* Column Header - Apple style: white, semibold, small */}
+                <h4 className="text-white font-semibold text-xs tracking-wide mb-4">
+                  {title}
+                </h4>
 
-              {/* Links List */}
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
+                {/* Links List */}
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-[#86868B] text-xs hover:text-[#00D4FF] transition-colors duration-200"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </AnimateOnScroll>
+
+        {/* Bottom Bar */}
+        <AnimateOnScroll delay={0.2}>
+          <div className="pt-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              {/* Copyright */}
+              <p className="text-[#86868B] text-[11px]">
+                Copyright &copy; {new Date().getFullYear()} BKND Development. All rights reserved.
+              </p>
+
+              {/* Legal Links - Apple style: small text with subtle dividers */}
+              <div className="flex flex-wrap items-center gap-x-1 text-[11px]">
+                {legalLinks.map((link, index) => (
+                  <span key={link.label} className="flex items-center">
                     <Link
                       href={link.href}
-                      className="text-[#86868B] text-xs hover:text-[#00D4FF] transition-colors duration-200"
+                      className="text-[#86868B] hover:text-white transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
-                  </li>
+                    {index < legalLinks.length - 1 && (
+                      <span className="text-[#424245] mx-2">|</span>
+                    )}
+                  </span>
                 ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            {/* Copyright */}
-            <p className="text-[#86868B] text-[11px]">
-              Copyright &copy; {new Date().getFullYear()} BKND Development. All rights reserved.
-            </p>
-
-            {/* Legal Links - Apple style: small text with subtle dividers */}
-            <div className="flex flex-wrap items-center gap-x-1 text-[11px]">
-              {legalLinks.map((link, index) => (
-                <span key={link.label} className="flex items-center">
-                  <Link
-                    href={link.href}
-                    className="text-[#86868B] hover:text-white transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                  {index < legalLinks.length - 1 && (
-                    <span className="text-[#424245] mx-2">|</span>
-                  )}
-                </span>
-              ))}
+              </div>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </div>
     </footer>
   );
