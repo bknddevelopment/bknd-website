@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Randy Franco',
     title: 'Owner',
     company: 'Randy General Construction',
-    image: '/images/testimonials/randy-franco.jpg',
+    image: '/bknd-website/images/testimonials/randy-franco.jpg',
     rating: 5,
   },
   {
@@ -15,7 +15,7 @@ const testimonials = [
     name: 'Andrew Williams',
     title: 'Owner',
     company: 'The Library Dispensary of New Jersey',
-    image: '/images/testimonials/andrew-williams.jpg',
+    image: '/bknd-website/images/testimonials/andrew-williams.jpg',
     rating: 5,
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     name: 'Rich C.',
     title: 'Small Business Owner',
     company: '',
-    image: '/images/testimonials/rich-c.jpg',
+    image: '/bknd-website/images/testimonials/rich-c.jpg',
     rating: 5,
   },
 ];
