@@ -158,7 +158,10 @@ export default function AccessibilityStatement() {
                   <p className="text-[#1D1D1F] text-base mt-2">30 Union Street</p>
                   <p className="text-[#1D1D1F] text-base">Elizabeth, NJ 07208</p>
                   <p className="text-[#1D1D1F] text-base mt-2">
-                    Email: <Link href="mailto:hello@bknd.dev" className="text-[#00D4FF] hover:underline">hello@bknd.dev</Link>
+                    Email: <Link href="mailto:info@bknddevelopment.com" className="text-[#00D4FF] hover:underline">info@bknddevelopment.com</Link>
+                  </p>
+                  <p className="text-[#1D1D1F] text-base">
+                    Phone: <Link href="tel:+19735185600" className="text-[#00D4FF] hover:underline">(973) 518-5600</Link>
                   </p>
                 </div>
                 <p className="text-[#1D1D1F] text-base leading-relaxed mt-4">

@@ -120,10 +120,10 @@ export default function Contact() {
                   Prefer to talk directly?
                 </p>
                 <a
-                  href="mailto:hello@bknd.dev"
+                  href="mailto:info@bknddevelopment.com"
                   className="inline-flex items-center gap-2 text-white hover:text-[#06B6D4] transition-colors text-lg font-medium"
                 >
-                  hello@bknd.dev
+                  info@bknddevelopment.com
                   <svg
                     className="w-5 h-5"
                     fill="none"

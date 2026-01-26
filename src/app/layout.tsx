@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -72,7 +73,8 @@ const jsonLd = {
         width: 1536,
         height: 1024,
       },
-      email: 'hello@bknd.dev',
+      email: 'info@bknddevelopment.com',
+      telephone: '+19735185600',
       founder: {
         '@type': 'Person',
         name: 'Charwin Vanryck deGroot',
@@ -97,7 +99,8 @@ const jsonLd = {
       url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
       logo: 'https://charwinvanryckdegroot.github.io/bknd-website/images/bknd-logo.png',
       image: 'https://charwinvanryckdegroot.github.io/bknd-website/images/bknd-logo.png',
-      email: 'hello@bknd.dev',
+      email: 'info@bknddevelopment.com',
+      telephone: '+19735185600',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '30 Union Street',
@@ -184,7 +187,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-G6C4G1SQ44"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G6C4G1SQ44');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

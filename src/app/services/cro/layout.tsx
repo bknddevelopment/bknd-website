@@ -1,0 +1,149 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CRO Services | Conversion Rate Optimization | BKND Development',
+  description: 'Data-driven conversion rate optimization that turns visitors into customers. A/B testing, landing page optimization, user research, and funnel analysis with measurable results.',
+  keywords: [
+    'conversion rate optimization',
+    'CRO services',
+    'A/B testing',
+    'landing page optimization',
+    'conversion optimization',
+    'user research',
+    'funnel analysis',
+    'website optimization',
+    'conversion testing',
+    'CRO agency',
+  ],
+  openGraph: {
+    title: 'CRO Services | Conversion Rate Optimization | BKND Development',
+    description: 'Data-driven conversion rate optimization that turns visitors into customers. A/B testing, landing page optimization, and funnel analysis.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'BKND Development',
+    url: 'https://charwinvanryckdegroot.github.io/bknd-website/services/cro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CRO Services | BKND Development',
+    description: 'Data-driven conversion rate optimization that turns visitors into customers.',
+  },
+  alternates: {
+    canonical: '/services/cro',
+  },
+};
+
+// JSON-LD Schema for the CRO service page
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Conversion Rate Optimization Services',
+  description: 'Data-driven conversion rate optimization that turns visitors into customers. A/B testing, landing page optimization, user research, and funnel analysis with measurable results.',
+  provider: {
+    '@type': 'Organization',
+    name: 'BKND Development',
+    url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
+  },
+  serviceType: 'Conversion Rate Optimization',
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'CRO Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Landing Page Optimization',
+          description: 'Transform underperforming pages into conversion engines through data-driven optimization.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'A/B Testing',
+          description: 'Statistical testing to validate hypotheses and implement winning variations.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'User Research & Analytics',
+          description: 'Heatmaps, session recordings, and user surveys to identify friction points.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Funnel Analysis',
+          description: 'Map and optimize your entire conversion funnel to improve each step of the customer journey.',
+        },
+      },
+    ],
+  },
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does it take to see results from CRO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most tests require 2-4 weeks to reach statistical significance, depending on your traffic volume. We typically see meaningful conversion improvements within the first 90 days of engagement, with compounding gains over time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What tools do you use for testing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We use industry-leading tools like Google Optimize, VWO, and Optimizely for A/B testing, combined with Hotjar and FullStory for user behavior analysis. The specific stack depends on your needs and existing infrastructure.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much traffic do I need for CRO to work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For meaningful A/B tests, we recommend at least 10,000 monthly visitors and 100+ conversions. With lower traffic, we focus on qualitative research, UX improvements, and high-impact changes that don\'t require split testing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What kind of conversion improvements can I expect?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Results vary by industry and starting point, but our clients typically see 15-40% improvement in conversion rates within the first 6 months. Some tests yield 100%+ lifts, while others show smaller incremental gains that compound over time.',
+      },
+    },
+  ],
+};
+
+export default function CROLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      {children}
+    </>
+  );
+}

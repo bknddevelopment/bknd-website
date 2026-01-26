@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { Mail, MapPin, Clock, Send, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, ArrowRight, Phone } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -194,10 +194,25 @@ export default function ContactPage() {
                         <div>
                           <p className="text-[#86868B] text-sm mb-1">Email</p>
                           <a
-                            href="mailto:hello@bknd.dev"
+                            href="mailto:info@bknddevelopment.com"
                             className="text-white hover:text-[#00D4FF] transition-colors"
                           >
-                            hello@bknd.dev
+                            info@bknddevelopment.com
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0">
+                          <Phone className="w-5 h-5 text-[#00D4FF]" />
+                        </div>
+                        <div>
+                          <p className="text-[#86868B] text-sm mb-1">Phone</p>
+                          <a
+                            href="tel:+19735185600"
+                            className="text-white hover:text-[#00D4FF] transition-colors"
+                          >
+                            (973) 518-5600
                           </a>
                         </div>
                       </div>
@@ -239,10 +254,10 @@ export default function ContactPage() {
                       No forms needed. Just drop us a line and we&apos;ll get back to you.
                     </p>
                     <a
-                      href="mailto:hello@bknd.dev"
+                      href="mailto:info@bknddevelopment.com"
                       className="group inline-flex items-center gap-2 text-[#00D4FF] font-medium hover:underline"
                     >
-                      hello@bknd.dev
+                      info@bknddevelopment.com
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </a>
                   </div>
@@ -321,7 +336,7 @@ export default function ContactPage() {
 
               <AnimateOnScroll delay={0.2}>
                 <a
-                  href="mailto:hello@bknd.dev"
+                  href="mailto:info@bknddevelopment.com"
                   className="group inline-flex items-center gap-3 px-8 py-4 bg-[#00D4FF] hover:bg-[#00B8E0] text-white font-medium rounded-full transition-all duration-300"
                 >
                   Email Us Directly
