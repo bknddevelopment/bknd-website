@@ -3,27 +3,27 @@ import { AnimateOnScroll } from './AnimateOnScroll';
 
 const testimonials = [
   {
-    quote: "BKND delivered our entire marketing stack in 3 weeks. Other agencies quoted 3 months. The speed alone paid for itself, but the quality exceeded what we expected from a much longer timeline.",
-    name: 'Michael Chen',
-    title: 'VP of Growth',
-    company: 'TechFlow',
-    image: '/bknd-website/images/testimonials/michael-chen.jpg',
+    quote: "BKND Development delivered exactly what they promised. Their keyword strategy worked like a charm—almost immediately we saw a steady stream of high-intent inquiries. Not fluff, not vanity metrics. Real customers ready to buy.",
+    name: 'Randy Franco',
+    title: 'Owner',
+    company: 'Randy General Construction',
+    image: '/images/testimonials/randy-franco.jpg',
     rating: 5,
   },
   {
-    quote: "First agency that actually cared about our revenue numbers, not just vanity metrics. Within 90 days, our pipeline doubled and cost per lead dropped 40%. They get that marketing exists to drive business outcomes.",
-    name: 'Sarah Rodriguez',
-    title: 'Marketing Director',
-    company: 'CloudBase',
-    image: '/bknd-website/images/testimonials/sarah-rodriguez.jpg',
+    quote: "These guys definitely make things happen for small businesses. We are seeing nothing but results here at The Library Dispensary. If you want real visibility and customers who are actually searching for what you offer, BKND delivers.",
+    name: 'Andrew Williams',
+    title: 'Owner',
+    company: 'The Library Dispensary of New Jersey',
+    image: '/images/testimonials/andrew-williams.jpg',
     rating: 5,
   },
   {
-    quote: "Finally an agency that understands our tech stack. No hand-holding required on integrations, no amateur hour with our analytics setup. They plugged in and started driving results from week one.",
-    name: 'David Kim',
-    title: 'CEO',
-    company: 'Nexus Digital',
-    image: '/bknd-website/images/testimonials/david-kim.jpg',
+    quote: "These guys are the real deal. Best investment we made for our small business. They focus on what actually matters—getting you in front of customers who are ready to buy, not just vanity numbers.",
+    name: 'Rich C.',
+    title: 'Small Business Owner',
+    company: '',
+    image: '/images/testimonials/rich-c.jpg',
     rating: 5,
   },
 ];
@@ -104,7 +104,7 @@ export default function Testimonials() {
                       {testimonial.name}
                     </div>
                     <div className="text-[#86868B] text-sm">
-                      {testimonial.title}, {testimonial.company}
+                      {testimonial.company ? `${testimonial.title}, ${testimonial.company}` : testimonial.title}
                     </div>
                   </div>
                 </div>

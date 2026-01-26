@@ -19,8 +19,8 @@ const footerLinks = {
   Contact: [
     { label: 'info@bknddevelopment.com', href: 'mailto:info@bknddevelopment.com' },
     { label: '(973) 518-5600', href: 'tel:+19735185600' },
-    { label: '30 Union Street', href: '#' },
-    { label: 'Elizabeth, NJ 07208', href: '#' },
+    { label: '30 Union St, Unit 13', href: '#' },
+    { label: 'Elizabeth, NJ 07202', href: '#' },
   ],
 };
 

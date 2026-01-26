@@ -225,8 +225,8 @@ export default function PrivacyPolicy() {
                 <div className="bg-[#F5F5F7] rounded-lg p-6 mt-4">
                   <p className="text-[#1D1D1F] text-base font-medium">BKND Development</p>
                   <p className="text-[#1D1D1F] text-base">Charwin Vanryck deGroot, CEO</p>
-                  <p className="text-[#1D1D1F] text-base mt-2">30 Union Street</p>
-                  <p className="text-[#1D1D1F] text-base">Elizabeth, NJ 07208</p>
+                  <p className="text-[#1D1D1F] text-base mt-2">30 Union St, Unit 13</p>
+                  <p className="text-[#1D1D1F] text-base">Elizabeth, NJ 07202</p>
                   <p className="text-[#1D1D1F] text-base mt-2">
                     Email: <Link href="mailto:info@bknddevelopment.com" className="text-[#00D4FF] hover:underline">info@bknddevelopment.com</Link>
                   </p>

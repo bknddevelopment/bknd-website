@@ -180,14 +180,14 @@ export default function Hero() {
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
               </svg>
               <p className="text-[#1D1D1F] text-[15px] leading-relaxed pt-8 pr-4" style={{ fontFamily: 'SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif' }}>
-                &quot;We build marketing systems the way developers build software—clean, scalable, and measurable.&quot;
+                &quot;We build marketing systems the way we build software—with clean architecture, measurable outcomes, and zero guesswork.&quot;
               </p>
               <p className="text-[#86868B] text-sm mt-4">
-                — Charwin Vanryck deGroot, Founder
+                — Charwin Vanryck deGroot, Founder &amp; CEO
               </p>
             </div>
 
-            {/* Video/Founder Card - Overlapping */}
+            {/* Client Testimonial Card - Overlapping */}
             <div
               className="bg-white rounded-2xl overflow-hidden relative z-20"
               style={{
@@ -196,40 +196,37 @@ export default function Hero() {
                 boxShadow: '0 4px 6px rgba(0,0,0,0.04), 0 10px 15px rgba(0,0,0,0.03), 0 20px 25px rgba(0,0,0,0.02)'
               }}
             >
-              {/* Video Thumbnail */}
-              <div className="relative h-[180px] flex items-center justify-center">
-                <Image
-                  src="/bknd-website/images/team/hero-video.jpg"
-                  alt="BKND Development team presenting growth strategies"
-                  fill
-                  className="object-cover"
-                  sizes="380px"
-                />
-                {/* Play Button */}
-                <div className="absolute w-14 h-14 rounded-full bg-[#00D4FF] flex items-center justify-center cursor-pointer hover:bg-[#00B8E0] transition-all shadow-lg hover:scale-105 z-10">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 4L16 10L6 16V4Z" fill="white"/>
-                  </svg>
+              {/* Google Review Badge */}
+              <div className="p-5 border-b border-[#F5F5F7]">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-[#FBBC04]" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="text-[#1D1D1F] text-sm font-medium">5.0</span>
+                  <span className="text-[#86868B] text-xs">Google Review</span>
                 </div>
-                {/* Company Badge */}
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs text-[#1D1D1F] font-medium z-10 shadow-sm">
-                  BKND Development
-                </div>
+                <p className="text-[#1D1D1F] text-[14px] leading-relaxed" style={{ fontFamily: 'SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif' }}>
+                  &quot;Finally an agency that understands our tech stack. They plugged in and started driving results from week one.&quot;
+                </p>
               </div>
-              {/* Founder Info */}
-              <div className="p-5 flex items-center gap-3 border-t border-[#F5F5F7]">
+              {/* Client Info */}
+              <div className="p-5 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full overflow-hidden relative ring-2 ring-[#F5F5F7]">
                   <Image
-                    src="/bknd-website/images/team/founder-avatar.jpg"
-                    alt="Charwin Vanryck deGroot, Founder of BKND Development"
+                    src="/bknd-website/images/testimonials/david-kim.jpg"
+                    alt="David Kim, CEO of Nexus Digital"
                     fill
                     className="object-cover"
                     sizes="40px"
                   />
                 </div>
                 <div>
-                  <p className="text-[#1D1D1F] text-sm font-medium">Charwin Vanryck deGroot</p>
-                  <p className="text-[#86868B] text-xs">Founder & CEO</p>
+                  <p className="text-[#1D1D1F] text-sm font-medium">David Kim</p>
+                  <p className="text-[#86868B] text-xs">CEO, Nexus Digital</p>
                 </div>
               </div>
             </div>

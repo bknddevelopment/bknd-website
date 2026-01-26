@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     icon: '/bknd-website/images/bknd-logo.png',
     apple: '/bknd-website/images/bknd-logo.png',
   },
-  metadataBase: new URL('https://charwinvanryckdegroot.github.io/bknd-website'),
+  metadataBase: new URL('https://bknddevelopment.com'),
   alternates: {
     canonical: '/',
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'BKND Development',
-    url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
+    url: 'https://bknddevelopment.com/',
     images: [
       {
         url: '/images/bknd-logo.png',
@@ -64,12 +64,12 @@ const jsonLd = {
     // Organization Schema
     {
       '@type': 'Organization',
-      '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#organization',
+      '@id': 'https://bknddevelopment.com/#organization',
       name: 'BKND Development',
-      url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
+      url: 'https://bknddevelopment.com/',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://charwinvanryckdegroot.github.io/bknd-website/images/bknd-logo.png',
+        url: 'https://bknddevelopment.com/images/bknd-logo.png',
         width: 1536,
         height: 1024,
       },
@@ -82,10 +82,10 @@ const jsonLd = {
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '30 Union Street',
+        streetAddress: '30 Union St, Unit 13',
         addressLocality: 'Elizabeth',
         addressRegion: 'NJ',
-        postalCode: '07208',
+        postalCode: '07202',
         addressCountry: 'US',
       },
       sameAs: [],
@@ -93,20 +93,20 @@ const jsonLd = {
     // LocalBusiness Schema
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#localbusiness',
+      '@id': 'https://bknddevelopment.com/#localbusiness',
       name: 'BKND Development',
       description: 'Developer-built marketing campaigns with data-driven decisions and measurable revenue results.',
-      url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
-      logo: 'https://charwinvanryckdegroot.github.io/bknd-website/images/bknd-logo.png',
-      image: 'https://charwinvanryckdegroot.github.io/bknd-website/images/bknd-logo.png',
+      url: 'https://bknddevelopment.com/',
+      logo: 'https://bknddevelopment.com/images/bknd-logo.png',
+      image: 'https://bknddevelopment.com/images/bknd-logo.png',
       email: 'info@bknddevelopment.com',
       telephone: '+19735185600',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '30 Union Street',
+        streetAddress: '30 Union St, Unit 13',
         addressLocality: 'Elizabeth',
         addressRegion: 'NJ',
-        postalCode: '07208',
+        postalCode: '07202',
         addressCountry: 'US',
       },
       geo: {
@@ -139,18 +139,18 @@ const jsonLd = {
     // WebSite Schema with SearchAction
     {
       '@type': 'WebSite',
-      '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#website',
-      url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
+      '@id': 'https://bknddevelopment.com/#website',
+      url: 'https://bknddevelopment.com/',
       name: 'BKND Development',
       description: 'Marketing Built Like Software - Developer-built campaigns with data-driven decisions.',
       publisher: {
-        '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#organization',
+        '@id': 'https://bknddevelopment.com/#organization',
       },
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://charwinvanryckdegroot.github.io/bknd-website/?s={search_term_string}',
+          urlTemplate: 'https://bknddevelopment.com/?s={search_term_string}',
         },
         'query-input': 'required name=search_term_string',
       },
@@ -158,15 +158,15 @@ const jsonLd = {
     // WebPage Schema
     {
       '@type': 'WebPage',
-      '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#webpage',
-      url: 'https://charwinvanryckdegroot.github.io/bknd-website/',
+      '@id': 'https://bknddevelopment.com/#webpage',
+      url: 'https://bknddevelopment.com/',
       name: 'BKND Development | Marketing Built Like Software',
       description: 'Developer-built campaigns. Data-driven decisions. Revenue you can measure.',
       isPartOf: {
-        '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#website',
+        '@id': 'https://bknddevelopment.com/#website',
       },
       about: {
-        '@id': 'https://charwinvanryckdegroot.github.io/bknd-website/#organization',
+        '@id': 'https://bknddevelopment.com/#organization',
       },
       datePublished: '2026-01-26',
       dateModified: '2026-01-26',

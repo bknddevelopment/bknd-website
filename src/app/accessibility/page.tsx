@@ -155,8 +155,8 @@ export default function AccessibilityStatement() {
                 <div className="bg-[#F5F5F7] rounded-lg p-6 mt-4">
                   <p className="text-[#1D1D1F] text-base font-medium">BKND Development</p>
                   <p className="text-[#1D1D1F] text-base">Accessibility Coordinator</p>
-                  <p className="text-[#1D1D1F] text-base mt-2">30 Union Street</p>
-                  <p className="text-[#1D1D1F] text-base">Elizabeth, NJ 07208</p>
+                  <p className="text-[#1D1D1F] text-base mt-2">30 Union St, Unit 13</p>
+                  <p className="text-[#1D1D1F] text-base">Elizabeth, NJ 07202</p>
                   <p className="text-[#1D1D1F] text-base mt-2">
                     Email: <Link href="mailto:info@bknddevelopment.com" className="text-[#00D4FF] hover:underline">info@bknddevelopment.com</Link>
                   </p>
@@ -221,7 +221,7 @@ export default function AccessibilityStatement() {
                 <h2 className="text-[#1D1D1F] text-2xl font-semibold">Legal Compliance</h2>
                 <p className="text-[#1D1D1F] text-base leading-relaxed">
                   This accessibility statement applies to the BKND Development website
-                  (bknd.dev). We are committed to compliance with:
+                  (bknddevelopment.com). We are committed to compliance with:
                 </p>
                 <ul className="list-disc list-inside text-[#1D1D1F] text-base leading-relaxed space-y-2 ml-4">
                   <li>Americans with Disabilities Act (ADA)</li>

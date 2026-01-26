@@ -4,74 +4,63 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { AnimateOnScroll } from './AnimateOnScroll';
 
-const categories = ['All', 'SEO', 'Paid Media', 'Creative', 'Email'];
+const categories = ['All', 'SEO', 'Local SEO'];
 
 const caseStudies = [
   {
-    category: 'Paid Media',
+    category: 'SEO',
     stats: [
-      { value: '+312%', label: 'Demo Signups' },
-      { value: '$47', label: 'CAC (from $180)' },
+      { value: '+554%', label: 'Organic Traffic' },
+      { value: '+393%', label: 'Keywords' },
     ],
-    title: 'Launched Paid Acquisition in 2 Weeks, Profitable in 6',
-    client: 'Velocity Labs',
-    industry: 'B2B SaaS',
-    image: '/bknd-website/images/case-studies/velocity-labs.jpg',
+    title: 'From Zero to $2,700/Month Traffic Value in 12 Months',
+    client: "Randy's Sealcoating & Striping",
+    industry: 'Construction / Paving',
+    image: '/bknd-website/images/case-studies/randys-sealcoating.jpg',
   },
   {
     category: 'SEO',
     stats: [
-      { value: '+189%', label: 'Organic Traffic' },
-      { value: '#1', label: 'Core Keyword (from #12)' },
+      { value: '15.8K', label: 'Monthly Visitors' },
+      { value: '11.3K', label: 'Keywords Ranking' },
     ],
-    title: 'Technical SEO Overhaul for Developer Tools Company',
-    client: 'DataStack Pro',
-    industry: 'Developer Tools',
-    image: '/bknd-website/images/case-studies/datastack-pro.jpg',
+    title: 'Built Dominant Local Authority with 302 AI Mentions',
+    client: 'Rohnert Park Transmission',
+    industry: 'Automotive',
+    image: '/bknd-website/images/case-studies/rohnert-park-transmission.jpg',
   },
   {
-    category: 'Paid Media',
+    category: 'Local SEO',
     stats: [
-      { value: '4.2x', label: 'ROAS' },
-      { value: '+$1.2M', label: 'Revenue (Q4)' },
+      { value: '+173%', label: 'Traffic Growth' },
+      { value: '8.1K', label: 'GBP Views/Month' },
     ],
-    title: 'Scaled DTC Brand from $10K to $150K/mo Spend Profitably',
-    client: 'Meridian Goods',
-    industry: 'E-commerce',
-    image: '/bknd-website/images/case-studies/meridian-goods.jpg',
-  },
-  {
-    category: 'Creative',
-    stats: [
-      { value: '+78%', label: 'Conversion Rate' },
-      { value: '2.8x', label: 'Pipeline Growth' },
-    ],
-    title: 'Rebuilt Landing Pages & Ad Creative for Fintech Launch',
-    client: 'ClearPath Finance',
-    industry: 'Fintech',
-    image: '/bknd-website/images/case-studies/clearpath-finance.jpg',
+    title: 'Local Discovery Strategy with 50 Citations & Review Management',
+    client: 'The Library NJ',
+    industry: 'Hospitality / Entertainment',
+    image: '/bknd-website/images/case-studies/the-library-nj.jpg',
   },
   {
     category: 'SEO',
     stats: [
-      { value: '847', label: 'Keywords Ranking' },
-      { value: '+215%', label: 'MQLs' },
+      { value: '+117%', label: 'Traffic Growth' },
+      { value: '+113%', label: 'Keywords' },
     ],
-    title: 'Built Programmatic Content Engine: 200+ Pages in 8 Weeks',
-    client: 'Nimbus Cloud',
-    industry: 'Cloud Infrastructure',
-    image: '/bknd-website/images/case-studies/nimbus-cloud.jpg',
+    title: 'Doubled Organic Presence with Strong Backlink Growth',
+    client: 'Weathershield Roofers',
+    industry: 'Roofing',
+    image: '/bknd-website/images/case-studies/weathershield-roofers.jpg',
   },
   {
-    category: 'Email',
+    category: 'SEO',
     stats: [
-      { value: '+34%', label: 'Retention Rate' },
-      { value: '$890K', label: 'Recovered Revenue' },
+      { value: '$16.4K', label: 'Traffic Value/Month' },
+      { value: '3.5K', label: 'Keywords' },
     ],
-    title: 'Automated Lifecycle Flows to Reduce Churn',
-    client: 'Forge Fitness',
-    industry: 'Subscription App',
-    image: '/bknd-website/images/case-studies/forge-fitness.jpg',
+    title: 'International SEO Reach Across US, Canada & Brazil',
+    client: 'Linta Roofing',
+    industry: 'Roofing',
+    image: '/bknd-website/images/case-studies/linta-roofing.jpg',
   },
 ];
 

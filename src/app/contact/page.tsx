@@ -224,8 +224,8 @@ export default function ContactPage() {
                         <div>
                           <p className="text-[#86868B] text-sm mb-1">Address</p>
                           <p className="text-white">
-                            30 Union Street<br />
-                            Elizabeth, NJ 07208
+                            30 Union St, Unit 13<br />
+                            Elizabeth, NJ 07202
                           </p>
                         </div>
                       </div>
@@ -293,13 +293,13 @@ export default function ContactPage() {
                       <MapPin className="w-8 h-8 text-[#00D4FF]" />
                     </div>
                     <p className="text-[#1D1D1F] font-semibold text-lg mb-2">
-                      30 Union Street
+                      30 Union St, Unit 13
                     </p>
                     <p className="text-[#86868B]">
-                      Elizabeth, NJ 07208
+                      Elizabeth, NJ 07202
                     </p>
                     <a
-                      href="https://maps.google.com/?q=30+Union+Street+Elizabeth+NJ+07208"
+                      href="https://maps.google.com/?q=30+Union+St+Unit+13+Elizabeth+NJ+07202"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-[#00D4FF] font-medium mt-4 hover:underline"
