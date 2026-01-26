@@ -12,83 +12,70 @@ interface Service {
   icon: React.ReactNode;
 }
 
-// Line-art style SVG icons matching SingleGrain aesthetic
+// Apple-style line-art SVG icons - black with cyan accent option
 const PaidAdvertisingIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-orange">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#1D1D1F]">
     <path d="M6 12h36M6 24h36M6 36h36" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <circle cx="14" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="34" cy="24" r="3" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="20" cy="36" r="3" stroke="currentColor" strokeWidth="2"/>
+    <circle cx="14" cy="12" r="3" stroke="#06B6D4" strokeWidth="2"/>
+    <circle cx="34" cy="24" r="3" stroke="#06B6D4" strokeWidth="2"/>
+    <circle cx="20" cy="36" r="3" stroke="#06B6D4" strokeWidth="2"/>
     <path d="M14 15v9M34 27v9M20 33v-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 2"/>
   </svg>
 );
 
 const PerformanceCreativeIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-orange">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#1D1D1F]">
     <rect x="6" y="6" width="36" height="28" rx="2" stroke="currentColor" strokeWidth="2"/>
     <path d="M6 14h36" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="10" cy="10" r="1" fill="currentColor"/>
-    <circle cx="14" cy="10" r="1" fill="currentColor"/>
-    <circle cx="18" cy="10" r="1" fill="currentColor"/>
-    <path d="M14 24l6 8 4-4 8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="10" cy="10" r="1" fill="#06B6D4"/>
+    <circle cx="14" cy="10" r="1" fill="#06B6D4"/>
+    <circle cx="18" cy="10" r="1" fill="#06B6D4"/>
+    <path d="M14 24l6 8 4-4 8 6" stroke="#06B6D4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M18 42h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
     <path d="M24 34v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 );
 
 const SEOIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-orange">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#1D1D1F]">
     <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="2"/>
     <path d="M29 29l10 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M14 20h12M20 14v12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M38 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+    <path d="M14 20h12M20 14v12" stroke="#06B6D4" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M38 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z" stroke="#06B6D4" strokeWidth="1.5" strokeLinejoin="round"/>
   </svg>
 );
 
 const CROIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-orange">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#1D1D1F]">
     <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2"/>
     <path d="M24 6v4M24 38v4M6 24h4M38 24h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <circle cx="24" cy="24" r="6" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="24" cy="24" r="2" fill="currentColor"/>
+    <circle cx="24" cy="24" r="6" stroke="#06B6D4" strokeWidth="2"/>
+    <circle cx="24" cy="24" r="2" fill="#06B6D4"/>
   </svg>
 );
 
 const DataAnalyticsIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-orange">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#1D1D1F]">
     <path d="M6 42V18l10 8 8-14 8 10 10-16v36H6z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-    <circle cx="16" cy="26" r="2" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="24" cy="12" r="2" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="32" cy="22" r="2" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="42" cy="6" r="2" stroke="currentColor" strokeWidth="2"/>
+    <circle cx="16" cy="26" r="2" stroke="#06B6D4" strokeWidth="2"/>
+    <circle cx="24" cy="12" r="2" stroke="#06B6D4" strokeWidth="2"/>
+    <circle cx="32" cy="22" r="2" stroke="#06B6D4" strokeWidth="2"/>
+    <circle cx="42" cy="6" r="2" stroke="#06B6D4" strokeWidth="2"/>
   </svg>
 );
 
 const ContentMarketingIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-orange">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#1D1D1F]">
     <rect x="8" y="6" width="32" height="36" rx="2" stroke="currentColor" strokeWidth="2"/>
     <path d="M14 14h20M14 22h20M14 30h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M32 28l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M32 28l6 6-6 6" stroke="#06B6D4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-// Logo divider icon (SingleGrain style flame/spark)
+// Minimal divider - Apple style thin line with subtle accent
 const LogoDivider = () => (
-  <div className="flex justify-center mb-8">
-    <div className="w-12 h-12 flex items-center justify-center">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M16 2C12 8 8 12 8 18C8 22.4183 11.5817 26 16 26C20.4183 26 24 22.4183 24 18C24 12 20 8 16 2Z"
-          stroke="#F27038"
-          strokeWidth="2"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M16 14C14 17 12 19 12 21C12 23.2091 13.7909 25 16 25C18.2091 25 20 23.2091 20 21C20 19 18 17 16 14Z"
-          fill="#F27038"
-        />
-      </svg>
-    </div>
+  <div className="flex justify-center mb-12">
+    <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-60" />
   </div>
 );
 
@@ -143,11 +130,14 @@ const services: Service[] = [
   },
 ];
 
-// Service card component
+// Apple-style card shadow
+const appleCardStyle = "bg-white rounded-[18px] shadow-[0_4px_6px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.08)]";
+
+// Service card component - Apple aesthetic
 function ServiceCard({ service, className = '' }: { service: Service; className?: string }) {
   return (
     <div
-      className={`bg-white border border-border-light rounded-card p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${className}`}
+      className={`${appleCardStyle} p-8 transition-all duration-500 hover:shadow-[0_8px_25px_rgba(0,0,0,0.08),0_4px_10px_rgba(0,0,0,0.06)] hover:-translate-y-1 ${className}`}
     >
       {/* Icon */}
       <div className="mb-6">
@@ -155,22 +145,22 @@ function ServiceCard({ service, className = '' }: { service: Service; className?
       </div>
 
       {/* Title & Subtitle */}
-      <h3 className="text-xl font-bold text-dark-primary mb-1">
+      <h3 className="text-xl font-semibold text-[#1D1D1F] mb-1 tracking-tight">
         {service.title}
       </h3>
-      <p className="text-orange text-sm font-medium mb-4">
+      <p className="text-cyan-500 text-sm font-medium mb-4">
         {service.subtitle}
       </p>
 
       {/* Description */}
-      <p className="text-gray-600 text-sm leading-relaxed mb-6">
+      <p className="text-[#86868B] text-sm leading-relaxed mb-6">
         {service.description}
       </p>
 
-      {/* Dark button with arrow (NOT orange) */}
+      {/* Black button with arrow - Apple style */}
       <a
         href={service.link}
-        className="inline-flex items-center gap-2 bg-dark-primary text-white px-5 py-3 rounded-button text-sm font-medium transition-all duration-300 hover:bg-dark-secondary group"
+        className="inline-flex items-center gap-2 bg-[#1D1D1F] text-white px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#000000] group"
       >
         Learn More
         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -181,20 +171,20 @@ function ServiceCard({ service, className = '' }: { service: Service; className?
 
 export default function Services() {
   return (
-    <section id="services" className="section-light section-py-lg relative overflow-hidden">
-      <div className="container-sg">
+    <section id="services" className="bg-[#F5F5F7] py-16 md:py-20 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Logo Divider */}
         <AnimateOnScroll>
           <LogoDivider />
         </AnimateOnScroll>
 
-        {/* Header */}
+        {/* Header - Apple style centered */}
         <AnimateOnScroll>
-          <div className="section-header">
-            <h2 className="section-title text-dark-primary">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-semibold text-[#1D1D1F] tracking-tight mb-6">
               Our Services
             </h2>
-            <p className="section-subtitle text-gray-600">
+            <p className="text-lg md:text-xl text-[#86868B] leading-relaxed">
               Full-stack digital marketing built for growth. From paid acquisition to organic content,
               we provide the complete toolkit to scale your business systematically.
             </p>

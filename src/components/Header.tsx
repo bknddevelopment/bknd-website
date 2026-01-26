@@ -7,8 +7,8 @@ import Image from 'next/image';
 const navItems = [
   { label: 'Services', href: '#services', hasDropdown: true },
   { label: 'Industries', href: '#industries', hasDropdown: true },
-  { label: 'About Us', href: '#about', hasDropdown: true },
-  { label: 'Learn', href: '#learn', hasDropdown: true },
+  { label: 'About Us', href: '/about', hasDropdown: false },
+  { label: 'Contact', href: '/contact', hasDropdown: false },
 ];
 
 // Chevron down icon
@@ -33,18 +33,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#34394D]">
+    <header className="w-full bg-white/80 backdrop-blur-xl border-b border-black/5 sticky top-0 z-50">
       <div className="container-sg">
         <div className="flex items-center justify-between h-[68px]">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/bknd-logo.png"
+              src="/bknd-website/images/bknd-logo-new.png"
               alt="BKND Development"
               width={192}
               height={128}
               className="h-16 w-auto"
-              style={{ filter: 'brightness(0) invert(1)' }}
               priority
             />
           </Link>
@@ -55,7 +54,7 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-white text-base font-normal hover:text-white/80 transition-colors flex items-center gap-1"
+                className="text-[#1D1D1F] text-base font-normal hover:text-[#1D1D1F]/60 transition-colors flex items-center gap-1"
               >
                 {item.label}
                 {item.hasDropdown && (
@@ -65,10 +64,10 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button - White outlined with arrow */}
+          {/* CTA Button - Cyan with white text */}
           <Link
             href="#contact"
-            className="hidden lg:flex items-center gap-2 px-5 py-2.5 border border-white rounded-[5px] text-white text-base font-normal bg-transparent hover:bg-white/10 transition-all group"
+            className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all group shadow-sm"
           >
             Work With Us
             <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -76,7 +75,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-[#1D1D1F] p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -92,13 +91,13 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-white/10">
+          <div className="lg:hidden py-4 border-t border-black/5">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-white hover:text-white/80 transition-colors py-2 flex items-center gap-1"
+                  className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -109,7 +108,7 @@ export default function Header() {
               ))}
               <Link
                 href="#contact"
-                className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 border border-white rounded-[5px] text-white text-base font-normal bg-transparent hover:bg-white/10 transition-all"
+                className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Work With Us

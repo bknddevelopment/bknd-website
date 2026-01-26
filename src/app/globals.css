@@ -1,85 +1,55 @@
 @import "tailwindcss";
 
 /* ============================================
-   SINGLEGRAIN DESIGN SYSTEM
+   APPLE-INSPIRED DESIGN SYSTEM
    CSS Variables & Theme Configuration
    ============================================ */
 
 @theme inline {
   /* ============================================
-     COLORS - Primary Brand
+     COLORS - Apple Core Palette
      ============================================ */
 
-  /* Brand Orange (Primary CTA) */
-  --color-orange: #F27038;
-  --color-orange-hover: #EA580C;
-  --color-orange-accent: #FF6B35;
-  --color-orange-glow: rgba(242, 112, 56, 0.4);
+  /* Primary Colors */
+  --color-apple-white: #FFFFFF;
+  --color-apple-gray: #F5F5F7;
+  --color-apple-black: #1D1D1F;
+  --color-apple-secondary: #86868B;
 
-  /* Amber/Gold Accents */
-  --color-amber: #EFB438;
-  --color-amber-gradient-start: #F59E0B;
-  --color-amber-gradient-mid: #F97316;
-  --color-amber-gradient-end: #EA580C;
+  /* Accent (Cyan from logo - use sparingly) */
+  --color-accent: #00D4FF;
+  --color-accent-hover: #00B8E0;
+  --color-accent-light: rgba(0, 212, 255, 0.1);
+  --color-accent-glow: rgba(0, 212, 255, 0.3);
 
   /* ============================================
-     COLORS - Dark Backgrounds
+     COLORS - Backgrounds
      ============================================ */
-  --color-dark-primary: #2F333B;
-  --color-dark-secondary: #2F343A;
-  --color-dark-gradient-start: #2F343A;
-  --color-dark-gradient-end: #232020;
-  --color-dark-footer: #28282C;
-  --color-dark-input: #313033;
-  --color-dark-card: #34394D;
-
-  /* ============================================
-     COLORS - Light/Neutral Backgrounds
-     ============================================ */
-  --color-bg-page: #EEEEEE;
-  --color-bg-white: #FFFFFF;
-  --color-bg-off-white: #F8F8F8;
-  --color-bg-light-gray: #F1F1F1;
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F7;
+  --color-bg-dark: #1D1D1F;
 
   /* ============================================
      COLORS - Text
      ============================================ */
-  --color-text-dark: #2F333B;
-  --color-text-gray: #6B7280;
-  --color-text-muted: #6B7280;
-  --color-text-light: #E9EFF4;
-  --color-text-white: #FFFFFF;
-  --color-text-white-80: rgba(255, 255, 255, 0.8);
-  --color-text-white-50: rgba(255, 255, 255, 0.5);
+  --color-text-primary: #1D1D1F;
+  --color-text-secondary: #86868B;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #86868B;
 
   /* ============================================
      COLORS - Borders
      ============================================ */
-  --color-border-light: #DDDDDD;
-  --color-border-dark: rgba(255, 255, 255, 0.07);
-  --color-border-medium: rgba(0, 0, 0, 0.5);
-
-  /* ============================================
-     COLORS - Accents
-     ============================================ */
-  --color-purple-accent: #BC68FF;
-  --color-blue-primary: #0048FF;
-  --color-blue-link: #2175A3;
-  --color-yellow-highlight: #FFF300;
-
-  /* ============================================
-     COLORS - Glass Effects
-     ============================================ */
-  --color-glass-border: rgba(217, 217, 217, 0.1);
-  --color-glass-bg: rgba(255, 255, 255, 0.05);
-  --color-glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --color-border-light: #D2D2D7;
+  --color-border-default: #D2D2D7;
+  --color-border-dark: rgba(0, 0, 0, 0.1);
 
   /* ============================================
      TYPOGRAPHY - Font Family
-     Using Inter as Sofia Pro substitute
+     Apple System Fonts
      ============================================ */
-  --font-family-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  --font-family-display: var(--font-inter), system-ui, sans-serif;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
 
   /* ============================================
      BORDER RADIUS - CRITICAL: buttons are 2px
@@ -107,16 +77,13 @@
   --section-padding-lg: 120px;
 
   /* ============================================
-     SHADOWS
+     SHADOWS - Apple-style minimal
      ============================================ */
-  --shadow-card: rgba(0, 0, 0, 0.1) 0px 10px 15px 0px;
-  --shadow-crisp: 6px 6px 0px rgb(0, 0, 0);
-  --shadow-deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
-  --shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
-  --shadow-outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);
-  --shadow-sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
-  --shadow-orange-glow: 0 4px 15px rgba(242, 112, 56, 0.3);
-  --shadow-orange-glow-lg: 0 6px 25px rgba(242, 112, 56, 0.5);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-accent-glow: 0 4px 15px rgba(0, 212, 255, 0.2);
+  --shadow-accent-glow-lg: 0 6px 25px rgba(0, 212, 255, 0.3);
 
   /* ============================================
      TRANSITIONS
@@ -126,41 +93,15 @@
   --transition-slow: 0.75s;
 
   /* ============================================
-     ANIMATIONS
+     ANIMATIONS - Apple-style subtle
      ============================================ */
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
-  --animate-gradient: gradient 8s ease infinite;
-  --animate-slide-up: slide-up 0.6s ease-out;
-  --animate-slide-in-right: slide-in-right 0.6s ease-out;
-  --animate-fade-in: fade-in 0.8s ease-out;
-  --animate-scale-in: scale-in 0.5s ease-out;
-  --animate-marquee: marquee 30s linear infinite;
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px var(--color-orange-glow); }
-    50% { box-shadow: 0 0 40px var(--color-orange-glow), 0 0 60px var(--color-orange-glow); }
-  }
-
-  @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-scale-in: scale-in 0.4s ease-out;
 
   @keyframes slide-up {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes slide-in-right {
-    from { opacity: 0; transform: translateX(30px); }
-    to { opacity: 1; transform: translateX(0); }
   }
 
   @keyframes fade-in {
@@ -169,13 +110,8 @@
   }
 
   @keyframes scale-in {
-    from { opacity: 0; transform: scale(0.95); }
+    from { opacity: 0; transform: scale(0.98); }
     to { opacity: 1; transform: scale(1); }
-  }
-
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
   }
 }
 
@@ -183,21 +119,30 @@
    CSS CUSTOM PROPERTIES (for use outside Tailwind)
    ============================================ */
 :root {
-  /* Colors */
-  --orange: #F27038;
-  --orange-hover: #EA580C;
-  --dark-primary: #2F333B;
-  --dark-gradient-start: #2F343A;
-  --dark-gradient-end: #232020;
-  --footer-bg: #28282C;
-  --text-muted: #6B7280;
-  --bg-page: #EEEEEE;
-  --text-light: #E9EFF4;
-  --amber: #EFB438;
+  /* Apple Colors */
+  --apple-white: #FFFFFF;
+  --apple-gray: #F5F5F7;
+  --apple-black: #1D1D1F;
+  --apple-secondary: #86868B;
+  --accent: #00D4FF;
+  --accent-hover: #00B8E0;
+
+  /* Text */
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+  --text-light: #FFFFFF;
+
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F7;
+  --bg-dark: #1D1D1F;
+
+  /* Border */
+  --border-color: #D2D2D7;
 
   /* Border Radius */
-  --radius-button: 2px;
-  --radius-card: 4px;
+  --radius-button: 8px;
+  --radius-card: 12px;
   --radius-pill: 20px;
 
   /* Container */
@@ -210,7 +155,8 @@
   --section-lg: 120px;
 
   /* Shadows */
-  --shadow-card: rgba(0, 0, 0, 0.1) 0px 10px 15px 0px;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
 
   /* Transitions */
   --transition-fast: 0.2s;
@@ -225,15 +171,15 @@ html {
 }
 
 body {
-  background-color: var(--color-dark-gradient-end, #232020);
-  color: var(--color-text-light, #E9EFF4);
+  background-color: var(--apple-white, #FFFFFF);
+  color: var(--apple-black, #1D1D1F);
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: rgba(242, 112, 56, 0.3);
+  background: rgba(0, 212, 255, 0.2);
 }
 
 /* ============================================
@@ -258,121 +204,138 @@ h3, .h3 {
 }
 
 /* ============================================
-   BUTTON STYLES - SINGLEGRAIN EXACT
+   BUTTON STYLES - APPLE-INSPIRED
    ============================================ */
 
-/* Primary CTA Button - Orange */
+/* Primary CTA Button - Apple Black */
 .btn-primary {
-  background-color: var(--orange);
+  background-color: var(--apple-black);
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
-  padding: 17px 30px;
-  border: 1px solid var(--orange);
-  border-radius: 2px; /* CRITICAL: 2px, not rounded */
-  line-height: 19.2px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  line-height: 1.2;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   transition: all var(--transition-normal) ease;
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: var(--orange-hover);
-  border-color: var(--orange-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-orange-glow-lg, 0 6px 25px rgba(242, 112, 56, 0.5));
+  background-color: #000000;
+  transform: scale(1.02);
 }
 
-.btn-primary:hover .btn-arrow {
-  transform: rotate(-45deg);
-}
-
-/* Secondary Button - Ghost/Outlined */
+/* Secondary Button - Outlined */
 .btn-secondary {
-  background-color: #FFFFFF;
-  color: #000000;
-  font-size: 15px;
-  font-weight: 300;
-  padding: 6px 20px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  background-color: transparent;
+  color: var(--apple-black);
+  font-size: 17px;
+  font-weight: 400;
+  padding: 12px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   transition: all var(--transition-normal) ease;
   cursor: pointer;
 }
 
 .btn-secondary:hover {
-  border-color: rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--apple-gray);
+}
+
+/* Accent Button - Cyan (use sparingly) */
+.btn-accent {
+  background-color: var(--accent);
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal) ease;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.02);
 }
 
 /* Ghost Button - For dark backgrounds */
 .btn-ghost {
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 17px 30px;
-  border-radius: 2px;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   transition: all var(--transition-normal) ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   cursor: pointer;
   background: transparent;
 }
 
 .btn-ghost:hover {
-  border-color: rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
-   INPUT STYLES - SINGLEGRAIN EXACT
+   INPUT STYLES - APPLE-INSPIRED
    ============================================ */
 
 /* Light Input */
 .input-light {
-  background-color: #FFFFFF;
-  color: #333333;
-  font-size: 16px;
-  padding: 14px 18px;
-  border: 1px solid #DDDDDD;
-  border-radius: 2px;
-  height: 55px;
+  background-color: var(--apple-white);
+  color: var(--apple-black);
+  font-size: 17px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  height: 48px;
   width: 100%;
   transition: border-color var(--transition-fast);
 }
 
 .input-light:focus {
   outline: none;
-  border-color: var(--orange);
+  border-color: var(--accent);
 }
 
 .input-light::placeholder {
-  color: #999999;
+  color: var(--apple-secondary);
 }
 
 /* Dark Input */
 .input-dark {
-  background-color: #313033;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #FFFFFF;
-  font-size: 16px;
-  padding: 14px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 4px;
-  height: 54px;
+  font-size: 17px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  height: 48px;
   width: 100%;
   transition: border-color var(--transition-fast);
 }
 
 .input-dark:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent);
 }
 
 .input-dark::placeholder {
@@ -421,35 +384,30 @@ h3, .h3 {
 }
 
 /* ============================================
-   SECTION STYLES
+   SECTION STYLES - APPLE-INSPIRED
    ============================================ */
 
-/* Dark section with gradient background */
+/* Dark section - charcoal */
 .section-dark {
-  background: linear-gradient(257.07deg, #2F343A 0%, #232020 100%);
+  background-color: var(--apple-black);
   color: var(--text-light);
 }
 
-.section-dark-solid {
-  background-color: #232020;
-  color: var(--text-light);
-}
-
-/* Light section */
+/* Light section - white */
 .section-light {
-  background-color: #FFFFFF;
-  color: var(--dark-primary);
+  background-color: var(--apple-white);
+  color: var(--apple-black);
 }
 
-/* Page background section */
-.section-page {
-  background-color: #EEEEEE;
-  color: var(--dark-primary);
+/* Secondary section - Apple gray */
+.section-secondary {
+  background-color: var(--apple-gray);
+  color: var(--apple-black);
 }
 
-/* Footer section */
+/* Footer section - charcoal */
 .section-footer {
-  background-color: #28282C;
+  background-color: var(--apple-black);
   color: #FFFFFF;
 }
 
@@ -476,88 +434,94 @@ h3, .h3 {
 }
 
 .section-label {
-  color: var(--orange);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
 .section-title {
   font-size: 48px;
-  line-height: 52.8px;
-  font-weight: 300;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
   .section-title {
     font-size: 32px;
-    line-height: 38px;
+    line-height: 1.1;
   }
 }
 
 .section-subtitle {
-  font-size: 15px;
-  line-height: 28px;
-  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--apple-secondary);
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* ============================================
-   CARD STYLES
+   CARD STYLES - APPLE-INSPIRED
    ============================================ */
 
-/* Glass Card */
-.glass-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 4px;
+/* Card - Clean white */
+.card {
+  background-color: var(--apple-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   box-shadow: var(--shadow-card);
 }
 
-.glass-card-hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 4px;
+.card-hover {
+  background-color: var(--apple-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   box-shadow: var(--shadow-card);
   transition: all var(--transition-normal) ease;
 }
 
-.glass-card-hover:hover {
-  border-color: rgba(242, 112, 56, 0.3);
-  background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(242, 112, 56, 0.1);
+.card-hover:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
 }
 
-/* Menu Card (navigation dropdown) */
-.menu-card {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 4px;
-  padding: 26px;
-  box-shadow: var(--shadow-card);
+/* Dark Card - For dark sections */
+.card-dark {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.card-dark-hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all var(--transition-normal) ease;
+}
+
+.card-dark-hover:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
 }
 
 /* ============================================
-   TAG & PILL STYLES
+   TAG & PILL STYLES - APPLE-INSPIRED
    ============================================ */
 
 /* Category Tag */
 .tag {
-  font-size: 10px;
-  padding: 3px 10px;
-  border-radius: 30px;
-  color: var(--dark-primary);
-  background: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: var(--apple-black);
+  background-color: var(--apple-gray);
   display: inline-block;
 }
 
@@ -565,44 +529,30 @@ h3, .h3 {
 .filter-pill {
   background-color: transparent;
   border-radius: 20px;
-  padding: 7px 20px;
+  padding: 8px 20px;
   font-size: 14px;
+  font-weight: 500;
   transition: all var(--transition-fast);
   cursor: pointer;
 }
 
 .filter-pill:hover {
-  background-color: rgba(242, 112, 56, 0.1);
+  background-color: var(--apple-gray);
 }
 
 .filter-pill.active {
-  background-color: var(--orange);
+  background-color: var(--apple-black);
   color: white;
 }
 
 /* ============================================
-   TEXT UTILITIES
+   TEXT UTILITIES - APPLE-INSPIRED
    ============================================ */
 
-/* Text Gradient */
-.text-gradient {
-  background-image: linear-gradient(to right, var(--orange), var(--amber));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.text-gradient-white {
-  background-image: linear-gradient(to right, white, var(--text-light));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 /* Text colors */
-.text-orange { color: var(--orange); }
-.text-muted { color: var(--text-muted); }
-.text-dark { color: var(--dark-primary); }
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--apple-secondary); }
+.text-primary { color: var(--apple-black); }
 .text-light { color: var(--text-light); }
 
 .text-balance {
@@ -610,50 +560,25 @@ h3, .h3 {
 }
 
 /* ============================================
-   GLOW & EFFECTS
+   EFFECTS - APPLE-INSPIRED (minimal)
    ============================================ */
 
-.glow-orange {
-  box-shadow: 0 0 40px rgba(242, 112, 56, 0.3);
+.glow-accent {
+  box-shadow: var(--shadow-accent-glow);
 }
 
-.glow-orange-lg {
-  box-shadow: 0 0 60px rgba(242, 112, 56, 0.4);
-}
-
-/* Gradient Border */
-.gradient-border {
-  position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(242, 112, 56, 0.5), rgba(239, 180, 56, 0.5));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+.glow-accent-lg {
+  box-shadow: var(--shadow-accent-glow-lg);
 }
 
 /* ============================================
-   BACKGROUND UTILITIES
+   BACKGROUND UTILITIES - APPLE-INSPIRED
    ============================================ */
 
-.bg-gradient-dark {
-  background: linear-gradient(257.07deg, #2F343A 0%, #232020 100%);
-}
-
-.bg-gradient-orange {
-  background: linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #EA580C 100%);
-}
-
-.bg-gradient-peach {
-  background: linear-gradient(135deg, #F8D7CB 0%, #F4E8E0 50%, #F8D7CB 100%);
-}
+.bg-white { background-color: var(--apple-white); }
+.bg-gray { background-color: var(--apple-gray); }
+.bg-dark { background-color: var(--apple-black); }
+.bg-accent { background-color: var(--accent); }
 
 /* ============================================
    ANIMATION UTILITIES

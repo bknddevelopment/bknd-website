@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   basePath: '/bknd-website',
   assetPrefix: '/bknd-website/',
+  trailingSlash: true,
 };
 
 export default nextConfig;

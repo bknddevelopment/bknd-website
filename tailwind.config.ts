@@ -9,67 +9,43 @@ const config: Config = {
   theme: {
     extend: {
       // ============================================
-      // SINGLEGRAIN COLOR SYSTEM
+      // APPLE-INSPIRED COLOR SYSTEM
       // ============================================
       colors: {
-        // Brand Orange (Primary CTA)
-        orange: {
-          DEFAULT: "#F27038",
-          hover: "#EA580C",
-          accent: "#FF6B35",
-          glow: "rgba(242, 112, 56, 0.4)",
+        // Apple Core Colors
+        'apple-white': '#FFFFFF',
+        'apple-gray': '#F5F5F7',
+        'apple-black': '#1D1D1F',
+        'apple-secondary': '#86868B',
+
+        // Accent (Cyan from logo - use sparingly)
+        accent: {
+          DEFAULT: '#00D4FF',
+          hover: '#00B8E0',
+          light: 'rgba(0, 212, 255, 0.1)',
+          glow: 'rgba(0, 212, 255, 0.3)',
         },
-        // Amber/Gold Accents
-        amber: {
-          DEFAULT: "#EFB438",
-          "gradient-start": "#F59E0B",
-          "gradient-mid": "#F97316",
-          "gradient-end": "#EA580C",
-        },
-        // Dark Backgrounds
-        dark: {
-          DEFAULT: "#2F333B",
-          primary: "#2F333B",
-          secondary: "#2F343A",
-          "gradient-start": "#2F343A",
-          "gradient-end": "#232020",
-          footer: "#28282C",
-          input: "#313033",
-          card: "#34394D",
-        },
-        // Light/Neutral Backgrounds
+
+        // Background Colors
         bg: {
-          page: "#EEEEEE",
-          white: "#FFFFFF",
-          "off-white": "#F8F8F8",
-          "light-gray": "#F1F1F1",
+          primary: '#FFFFFF',
+          secondary: '#F5F5F7',
+          dark: '#1D1D1F',
         },
+
         // Text Colors
         text: {
-          dark: "#2F333B",
-          gray: "#6B7280",
-          muted: "#6B7280",
-          light: "#E9EFF4",
-          white: "#FFFFFF",
-          "white-80": "rgba(255, 255, 255, 0.8)",
-          "white-50": "rgba(255, 255, 255, 0.5)",
+          primary: '#1D1D1F',
+          secondary: '#86868B',
+          light: '#FFFFFF',
+          muted: '#86868B',
         },
+
         // Border Colors
         border: {
-          light: "#DDDDDD",
-          dark: "rgba(255, 255, 255, 0.07)",
-          medium: "rgba(0, 0, 0, 0.5)",
-        },
-        // Accent Colors
-        purple: {
-          accent: "#BC68FF",
-        },
-        blue: {
-          primary: "#0048FF",
-          link: "#2175A3",
-        },
-        yellow: {
-          highlight: "#FFF300",
+          light: '#D2D2D7',
+          DEFAULT: '#D2D2D7',
+          dark: 'rgba(0, 0, 0, 0.1)',
         },
       },
 
@@ -83,7 +59,7 @@ const config: Config = {
         display: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontSize: {
-        // Heading sizes from SingleGrain
+        // Heading sizes
         "h1": ["46px", { lineHeight: "65px", fontWeight: "700" }],
         "h2": ["48px", { lineHeight: "52.8px", fontWeight: "300" }],
         "h3": ["29px", { lineHeight: "51px", fontWeight: "300" }],
@@ -153,32 +129,21 @@ const config: Config = {
       },
 
       // ============================================
-      // SHADOWS
+      // SHADOWS - Apple-style minimal
       // ============================================
       boxShadow: {
-        "card": "rgba(0, 0, 0, 0.1) 0px 10px 15px 0px",
-        "crisp": "6px 6px 0px rgb(0, 0, 0)",
-        "deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
-        "natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
-        "outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
-        "sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
-        "orange-glow": "0 4px 15px rgba(242, 112, 56, 0.3)",
-        "orange-glow-lg": "0 6px 25px rgba(242, 112, 56, 0.5)",
+        "card": "0 2px 8px rgba(0, 0, 0, 0.08)",
+        "card-hover": "0 4px 16px rgba(0, 0, 0, 0.12)",
+        "subtle": "0 1px 3px rgba(0, 0, 0, 0.06)",
+        "accent-glow": "0 4px 15px rgba(0, 212, 255, 0.2)",
+        "accent-glow-lg": "0 6px 25px rgba(0, 212, 255, 0.3)",
       },
 
       // ============================================
-      // BACKGROUND GRADIENTS
+      // BACKGROUND - Minimal (no gradients)
       // ============================================
       backgroundImage: {
-        // Hero/Dark section gradient (257.07deg angle)
-        "gradient-dark": "linear-gradient(257.07deg, #2F343A 0%, #232020 100%)",
-        // Orange/Amber CTA gradient
-        "gradient-orange": "linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #EA580C 100%)",
-        // Soft peach gradient
-        "gradient-peach": "linear-gradient(135deg, #F8D7CB 0%, #F4E8E0 50%, #F8D7CB 100%)",
-        // Text gradients
-        "gradient-text-orange": "linear-gradient(to right, #F27038, #EFB438)",
-        "gradient-text-white": "linear-gradient(to right, #FFFFFF, #E9EFF4)",
+        "none": "none",
       },
 
       // ============================================
@@ -194,52 +159,26 @@ const config: Config = {
       },
 
       // ============================================
-      // ANIMATIONS
+      // ANIMATIONS - Apple-style subtle
       // ============================================
       keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(242, 112, 56, 0.4)" },
-          "50%": { boxShadow: "0 0 40px rgba(242, 112, 56, 0.4), 0 0 60px rgba(242, 112, 56, 0.4)" },
-        },
-        gradient: {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
-        },
         "slide-up": {
-          from: { opacity: "0", transform: "translateY(30px)" },
+          from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
-        },
-        "slide-in-right": {
-          from: { opacity: "0", transform: "translateX(30px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
         },
         "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
         "scale-in": {
-          from: { opacity: "0", transform: "scale(0.95)" },
+          from: { opacity: "0", transform: "scale(0.98)" },
           to: { opacity: "1", transform: "scale(1)" },
-        },
-        marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
         },
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        gradient: "gradient 8s ease infinite",
-        "slide-up": "slide-up 0.6s ease-out",
-        "slide-in-right": "slide-in-right 0.6s ease-out",
-        "fade-in": "fade-in 0.8s ease-out",
-        "scale-in": "scale-in 0.5s ease-out",
-        marquee: "marquee 30s linear infinite",
+        "slide-up": "slide-up 0.5s ease-out",
+        "fade-in": "fade-in 0.6s ease-out",
+        "scale-in": "scale-in 0.4s ease-out",
       },
 
       // ============================================

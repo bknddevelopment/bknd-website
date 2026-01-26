@@ -16,8 +16,7 @@ const caseStudies = [
     title: 'Launched Paid Acquisition in 2 Weeks, Profitable in 6',
     client: 'Velocity Labs',
     industry: 'B2B SaaS',
-    gradient: 'from-blue-500/20 to-cyan-500/20',
-    image: '/images/case-studies/velocity-labs.jpg',
+    image: '/bknd-website/images/case-studies/velocity-labs.jpg',
   },
   {
     category: 'SEO',
@@ -28,8 +27,7 @@ const caseStudies = [
     title: 'Technical SEO Overhaul for Developer Tools Company',
     client: 'DataStack Pro',
     industry: 'Developer Tools',
-    gradient: 'from-purple-500/20 to-indigo-500/20',
-    image: '/images/case-studies/datastack-pro.jpg',
+    image: '/bknd-website/images/case-studies/datastack-pro.jpg',
   },
   {
     category: 'Paid Media',
@@ -40,8 +38,7 @@ const caseStudies = [
     title: 'Scaled DTC Brand from $10K to $150K/mo Spend Profitably',
     client: 'Meridian Goods',
     industry: 'E-commerce',
-    gradient: 'from-pink-500/20 to-orange-500/20',
-    image: '/images/case-studies/meridian-goods.jpg',
+    image: '/bknd-website/images/case-studies/meridian-goods.jpg',
   },
   {
     category: 'Creative',
@@ -52,8 +49,7 @@ const caseStudies = [
     title: 'Rebuilt Landing Pages & Ad Creative for Fintech Launch',
     client: 'ClearPath Finance',
     industry: 'Fintech',
-    gradient: 'from-green-500/20 to-teal-500/20',
-    image: '/images/case-studies/clearpath-finance.jpg',
+    image: '/bknd-website/images/case-studies/clearpath-finance.jpg',
   },
   {
     category: 'SEO',
@@ -64,8 +60,7 @@ const caseStudies = [
     title: 'Built Programmatic Content Engine: 200+ Pages in 8 Weeks',
     client: 'Nimbus Cloud',
     industry: 'Cloud Infrastructure',
-    gradient: 'from-sky-500/20 to-blue-500/20',
-    image: '/images/case-studies/nimbus-cloud.jpg',
+    image: '/bknd-website/images/case-studies/nimbus-cloud.jpg',
   },
   {
     category: 'Email',
@@ -76,8 +71,7 @@ const caseStudies = [
     title: 'Automated Lifecycle Flows to Reduce Churn',
     client: 'Forge Fitness',
     industry: 'Subscription App',
-    gradient: 'from-amber-500/20 to-red-500/20',
-    image: '/images/case-studies/forge-fitness.jpg',
+    image: '/bknd-website/images/case-studies/forge-fitness.jpg',
   },
 ];
 
@@ -89,87 +83,103 @@ export default function CaseStudies() {
     : caseStudies.filter(c => c.category === activeCategory);
 
   return (
-    <section className="section-dark relative">
-      <div className="container-sg">
+    <section className="bg-[#F5F5F7] py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <AnimateOnScroll>
-          <div className="section-header">
-            <p className="section-label">Case Studies</p>
-            <h2 className="section-title text-white">
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium tracking-widest uppercase text-[#6E6E73] mb-4">
+              Case Studies
+            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1D1D1F] tracking-tight mb-6">
               Real Results for{' '}
-              <span className="text-gradient">Real Businesses</span>
+              <span className="bg-gradient-to-r from-[#00D4FF] to-[#0071E3] bg-clip-text text-transparent">
+                Real Businesses
+              </span>
             </h2>
-            <p className="section-subtitle">
+            <p className="text-xl text-[#86868B] max-w-2xl mx-auto">
               See how we&apos;ve helped companies like yours achieve breakthrough growth.
             </p>
           </div>
         </AnimateOnScroll>
 
-        {/* Category Filters */}
+        {/* Category Filters - Apple-style toggle */}
         <AnimateOnScroll delay={0.1}>
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
-                activeCategory === cat
-                  ? 'bg-[#F27038] text-white shadow-lg'
-                  : 'bg-white/5 text-[#E9EFF4]/70 hover:bg-white/10 hover:text-white'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeCategory === cat
+                    ? 'bg-[#1D1D1F] text-white'
+                    : 'bg-white text-[#1D1D1F] hover:bg-[#1D1D1F] hover:text-white border border-[#D2D2D7]'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </AnimateOnScroll>
 
         {/* Case Study Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {filtered.map((study, i) => (
             <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
-              <div className="glass-card-hover overflow-hidden group cursor-pointer h-full">
-              {/* Image/Gradient Area */}
-              <div className="h-48 relative overflow-hidden">
-                <Image
-                  src={study.image}
-                  alt={`${study.client} case study - ${study.title}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2F333B]/70 via-[#2F333B]/30 to-transparent" />
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs text-white">
-                    {study.category}
-                  </span>
-                </div>
-                <div className="absolute bottom-4 left-4 right-4 z-10">
-                  <p className="text-white/80 text-sm">{study.client} • {study.industry}</p>
-                </div>
-              </div>
+              <div className="bg-white rounded-2xl overflow-hidden group cursor-pointer h-full shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
+                {/* Image Area */}
+                <div className="h-56 relative overflow-hidden">
+                  <Image
+                    src={study.image}
+                    alt={`${study.client} case study - ${study.title}`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
 
-              {/* Content */}
-              <div className="p-6">
-                {/* Stats */}
-                <div className="flex gap-6 mb-4">
-                  {study.stats.map((stat, j) => (
-                    <div key={j}>
-                      <div className="text-2xl font-bold text-[#F27038]">{stat.value}</div>
-                      <div className="text-gray-300 text-xs">{stat.label}</div>
-                    </div>
-                  ))}
+                  {/* Category badge */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-full text-xs font-medium text-[#1D1D1F]">
+                      {study.category}
+                    </span>
+                  </div>
+
+                  {/* Client info on image */}
+                  <div className="absolute bottom-4 left-4 right-4 z-10">
+                    <p className="text-white/90 text-sm font-medium">
+                      {study.client} <span className="text-white/60">•</span> <span className="text-white/70">{study.industry}</span>
+                    </p>
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-semibold text-white group-hover:text-[#F27038] transition-colors">
-                  {study.title}
-                </h3>
+                {/* Content */}
+                <div className="p-6">
+                  {/* Stats */}
+                  <div className="flex gap-8 mb-5">
+                    {study.stats.map((stat, j) => (
+                      <div key={j}>
+                        <div className="text-2xl md:text-3xl font-semibold text-[#00D4FF]">
+                          {stat.value}
+                        </div>
+                        <div className="text-[#86868B] text-xs mt-1">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
 
-                {/* Read More Link */}
-                <div className="mt-4 flex items-center gap-2 text-[#F27038] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  Read Case Study <span>→</span>
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-[#1D1D1F] leading-snug group-hover:text-[#0071E3] transition-colors duration-300">
+                    {study.title}
+                  </h3>
+
+                  {/* Read More Link */}
+                  <div className="mt-5 flex items-center gap-2 text-[#0071E3] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Read Case Study
+                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
               </div>
             </AnimateOnScroll>
           ))}
@@ -178,9 +188,14 @@ export default function CaseStudies() {
         {/* View All CTA */}
         <AnimateOnScroll delay={0.4}>
           <div className="text-center mt-12">
-            <a href="/case-studies" className="btn-secondary">
+            <a
+              href="/case-studies"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#1D1D1F] text-white rounded-full text-base font-medium hover:bg-[#000000] transition-all duration-300 hover:scale-105"
+            >
               View All Case Studies
-              <span>→</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
         </AnimateOnScroll>

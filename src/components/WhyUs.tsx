@@ -1,6 +1,6 @@
 'use client';
 
-import { Flame, ChevronRight } from 'lucide-react';
+import { Check, X, ArrowRight } from 'lucide-react';
 import { AnimateOnScroll } from './AnimateOnScroll';
 
 const comparisons = [
@@ -14,62 +14,67 @@ const comparisons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 lg:py-32" style={{ backgroundColor: '#f5f5f5' }}>
+    <section className="py-16 lg:py-20 bg-[#F5F5F7]">
       <div className="container-sg">
-        {/* Section Label */}
+        {/* Section Header */}
         <AnimateOnScroll>
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Flame className="w-5 h-5 text-[#F27038]" />
-            <span className="text-[#F27038] font-semibold text-sm uppercase tracking-wide">
-              Why BKND
-            </span>
-          </div>
+          <p className="text-[#6E6E73] text-sm font-medium tracking-wide uppercase text-center mb-4">
+            Why Choose Us
+          </p>
         </AnimateOnScroll>
 
-        {/* Headline */}
         <AnimateOnScroll delay={0.1}>
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 text-center mb-16 max-w-4xl mx-auto">
-            What Sets BKND Apart from Other Digital Marketing Agencies?
+          <h2 className="text-[#1D1D1F] text-3xl lg:text-5xl font-semibold text-center mb-4 max-w-3xl mx-auto tracking-tight">
+            The BKND Difference
           </h2>
         </AnimateOnScroll>
 
-        {/* Comparison Table */}
+        <AnimateOnScroll delay={0.15}>
+          <p className="text-[#86868B] text-lg lg:text-xl text-center mb-10 max-w-2xl mx-auto">
+            See how we compare to traditional agencies
+          </p>
+        </AnimateOnScroll>
+
+        {/* Comparison Cards */}
         <AnimateOnScroll delay={0.2}>
           <div className="max-w-5xl mx-auto">
-            {/* Table Headers */}
-            <div className="flex items-stretch mb-1">
-              <div className="flex-1 bg-[#2F333B] rounded-tl-xl py-4 px-6">
-                <span className="text-white font-semibold text-lg">Traditional Agencies</span>
+            {/* Desktop Table Headers */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6 mb-6">
+              <div className="text-center">
+                <span className="text-[#86868B] text-sm font-medium uppercase tracking-wide">
+                  Traditional Agencies
+                </span>
               </div>
-              <div className="w-16 lg:w-20 flex items-center justify-center bg-gray-200">
-                <span className="text-gray-500 font-bold text-sm">vs</span>
-              </div>
-              <div className="flex-1 bg-[#F27038] rounded-tr-xl py-4 px-6">
-                <span className="text-white font-semibold text-lg">BKND</span>
+              <div className="text-center">
+                <span className="text-[#1D1D1F] text-sm font-medium uppercase tracking-wide">
+                  BKND
+                </span>
               </div>
             </div>
 
-            {/* Table Rows */}
-            <div className="border border-gray-200 rounded-b-xl overflow-hidden">
+            {/* Comparison Rows */}
+            <div className="space-y-4">
               {comparisons.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-stretch border-b border-gray-200 last:border-b-0 group transition-colors hover:bg-white"
+                  className="grid md:grid-cols-2 gap-4 md:gap-6"
                 >
-                  {/* Left column - Traditional Agencies */}
-                  <div className="flex-1 py-5 px-6 flex items-center bg-white/50">
-                    <span className="text-gray-700 text-base">{item.them}</span>
+                  {/* Traditional Agency Card */}
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-gray-300">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center">
+                      <X className="w-3.5 h-3.5 text-[#86868B]" />
+                    </div>
+                    <span className="text-[#86868B] text-base leading-relaxed">
+                      {item.them}
+                    </span>
                   </div>
 
-                  {/* Arrow divider */}
-                  <div className="w-16 lg:w-20 flex items-center justify-center bg-gray-100 border-l border-r border-gray-200">
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#F27038] transition-colors" />
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#F27038] transition-colors -ml-3" />
-                  </div>
-
-                  {/* Right column - BKND */}
-                  <div className="flex-1 py-5 px-6 flex items-center bg-white">
-                    <span className="text-gray-900 font-semibold text-base group-hover:text-[#F27038] transition-colors">
+                  {/* BKND Card */}
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#00D4FF]/10 flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-[#00D4FF]" strokeWidth={3} />
+                    </div>
+                    <span className="text-[#1D1D1F] text-base leading-relaxed font-medium">
                       {item.us}
                     </span>
                   </div>
@@ -84,10 +89,10 @@ export default function WhyUs() {
           <div className="text-center mt-12">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#F27038] text-[#F27038] font-semibold rounded-lg hover:bg-[#F27038] hover:text-white transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full hover:bg-[#000000] transition-all duration-300"
             >
               Get Your Custom Growth Strategy
-              <ChevronRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
         </AnimateOnScroll>

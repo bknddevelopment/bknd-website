@@ -42,16 +42,19 @@ const steps: Step[] = [
   },
 ];
 
-// Flame icon component for center
-function FlameIcon({ className }: { className?: string }) {
+// Minimal arrow icon for center
+function ArrowIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
       viewBox="0 0 24 24"
-      fill="currentColor"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <path d="M12 23c-3.866 0-7-3.134-7-7 0-2.685 1.504-5.187 3.357-7.229a18.93 18.93 0 0 1 2.862-2.523c.234-.166.452-.32.652-.458.2.138.418.292.652.458a18.93 18.93 0 0 1 2.862 2.523C17.496 10.813 19 13.315 19 16c0 3.866-3.134 7-7 7zm0-15.5c-.685.548-1.5 1.283-2.285 2.146C8.336 11.21 7 13.315 7 16a5 5 0 0 0 10 0c0-2.685-1.336-4.79-2.715-6.354A16.93 16.93 0 0 0 12 7.5z"/>
-      <path d="M12 21a3 3 0 0 1-3-3c0-1.5.75-2.5 2-3.5.5-.4 1-.7 1-1 0 .3.5.6 1 1 1.25 1 2 2 2 3.5a3 3 0 0 1-3 3z"/>
+      <path d="M12 5v14M5 12l7 7 7-7" />
     </svg>
   );
 }
@@ -73,32 +76,25 @@ export default function Methodology() {
 
   return (
     <section
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-16 lg:py-20 overflow-hidden"
       style={{
-        background: 'linear-gradient(257.07deg, #2F343A 0%, #232020 100%)',
+        backgroundColor: '#F5F5F7',
       }}
     >
-      {/* Radial Orange Glow in Center */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -30%)',
-          width: '600px',
-          height: '600px',
-          background: 'radial-gradient(circle, rgba(242, 112, 56, 0.25) 0%, rgba(242, 112, 56, 0.1) 30%, transparent 70%)',
-        }}
-      />
-
       <div className="container-sg relative z-10">
         {/* Header */}
         <AnimateOnScroll>
-          <div className="text-center mb-16 lg:mb-20">
-            <p className="text-orange-DEFAULT text-sm font-medium tracking-wider uppercase mb-4">
+          <div className="text-center mb-12 lg:mb-14">
+            <p
+              className="text-sm font-medium tracking-wider uppercase mb-4"
+              style={{ color: '#6E6E73' }}
+            >
               Methodology
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            <h2
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold"
+              style={{ color: '#1D1D1F' }}
+            >
               Discover Our Growth Methodology
             </h2>
           </div>
@@ -112,35 +108,48 @@ export default function Methodology() {
               <div className="relative">
                 {/* Center Logo for Mobile */}
                 <div className="flex justify-center mb-8">
-                  <div className="relative">
-                    <div
-                      className="absolute inset-0 rounded-full blur-2xl"
-                      style={{
-                        background: 'radial-gradient(circle, rgba(242, 112, 56, 0.5) 0%, transparent 70%)',
-                        transform: 'scale(1.5)',
-                      }}
-                    />
-                    <div className="relative w-20 h-20 rounded-full bg-dark-primary flex items-center justify-center border border-orange-DEFAULT/30">
-                      <FlameIcon className="w-10 h-10 text-orange-DEFAULT" />
-                    </div>
+                  <div
+                    className="relative w-20 h-20 rounded-full bg-white flex items-center justify-center"
+                    style={{
+                      boxShadow: '0 2px 20px rgba(0, 0, 0, 0.06)',
+                      border: '1px solid rgba(0, 0, 0, 0.08)',
+                    }}
+                  >
+                    <ArrowIcon className="w-8 h-8 text-[#00D4FF]" />
                   </div>
                 </div>
 
                 {/* Steps List */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {steps.map((step) => (
                     <div
                       key={step.id}
-                      className="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/10"
+                      className="flex items-start gap-4 p-5 rounded-2xl bg-white"
+                      style={{
+                        boxShadow: '0 2px 12px rgba(0, 0, 0, 0.04)',
+                        border: '1px solid rgba(0, 0, 0, 0.06)',
+                      }}
                     >
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-DEFAULT flex items-center justify-center text-white font-bold">
+                      <div
+                        className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm"
+                        style={{
+                          backgroundColor: '#1D1D1F',
+                          color: '#FFFFFF',
+                        }}
+                      >
                         {step.id}
                       </div>
                       <div>
-                        <p className="text-orange-DEFAULT text-xs font-medium uppercase tracking-wider mb-1">
+                        <p
+                          className="text-xs font-medium uppercase tracking-wider mb-1"
+                          style={{ color: '#00D4FF' }}
+                        >
                           {step.duration}
                         </p>
-                        <h3 className="text-white font-semibold text-lg">
+                        <h3
+                          className="font-semibold text-lg"
+                          style={{ color: '#1D1D1F' }}
+                        >
                           {step.title}
                         </h3>
                       </div>
@@ -152,24 +161,33 @@ export default function Methodology() {
 
             {/* Desktop: Circular Layout */}
             <div className="hidden lg:block relative" style={{ width: svgSize, height: svgSize }}>
-              {/* SVG for dotted circle path */}
+              {/* SVG for circle path */}
               <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox={`0 0 ${svgSize} ${svgSize}`}
               >
-                {/* Dotted circular path */}
+                {/* Clean circular path */}
                 <circle
                   cx={center}
                   cy={center}
                   r={circleRadius}
                   fill="none"
-                  stroke="rgba(255, 255, 255, 0.2)"
-                  strokeWidth="2"
-                  strokeDasharray="8 12"
+                  stroke="rgba(0, 0, 0, 0.08)"
+                  strokeWidth="1"
+                />
+                {/* Subtle dashed progress indicator */}
+                <circle
+                  cx={center}
+                  cy={center}
+                  r={circleRadius}
+                  fill="none"
+                  stroke="rgba(0, 212, 255, 0.3)"
+                  strokeWidth="1"
+                  strokeDasharray="4 8"
                 />
               </svg>
 
-              {/* Center Logo with Glow */}
+              {/* Center Logo */}
               <div
                 className="absolute"
                 style={{
@@ -178,18 +196,35 @@ export default function Methodology() {
                   transform: 'translate(-50%, -50%)',
                 }}
               >
-                {/* Glow effect */}
+                {/* Subtle glow */}
                 <div
-                  className="absolute inset-0 rounded-full animate-pulse-glow"
+                  className="absolute inset-0 rounded-full"
                   style={{
-                    background: 'radial-gradient(circle, rgba(242, 112, 56, 0.4) 0%, transparent 70%)',
-                    transform: 'scale(2.5)',
-                    filter: 'blur(20px)',
+                    background: 'radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%)',
+                    transform: 'scale(3)',
                   }}
                 />
                 {/* Logo container */}
-                <div className="relative w-24 h-24 rounded-full bg-dark-primary flex items-center justify-center border-2 border-orange-DEFAULT/50 shadow-orange-glow-lg">
-                  <FlameIcon className="w-12 h-12 text-orange-DEFAULT" />
+                <div
+                  className="relative w-28 h-28 rounded-full bg-white flex items-center justify-center"
+                  style={{
+                    boxShadow: '0 4px 24px rgba(0, 0, 0, 0.08)',
+                    border: '1px solid rgba(0, 0, 0, 0.06)',
+                  }}
+                >
+                  <div
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{
+                      backgroundColor: '#1D1D1F',
+                    }}
+                  >
+                    <span
+                      className="text-2xl font-bold"
+                      style={{ color: '#FFFFFF' }}
+                    >
+                      5
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -208,15 +243,28 @@ export default function Methodology() {
                   >
                     <div className="flex flex-col items-center text-center group cursor-default">
                       {/* Step Number Circle */}
-                      <div className="w-12 h-12 rounded-full bg-orange-DEFAULT flex items-center justify-center text-white font-bold text-lg mb-3 shadow-orange-glow transition-transform group-hover:scale-110">
+                      <div
+                        className="w-14 h-14 rounded-full bg-white flex items-center justify-center font-semibold text-lg mb-3 transition-all duration-300 group-hover:scale-105"
+                        style={{
+                          boxShadow: '0 2px 16px rgba(0, 0, 0, 0.08)',
+                          border: '1px solid rgba(0, 0, 0, 0.06)',
+                          color: '#1D1D1F',
+                        }}
+                      >
                         {step.id}
                       </div>
                       {/* Time Estimate */}
-                      <p className="text-orange-DEFAULT text-xs font-medium uppercase tracking-wider mb-1 whitespace-nowrap">
+                      <p
+                        className="text-xs font-medium uppercase tracking-wider mb-1 whitespace-nowrap"
+                        style={{ color: '#00D4FF' }}
+                      >
                         {step.duration}
                       </p>
                       {/* Step Title */}
-                      <h3 className="text-white font-semibold text-base whitespace-nowrap max-w-[140px] leading-tight">
+                      <h3
+                        className="font-semibold text-base whitespace-nowrap max-w-[140px] leading-tight"
+                        style={{ color: '#1D1D1F' }}
+                      >
                         {step.title}
                       </h3>
                     </div>
