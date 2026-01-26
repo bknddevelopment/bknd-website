@@ -1,0 +1,2 @@
+:HL["/bknd-website/_next/static/chunks/bbe9cec2127cc568.css","style"]
+0:{"buildId":"Nj5sbPVz9EPES4awVVcFL","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
