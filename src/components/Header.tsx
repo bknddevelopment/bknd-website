@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Services', href: '#services', hasDropdown: true },
   { label: 'Industries', href: '#industries', hasDropdown: true },
   { label: 'About Us', href: '/about', hasDropdown: false },
+  { label: 'Blog', href: '/blog', hasDropdown: false },
   { label: 'Contact', href: '/contact', hasDropdown: false },
 ];
 

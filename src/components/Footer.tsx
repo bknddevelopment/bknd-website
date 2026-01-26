@@ -12,8 +12,7 @@ const footerLinks = {
   ],
   Company: [
     { label: 'About Us', href: '/about' },
-    // { label: 'Case Studies', href: '/case-studies' },
-    // { label: 'Blog', href: '/blog' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '#contact' },
   ],
   Contact: [
