@@ -131,9 +131,9 @@ export default function ExitIntentModal() {
                     <Image
                       src="/bknd-website/images/bknd-logo-new.png"
                       alt="BKND Logo"
-                      width={140}
-                      height={42}
-                      className="h-10 w-auto"
+                      width={210}
+                      height={63}
+                      className="h-16 w-auto"
                     />
                   </div>
 

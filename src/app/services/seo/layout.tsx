@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://charwinvanryckdegroot.github.io/bknd-website/services/seo',
     images: [
       {
-        url: '/images/bknd-logo.png',
+        url: '/images/bknd-logo-new.png',
         width: 1536,
         height: 1024,
         alt: 'BKND Development SEO Services',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Technical SEO Services | BKND Development',
     description: 'SEO built by developers, for results. Technical optimization, schema markup, and data-driven strategies.',
-    images: ['/images/bknd-logo.png'],
+    images: ['/images/bknd-logo-new.png'],
   },
 };
 

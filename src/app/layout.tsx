@@ -15,8 +15,14 @@ export const metadata: Metadata = {
   keywords: ['digital marketing agency', 'developer marketing', 'growth marketing', 'paid advertising', 'SEO', 'performance marketing', 'Elizabeth NJ', 'New Jersey marketing agency'],
   authors: [{ name: 'BKND Development' }],
   icons: {
-    icon: '/bknd-website/images/bknd-logo.png',
-    apple: '/bknd-website/images/bknd-logo.png',
+    icon: [
+      { url: '/bknd-website/favicon.ico', sizes: 'any' },
+      { url: '/bknd-website/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/bknd-website/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/bknd-website/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   metadataBase: new URL('https://bknddevelopment.com'),
   alternates: {
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://bknddevelopment.com/',
     images: [
       {
-        url: '/images/bknd-logo.png',
+        url: '/bknd-website/images/bknd-logo-new.png',
         width: 1536,
         height: 1024,
         alt: 'BKND Development Logo',
@@ -42,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BKND Development | Marketing Built Like Software',
     description: 'Developer-built campaigns. Data-driven decisions. Revenue you can measure.',
-    images: ['/images/bknd-logo.png'],
+    images: ['/bknd-website/images/bknd-logo-new.png'],
   },
   robots: {
     index: true,
@@ -69,7 +75,7 @@ const jsonLd = {
       url: 'https://bknddevelopment.com/',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://bknddevelopment.com/images/bknd-logo.png',
+        url: 'https://bknddevelopment.com/images/bknd-logo-new.png',
         width: 1536,
         height: 1024,
       },
@@ -97,8 +103,8 @@ const jsonLd = {
       name: 'BKND Development',
       description: 'Developer-built marketing campaigns with data-driven decisions and measurable revenue results.',
       url: 'https://bknddevelopment.com/',
-      logo: 'https://bknddevelopment.com/images/bknd-logo.png',
-      image: 'https://bknddevelopment.com/images/bknd-logo.png',
+      logo: 'https://bknddevelopment.com/images/bknd-logo-new.png',
+      image: 'https://bknddevelopment.com/images/bknd-logo-new.png',
       email: 'info@bknddevelopment.com',
       telephone: '+19735185600',
       address: {

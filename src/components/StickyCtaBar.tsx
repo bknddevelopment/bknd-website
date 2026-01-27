@@ -44,9 +44,9 @@ export function StickyCtaBar() {
                 <Image
                   src="/bknd-website/images/bknd-logo-new.png"
                   alt="BKND Development"
-                  width={80}
-                  height={26}
-                  className="h-6 w-auto"
+                  width={120}
+                  height={39}
+                  className="h-10 w-auto"
                 />
               </div>
 

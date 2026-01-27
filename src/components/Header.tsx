@@ -36,15 +36,15 @@ export default function Header() {
   return (
     <header className="w-full bg-white/80 backdrop-blur-xl border-b border-black/5 sticky top-0 z-50">
       <div className="container-sg">
-        <div className="flex items-center justify-between h-[68px]">
+        <div className="flex items-center justify-between h-[100px]">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/bknd-website/images/bknd-logo-new.png"
               alt="BKND Development"
-              width={192}
-              height={128}
-              className="h-16 w-auto"
+              width={288}
+              height={192}
+              className="h-24 w-auto"
               priority
             />
           </Link>
