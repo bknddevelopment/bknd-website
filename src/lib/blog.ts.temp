@@ -37,9 +37,6 @@ The first: buying expensive software and using 10% of it. A company pays $500/mo
 
 The second: cobbling together free tools that do not talk to each other. Gmail plus Google Calendar plus some random SMS app. Nothing syncs. Data lives in five places. Leads fall through gaps between systems.
 
-:::warning
-The most expensive automation setup is the one you do not use. I have audited companies paying $6,000/year for platforms where they only configured the welcome email.
-:::
 The fix is not more software. It is a coherent system designed around your actual workflow, built to handle the specific sequences that generate revenue for service businesses.
 
 ## The $200/Month Automation Stack
@@ -56,9 +53,6 @@ The advantage: everything talks to everything else natively. No integration head
 
 The disadvantage: the interface is not pretty. There is a learning curve. Some features feel half-baked compared to dedicated tools.
 
-:::tip
-Start with Go High Level's $97/month plan. It includes everything most contractors need. Only upgrade when you hit specific feature limits, not because a salesperson said you should.
-:::
 Best for: companies that want one platform to rule everything and are willing to invest time learning it.
 
 ### Option 2: Industry-Specific CRM + Integrations
@@ -1829,6 +1823,7 @@ higher response rate when you text a direct Google review link vs. sending an em
 
 :::warning
 Never offer incentives for reviews. It's against Google's terms, it looks sketchy, and one customer calling you out for it destroys your credibility. The ask alone is enough if you've done good work.
+:::**Never offer incentives for reviews.** It's against Google's terms, it looks sketchy, and one customer calling you out for it destroys your credibility. The ask alone is enough if you've done good work.
 
 ## 6. A Website That Actually Converts
 
@@ -1928,9 +1923,7 @@ Word of mouth is still the best marketing. The question is whether you're active
 
 :::stat $300
 referral bonus is the sweet spot for roofing. Big enough to remember and mention to friends. Small enough that it doesn't eat your margin on a $10k+ job.
-
-$200-500 referral bonus for customers who refer someone that closes. Cash or gift card, their choice. Make it meaningful enough to remember.
-
+:::$200-500 referral bonus for customers who refer someone that closes. Cash or gift card, their choice. Make it meaningful enough to remember.
 
 Inform customers during the job. Not after. "If you know anyone else who needs roofing work, we offer a $300 referral bonus." Plant the seed while you're top of mind.
 
@@ -2553,9 +2546,7 @@ Most HVAC companies have the same problem: too much work in July and January, tu
 :::stat 400%
 spike in "AC repair" searches between May and August vs winter months. That's not a gentle curve. That's a cliff. Your marketing has to match this reality.
 :::
-I've worked with HVAC contractors who turned away jobs in peak season because they couldn't handle the volume, then laid off technicians three months later.
-
-:::pullquote
+I've worked with HVAC contractors who turned away jobs in peak season because they couldn't handle the volume, then laid off technicians three months later. :::pullquote
 "Turning away jobs in July then laying off technicians in October isn't a business model. It's a rollercoaster. Marketing can flatten the curve."
 :::
 
@@ -2574,6 +2565,7 @@ HVAC has three characteristics that break normal marketing rules.
 
 :::key
 A $150 tune-up and a $12,000 system replacement require completely different marketing approaches. Treating them the same means overpaying for one or underinvesting in the other.
+:::**Maintenance vs. replacement economics.** A $150 tune-up has a completely different customer acquisition cost tolerance than a $12,000 system replacement. Marketing both the same way means you're either overpaying for tune-up leads or underinvesting in replacement opportunities.
 
 Understanding these dynamics shapes everything that follows. Generic [home services marketing](/blog/home-services-marketing-guide) advice needs serious modification for HVAC.
 
@@ -2609,6 +2601,7 @@ This is survival mode with opportunity. You can't manufacture more leads. You ca
 
 :::warning
 When it's 102 degrees and the AC just died, nobody's waiting for your slow site. If your website takes more than 2 seconds to load on mobile, you're losing emergency calls to competitors.
+:::**The technical setup that matters:** Your website needs to load in under 2 seconds on mobile. When it's 102 degrees and the AC just died, nobody's waiting for your slow site. They're hitting back and calling the next result.
 
 Implement call tracking with whisper messages so your team knows immediately: "This call is from Google Ads - emergency AC repair." That context helps them answer appropriately.
 
@@ -2729,6 +2722,7 @@ The math: LSAs charge per lead, not per click. For HVAC, that's typically $25-75
 
 :::tip
 Respond to every LSA lead within 5 minutes. Google tracks response time and rewards fast responders with more leads. Slow response = fewer leads.
+:::Respond to every lead within 5 minutes. Google tracks response time and rewards fast responders with more leads.
 
 Complete every field in your LSA profile. License numbers, insurance verification, service areas. Google shows more complete profiles more often.
 
@@ -2929,10 +2923,6 @@ If you want help building this system instead of figuring it out yourself, that'
     content: `
 I've watched contractors spend $50,000 on trucks with phone numbers plastered on the side while their Google Business Profile sits empty. The truck reaches maybe 200 people a day. Google reaches everyone in their service area actively searching for what they sell.
 
-:::stat 46%
-of all Google searches have local intent. For "roofer near me" or "hvac repair [city]" searches, showing up in the map pack is everything.
-:::
-
 Local SEO for contractors isn't the same as local SEO for restaurants or retail stores. You don't have a storefront customers walk into. You serve a geographic area, not a point on a map. Your trust signals matter more because you're asking people to let strangers into their homes.
 
 This guide covers what actually works for service area businesses in 2026. Not theory. Not "best practices" copied from articles about coffee shops. Tested strategies from contractors who went from invisible to booked solid.
@@ -2959,9 +2949,7 @@ You're not competing with every contractor in the country. You're competing with
 
 ## Google Business Profile Optimization for Contractors
 
-:::key
 Your Google Business Profile (GBP) is probably worth more than your website for local leads. When someone searches "roofer near me," the map pack shows up first. Your website might not even appear above the fold.
-:::
 
 Most contractors set up their profile once and forget it. That's leaving money on the table.
 
@@ -3015,9 +3003,7 @@ Post weekly. Content doesn't need to be revolutionary. A completed project, a se
 
 Here's something most agencies don't tell you: you can ask and answer your own questions on your GBP.
 
-:::tip
-Add questions your customers actually ask, then answer them thoroughly. This puts keywords in your profile that help you rank for those specific searches.
-:::
+Add questions your customers actually ask, then answer them thoroughly:
 
 Q: "Do you offer emergency roof repair services?"
 A: "Yes, we provide 24/7 emergency roof repair services throughout [City] and surrounding areas. Call us any time for storm damage, major leaks, or other roofing emergencies."
@@ -3067,9 +3053,7 @@ Response framework:
 3. Take the conversation offline: "Please contact us at [phone] so we can make this right."
 4. Keep it short and professional
 
-:::warning
 Never argue. Never get defensive. Never reveal private details about the job. The response is for the audience watching, not the angry reviewer.
-:::
 
 ## Citations That Actually Move the Needle
 
@@ -3100,9 +3084,7 @@ Chamber of Commerce, local business associations, city directories
 
 **NAP Consistency Is Non-Negotiable**
 
-:::stat 100%
-consistency required. NAP = Name, Address, Phone Number. These must be identical everywhere. Not similar. Identical.
-:::
+NAP = Name, Address, Phone Number. These must be identical everywhere. Not similar. Identical.
 
 "123 Main Street Suite 100" and "123 Main St. Ste. 100" are different to Google. Pick one format and use it everywhere.
 
@@ -3183,9 +3165,7 @@ Here's what the JSON-LD should look like:
 
 Use the most specific @type for your business. Google has types for RoofingContractor, Plumber, HVACBusiness, Electrician, and more. Check schema.org for the full list.
 
-:::tip
 Test your schema with Google's Rich Results Test. Fix any errors. Invalid schema can hurt more than help.
-:::
 
 For more help with technical implementation, [our SEO services](/services/seo) include full schema setup and validation.
 
@@ -3291,9 +3271,7 @@ GBP isn't "set it and forget it." Regular updates, fresh photos, new reviews, an
 
 Local SEO for contractors comes down to a few fundamentals: a fully optimized Google Business Profile, consistent NAP across quality citations, a review generation system, and a website that supports it all.
 
-:::pullquote
-"The contractors who dominate the map pack in their area do these basics consistently. They don't chase shortcuts. They build the machine and keep it running."
-:::
+The contractors who dominate the map pack in their area do these basics consistently. They don't chase shortcuts. They build the machine and keep it running.
 
 If you want help implementing this—building the technical foundation, setting up tracking, or developing a local content strategy—[reach out to talk](/contact). We specialize in exactly this.
     `.trim(),
@@ -3657,10 +3635,6 @@ Everything you've read about marketing is probably wrong for your business.
 
 I've spent years watching contractors burn through marketing budgets following advice meant for software companies. A roofing company isn't a SaaS startup. An HVAC contractor isn't selling shoes online. The playbook is different.
 
-:::stat 95%
-of contractor marketing setups I've audited can't tell which marketing actually generates jobs. They're spending $3,000-$10,000/month blind.
-:::
-
 This guide is what I wish existed when I started working with home service businesses. No fluff. No "build your brand" nonsense. Just what actually generates jobs.
 
 ## Why Generic Marketing Advice Fails Home Services
@@ -3681,11 +3655,7 @@ The advice that follows accounts for all of this.
 
 ## The Foundation: Tracking That Actually Works
 
-:::warning
-If you skip this section and jump straight to "how do I get more leads," you'll waste money. I'm putting this first because nothing else matters without it.
-:::
-
-I've audited hundreds of contractor marketing setups. Maybe 5% had tracking that could actually tell them which marketing generated which jobs.
+I'm putting this first because nothing else matters without it. I've audited hundreds of contractor marketing setups. Maybe 5% had tracking that could actually tell them which marketing generated which jobs.
 
 Most have Google Analytics installed. Almost none have it configured to measure what matters.
 
@@ -3757,11 +3727,7 @@ Never offer incentives for reviews. It's against Google's terms, it's transparen
 
 Instead: make leaving a review stupidly easy.
 
-Send a text with a direct link to your Google review page immediately after job completion, while they're still feeling good about the work. Not an email buried in their inbox. A text.
-
-:::stat 10x
-higher response rate on review texts vs. email. Make it one tap to leave a review.
-:::
+Send a text with a direct link to your Google review page immediately after job completion, while they're still feeling good about the work. Not an email buried in their inbox. A text. The tap-to-review rate on texts is 10x higher than email.
 
 The script that works: "Hi [Name], thanks for choosing us. If you have 30 seconds, a Google review helps other homeowners find us: [link]" That's it. No begging. No "it would really mean a lot." Just the ask and the link.
 
@@ -3824,10 +3790,6 @@ If you're spending $10,000+/month:
 Now you can test properly. 50% to proven channels, 25% to expansion, 25% to experiments. At this budget, you should be running incrementality tests to verify each channel's true contribution.
 
 **The Metrics That Matter**
-
-:::key
-Stop measuring vanity metrics. Start measuring money.
-:::
 
 Stop looking at:
 - Cost per click
@@ -6610,10 +6572,8 @@ Dedicated landing pages for each ad group. Someone searching "water heater repla
 
 Call tracking so you know which keywords produce actual phone calls, not just clicks.
 
-
-:::key
 For contractors, we typically see cost per lead between $50-200 depending on service type and market competition. High-ticket services like roofing or HVAC replacement justify higher costs. Commodity services need tighter management.
-:::
+
 We cover paid advertising strategy in depth in our [advertising services guide](/services/paid-advertising).
 
 ### 4. Local Service Ads (Google Guaranteed)

@@ -66,10 +66,72 @@ export default async function BlogPostPage({ params }: PageProps) {
     return processInlineBold(processInlineLinks(text));
   };
 
+  // Helper function to process callout blocks
+  const processCallouts = (content: string): string => {
+    // Process :::stat blocks
+    content = content.replace(
+      /:::stat\s+([^\n]+)\n([\s\S]*?):::/g,
+      `<div class="my-8 p-6 bg-gradient-to-r from-[#00D4FF]/10 to-[#00D4FF]/5 border-l-4 border-[#00D4FF] rounded-r-lg">
+        <div class="text-4xl lg:text-5xl font-bold text-[#00D4FF] mb-2">$1</div>
+        <p class="text-[#1D1D1F] text-sm lg:text-base m-0">$2</p>
+      </div>`
+    );
+
+    // Process :::tip blocks
+    content = content.replace(
+      /:::tip\n([\s\S]*?):::/g,
+      `<div class="my-8 p-6 bg-emerald-50 border-l-4 border-emerald-500 rounded-r-lg">
+        <div class="flex items-start gap-3">
+          <span class="text-emerald-500 text-xl">💡</span>
+          <p class="text-[#1D1D1F] m-0">$1</p>
+        </div>
+      </div>`
+    );
+
+    // Process :::warning blocks
+    content = content.replace(
+      /:::warning\n([\s\S]*?):::/g,
+      `<div class="my-8 p-6 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
+        <div class="flex items-start gap-3">
+          <span class="text-amber-500 text-xl">⚠️</span>
+          <p class="text-[#1D1D1F] m-0">$1</p>
+        </div>
+      </div>`
+    );
+
+    // Process :::key blocks
+    content = content.replace(
+      /:::key\n([\s\S]*?):::/g,
+      `<div class="my-8 p-6 bg-[#1D1D1F] rounded-lg">
+        <div class="flex items-start gap-3">
+          <span class="text-[#00D4FF] text-xl">🔑</span>
+          <p class="text-white m-0">$1</p>
+        </div>
+      </div>`
+    );
+
+    // Process :::pullquote blocks
+    content = content.replace(
+      /:::pullquote\n([\s\S]*?):::/g,
+      `<blockquote class="my-8 pl-6 border-l-4 border-[#00D4FF] italic">
+        <p class="text-xl lg:text-2xl text-[#1D1D1F] leading-relaxed m-0">$1</p>
+      </blockquote>`
+    );
+
+    return content;
+  };
+
+  // Pre-process callouts before splitting into paragraphs
+  const processedContent = processCallouts(post.content);
+
   // Convert markdown-style content to HTML
-  const contentHtml = post.content
+  const contentHtml = processedContent
     .split('\n\n')
     .map((paragraph) => {
+      // Skip if it's already processed HTML from callouts
+      if (paragraph.trim().startsWith('<div') || paragraph.trim().startsWith('<blockquote')) {
+        return paragraph;
+      }
       // H2 headings
       if (paragraph.startsWith('## ')) {
         return `<h2 class="text-2xl lg:text-3xl font-semibold text-[#1D1D1F] mt-12 mb-6">${paragraph.slice(3)}</h2>`;
