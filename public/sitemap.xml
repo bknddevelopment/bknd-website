@@ -70,4 +70,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- AI Marketing Automation Service -->
+  <url>
+    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/automation/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
