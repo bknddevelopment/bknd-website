@@ -3,7 +3,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, Search, Code, BarChart3, Zap, Globe, FileText, Shield, ChevronDown } from 'lucide-react';
+import { ArrowRight, Search, Code, BarChart3, Zap, Globe, FileText, Shield, ChevronDown, Sparkles, Bot, Eye, Layers, Brain } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -32,6 +32,35 @@ const services = [
     icon: BarChart3,
     title: 'Link Building',
     description: 'White-hat outreach, digital PR, and authority building through genuine relationships and valuable content.',
+  },
+];
+
+const aiServices = [
+  {
+    icon: Sparkles,
+    title: 'Generative Engine Optimization (GEO)',
+    description: 'Optimize your content for AI search platforms like ChatGPT, Gemini, and Perplexity. Get cited in AI-generated responses.',
+    link: '/services/ai/geo',
+  },
+  {
+    icon: Bot,
+    title: 'AI Content Optimization at Scale',
+    description: 'Leverage AI to analyze, optimize, and enhance content across thousands of pages while maintaining brand voice and quality.',
+  },
+  {
+    icon: Eye,
+    title: 'LLM Visibility Tracking',
+    description: 'Monitor how often AI platforms cite your brand. Track your visibility in ChatGPT, Claude, Gemini, and other LLM responses.',
+  },
+  {
+    icon: Layers,
+    title: 'Programmatic SEO',
+    description: 'Generate thousands of optimized pages automatically using data-driven templates and AI-powered content generation.',
+  },
+  {
+    icon: Brain,
+    title: 'AI-Powered Keyword Research',
+    description: 'Use machine learning to discover keyword clusters, predict search trends, and identify high-opportunity topics before competitors.',
   },
 ];
 
@@ -213,6 +242,74 @@ export default function SEOServicesPage() {
                 </AnimateOnScroll>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* AI-Enhanced SEO Section */}
+        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <p className="text-[#00D4FF] text-sm font-medium tracking-wide uppercase text-center mb-4">
+                The Future of Search
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                AI-Enhanced SEO
+              </h2>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-6 max-w-2xl mx-auto">
+                AI doesn&apos;t replace traditional SEO—it amplifies it. We combine proven optimization strategies with cutting-edge AI capabilities to future-proof your search presence.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.2}>
+              <p className="text-[#6E6E73] text-base text-center mb-12 max-w-3xl mx-auto">
+                With ChatGPT, Gemini, and Perplexity becoming primary search interfaces for millions, optimizing for AI-generated responses is no longer optional. Our AI-enhanced approach ensures you&apos;re visible wherever your customers search.
+              </p>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {aiServices.map((service, i) => (
+                <AnimateOnScroll key={i} delay={0.25 + i * 0.1}>
+                  <div className="bg-white rounded-2xl p-8 h-full border border-gray-200/80 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)] group">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00D4FF]/20 to-[#00D4FF]/5 flex items-center justify-center mb-6 group-hover:from-[#00D4FF]/30 group-hover:to-[#00D4FF]/10 transition-all duration-300">
+                      <service.icon className="w-6 h-6 text-[#00D4FF]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#1D1D1F] mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-[#86868B] leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    {service.link && (
+                      <Link
+                        href={service.link}
+                        className="inline-flex items-center gap-2 text-[#00D4FF] font-medium text-sm hover:gap-3 transition-all duration-300"
+                      >
+                        Learn more about GEO
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    )}
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            <AnimateOnScroll delay={0.6}>
+              <div className="mt-12 text-center">
+                <Link
+                  href="/services/ai/geo"
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full hover:bg-[#000000] transition-all duration-300"
+                >
+                  Explore Generative Engine Optimization
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
 
