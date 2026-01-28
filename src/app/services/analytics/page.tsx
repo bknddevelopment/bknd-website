@@ -12,7 +12,12 @@ import {
   Eye,
   Zap,
   CheckCircle2,
-  ChevronDown
+  ChevronDown,
+  Brain,
+  TrendingUp,
+  Sparkles,
+  AlertTriangle,
+  Route
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -64,6 +69,34 @@ const approach = [
     step: '05',
     title: 'Recommend',
     description: 'Data-backed recommendations to optimize your marketing spend and improve conversion rates.',
+  },
+];
+
+const aiCapabilities = [
+  {
+    icon: Brain,
+    title: 'AI-Powered Attribution Modeling',
+    description: 'Machine learning algorithms that analyze thousands of touchpoints to accurately credit each channel. No more guessing which campaigns actually drive conversions.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Predictive Analytics & Forecasting',
+    description: 'AI models that predict future performance based on historical patterns. Know what\'s coming before it happens and adjust strategy proactively.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Automated Insight Generation',
+    description: 'Stop digging through dashboards. Our AI surfaces the insights that matter—automatically flagging opportunities and issues you\'d otherwise miss.',
+  },
+  {
+    icon: AlertTriangle,
+    title: 'Real-Time Anomaly Detection',
+    description: 'Instant alerts when metrics deviate from expected patterns. Catch tracking issues, traffic anomalies, or conversion drops the moment they happen.',
+  },
+  {
+    icon: Route,
+    title: 'Customer Journey Analysis',
+    description: 'ML-powered path analysis that reveals how customers actually move through your funnel. Identify drop-off points and optimization opportunities automatically.',
   },
 ];
 
@@ -213,6 +246,88 @@ export default function AnalyticsServicePage() {
                 </AnimateOnScroll>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* AI Attribution & Insights Section */}
+        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <p className="text-[#6E6E73] text-sm font-medium tracking-wide uppercase text-center mb-4">
+                AI Attribution & Insights
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                Turn data into action—automatically
+              </h2>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
+                While others manually analyze spreadsheets, our AI surfaces insights in seconds. Get the competitive edge of enterprise-level analytics intelligence.
+              </p>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {aiCapabilities.map((capability, i) => (
+                <AnimateOnScroll key={i} delay={0.2 + i * 0.08}>
+                  <div className="bg-white rounded-2xl p-8 h-full border border-gray-200/80 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00D4FF]/20 to-[#00D4FF]/5 flex items-center justify-center mb-6">
+                      <capability.icon className="w-6 h-6 text-[#00D4FF]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#1D1D1F] mb-3">
+                      {capability.title}
+                    </h3>
+                    <p className="text-[#86868B] leading-relaxed">
+                      {capability.description}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            <AnimateOnScroll delay={0.6}>
+              <div className="mt-12 bg-white rounded-2xl p-8 lg:p-10 border border-gray-200/80">
+                <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-[#00D4FF]/10 flex items-center justify-center">
+                        <Brain className="w-5 h-5 text-[#00D4FF]" />
+                      </div>
+                      <span className="text-[#00D4FF] text-sm font-semibold uppercase tracking-wide">
+                        The AI Advantage
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-semibold text-[#1D1D1F] mb-3">
+                      From weeks of analysis to instant insights
+                    </h3>
+                    <p className="text-[#86868B] leading-relaxed">
+                      Traditional analytics requires analysts to manually query data, build reports, and interpret results. Our AI does this continuously—processing millions of data points to surface what matters most. You get actionable recommendations, not just dashboards.
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 grid grid-cols-2 gap-4 lg:gap-6">
+                    <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">10x</p>
+                      <p className="text-[#86868B] text-sm">Faster insights</p>
+                    </div>
+                    <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">24/7</p>
+                      <p className="text-[#86868B] text-sm">Monitoring</p>
+                    </div>
+                    <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">95%</p>
+                      <p className="text-[#86868B] text-sm">Attribution accuracy</p>
+                    </div>
+                    <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">0</p>
+                      <p className="text-[#86868B] text-sm">Manual reports</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
 
