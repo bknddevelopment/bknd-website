@@ -38,4 +38,12 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- AI Services Hub -->
+  <url>
+    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
