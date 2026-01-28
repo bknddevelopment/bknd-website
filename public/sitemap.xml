@@ -46,4 +46,28 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- GEO (Generative Engine Optimization) Service -->
+  <url>
+    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Chatbots &amp; Assistants -->
+  <url>
+    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/chatbots/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Custom AI Solutions -->
+  <url>
+    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/custom/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
