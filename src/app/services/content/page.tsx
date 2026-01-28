@@ -3,7 +3,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, FileText, BookOpen, Mail, Share2, PenTool, Search, BarChart3, Target, Users, CheckCircle } from 'lucide-react';
+import { ArrowRight, FileText, BookOpen, Mail, Share2, PenTool, Search, BarChart3, Target, Users, CheckCircle, Sparkles, Zap, Brain, Users2, Bot } from 'lucide-react';
 import Link from 'next/link';
 
 // What We Do services
@@ -80,6 +80,35 @@ const benefits = [
     icon: Users,
     title: 'Brand-Aligned',
     description: 'Your voice, amplified. We learn your tone, values, and positioning to create content that feels authentically you.',
+  },
+];
+
+// AI-Powered Content features
+const aiFeatures = [
+  {
+    icon: Sparkles,
+    title: 'AI Content at Scale',
+    description: 'Generate high-quality drafts 10x faster. Our AI tools handle research, outlines, and initial drafts while human editors ensure every piece meets your brand standards.',
+  },
+  {
+    icon: Brain,
+    title: 'AI-Assisted Research',
+    description: 'Comprehensive briefs in minutes, not hours. AI analyzes competitors, extracts insights, and surfaces opportunities humans might miss.',
+  },
+  {
+    icon: Zap,
+    title: 'Automated SEO Optimization',
+    description: 'Real-time optimization suggestions as content is created. AI handles keyword density, readability scoring, and technical SEO so writers can focus on storytelling.',
+  },
+  {
+    icon: Users2,
+    title: 'Human + AI Collaboration',
+    description: 'AI amplifies human creativity, never replaces it. Writers guide strategy and voice while AI handles repetitive tasks and data analysis.',
+  },
+  {
+    icon: Bot,
+    title: 'LLM-Ready Content',
+    description: 'Content structured for how AI systems read and cite information. Clear hierarchies, factual density, and citation-friendly formatting for the AI-search era.',
   },
 ];
 
@@ -285,8 +314,92 @@ function ContentMarketingPageContent() {
           </div>
         </section>
 
-        {/* Case Study Teaser Section */}
+        {/* AI-Powered Content Section */}
         <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <p className="text-[#6E6E73] text-sm font-medium tracking-wide uppercase text-center mb-4">
+                AI-Powered Content
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                Human creativity, amplified by AI
+              </h2>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
+                Produce more content, faster, without sacrificing quality. Our AI-enhanced workflow lets your team focus on strategy while automation handles the heavy lifting.
+              </p>
+            </AnimateOnScroll>
+
+            {/* Efficiency Stats Bar */}
+            <AnimateOnScroll delay={0.2}>
+              <div className="bg-[#1D1D1F] rounded-2xl p-6 lg:p-8 mb-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                  <div className="text-center">
+                    <p className="text-3xl lg:text-4xl font-semibold text-[#00D4FF]">10x</p>
+                    <p className="text-gray-400 text-sm mt-1">Faster Drafts</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl lg:text-4xl font-semibold text-[#00D4FF]">3x</p>
+                    <p className="text-gray-400 text-sm mt-1">More Content</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl lg:text-4xl font-semibold text-[#00D4FF]">100%</p>
+                    <p className="text-gray-400 text-sm mt-1">Human Edited</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl lg:text-4xl font-semibold text-[#00D4FF]">0</p>
+                    <p className="text-gray-400 text-sm mt-1">Quality Compromise</p>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {aiFeatures.map((feature, i) => (
+                <AnimateOnScroll key={i} delay={0.25 + i * 0.05}>
+                  <div className="bg-white rounded-2xl p-8 h-full border border-gray-200/80 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00D4FF]/20 to-[#00D4FF]/5 flex items-center justify-center mb-6">
+                      <feature.icon className="w-6 h-6 text-[#00D4FF]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#1D1D1F] mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[#86868B] leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            {/* Human-AI Philosophy Note */}
+            <AnimateOnScroll delay={0.5}>
+              <div className="mt-12 bg-white rounded-2xl p-6 lg:p-8 border border-[#00D4FF]/20">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6">
+                  <div className="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0">
+                    <Users2 className="w-6 h-6 text-[#00D4FF]" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-[#1D1D1F] mb-2">
+                      AI assists. Humans create.
+                    </h4>
+                    <p className="text-[#86868B] leading-relaxed">
+                      Every piece of content is crafted by experienced writers who use AI as a research assistant and first-draft tool&mdash;never as a replacement for human judgment, creativity, and brand understanding. Your voice stays authentic because real people ensure it does.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* Case Study Teaser Section */}
+        <section className="py-16 lg:py-24 bg-white">
           <div className="container-sg">
             <AnimateOnScroll>
               <div className="relative bg-[#1D1D1F] rounded-3xl p-8 lg:p-12 overflow-hidden">
