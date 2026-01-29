@@ -1,14 +1,12 @@
 import type { NextConfig } from "next";
 
+const isGitHubPages = process.env.DEPLOY_TARGET === 'github-pages';
+
 const nextConfig: NextConfig = {
   output: 'export',
   images: { unoptimized: true },
-  // For GitHub Pages deployment, use basePath and assetPrefix:
-  basePath: '/bknd-website',
-  assetPrefix: '/bknd-website/',
-  // For production deployment to bknddevelopment.com, remove or comment out basePath and assetPrefix:
-  // basePath: '',
-  // assetPrefix: '',
+  basePath: isGitHubPages ? '/bknd-website' : '',
+  assetPrefix: isGitHubPages ? '/bknd-website/' : '',
   trailingSlash: true,
 };
 
