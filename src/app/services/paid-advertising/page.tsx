@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, Target, TrendingUp, Eye, Zap, ChevronDown, BarChart3, Code, DollarSign, LineChart } from 'lucide-react';
+import { ArrowRight, Target, TrendingUp, Eye, Zap, ChevronDown, BarChart3, Code, DollarSign, LineChart, Brain, Gauge, Sparkles, Layers, Activity } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -70,6 +70,34 @@ const approach = [
     step: '05',
     title: 'Scale',
     description: 'Once we find what works, we scale strategically. New channels, expanded audiences, increased budgets—with maintained efficiency.',
+  },
+];
+
+const aiFeatures = [
+  {
+    icon: Brain,
+    title: 'AI-Powered Bid Management',
+    description: 'Machine learning algorithms analyze thousands of signals in real-time to optimize bids at the keyword, audience, and placement level—far beyond what manual management can achieve.',
+  },
+  {
+    icon: Gauge,
+    title: 'Predictive Budget Allocation',
+    description: 'AI forecasts performance across channels and automatically shifts budget to highest-performing campaigns. Your spend flows where the returns are.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Creative Testing Automation',
+    description: 'Automated multivariate testing of ad copy, images, and CTAs. AI identifies winning combinations and phases out underperformers without manual intervention.',
+  },
+  {
+    icon: Layers,
+    title: 'Cross-Channel AI Optimization',
+    description: 'Unified AI optimization across Google, Meta, LinkedIn, and programmatic. One brain coordinating your entire paid media ecosystem for maximum efficiency.',
+  },
+  {
+    icon: Activity,
+    title: 'Real-Time Performance Adjustments',
+    description: 'AI monitors campaigns 24/7 and makes micro-adjustments in milliseconds. Pause underperformers, boost winners, and respond to market changes instantly.',
   },
 ];
 
@@ -239,6 +267,66 @@ export default function PaidAdvertisingPage() {
                 </AnimateOnScroll>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* AI Ad Optimization Section */}
+        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <p className="text-[#6E6E73] text-sm font-medium tracking-wide uppercase text-center mb-4">
+                AI-Powered Performance
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                AI Ad Optimization
+              </h2>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
+                Maximize ROAS through continuous AI optimization. Our machine learning systems work around the clock to squeeze every drop of performance from your ad spend.
+              </p>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {aiFeatures.map((feature, i) => (
+                <AnimateOnScroll key={i} delay={0.2 + i * 0.1}>
+                  <div className="bg-white rounded-2xl p-8 h-full border border-gray-200/80 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
+                    <div className="w-12 h-12 rounded-xl bg-[#00D4FF]/10 flex items-center justify-center mb-6">
+                      <feature.icon className="w-6 h-6 text-[#00D4FF]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#1D1D1F] mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[#86868B] leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            <AnimateOnScroll delay={0.7}>
+              <div className="mt-12 bg-[#1D1D1F] rounded-2xl p-8 lg:p-10">
+                <div className="grid md:grid-cols-3 gap-8 text-center">
+                  <div>
+                    <p className="text-[#00D4FF] text-4xl lg:text-5xl font-semibold mb-2">24/7</p>
+                    <p className="text-gray-400">Continuous Optimization</p>
+                  </div>
+                  <div>
+                    <p className="text-[#00D4FF] text-4xl lg:text-5xl font-semibold mb-2">1000+</p>
+                    <p className="text-gray-400">Signals Analyzed Per Bid</p>
+                  </div>
+                  <div>
+                    <p className="text-[#00D4FF] text-4xl lg:text-5xl font-semibold mb-2">40%</p>
+                    <p className="text-gray-400">Average ROAS Improvement</p>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
 

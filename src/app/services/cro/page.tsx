@@ -3,7 +3,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, BarChart3, FlaskConical, Search, Target, Repeat, LineChart, Users, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, BarChart3, FlaskConical, Search, Target, Repeat, LineChart, Users, CheckCircle2, Brain, Sparkles, Zap, TrendingUp, Activity } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
@@ -54,6 +54,34 @@ const approach = [
     step: '05',
     title: 'Repeat',
     description: 'Continuous optimization. Each test generates insights that inform the next round of improvements.',
+  },
+];
+
+const aiFeatures = [
+  {
+    icon: TrendingUp,
+    title: 'Predictive Analytics for A/B Testing',
+    description: 'AI models predict test outcomes before reaching full statistical significance, helping you make faster decisions and run more tests in less time.',
+  },
+  {
+    icon: Sparkles,
+    title: 'AI-Driven Personalization at Scale',
+    description: 'Deliver personalized experiences to every visitor segment automatically. Machine learning identifies patterns and serves the right content to the right user.',
+  },
+  {
+    icon: Zap,
+    title: 'Automated Test Analysis & Insights',
+    description: 'Stop manually analyzing test results. AI automatically identifies winning variations, explains why they won, and recommends next steps.',
+  },
+  {
+    icon: Brain,
+    title: 'ML-Optimized Conversion Funnels',
+    description: 'Machine learning continuously optimizes your funnel by identifying drop-off patterns and automatically adjusting experiences to maximize conversions.',
+  },
+  {
+    icon: Activity,
+    title: 'Real-Time Behavioral Analysis',
+    description: 'AI monitors user behavior in real-time, detecting friction points and opportunities as they happen—not weeks later in a quarterly review.',
   },
 ];
 
@@ -176,23 +204,89 @@ export default function CROPage() {
           </div>
         </section>
 
-        {/* Our Approach Section */}
+        {/* AI-Powered CRO Section */}
         <section className="py-16 lg:py-24 bg-[#1D1D1F]">
           <div className="container-sg">
             <AnimateOnScroll>
               <p className="text-[#00D4FF] text-sm font-medium tracking-wide uppercase text-center mb-4">
-                Our Approach
+                AI-Powered CRO
               </p>
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.1}>
               <h2 className="text-3xl lg:text-4xl font-semibold text-white text-center mb-4 tracking-tight">
-                The CRO process that works
+                Smarter testing. Faster insights.
               </h2>
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-gray-400 text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
+                Traditional CRO takes weeks. AI accelerates every step—from hypothesis generation to winner identification—so you can run more tests and find winning variations faster.
+              </p>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {aiFeatures.map((feature, i) => (
+                <AnimateOnScroll key={i} delay={0.2 + i * 0.1}>
+                  <div className="bg-[#2D2D2F] rounded-2xl p-8 h-full border border-gray-700/50 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_30px_rgba(0,212,255,0.15)]">
+                    <div className="w-12 h-12 rounded-xl bg-[#00D4FF]/10 flex items-center justify-center mb-6">
+                      <feature.icon className="w-6 h-6 text-[#00D4FF]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            <AnimateOnScroll delay={0.7}>
+              <div className="bg-gradient-to-r from-[#00D4FF]/10 to-[#00D4FF]/5 rounded-2xl p-8 lg:p-10 border border-[#00D4FF]/20">
+                <div className="flex flex-col lg:flex-row items-center gap-8">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold text-white mb-3">
+                      The AI Advantage
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      While traditional testing requires waiting weeks for statistical significance, AI-powered CRO identifies winning patterns in days. Run 3x more tests, get actionable insights faster, and compound your conversion gains throughout the year.
+                    </p>
+                  </div>
+                  <div className="flex gap-8 lg:gap-12">
+                    <div className="text-center">
+                      <p className="text-[#00D4FF] text-3xl lg:text-4xl font-semibold">3x</p>
+                      <p className="text-gray-500 text-sm">Faster Testing</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-[#00D4FF] text-3xl lg:text-4xl font-semibold">10x</p>
+                      <p className="text-gray-500 text-sm">More Insights</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* Our Approach Section */}
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <p className="text-[#6E6E73] text-sm font-medium tracking-wide uppercase text-center mb-4">
+                Our Approach
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                The CRO process that works
+              </h2>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
                 A systematic, repeatable process that delivers consistent improvements.
               </p>
             </AnimateOnScroll>
@@ -207,10 +301,10 @@ export default function CROPage() {
                       </div>
                     </div>
                     <div className="pt-2">
-                      <h3 className="text-xl font-semibold text-white mb-2">
+                      <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-gray-400 leading-relaxed">
+                      <p className="text-[#86868B] leading-relaxed">
                         {item.description}
                       </p>
                     </div>

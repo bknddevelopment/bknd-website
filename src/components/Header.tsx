@@ -4,6 +4,16 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const serviceLinks = [
+  { label: 'AI Solutions', href: '/services/ai' },
+  { label: 'SEO', href: '/services/seo' },
+  { label: 'Content', href: '/services/content' },
+  { label: 'Creative', href: '/services/creative' },
+  { label: 'CRO', href: '/services/cro' },
+  { label: 'Analytics', href: '/services/analytics' },
+  { label: 'Paid Advertising', href: '/services/paid-advertising' },
+];
+
 const navItems = [
   { label: 'Services', href: '#services', hasDropdown: true },
   { label: 'Industries', href: '#industries', hasDropdown: true },
@@ -52,16 +62,33 @@ export default function Header() {
           {/* Desktop Nav - centered items with dropdown chevrons */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="text-[#1D1D1F] text-base font-normal hover:text-[#1D1D1F]/60 transition-colors flex items-center gap-1"
-              >
-                {item.label}
-                {item.hasDropdown && (
-                  <ChevronDownIcon className="w-4 h-4" />
+              <div key={item.label} className="relative group">
+                <Link
+                  href={item.href}
+                  className="text-[#1D1D1F] text-base font-normal hover:text-[#1D1D1F]/60 transition-colors flex items-center gap-1"
+                >
+                  {item.label}
+                  {item.hasDropdown && (
+                    <ChevronDownIcon className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                  )}
+                </Link>
+                {/* Services Dropdown */}
+                {item.label === 'Services' && (
+                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-white rounded-xl shadow-lg border border-black/5 py-2 min-w-[200px]">
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.label}
+                          href={service.href}
+                          className="block px-4 py-2.5 text-sm text-[#1D1D1F] hover:bg-[#F5F5F7] hover:text-[#00D4FF] transition-colors"
+                        >
+                          {service.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 )}
-              </Link>
+              </div>
             ))}
           </nav>
 
@@ -95,17 +122,33 @@ export default function Header() {
           <div className="lg:hidden py-4 border-t border-black/5">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                  {item.hasDropdown && (
-                    <ChevronDownIcon className="w-4 h-4" />
+                <div key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
+                    onClick={() => item.label !== 'Services' && setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                    {item.hasDropdown && (
+                      <ChevronDownIcon className="w-4 h-4" />
+                    )}
+                  </Link>
+                  {/* Mobile Services Sub-menu */}
+                  {item.label === 'Services' && (
+                    <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.label}
+                          href={service.href}
+                          className="block text-sm text-[#86868B] hover:text-[#00D4FF] transition-colors py-1"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.label}
+                        </Link>
+                      ))}
+                    </div>
                   )}
-                </Link>
+                </div>
               ))}
               <Link
                 href="#contact"

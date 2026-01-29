@@ -95,7 +95,7 @@ export default function Hero() {
               className={`text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-white mb-6 leading-[1.1] tracking-[-0.02em] transition-all duration-500 delay-100 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ fontFamily: 'SF Pro Display, -apple-system, BlinkMacSystemFont, Inter, sans-serif' }}
             >
-              We are the marketing partner that companies never outgrow.
+              We are the marketing + AI partner that companies never outgrow.
             </h1>
 
             {/* Stats Line */}
@@ -112,7 +112,7 @@ export default function Hero() {
               className={`text-white/70 text-[17px] leading-[1.65] mb-10 max-w-lg transition-all duration-500 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ fontFamily: 'SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif' }}
             >
-              Developer-built campaigns. Data-driven decisions. Revenue you can measure. We deliver marketing that actually works.
+              Developer-built campaigns. AI-powered optimization. Revenue you can measure. We deliver marketing that actually works.
             </p>
 
             {/* Email Form - Side by Side */}
@@ -162,7 +162,7 @@ export default function Hero() {
             <div
               className={`flex flex-wrap gap-8 text-sm transition-all duration-500 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              {['ROI-focused', 'Expert-led', 'AI-forward'].map((badge, i) => (
+              {['ROI-focused', 'AI-powered', 'Developer-built'].map((badge, i) => (
                 <span key={i} className="flex items-center gap-2 text-white">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="9" cy="9" r="9" fill="#00D4FF" fillOpacity="0.1"/>

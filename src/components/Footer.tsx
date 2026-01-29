@@ -6,12 +6,13 @@ import { AnimateOnScroll } from './AnimateOnScroll';
 
 const footerLinks = {
   Services: [
-    { label: 'Paid Advertising', href: '/services/paid-advertising' },
+    { label: 'AI Solutions', href: '/services/ai' },
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'Content Marketing', href: '/services/content' },
     { label: 'Performance Creative', href: '/services/creative' },
     { label: 'CRO', href: '/services/cro' },
     { label: 'Data & Analytics', href: '/services/analytics' },
+    { label: 'Paid Advertising', href: '/services/paid-advertising' },
   ],
   Company: [
     { label: 'About Us', href: '/about' },
