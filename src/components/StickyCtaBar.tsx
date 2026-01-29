@@ -42,7 +42,7 @@ export function StickyCtaBar() {
               {/* Logo/Brand */}
               <div className="flex items-center">
                 <Image
-                  src="/bknd-website/images/bknd-logo-new.png"
+                  src="/images/bknd-logo-new.png"
                   alt="BKND Development"
                   width={120}
                   height={39}

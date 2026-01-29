@@ -129,7 +129,7 @@ export default function ExitIntentModal() {
                   {/* Logo */}
                   <div className="flex justify-center mb-8">
                     <Image
-                      src="/bknd-website/images/bknd-logo-new.png"
+                      src="/images/bknd-logo-new.png"
                       alt="BKND Logo"
                       width={210}
                       height={63}

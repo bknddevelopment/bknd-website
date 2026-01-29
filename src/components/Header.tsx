@@ -50,7 +50,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/bknd-website/images/bknd-logo-new.png"
+              src="/images/bknd-logo-new.png"
               alt="BKND Development"
               width={288}
               height={192}

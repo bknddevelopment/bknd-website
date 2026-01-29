@@ -4,19 +4,19 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/</loc>
+    <loc>https://bknddevelopment.com/</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://charwinvanryckdegroot.github.io/bknd-website/images/bknd-logo-new.png</image:loc>
+      <image:loc>https://bknddevelopment.com/images/bknd-logo-new.png</image:loc>
       <image:title>BKND Development Logo</image:title>
     </image:image>
   </url>
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/privacy/</loc>
+    <loc>https://bknddevelopment.com/privacy/</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -24,7 +24,7 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/terms/</loc>
+    <loc>https://bknddevelopment.com/terms/</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -32,7 +32,7 @@
 
   <!-- Accessibility Statement -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/accessibility/</loc>
+    <loc>https://bknddevelopment.com/accessibility/</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -40,7 +40,7 @@
 
   <!-- AI Services Hub -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/</loc>
+    <loc>https://bknddevelopment.com/services/ai/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -48,7 +48,7 @@
 
   <!-- GEO (Generative Engine Optimization) Service -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo/</loc>
+    <loc>https://bknddevelopment.com/services/ai/geo/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -56,7 +56,7 @@
 
   <!-- AI Chatbots &amp; Assistants -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/chatbots/</loc>
+    <loc>https://bknddevelopment.com/services/ai/chatbots/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -64,7 +64,7 @@
 
   <!-- Custom AI Solutions -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/custom/</loc>
+    <loc>https://bknddevelopment.com/services/ai/custom/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -72,7 +72,7 @@
 
   <!-- AI Marketing Automation Service -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/services/ai/automation/</loc>
+    <loc>https://bknddevelopment.com/services/ai/automation/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -80,7 +80,7 @@
 
   <!-- AI Methodology Page -->
   <url>
-    <loc>https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai/</loc>
+    <loc>https://bknddevelopment.com/methodology/ai/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

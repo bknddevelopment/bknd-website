@@ -230,7 +230,7 @@ export default function Hero() {
               <div className="p-5 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full overflow-hidden relative ring-2 ring-[#F5F5F7]">
                   <Image
-                    src="/bknd-website/images/team/founder-avatar.jpg"
+                    src="/images/team/founder-avatar.jpg"
                     alt="Charwin Vanryck deGroot, Founder & CEO of BKND"
                     fill
                     className="object-cover"

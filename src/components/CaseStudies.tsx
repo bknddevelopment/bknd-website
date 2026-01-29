@@ -17,7 +17,7 @@ const capabilities = [
     title: 'From invisible to page 1 in 90 days',
     capability: 'Local SEO Dominance',
     industry: 'Service Businesses',
-    image: '/bknd-website/images/case-studies/local-seo.jpg',
+    image: '/images/case-studies/local-seo.jpg',
   },
   {
     category: 'Paid Media',
@@ -29,7 +29,7 @@ const capabilities = [
     title: 'Profitable campaigns from day one',
     capability: 'Paid Media Scaling',
     industry: 'E-commerce & Lead Gen',
-    image: '/bknd-website/images/case-studies/paid-media.jpg',
+    image: '/images/case-studies/paid-media.jpg',
   },
   {
     category: 'SEO',
@@ -41,7 +41,7 @@ const capabilities = [
     title: 'Fixing what other agencies missed',
     capability: 'Technical SEO Overhaul',
     industry: 'All Industries',
-    image: '/bknd-website/images/case-studies/technical-seo.jpg',
+    image: '/images/case-studies/technical-seo.jpg',
   },
   {
     category: 'SEO',
@@ -53,7 +53,7 @@ const capabilities = [
     title: 'Strategic content, not content mills',
     capability: 'Content That Ranks',
     industry: 'B2B & Professional Services',
-    image: '/bknd-website/images/case-studies/content-marketing.jpg',
+    image: '/images/case-studies/content-marketing.jpg',
   },
   {
     category: 'CRO',
@@ -65,7 +65,7 @@ const capabilities = [
     title: 'Stop leaving money on the table',
     capability: 'Conversion Optimization',
     industry: 'Any Website',
-    image: '/bknd-website/images/case-studies/cro.jpg',
+    image: '/images/case-studies/cro.jpg',
   },
 ];
 

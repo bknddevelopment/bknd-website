@@ -56,7 +56,7 @@ export default function Footer() {
             {/* Logo - inverted/white for dark background */}
             <div className="mb-6 md:mb-0">
               <Image
-                src="/bknd-website/images/bknd-logo-new.png"
+                src="/images/bknd-logo-new.png"
                 alt="BKND Development"
                 width={210}
                 height={60}

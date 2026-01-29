@@ -7,7 +7,7 @@ const testimonials = [
     name: 'R.F.',
     title: 'Construction Business Owner',
     company: 'New Jersey',
-    image: '/bknd-website/images/testimonials/randy-franco.jpg',
+    image: '/images/testimonials/randy-franco.jpg',
     rating: 5,
   },
   {
@@ -15,7 +15,7 @@ const testimonials = [
     name: 'A.W.',
     title: 'Retail Business Owner',
     company: 'New Jersey',
-    image: '/bknd-website/images/testimonials/andrew-williams.jpg',
+    image: '/images/testimonials/andrew-williams.jpg',
     rating: 5,
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     name: 'Rich C.',
     title: 'Small Business Owner',
     company: '',
-    image: '/bknd-website/images/testimonials/rich-c.jpg',
+    image: '/images/testimonials/rich-c.jpg',
     rating: 5,
   },
 ];

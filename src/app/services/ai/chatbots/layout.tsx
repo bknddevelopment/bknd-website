@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://bknddevelopment.com/services/ai/chatbots',
     images: [
       {
-        url: '/bknd-website/images/bknd-logo-new.png',
+        url: '/images/bknd-logo-new.png',
         width: 1536,
         height: 1024,
         alt: 'BKND Development AI Chatbot Services',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Chatbots & Assistants | BKND Development',
     description: 'AI chatbots that convert visitors into customers. 24/7 intelligent engagement that qualifies leads and books meetings.',
-    images: ['/bknd-website/images/bknd-logo-new.png'],
+    images: ['/images/bknd-logo-new.png'],
   },
 };
 

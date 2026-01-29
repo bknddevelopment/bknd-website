@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'BKND Development' }],
   icons: {
     icon: [
-      { url: '/bknd-website/favicon.ico', sizes: 'any' },
-      { url: '/bknd-website/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/bknd-website/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     ],
     apple: [
-      { url: '/bknd-website/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   metadataBase: new URL('https://bknddevelopment.com'),
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://bknddevelopment.com/',
     images: [
       {
-        url: '/bknd-website/images/bknd-logo-new.png',
+        url: '/images/bknd-logo-new.png',
         width: 1536,
         height: 1024,
         alt: 'BKND Development Logo',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BKND Development | Marketing Built Like Software',
     description: 'Developer-built campaigns. Data-driven decisions. Revenue you can measure.',
-    images: ['/bknd-website/images/bknd-logo-new.png'],
+    images: ['/images/bknd-logo-new.png'],
   },
   robots: {
     index: true,
