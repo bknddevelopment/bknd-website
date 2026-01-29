@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description: 'Developer-built campaigns. Data-driven decisions. Revenue you can measure. BKND Development is the marketing agency for companies that demand speed, transparency, and measurable results.',
   keywords: ['digital marketing agency', 'developer marketing', 'growth marketing', 'paid advertising', 'SEO', 'performance marketing', 'Elizabeth NJ', 'New Jersey marketing agency'],
   authors: [{ name: 'BKND Development' }],
+  verification: {
+    google: 'c9auD4d1EqN--1_vKGCVADAt-HXid2ua0LFJYTd7O70',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },

@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://bknddevelopment.com/</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,10 +14,316 @@
     </image:image>
   </url>
 
+  <!-- About Page -->
+  <url>
+    <loc>https://bknddevelopment.com/about/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://bknddevelopment.com/contact/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Case Studies -->
+  <url>
+    <loc>https://bknddevelopment.com/case-studies/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://bknddevelopment.com/blog/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ========== AI SERVICES ========== -->
+
+  <!-- AI Services Hub -->
+  <url>
+    <loc>https://bknddevelopment.com/services/ai/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- GEO (Generative Engine Optimization) Service -->
+  <url>
+    <loc>https://bknddevelopment.com/services/ai/geo/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Chatbots & Assistants -->
+  <url>
+    <loc>https://bknddevelopment.com/services/ai/chatbots/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Custom AI Solutions -->
+  <url>
+    <loc>https://bknddevelopment.com/services/ai/custom/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Marketing Automation -->
+  <url>
+    <loc>https://bknddevelopment.com/services/ai/automation/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========== OTHER SERVICES ========== -->
+
+  <!-- SEO Services -->
+  <url>
+    <loc>https://bknddevelopment.com/services/seo/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Content Marketing -->
+  <url>
+    <loc>https://bknddevelopment.com/services/content/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Paid Advertising -->
+  <url>
+    <loc>https://bknddevelopment.com/services/paid-advertising/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Analytics -->
+  <url>
+    <loc>https://bknddevelopment.com/services/analytics/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CRO (Conversion Rate Optimization) -->
+  <url>
+    <loc>https://bknddevelopment.com/services/cro/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Creative Services -->
+  <url>
+    <loc>https://bknddevelopment.com/services/creative/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========== METHODOLOGY ========== -->
+
+  <!-- AI Methodology Page -->
+  <url>
+    <loc>https://bknddevelopment.com/methodology/ai/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ========== BLOG POSTS ========== -->
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/ai-powered-agencies-vs-traditional-marketing/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/marketing-automation-ai-guide-2025/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/ai-marketing-methodology/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/marketing-automation-small-business/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/call-tracking-setup-guide/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/plumber-marketing/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/google-ads-for-contractors/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/roofing-company-marketing/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/contractor-marketing-ideas/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/hvac-marketing/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/local-seo-for-contractors/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/marketing-roi-measurement/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/home-services-marketing-guide/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/marketing-agency-lying-to-you/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/the-real-cost-of-vanity-metrics/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/attribution-is-harder-than-you-think/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/marketing-dashboard-service-companies/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/home-services-website-design/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/ga4-setup-home-services/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/marketing-attribution-lead-gen/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/crm-integration-home-services/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/lead-generation-for-contractors/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/geo-future-of-seo/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bknddevelopment.com/blog/ai-chatbots-roi-guide/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ========== LEGAL PAGES ========== -->
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://bknddevelopment.com/privacy/</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -25,7 +331,7 @@
   <!-- Terms of Service -->
   <url>
     <loc>https://bknddevelopment.com/terms/</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -33,57 +339,9 @@
   <!-- Accessibility Statement -->
   <url>
     <loc>https://bknddevelopment.com/accessibility/</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-
-  <!-- AI Services Hub -->
-  <url>
-    <loc>https://bknddevelopment.com/services/ai/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- GEO (Generative Engine Optimization) Service -->
-  <url>
-    <loc>https://bknddevelopment.com/services/ai/geo/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AI Chatbots &amp; Assistants -->
-  <url>
-    <loc>https://bknddevelopment.com/services/ai/chatbots/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Custom AI Solutions -->
-  <url>
-    <loc>https://bknddevelopment.com/services/ai/custom/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AI Marketing Automation Service -->
-  <url>
-    <loc>https://bknddevelopment.com/services/ai/automation/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AI Methodology Page -->
-  <url>
-    <loc>https://bknddevelopment.com/methodology/ai/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>
