@@ -1,29 +1,32 @@
-import Image from 'next/image';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import Image from "next/image";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const testimonials = [
   {
-    quote: "BKND Development delivered exactly what they promised. Their keyword strategy worked like a charm—almost immediately we saw a steady stream of high-intent inquiries. Not fluff, not vanity metrics. Real customers ready to buy.",
-    name: 'R.F.',
-    title: 'Construction Business Owner',
-    company: 'New Jersey',
-    image: '/images/testimonials/randy-franco.jpg',
+    quote:
+      "BKND Development delivered exactly what they promised. Their keyword strategy worked like a charm—almost immediately we saw a steady stream of high-intent inquiries. Not fluff, not vanity metrics. Real customers ready to buy.",
+    name: "R.F.",
+    title: "Construction Business Owner",
+    company: "New Jersey",
+    image: "/images/testimonials/randy-franco.jpg",
     rating: 5,
   },
   {
-    quote: "These guys definitely make things happen for small businesses. We are seeing nothing but results. If you want real visibility and customers who are actually searching for what you offer, BKND delivers.",
-    name: 'A.W.',
-    title: 'Retail Business Owner',
-    company: 'New Jersey',
-    image: '/images/testimonials/andrew-williams.jpg',
+    quote:
+      "These guys definitely make things happen for small businesses. We are seeing nothing but results. If you want real visibility and customers who are actually searching for what you offer, BKND delivers.",
+    name: "A.W.",
+    title: "Retail Business Owner",
+    company: "New Jersey",
+    image: "/images/testimonials/andrew-williams.jpg",
     rating: 5,
   },
   {
-    quote: "These guys are the real deal. Best investment we made for our small business. They focus on what actually matters—getting you in front of customers who are ready to buy, not just vanity numbers.",
-    name: 'Rich C.',
-    title: 'Small Business Owner',
-    company: '',
-    image: '/images/testimonials/rich-c.jpg',
+    quote:
+      "These guys are the real deal. Best investment we made for our small business. They focus on what actually matters—getting you in front of customers who are ready to buy, not just vanity numbers.",
+    name: "Rich C.",
+    title: "Small Business Owner",
+    company: "",
+    image: "/images/testimonials/rich-c.jpg",
     rating: 5,
   },
 ];
@@ -35,7 +38,7 @@ function StarRating({ rating }: { rating: number }) {
       {[...Array(5)].map((_, i) => (
         <svg
           key={i}
-          className={`w-5 h-5 ${i < rating ? 'text-[#1D1D1F]' : 'text-[#D2D2D7]'}`}
+          className={`w-5 h-5 ${i < rating ? "text-[#1D1D1F]" : "text-[#D2D2D7]"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -70,7 +73,8 @@ export default function Testimonials() {
                 key={index}
                 className="bg-white rounded-[18px] p-8 transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  boxShadow: '0 4px 6px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.08)',
+                  boxShadow:
+                    "0 4px 6px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.08)",
                 }}
               >
                 {/* Quote mark */}
@@ -79,7 +83,7 @@ export default function Testimonials() {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
 
                 {/* Star Rating */}
@@ -104,7 +108,9 @@ export default function Testimonials() {
                       {testimonial.name}
                     </div>
                     <div className="text-[#86868B] text-sm">
-                      {testimonial.company ? `${testimonial.title}, ${testimonial.company}` : testimonial.title}
+                      {testimonial.company
+                        ? `${testimonial.title}, ${testimonial.company}`
+                        : testimonial.title}
                     </div>
                   </div>
                 </div>

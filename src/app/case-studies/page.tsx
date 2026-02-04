@@ -1,66 +1,66 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import Image from "next/image";
+import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 const caseStudies = [
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '+554%', label: 'Organic Traffic' },
-      { value: '+393%', label: 'Keywords' },
+      { value: "+554%", label: "Organic Traffic" },
+      { value: "+393%", label: "Keywords" },
     ],
-    title: 'From Zero to $2,700/Month Traffic Value in 12 Months',
+    title: "From Zero to $2,700/Month Traffic Value in 12 Months",
     client: "Randy's Sealcoating & Striping",
-    industry: 'Construction / Paving',
-    image: '/images/case-studies/randys-sealcoating.jpg',
+    industry: "Construction / Paving",
+    image: "/images/case-studies/randys-sealcoating.jpg",
   },
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '15.8K', label: 'Monthly Visitors' },
-      { value: '11.3K', label: 'Keywords Ranking' },
+      { value: "15.8K", label: "Monthly Visitors" },
+      { value: "11.3K", label: "Keywords Ranking" },
     ],
-    title: 'Built Dominant Local Authority with 302 AI Mentions',
-    client: 'Rohnert Park Transmission',
-    industry: 'Automotive',
-    image: '/images/case-studies/rohnert-park-transmission.jpg',
+    title: "Built Dominant Local Authority with 302 AI Mentions",
+    client: "Rohnert Park Transmission",
+    industry: "Automotive",
+    image: "/images/case-studies/rohnert-park-transmission.jpg",
   },
   {
-    category: 'Local SEO',
+    category: "Local SEO",
     stats: [
-      { value: '+173%', label: 'Traffic Growth' },
-      { value: '8.1K', label: 'GBP Views/Month' },
+      { value: "+173%", label: "Traffic Growth" },
+      { value: "8.1K", label: "GBP Views/Month" },
     ],
-    title: 'Local Discovery Strategy with 50 Citations & Review Management',
-    client: 'The Library NJ',
-    industry: 'Hospitality / Entertainment',
-    image: '/images/case-studies/the-library-nj.jpg',
+    title: "Local Discovery Strategy with 50 Citations & Review Management",
+    client: "The Library NJ",
+    industry: "Hospitality / Entertainment",
+    image: "/images/case-studies/the-library-nj.jpg",
   },
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '+117%', label: 'Traffic Growth' },
-      { value: '+113%', label: 'Keywords' },
+      { value: "+117%", label: "Traffic Growth" },
+      { value: "+113%", label: "Keywords" },
     ],
-    title: 'Doubled Organic Presence with Strong Backlink Growth',
-    client: 'Weathershield Roofers',
-    industry: 'Roofing',
-    image: '/images/case-studies/weathershield-roofers.jpg',
+    title: "Doubled Organic Presence with Strong Backlink Growth",
+    client: "Weathershield Roofers",
+    industry: "Roofing",
+    image: "/images/case-studies/weathershield-roofers.jpg",
   },
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '$16.4K', label: 'Traffic Value/Month' },
-      { value: '3.5K', label: 'Keywords' },
+      { value: "$16.4K", label: "Traffic Value/Month" },
+      { value: "3.5K", label: "Keywords" },
     ],
-    title: 'International SEO Reach Across US, Canada & Brazil',
-    client: 'Linta Roofing',
-    industry: 'Roofing',
-    image: '/images/case-studies/linta-roofing.jpg',
+    title: "International SEO Reach Across US, Canada & Brazil",
+    client: "Linta Roofing",
+    industry: "Roofing",
+    image: "/images/case-studies/linta-roofing.jpg",
   },
 ];
 
@@ -77,7 +77,8 @@ export default function CaseStudiesPage() {
                 Client Results
               </h1>
               <p className="text-xl md:text-2xl text-[#86868B] max-w-2xl mx-auto leading-relaxed">
-                Real results for real businesses. Some clients prefer to remain confidential - reach out to learn more about our full portfolio.
+                Real results for real businesses. Some clients prefer to remain
+                confidential - reach out to learn more about our full portfolio.
               </p>
             </AnimateOnScroll>
           </div>
@@ -89,9 +90,7 @@ export default function CaseStudiesPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((study, i) => (
                 <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
-                  <div
-                    className="bg-white rounded-2xl overflow-hidden group h-full shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
-                  >
+                  <div className="bg-white rounded-2xl overflow-hidden group h-full shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
                     {/* Image Area */}
                     <div className="h-56 relative overflow-hidden">
                       <Image
@@ -113,9 +112,11 @@ export default function CaseStudiesPage() {
                       {/* Client info on image */}
                       <div className="absolute bottom-4 left-4 right-4 z-10">
                         <p className="text-white/90 text-sm font-medium">
-                          {study.client}{' '}
-                          <span className="text-white/60">&#8226;</span>{' '}
-                          <span className="text-white/70">{study.industry}</span>
+                          {study.client}{" "}
+                          <span className="text-white/60">&#8226;</span>{" "}
+                          <span className="text-white/70">
+                            {study.industry}
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -154,7 +155,8 @@ export default function CaseStudiesPage() {
             <AnimateOnScroll>
               <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
                 <p className="text-lg md:text-xl text-[#86868B] mb-6">
-                  Many of our clients prefer confidential partnerships. Contact us to discuss specific results in your industry.
+                  Many of our clients prefer confidential partnerships. Contact
+                  us to discuss specific results in your industry.
                 </p>
                 <Link
                   href="/contact"

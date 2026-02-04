@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { Mail, MapPin, Clock, Send, ArrowRight, Phone } from 'lucide-react';
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import { Mail, MapPin, Clock, Send, ArrowRight, Phone } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
+    name: "",
+    email: "",
+    company: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -26,7 +26,9 @@ export default function ContactPage() {
     }, 1000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -49,14 +51,16 @@ export default function ContactPage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Let&apos;s talk about{' '}
+                  Let&apos;s talk about{" "}
                   <span className="text-[#00D4FF]">growth.</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl">
-                  Whether you&apos;re ready to start a project or just want to explore what&apos;s possible, we&apos;d love to hear from you. No pressure, no sales pitch. Just a conversation.
+                  Whether you&apos;re ready to start a project or just want to
+                  explore what&apos;s possible, we&apos;d love to hear from you.
+                  No pressure, no sales pitch. Just a conversation.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -85,12 +89,18 @@ export default function ContactPage() {
                         Message received!
                       </h3>
                       <p className="text-[#86868B] text-lg mb-6">
-                        Thanks for reaching out. We&apos;ll get back to you within 24 hours.
+                        Thanks for reaching out. We&apos;ll get back to you
+                        within 24 hours.
                       </p>
                       <button
                         onClick={() => {
                           setIsSubmitted(false);
-                          setFormData({ name: '', email: '', company: '', message: '' });
+                          setFormData({
+                            name: "",
+                            email: "",
+                            company: "",
+                            message: "",
+                          });
                         }}
                         className="text-[#00D4FF] font-medium hover:underline"
                       >
@@ -103,7 +113,10 @@ export default function ContactPage() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-[#1D1D1F] mb-2">
+                          <label
+                            htmlFor="name"
+                            className="block text-sm font-medium text-[#1D1D1F] mb-2"
+                          >
                             Name
                           </label>
                           <input
@@ -118,7 +131,10 @@ export default function ContactPage() {
                           />
                         </div>
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-[#1D1D1F] mb-2">
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-[#1D1D1F] mb-2"
+                          >
                             Email
                           </label>
                           <input
@@ -135,8 +151,12 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-[#1D1D1F] mb-2">
-                          Company <span className="text-[#86868B]">(optional)</span>
+                        <label
+                          htmlFor="company"
+                          className="block text-sm font-medium text-[#1D1D1F] mb-2"
+                        >
+                          Company{" "}
+                          <span className="text-[#86868B]">(optional)</span>
                         </label>
                         <input
                           type="text"
@@ -150,7 +170,10 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-[#1D1D1F] mb-2">
+                        <label
+                          htmlFor="message"
+                          className="block text-sm font-medium text-[#1D1D1F] mb-2"
+                        >
                           Message
                         </label>
                         <textarea
@@ -170,7 +193,7 @@ export default function ContactPage() {
                         disabled={isSubmitting}
                         className="group inline-flex items-center gap-3 px-8 py-4 bg-[#00D4FF] hover:bg-[#00B8E0] text-white font-medium rounded-full transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                        {isSubmitting ? "Sending..." : "Send Message"}
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </button>
                     </form>
@@ -224,7 +247,8 @@ export default function ContactPage() {
                         <div>
                           <p className="text-[#86868B] text-sm mb-1">Address</p>
                           <p className="text-white">
-                            30 Union St, Unit 13<br />
+                            30 Union St, Unit 13
+                            <br />
                             Elizabeth, NJ 07202
                           </p>
                         </div>
@@ -235,10 +259,10 @@ export default function ContactPage() {
                           <Clock className="w-5 h-5 text-[#00D4FF]" />
                         </div>
                         <div>
-                          <p className="text-[#86868B] text-sm mb-1">Response Time</p>
-                          <p className="text-white">
-                            Within 24 hours
+                          <p className="text-[#86868B] text-sm mb-1">
+                            Response Time
                           </p>
+                          <p className="text-white">Within 24 hours</p>
                         </div>
                       </div>
                     </div>
@@ -251,7 +275,8 @@ export default function ContactPage() {
                       Prefer to email directly?
                     </h3>
                     <p className="text-[#86868B] mb-4">
-                      No forms needed. Just drop us a line and we&apos;ll get back to you.
+                      No forms needed. Just drop us a line and we&apos;ll get
+                      back to you.
                     </p>
                     <a
                       href="mailto:info@bknddevelopment.com"
@@ -279,7 +304,8 @@ export default function ContactPage() {
                   Based in Elizabeth, NJ
                 </h2>
                 <p className="text-[#86868B] text-lg max-w-xl mx-auto">
-                  Serving clients across the United States and beyond with remote-first collaboration.
+                  Serving clients across the United States and beyond with
+                  remote-first collaboration.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -295,9 +321,7 @@ export default function ContactPage() {
                     <p className="text-[#1D1D1F] font-semibold text-lg mb-2">
                       30 Union St, Unit 13
                     </p>
-                    <p className="text-[#86868B]">
-                      Elizabeth, NJ 07202
-                    </p>
+                    <p className="text-[#86868B]">Elizabeth, NJ 07202</p>
                     <a
                       href="https://maps.google.com/?q=30+Union+St+Unit+13+Elizabeth+NJ+07202"
                       target="_blank"

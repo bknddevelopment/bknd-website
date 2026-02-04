@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import Link from 'next/link';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import Link from "next/link";
 import {
   ArrowRight,
   Mail,
@@ -15,119 +15,138 @@ import {
   ChevronDown,
   TrendingUp,
   Clock,
-  Zap
-} from 'lucide-react';
-import { useState } from 'react';
+  Zap,
+} from "lucide-react";
+import { useState } from "react";
 
 const services = [
   {
     icon: Mail,
-    title: 'Email Campaign Automation',
-    description: 'AI-optimized email sequences with predictive send times. Every message lands when your audience is most likely to engage.',
+    title: "Email Campaign Automation",
+    description:
+      "AI-optimized email sequences with predictive send times. Every message lands when your audience is most likely to engage.",
   },
   {
     icon: GitBranch,
-    title: 'Customer Journey Automation',
-    description: 'Multi-channel workflows that adapt in real-time. From first touch to conversion, every interaction is personalized.',
+    title: "Customer Journey Automation",
+    description:
+      "Multi-channel workflows that adapt in real-time. From first touch to conversion, every interaction is personalized.",
   },
   {
     icon: Brain,
-    title: 'Lead Scoring & Nurturing',
-    description: 'ML-powered scoring that identifies ready-to-buy leads. Stop wasting time on cold prospects—focus on signals that matter.',
+    title: "Lead Scoring & Nurturing",
+    description:
+      "ML-powered scoring that identifies ready-to-buy leads. Stop wasting time on cold prospects—focus on signals that matter.",
   },
   {
     icon: Sparkles,
-    title: 'Predictive Personalization',
-    description: 'Dynamic content based on behavior and intent. Every touchpoint delivers exactly what each prospect needs to convert.',
+    title: "Predictive Personalization",
+    description:
+      "Dynamic content based on behavior and intent. Every touchpoint delivers exactly what each prospect needs to convert.",
   },
   {
     icon: Settings,
-    title: 'Workflow Optimization',
-    description: 'AI that identifies bottlenecks and suggests improvements. Your automation gets smarter with every interaction.',
+    title: "Workflow Optimization",
+    description:
+      "AI that identifies bottlenecks and suggests improvements. Your automation gets smarter with every interaction.",
   },
 ];
 
 const approach = [
   {
-    step: '01',
-    title: 'Audit',
-    description: 'Analyze your current automation setup and identify gaps. We map every workflow, measure performance, and find opportunities.',
+    step: "01",
+    title: "Audit",
+    description:
+      "Analyze your current automation setup and identify gaps. We map every workflow, measure performance, and find opportunities.",
   },
   {
-    step: '02',
-    title: 'Strategy',
-    description: 'Design AI-enhanced workflow architecture. We build the blueprint for automation that learns and scales.',
+    step: "02",
+    title: "Strategy",
+    description:
+      "Design AI-enhanced workflow architecture. We build the blueprint for automation that learns and scales.",
   },
   {
-    step: '03',
-    title: 'Implement',
-    description: 'Build and integrate automation systems. Clean code, proper testing, seamless platform integration.',
+    step: "03",
+    title: "Implement",
+    description:
+      "Build and integrate automation systems. Clean code, proper testing, seamless platform integration.",
   },
   {
-    step: '04',
-    title: 'Train',
-    description: 'Configure AI models on your data. The system learns your audience, your timing, your best-performing patterns.',
+    step: "04",
+    title: "Train",
+    description:
+      "Configure AI models on your data. The system learns your audience, your timing, your best-performing patterns.",
   },
   {
-    step: '05',
-    title: 'Scale',
-    description: 'Expand and optimize based on results. As your business grows, your automation grows with it.',
+    step: "05",
+    title: "Scale",
+    description:
+      "Expand and optimize based on results. As your business grows, your automation grows with it.",
   },
 ];
 
 const benefits = [
   {
-    title: 'Self-Optimizing Campaigns',
-    description: 'Traditional automation is set-and-forget. AI automation continuously tests, learns, and improves without manual intervention.',
+    title: "Self-Optimizing Campaigns",
+    description:
+      "Traditional automation is set-and-forget. AI automation continuously tests, learns, and improves without manual intervention.",
   },
   {
-    title: 'Predictive Send Times',
-    description: 'Stop guessing when to send. AI analyzes individual recipient behavior to deliver messages at peak engagement moments.',
+    title: "Predictive Send Times",
+    description:
+      "Stop guessing when to send. AI analyzes individual recipient behavior to deliver messages at peak engagement moments.",
   },
   {
-    title: 'Dynamic Segmentation',
-    description: 'Segments that update in real-time based on behavior. No more static lists—your audience is always current.',
+    title: "Dynamic Segmentation",
+    description:
+      "Segments that update in real-time based on behavior. No more static lists—your audience is always current.",
   },
   {
-    title: 'Platform Agnostic',
-    description: 'We integrate with Klaviyo, HubSpot, Marketo, and more. Your existing tools, supercharged with AI capabilities.',
+    title: "Platform Agnostic",
+    description:
+      "We integrate with Klaviyo, HubSpot, Marketo, and more. Your existing tools, supercharged with AI capabilities.",
   },
 ];
 
 const stats = [
   {
-    value: '250-300%',
-    label: 'ROI vs traditional automation',
+    value: "250-300%",
+    label: "ROI vs traditional automation",
     icon: TrendingUp,
   },
   {
-    value: '60%',
-    label: 'Achieve positive ROI within 12 months',
+    value: "60%",
+    label: "Achieve positive ROI within 12 months",
     icon: Clock,
   },
   {
-    value: '25-40%',
-    label: 'Productivity improvements',
+    value: "25-40%",
+    label: "Productivity improvements",
     icon: Zap,
   },
 ];
 
 const faqs = [
   {
-    question: 'How is AI automation different from regular marketing automation?',
-    answer: 'Traditional automation runs on fixed rules—if X happens, do Y. AI automation learns from every interaction. It optimizes send times, personalizes content, and improves conversion rates automatically. No more manual A/B testing or guessing at the best approach.',
+    question:
+      "How is AI automation different from regular marketing automation?",
+    answer:
+      "Traditional automation runs on fixed rules—if X happens, do Y. AI automation learns from every interaction. It optimizes send times, personalizes content, and improves conversion rates automatically. No more manual A/B testing or guessing at the best approach.",
   },
   {
-    question: 'What platforms do you integrate with?',
-    answer: 'We work with all major marketing automation platforms including Klaviyo, HubSpot, Marketo, ActiveCampaign, Salesforce Marketing Cloud, and more. We build integrations that enhance your existing tools rather than replacing them.',
+    question: "What platforms do you integrate with?",
+    answer:
+      "We work with all major marketing automation platforms including Klaviyo, HubSpot, Marketo, ActiveCampaign, Salesforce Marketing Cloud, and more. We build integrations that enhance your existing tools rather than replacing them.",
   },
   {
-    question: 'How long until we see results?',
-    answer: 'Most clients see measurable improvements within 30-60 days. The AI needs some initial data to learn from, but the optimization happens continuously. Expect 60% of implementations to achieve positive ROI within 12 months.',
+    question: "How long until we see results?",
+    answer:
+      "Most clients see measurable improvements within 30-60 days. The AI needs some initial data to learn from, but the optimization happens continuously. Expect 60% of implementations to achieve positive ROI within 12 months.",
   },
   {
-    question: 'Do we need a lot of data to get started?',
-    answer: 'Not necessarily. We can start with as little as 1,000 email subscribers or 500 monthly leads. The AI begins learning immediately and improves as your data grows. More data means faster optimization, but we can work with what you have.',
+    question: "Do we need a lot of data to get started?",
+    answer:
+      "Not necessarily. We can start with as little as 1,000 email subscribers or 500 monthly leads. The AI begins learning immediately and improves as your data grows. More data means faster optimization, but we can work with what you have.",
   },
 ];
 
@@ -144,15 +163,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-6" : "max-h-0"}`}
       >
-        <p className="text-[#86868B] leading-relaxed">
-          {answer}
-        </p>
+        <p className="text-[#86868B] leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -175,14 +192,16 @@ export default function AIAutomationServicePage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  AI-Powered Marketing{' '}
+                  AI-Powered Marketing{" "}
                   <span className="text-[#00D4FF]">Automation.</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  Workflows that learn, optimize, and scale. From email sequences to customer journeys, automation that gets smarter with every interaction.
+                  Workflows that learn, optimize, and scale. From email
+                  sequences to customer journeys, automation that gets smarter
+                  with every interaction.
                 </p>
               </AnimateOnScroll>
 
@@ -214,7 +233,11 @@ export default function AIAutomationServicePage() {
                     Traditional automation is set-and-forget.
                   </h3>
                   <p className="text-gray-400 text-lg leading-relaxed">
-                    It doesn&apos;t learn. It doesn&apos;t adapt. It leaves money on the table. Static workflows send the same message at the same time, regardless of what works. You&apos;re manually testing, manually optimizing, manually falling behind.
+                    It doesn&apos;t learn. It doesn&apos;t adapt. It leaves
+                    money on the table. Static workflows send the same message
+                    at the same time, regardless of what works. You&apos;re
+                    manually testing, manually optimizing, manually falling
+                    behind.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -228,7 +251,10 @@ export default function AIAutomationServicePage() {
                     AI-powered automation that optimizes itself.
                   </h3>
                   <p className="text-[#86868B] text-lg leading-relaxed">
-                    Automation that optimizes send times, personalizes content, and improves conversion rates automatically. Every campaign learns from the last. Every workflow gets smarter. Your marketing scales without your workload scaling with it.
+                    Automation that optimizes send times, personalizes content,
+                    and improves conversion rates automatically. Every campaign
+                    learns from the last. Every workflow gets smarter. Your
+                    marketing scales without your workload scaling with it.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -253,7 +279,8 @@ export default function AIAutomationServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From email campaigns to complex customer journeys, we build AI systems that learn and improve automatically.
+                From email campaigns to complex customer journeys, we build AI
+                systems that learn and improve automatically.
               </p>
             </AnimateOnScroll>
 
@@ -302,9 +329,7 @@ export default function AIAutomationServicePage() {
                     <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">
                       {stat.value}
                     </p>
-                    <p className="text-gray-400 text-lg">
-                      {stat.label}
-                    </p>
+                    <p className="text-gray-400 text-lg">{stat.label}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -329,7 +354,8 @@ export default function AIAutomationServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                A proven process that transforms static workflows into intelligent, self-optimizing systems.
+                A proven process that transforms static workflows into
+                intelligent, self-optimizing systems.
               </p>
             </AnimateOnScroll>
 
@@ -339,7 +365,9 @@ export default function AIAutomationServicePage() {
                   <AnimateOnScroll key={i} delay={0.2 + i * 0.08}>
                     <div className="flex gap-6 items-start bg-[#F5F5F7] rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                       <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1D1D1F] flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">{item.step}</span>
+                        <span className="text-white text-sm font-semibold">
+                          {item.step}
+                        </span>
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">
@@ -374,7 +402,8 @@ export default function AIAutomationServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                AI automation doesn&apos;t just execute—it learns, adapts, and improves.
+                AI automation doesn&apos;t just execute—it learns, adapts, and
+                improves.
               </p>
             </AnimateOnScroll>
 
@@ -415,10 +444,17 @@ export default function AIAutomationServicePage() {
                     Works with your existing tools
                   </h3>
                   <p className="text-[#86868B] text-lg leading-relaxed mb-8">
-                    We integrate AI capabilities into the platforms you already use. No migration required—just smarter automation.
+                    We integrate AI capabilities into the platforms you already
+                    use. No migration required—just smarter automation.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
-                    {['Klaviyo', 'HubSpot', 'Marketo', 'ActiveCampaign', 'Salesforce'].map((platform) => (
+                    {[
+                      "Klaviyo",
+                      "HubSpot",
+                      "Marketo",
+                      "ActiveCampaign",
+                      "Salesforce",
+                    ].map((platform) => (
                       <span
                         key={platform}
                         className="px-6 py-3 bg-white rounded-full text-[#1D1D1F] font-medium border border-gray-200/80"
@@ -452,7 +488,11 @@ export default function AIAutomationServicePage() {
               <AnimateOnScroll delay={0.2}>
                 <div className="bg-white rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                   {faqs.map((faq, i) => (
-                    <FAQItem key={i} question={faq.question} answer={faq.answer} />
+                    <FAQItem
+                      key={i}
+                      question={faq.question}
+                      answer={faq.answer}
+                    />
                   ))}
                 </div>
               </AnimateOnScroll>
@@ -476,7 +516,8 @@ export default function AIAutomationServicePage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Start with a free automation assessment. We&apos;ll show you where AI can transform your marketing workflows.
+                  Start with a free automation assessment. We&apos;ll show you
+                  where AI can transform your marketing workflows.
                 </p>
               </AnimateOnScroll>
 

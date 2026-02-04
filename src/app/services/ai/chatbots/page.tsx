@@ -1,113 +1,142 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, MessageSquare, Bot, Users, Globe, Sparkles, Clock, TrendingUp, Shield, ChevronDown } from 'lucide-react';
-import Link from 'next/link';
-import { useState } from 'react';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import {
+  ArrowRight,
+  MessageSquare,
+  Bot,
+  Users,
+  Globe,
+  Sparkles,
+  Clock,
+  TrendingUp,
+  Shield,
+  ChevronDown,
+} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const services = [
   {
     icon: MessageSquare,
-    title: 'Customer Service Chatbots',
-    description: 'Handle FAQs, troubleshoot common issues, and reduce support ticket volume with intelligent automation that learns from every conversation.',
+    title: "Customer Service Chatbots",
+    description:
+      "Handle FAQs, troubleshoot common issues, and reduce support ticket volume with intelligent automation that learns from every conversation.",
   },
   {
     icon: TrendingUp,
-    title: 'Sales Qualification Bots',
-    description: 'Qualify leads in real-time, book demos automatically, and capture contact information while your sales team focuses on closing.',
+    title: "Sales Qualification Bots",
+    description:
+      "Qualify leads in real-time, book demos automatically, and capture contact information while your sales team focuses on closing.",
   },
   {
     icon: Users,
-    title: 'Lead Capture Assistants',
-    description: 'Engage every visitor with personalized conversations, collect valuable information, and route hot leads directly to your sales team.',
+    title: "Lead Capture Assistants",
+    description:
+      "Engage every visitor with personalized conversations, collect valuable information, and route hot leads directly to your sales team.",
   },
   {
     icon: Globe,
-    title: 'Multi-Channel Deployment',
-    description: 'Deploy across website, SMS, Facebook Messenger, WhatsApp, and more—one AI brain powering consistent experiences everywhere.',
+    title: "Multi-Channel Deployment",
+    description:
+      "Deploy across website, SMS, Facebook Messenger, WhatsApp, and more—one AI brain powering consistent experiences everywhere.",
   },
   {
     icon: Sparkles,
-    title: 'Custom AI Assistants',
-    description: 'Trained on your data, speaking in your voice, following your processes. Not a generic bot—your digital team member.',
+    title: "Custom AI Assistants",
+    description:
+      "Trained on your data, speaking in your voice, following your processes. Not a generic bot—your digital team member.",
   },
 ];
 
 const approach = [
   {
-    step: '01',
-    title: 'Discovery',
-    description: 'We analyze your customer conversations, understand common questions, and identify where automation creates the most impact.',
+    step: "01",
+    title: "Discovery",
+    description:
+      "We analyze your customer conversations, understand common questions, and identify where automation creates the most impact.",
   },
   {
-    step: '02',
-    title: 'Design',
-    description: 'Map conversation flows, integration points, and escalation paths. We design for natural conversations, not robotic scripts.',
+    step: "02",
+    title: "Design",
+    description:
+      "Map conversation flows, integration points, and escalation paths. We design for natural conversations, not robotic scripts.",
   },
   {
-    step: '03',
-    title: 'Build',
-    description: 'Develop and train your custom AI chatbot using your actual data, FAQs, and product information for accurate responses.',
+    step: "03",
+    title: "Build",
+    description:
+      "Develop and train your custom AI chatbot using your actual data, FAQs, and product information for accurate responses.",
   },
   {
-    step: '04',
-    title: 'Deploy',
-    description: 'Launch across your channels with real-time monitoring, analytics dashboards, and human handoff protocols in place.',
+    step: "04",
+    title: "Deploy",
+    description:
+      "Launch across your channels with real-time monitoring, analytics dashboards, and human handoff protocols in place.",
   },
   {
-    step: '05',
-    title: 'Optimize',
-    description: 'Continuous improvement based on real conversations. We analyze, retrain, and refine to increase automation rates over time.',
+    step: "05",
+    title: "Optimize",
+    description:
+      "Continuous improvement based on real conversations. We analyze, retrain, and refine to increase automation rates over time.",
   },
 ];
 
 const benefits = [
   {
     icon: Clock,
-    title: '24/7 Availability',
-    description: 'Your AI never sleeps, never takes breaks, and responds instantly. Capture leads and help customers at 2 AM just as effectively as 2 PM.',
+    title: "24/7 Availability",
+    description:
+      "Your AI never sleeps, never takes breaks, and responds instantly. Capture leads and help customers at 2 AM just as effectively as 2 PM.",
   },
   {
     icon: TrendingUp,
-    title: 'Instant Qualification',
-    description: 'Stop wasting sales time on unqualified leads. AI qualifies prospects in real-time using your exact criteria before routing to your team.',
+    title: "Instant Qualification",
+    description:
+      "Stop wasting sales time on unqualified leads. AI qualifies prospects in real-time using your exact criteria before routing to your team.",
   },
   {
     icon: Shield,
-    title: 'Consistent Experience',
-    description: 'Every customer gets your best service, every time. No bad days, no training gaps, no forgotten information.',
+    title: "Consistent Experience",
+    description:
+      "Every customer gets your best service, every time. No bad days, no training gaps, no forgotten information.",
   },
   {
     icon: Bot,
-    title: 'Scalable Support',
-    description: 'Handle 10 or 10,000 conversations simultaneously without hiring. Scale customer engagement without scaling headcount.',
+    title: "Scalable Support",
+    description:
+      "Handle 10 or 10,000 conversations simultaneously without hiring. Scale customer engagement without scaling headcount.",
   },
 ];
 
 const stats = [
-  { value: '60%', label: 'of inquiries resolved without human intervention' },
-  { value: '40%', label: 'increase in lead capture with 24/7 availability' },
-  { value: '3 mo', label: 'average ROI on chatbot implementation' },
+  { value: "60%", label: "of inquiries resolved without human intervention" },
+  { value: "40%", label: "increase in lead capture with 24/7 availability" },
+  { value: "3 mo", label: "average ROI on chatbot implementation" },
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to build and deploy a chatbot?',
-    answer: 'A basic FAQ chatbot can be deployed in 2-3 weeks. More complex chatbots with integrations, custom training, and multi-channel deployment typically take 4-8 weeks. We prioritize getting value quickly while building toward your full vision.',
+    question: "How long does it take to build and deploy a chatbot?",
+    answer:
+      "A basic FAQ chatbot can be deployed in 2-3 weeks. More complex chatbots with integrations, custom training, and multi-channel deployment typically take 4-8 weeks. We prioritize getting value quickly while building toward your full vision.",
   },
   {
-    question: 'Will the chatbot sound robotic or generic?',
-    answer: 'Absolutely not. We train your AI on your actual content, brand voice, and communication style. The result is a chatbot that sounds like an extension of your team, not a generic script reader.',
+    question: "Will the chatbot sound robotic or generic?",
+    answer:
+      "Absolutely not. We train your AI on your actual content, brand voice, and communication style. The result is a chatbot that sounds like an extension of your team, not a generic script reader.",
   },
   {
-    question: 'What happens when the chatbot can\'t answer a question?',
-    answer: 'We build intelligent escalation paths. When your chatbot encounters something it can\'t handle, it seamlessly hands off to a human agent with full conversation context—no repetition required for the customer.',
+    question: "What happens when the chatbot can't answer a question?",
+    answer:
+      "We build intelligent escalation paths. When your chatbot encounters something it can't handle, it seamlessly hands off to a human agent with full conversation context—no repetition required for the customer.",
   },
   {
-    question: 'Can the chatbot integrate with our existing tools?',
-    answer: 'Yes. We integrate with CRMs (Salesforce, HubSpot), help desks (Zendesk, Intercom), calendars (Calendly, Google), and most platforms with APIs. Your chatbot becomes part of your existing workflow, not a siloed tool.',
+    question: "Can the chatbot integrate with our existing tools?",
+    answer:
+      "Yes. We integrate with CRMs (Salesforce, HubSpot), help desks (Zendesk, Intercom), calendars (Calendly, Google), and most platforms with APIs. Your chatbot becomes part of your existing workflow, not a siloed tool.",
   },
 ];
 
@@ -123,13 +152,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         <span className="text-lg font-medium text-[#1D1D1F]">{question}</span>
         <ChevronDown
           className={`w-5 h-5 text-[#86868B] transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : ''
+            isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 pb-6' : 'max-h-0'
+          isOpen ? "max-h-96 pb-6" : "max-h-0"
         }`}
       >
         <p className="text-[#86868B] leading-relaxed">{answer}</p>
@@ -155,14 +184,18 @@ export default function AIChatbotsPage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  AI Chatbots That{' '}
-                  <span className="text-[#00D4FF]">Convert Visitors Into Customers</span>
+                  AI Chatbots That{" "}
+                  <span className="text-[#00D4FF]">
+                    Convert Visitors Into Customers
+                  </span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  24/7 intelligent engagement that qualifies leads, answers questions, and books meetings—while you focus on closing deals.
+                  24/7 intelligent engagement that qualifies leads, answers
+                  questions, and books meetings—while you focus on closing
+                  deals.
                 </p>
               </AnimateOnScroll>
 
@@ -196,7 +229,8 @@ export default function AIChatbotsPage() {
                   <ul className="space-y-3 text-[#86868B]">
                     <li className="flex items-start gap-3">
                       <span className="text-red-500 mt-1">&#10005;</span>
-                      Visitors leave without converting when no one&apos;s available
+                      Visitors leave without converting when no one&apos;s
+                      available
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-red-500 mt-1">&#10005;</span>
@@ -263,7 +297,8 @@ export default function AIChatbotsPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From simple FAQ bots to sophisticated AI assistants, we build chatbots that actually work.
+                From simple FAQ bots to sophisticated AI assistants, we build
+                chatbots that actually work.
               </p>
             </AnimateOnScroll>
 
@@ -304,7 +339,8 @@ export default function AIChatbotsPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-gray-400 text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                A proven process that delivers AI chatbots that actually solve problems.
+                A proven process that delivers AI chatbots that actually solve
+                problems.
               </p>
             </AnimateOnScroll>
 
@@ -350,9 +386,7 @@ export default function AIChatbotsPage() {
                     <div className="text-5xl lg:text-6xl font-bold text-[#00D4FF] mb-4">
                       {stat.value}
                     </div>
-                    <p className="text-[#86868B] text-lg">
-                      {stat.label}
-                    </p>
+                    <p className="text-[#86868B] text-lg">{stat.label}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -377,7 +411,8 @@ export default function AIChatbotsPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                Why businesses are racing to implement AI-powered customer engagement.
+                Why businesses are racing to implement AI-powered customer
+                engagement.
               </p>
             </AnimateOnScroll>
 
@@ -429,7 +464,11 @@ export default function AIChatbotsPage() {
             <AnimateOnScroll delay={0.2}>
               <div className="max-w-2xl mx-auto">
                 {faqs.map((faq, i) => (
-                  <FAQItem key={i} question={faq.question} answer={faq.answer} />
+                  <FAQItem
+                    key={i}
+                    question={faq.question}
+                    answer={faq.answer}
+                  />
                 ))}
               </div>
             </AnimateOnScroll>
@@ -452,7 +491,8 @@ export default function AIChatbotsPage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Get a free chatbot strategy session and discover how AI can transform your customer engagement.
+                  Get a free chatbot strategy session and discover how AI can
+                  transform your customer engagement.
                 </p>
               </AnimateOnScroll>
 

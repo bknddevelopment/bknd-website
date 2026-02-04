@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import Link from 'next/link';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import Link from "next/link";
 import {
   ArrowRight,
   Search,
@@ -17,118 +17,151 @@ import {
   Sparkles,
   Eye,
   Target,
-  TrendingUp
-} from 'lucide-react';
-import { useState } from 'react';
+  TrendingUp,
+} from "lucide-react";
+import { useState } from "react";
 
 const services = [
   {
     icon: Eye,
-    title: 'AI Search Visibility Audits',
-    description: 'Analyze how ChatGPT, Gemini, and Perplexity currently perceive your brand. Understand where you appear in AI-generated responses and where you\'re invisible.',
+    title: "AI Search Visibility Audits",
+    description:
+      "Analyze how ChatGPT, Gemini, and Perplexity currently perceive your brand. Understand where you appear in AI-generated responses and where you're invisible.",
   },
   {
     icon: Brain,
-    title: 'LLM Optimization',
-    description: 'Structure your content for large language model understanding. We optimize for how AI reads, interprets, and retrieves your information.',
+    title: "LLM Optimization",
+    description:
+      "Structure your content for large language model understanding. We optimize for how AI reads, interprets, and retrieves your information.",
   },
   {
     icon: MessageSquare,
-    title: 'AI Citation Generation',
-    description: 'Get your content cited as a source in AI responses. We engineer content that AI systems reference when answering user queries.',
+    title: "AI Citation Generation",
+    description:
+      "Get your content cited as a source in AI responses. We engineer content that AI systems reference when answering user queries.",
   },
   {
     icon: FileText,
-    title: 'Content Structuring for AI',
-    description: 'Format your information architecture for optimal AI consumption. Clear hierarchies, semantic relationships, and machine-readable structure.',
+    title: "Content Structuring for AI",
+    description:
+      "Format your information architecture for optimal AI consumption. Clear hierarchies, semantic relationships, and machine-readable structure.",
   },
   {
     icon: BarChart3,
-    title: 'AI Search Tracking',
-    description: 'Monitor your visibility across AI platforms over time. Track citations, references, and brand mentions in AI-generated content.',
+    title: "AI Search Tracking",
+    description:
+      "Monitor your visibility across AI platforms over time. Track citations, references, and brand mentions in AI-generated content.",
   },
 ];
 
 const platforms = [
-  { name: 'ChatGPT / OpenAI', description: 'The largest AI assistant with millions of daily queries' },
-  { name: 'Google Gemini / AI Overviews', description: 'Google\'s AI powering search results and Bard' },
-  { name: 'Perplexity AI', description: 'The AI-native search engine gaining rapid adoption' },
-  { name: 'Claude / Anthropic', description: 'Enterprise AI assistant with growing market share' },
-  { name: 'Microsoft Copilot', description: 'AI integrated across Microsoft\'s ecosystem' },
+  {
+    name: "ChatGPT / OpenAI",
+    description: "The largest AI assistant with millions of daily queries",
+  },
+  {
+    name: "Google Gemini / AI Overviews",
+    description: "Google's AI powering search results and Bard",
+  },
+  {
+    name: "Perplexity AI",
+    description: "The AI-native search engine gaining rapid adoption",
+  },
+  {
+    name: "Claude / Anthropic",
+    description: "Enterprise AI assistant with growing market share",
+  },
+  {
+    name: "Microsoft Copilot",
+    description: "AI integrated across Microsoft's ecosystem",
+  },
 ];
 
 const approach = [
   {
-    step: '01',
-    title: 'Audit',
-    description: 'Analyze your current AI visibility. We query major AI platforms to understand how they perceive and cite your brand.',
+    step: "01",
+    title: "Audit",
+    description:
+      "Analyze your current AI visibility. We query major AI platforms to understand how they perceive and cite your brand.",
   },
   {
-    step: '02',
-    title: 'Strategy',
-    description: 'Identify high-value AI search opportunities. Map the questions your audience asks AI and where you should appear.',
+    step: "02",
+    title: "Strategy",
+    description:
+      "Identify high-value AI search opportunities. Map the questions your audience asks AI and where you should appear.",
   },
   {
-    step: '03',
-    title: 'Optimize',
-    description: 'Restructure content for LLM understanding. Implement semantic markup, clear hierarchies, and AI-friendly formatting.',
+    step: "03",
+    title: "Optimize",
+    description:
+      "Restructure content for LLM understanding. Implement semantic markup, clear hierarchies, and AI-friendly formatting.",
   },
   {
-    step: '04',
-    title: 'Build Authority',
-    description: 'Generate citations and references. Create content that AI systems trust and cite as authoritative sources.',
+    step: "04",
+    title: "Build Authority",
+    description:
+      "Generate citations and references. Create content that AI systems trust and cite as authoritative sources.",
   },
   {
-    step: '05',
-    title: 'Track',
-    description: 'Monitor AI search visibility over time. Track your citations, references, and brand presence across platforms.',
+    step: "05",
+    title: "Track",
+    description:
+      "Monitor AI search visibility over time. Track your citations, references, and brand presence across platforms.",
   },
 ];
 
 const stats = [
-  { value: '400+', label: 'AI citations generated for clients' },
-  { value: '$220K+', label: 'Traffic value from AI search' },
-  { value: 'First', label: 'Mover advantage in AI search' },
+  { value: "400+", label: "AI citations generated for clients" },
+  { value: "$220K+", label: "Traffic value from AI search" },
+  { value: "First", label: "Mover advantage in AI search" },
 ];
 
 const whyNow = [
   {
     icon: TrendingUp,
-    title: 'Exponential AI Search Growth',
-    description: 'AI search usage is doubling year-over-year. ChatGPT alone processes millions of queries daily that used to go to Google.',
+    title: "Exponential AI Search Growth",
+    description:
+      "AI search usage is doubling year-over-year. ChatGPT alone processes millions of queries daily that used to go to Google.",
   },
   {
     icon: Target,
-    title: 'Early Adopter Advantage',
-    description: 'GEO is where SEO was in 2005. Brands optimizing now will dominate AI search results for years to come.',
+    title: "Early Adopter Advantage",
+    description:
+      "GEO is where SEO was in 2005. Brands optimizing now will dominate AI search results for years to come.",
   },
   {
     icon: Sparkles,
-    title: 'Complete Search Strategy',
-    description: 'Traditional SEO + GEO = comprehensive visibility. Capture users whether they search Google or ask AI.',
+    title: "Complete Search Strategy",
+    description:
+      "Traditional SEO + GEO = comprehensive visibility. Capture users whether they search Google or ask AI.",
   },
 ];
 
 const faqs = [
   {
-    question: 'What is Generative Engine Optimization (GEO)?',
-    answer: 'GEO is the practice of optimizing content to appear in AI-generated responses. While SEO targets traditional search engines like Google, GEO targets AI systems like ChatGPT, Gemini, and Perplexity that generate answers by synthesizing information from multiple sources.',
+    question: "What is Generative Engine Optimization (GEO)?",
+    answer:
+      "GEO is the practice of optimizing content to appear in AI-generated responses. While SEO targets traditional search engines like Google, GEO targets AI systems like ChatGPT, Gemini, and Perplexity that generate answers by synthesizing information from multiple sources.",
   },
   {
-    question: 'How is GEO different from traditional SEO?',
-    answer: 'Traditional SEO optimizes for ranking in a list of blue links. GEO optimizes to be cited within AI-generated answers. The goal shifts from "rank higher" to "be the source AI references." This requires different content structures, authority signals, and optimization tactics.',
+    question: "How is GEO different from traditional SEO?",
+    answer:
+      'Traditional SEO optimizes for ranking in a list of blue links. GEO optimizes to be cited within AI-generated answers. The goal shifts from "rank higher" to "be the source AI references." This requires different content structures, authority signals, and optimization tactics.',
   },
   {
-    question: 'How do you track AI search visibility?',
-    answer: 'We systematically query AI platforms with relevant questions and analyze which sources they cite. We track citation frequency, context accuracy, and brand mention sentiment. This provides ongoing visibility into your AI search presence.',
+    question: "How do you track AI search visibility?",
+    answer:
+      "We systematically query AI platforms with relevant questions and analyze which sources they cite. We track citation frequency, context accuracy, and brand mention sentiment. This provides ongoing visibility into your AI search presence.",
   },
   {
-    question: 'How long does it take to see results?',
-    answer: 'AI systems update their knowledge and citation patterns regularly. Initial improvements can appear within weeks as optimized content gets indexed. Full impact typically materializes over 2-4 months as AI systems learn to trust and cite your content.',
+    question: "How long does it take to see results?",
+    answer:
+      "AI systems update their knowledge and citation patterns regularly. Initial improvements can appear within weeks as optimized content gets indexed. Full impact typically materializes over 2-4 months as AI systems learn to trust and cite your content.",
   },
   {
-    question: 'Do I still need traditional SEO?',
-    answer: 'Absolutely. Traditional search isn\'t going away—it\'s being supplemented by AI search. The strongest strategy combines SEO and GEO to capture users regardless of how they search. Many AI systems also use traditional search rankings as trust signals.',
+    question: "Do I still need traditional SEO?",
+    answer:
+      "Absolutely. Traditional search isn't going away—it's being supplemented by AI search. The strongest strategy combines SEO and GEO to capture users regardless of how they search. Many AI systems also use traditional search rankings as trust signals.",
   },
 ];
 
@@ -145,15 +178,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-6" : "max-h-0"}`}
       >
-        <p className="text-[#86868B] leading-relaxed">
-          {answer}
-        </p>
+        <p className="text-[#86868B] leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -176,14 +207,16 @@ export default function GEOServicePage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Generative Engine{' '}
+                  Generative Engine{" "}
                   <span className="text-[#00D4FF]">Optimization (GEO)</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  Get found in AI search. As ChatGPT, Gemini, and Perplexity reshape how people find information, your content needs to be optimized for the new search landscape.
+                  Get found in AI search. As ChatGPT, Gemini, and Perplexity
+                  reshape how people find information, your content needs to be
+                  optimized for the new search landscape.
                 </p>
               </AnimateOnScroll>
 
@@ -211,9 +244,14 @@ export default function GEOServicePage() {
                   <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mb-6">
                     <Search className="w-6 h-6 text-red-400" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">The Problem</h3>
+                  <h3 className="text-2xl font-semibold text-white mb-4">
+                    The Problem
+                  </h3>
                   <p className="text-gray-400 leading-relaxed">
-                    Traditional SEO optimizes for Google. But millions now ask ChatGPT, Gemini, and Perplexity instead. If AI can&apos;t find and cite you, you&apos;re invisible to a growing audience.
+                    Traditional SEO optimizes for Google. But millions now ask
+                    ChatGPT, Gemini, and Perplexity instead. If AI can&apos;t
+                    find and cite you, you&apos;re invisible to a growing
+                    audience.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -223,9 +261,13 @@ export default function GEOServicePage() {
                   <div className="w-12 h-12 rounded-xl bg-[#00D4FF]/20 flex items-center justify-center mb-6">
                     <Sparkles className="w-6 h-6 text-[#00D4FF]" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">The Solution</h3>
+                  <h3 className="text-2xl font-semibold text-white mb-4">
+                    The Solution
+                  </h3>
                   <p className="text-gray-400 leading-relaxed">
-                    GEO optimizes your content for AI search engines—getting you cited, referenced, and recommended in AI-generated answers. Be the source AI trusts.
+                    GEO optimizes your content for AI search engines—getting you
+                    cited, referenced, and recommended in AI-generated answers.
+                    Be the source AI trusts.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -341,7 +383,9 @@ export default function GEOServicePage() {
                   <AnimateOnScroll key={i} delay={0.2 + i * 0.08}>
                     <div className="flex gap-6 items-start bg-[#F5F5F7] rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                       <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1D1D1F] flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">{item.step}</span>
+                        <span className="text-white text-sm font-semibold">
+                          {item.step}
+                        </span>
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">
@@ -381,9 +425,7 @@ export default function GEOServicePage() {
                     <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">
                       {stat.value}
                     </p>
-                    <p className="text-gray-400">
-                      {stat.label}
-                    </p>
+                    <p className="text-gray-400">{stat.label}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -451,7 +493,11 @@ export default function GEOServicePage() {
               <AnimateOnScroll delay={0.2}>
                 <div className="bg-white rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                   {faqs.map((faq, i) => (
-                    <FAQItem key={i} question={faq.question} answer={faq.answer} />
+                    <FAQItem
+                      key={i}
+                      question={faq.question}
+                      answer={faq.answer}
+                    />
                   ))}
                 </div>
               </AnimateOnScroll>
@@ -475,7 +521,8 @@ export default function GEOServicePage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Start with a free AI search audit. Discover how AI platforms currently see your brand.
+                  Start with a free AI search audit. Discover how AI platforms
+                  currently see your brand.
                 </p>
               </AnimateOnScroll>
 

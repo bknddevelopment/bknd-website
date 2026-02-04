@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Client Results | BKND Development',
-  description: 'Real results for real businesses. See how BKND Development has helped companies achieve breakthrough growth through SEO and digital marketing.',
+  title: "Client Results | BKND Development",
+  description:
+    "Real results for real businesses. See how BKND Development has helped companies achieve breakthrough growth through SEO and digital marketing.",
   robots: {
     index: false,
     follow: false,

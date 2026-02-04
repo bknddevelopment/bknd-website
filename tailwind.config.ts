@@ -13,39 +13,39 @@ const config: Config = {
       // ============================================
       colors: {
         // Apple Core Colors
-        'apple-white': '#FFFFFF',
-        'apple-gray': '#F5F5F7',
-        'apple-black': '#1D1D1F',
-        'apple-secondary': '#86868B',
+        "apple-white": "#FFFFFF",
+        "apple-gray": "#F5F5F7",
+        "apple-black": "#1D1D1F",
+        "apple-secondary": "#86868B",
 
         // Accent (Cyan from logo - use sparingly)
         accent: {
-          DEFAULT: '#00D4FF',
-          hover: '#00B8E0',
-          light: 'rgba(0, 212, 255, 0.1)',
-          glow: 'rgba(0, 212, 255, 0.3)',
+          DEFAULT: "#00D4FF",
+          hover: "#00B8E0",
+          light: "rgba(0, 212, 255, 0.1)",
+          glow: "rgba(0, 212, 255, 0.3)",
         },
 
         // Background Colors
         bg: {
-          primary: '#FFFFFF',
-          secondary: '#F5F5F7',
-          dark: '#1D1D1F',
+          primary: "#FFFFFF",
+          secondary: "#F5F5F7",
+          dark: "#1D1D1F",
         },
 
         // Text Colors
         text: {
-          primary: '#1D1D1F',
-          secondary: '#86868B',
-          light: '#FFFFFF',
-          muted: '#86868B',
+          primary: "#1D1D1F",
+          secondary: "#86868B",
+          light: "#FFFFFF",
+          muted: "#86868B",
         },
 
         // Border Colors
         border: {
-          light: '#D2D2D7',
-          DEFAULT: '#D2D2D7',
-          dark: 'rgba(0, 0, 0, 0.1)',
+          light: "#D2D2D7",
+          DEFAULT: "#D2D2D7",
+          dark: "rgba(0, 0, 0, 0.1)",
         },
       },
 
@@ -54,47 +54,55 @@ const config: Config = {
       // ============================================
       fontFamily: {
         // Using Inter as Sofia Pro substitute (similar proportions)
-        sans: ["var(--font-inter)", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        sans: [
+          "var(--font-inter)",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
         // Alternative options for Sofia Pro-like feel
         display: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontSize: {
         // Heading sizes
-        "h1": ["46px", { lineHeight: "65px", fontWeight: "700" }],
-        "h2": ["48px", { lineHeight: "52.8px", fontWeight: "300" }],
-        "h3": ["29px", { lineHeight: "51px", fontWeight: "300" }],
+        h1: ["46px", { lineHeight: "65px", fontWeight: "700" }],
+        h2: ["48px", { lineHeight: "52.8px", fontWeight: "300" }],
+        h3: ["29px", { lineHeight: "51px", fontWeight: "300" }],
         // Body text sizes
-        "body": ["14px", { lineHeight: "15.4px" }],
+        body: ["14px", { lineHeight: "15.4px" }],
         "body-lg": ["29px", { lineHeight: "51px", fontWeight: "300" }],
         "body-md": ["15px", { lineHeight: "28px" }],
         "body-sm": ["14px", { lineHeight: "14px" }],
         // Navigation
-        "nav": ["16px", { lineHeight: "1.5" }],
+        nav: ["16px", { lineHeight: "1.5" }],
         "nav-dropdown": ["15px", { lineHeight: "1.5", fontWeight: "300" }],
         // Labels & Supporting
-        "label": ["22px", { lineHeight: "normal", fontWeight: "300" }],
-        "supporting": ["18px", { lineHeight: "normal", fontWeight: "300" }],
-        "tag": ["10px", { lineHeight: "1.2" }],
+        label: ["22px", { lineHeight: "normal", fontWeight: "300" }],
+        supporting: ["18px", { lineHeight: "normal", fontWeight: "300" }],
+        tag: ["10px", { lineHeight: "1.2" }],
       },
 
       // ============================================
       // BORDER RADIUS - CRITICAL: Buttons are 2px, not rounded
       // ============================================
       borderRadius: {
-        "button": "2px",
-        "card": "4px",
-        "input": "4px",
-        "secondary": "5px",
-        "pill": "20px",
-        "tag": "30px",
+        button: "2px",
+        card: "4px",
+        input: "4px",
+        secondary: "5px",
+        pill: "20px",
+        tag: "30px",
       },
 
       // ============================================
       // SPACING & CONTAINER
       // ============================================
       maxWidth: {
-        "container": "1148px",
-        "wrapper": "1460px",
+        container: "1148px",
+        wrapper: "1460px",
       },
       spacing: {
         // Section paddings
@@ -113,7 +121,7 @@ const config: Config = {
         "input-y": "14px",
         "input-x": "18px",
         // Card padding
-        "card": "26px",
+        card: "26px",
         "card-lg-y": "50px",
         "card-lg-x": "60px",
       },
@@ -124,7 +132,7 @@ const config: Config = {
         "section-lg": "120px",
       },
       margin: {
-        "container": "80px",
+        container: "80px",
         "container-lg": "95px",
       },
 
@@ -132,9 +140,9 @@ const config: Config = {
       // SHADOWS - Apple-style minimal
       // ============================================
       boxShadow: {
-        "card": "0 2px 8px rgba(0, 0, 0, 0.08)",
+        card: "0 2px 8px rgba(0, 0, 0, 0.08)",
         "card-hover": "0 4px 16px rgba(0, 0, 0, 0.12)",
-        "subtle": "0 1px 3px rgba(0, 0, 0, 0.06)",
+        subtle: "0 1px 3px rgba(0, 0, 0, 0.06)",
         "accent-glow": "0 4px 15px rgba(0, 212, 255, 0.2)",
         "accent-glow-lg": "0 6px 25px rgba(0, 212, 255, 0.3)",
       },
@@ -143,16 +151,16 @@ const config: Config = {
       // BACKGROUND - Minimal (no gradients)
       // ============================================
       backgroundImage: {
-        "none": "none",
+        none: "none",
       },
 
       // ============================================
       // TRANSITIONS
       // ============================================
       transitionDuration: {
-        "fast": "200ms",
-        "normal": "300ms",
-        "slow": "750ms",
+        fast: "200ms",
+        normal: "300ms",
+        slow: "750ms",
       },
       transitionTimingFunction: {
         "ease-out-slow": "cubic-bezier(0, 0, 0.2, 1)",
@@ -185,7 +193,7 @@ const config: Config = {
       // HEIGHT (for inputs)
       // ============================================
       height: {
-        "input": "55px",
+        input: "55px",
         "input-dark": "54px",
       },
     },

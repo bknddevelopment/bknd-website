@@ -1,34 +1,35 @@
 // TODO: Replace YOUR_FORM_ID with actual Formspree form ID
-'use client';
+"use client";
 
-import { useState, useEffect, FormEvent } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import { useState, useEffect, FormEvent } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 export default function ExitIntentModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
 
   useEffect(() => {
     // Only run on desktop (mouse-based devices)
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice) return;
 
     const handleMouseLeave = (e: MouseEvent) => {
       // Trigger when mouse leaves from the top of the viewport
-      if (e.clientY < 10 && !sessionStorage.getItem('exitModalShown')) {
+      if (e.clientY < 10 && !sessionStorage.getItem("exitModalShown")) {
         setIsOpen(true);
-        sessionStorage.setItem('exitModalShown', 'true');
+        sessionStorage.setItem("exitModalShown", "true");
       }
     };
 
-    document.addEventListener('mouseleave', handleMouseLeave);
-    return () => document.removeEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener("mouseleave", handleMouseLeave);
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, []);
 
   const handleSubmit = async (e: FormEvent) => {
@@ -40,14 +41,14 @@ export default function ExitIntentModal() {
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           email,
-          _subject: 'Free Growth Audit Request - BKND Development',
+          _subject: "Free Growth Audit Request - BKND Development",
         }),
       });
 
@@ -82,7 +83,7 @@ export default function ExitIntentModal() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
             className="fixed inset-0 z-[100]"
-            style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
             onClick={handleClose}
           />
 
@@ -93,14 +94,15 @@ export default function ExitIntentModal() {
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{
               duration: 0.4,
-              ease: [0.32, 0.72, 0, 1]
+              ease: [0.32, 0.72, 0, 1],
             }}
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-full max-w-[480px] mx-4"
           >
             <div
               className="relative bg-white rounded-[24px] p-10 md:p-12"
               style={{
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05)'
+                boxShadow:
+                  "0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05)",
               }}
             >
               {/* Close button - subtle gray */}
@@ -140,7 +142,7 @@ export default function ExitIntentModal() {
                   {/* Headline - Apple style black */}
                   <h2
                     className="text-[28px] md:text-[32px] font-semibold text-center mb-3 leading-tight tracking-tight"
-                    style={{ color: '#1D1D1F' }}
+                    style={{ color: "#1D1D1F" }}
                   >
                     Get Your Free Growth Audit
                   </h2>
@@ -148,31 +150,38 @@ export default function ExitIntentModal() {
                   {/* Subheadline - Apple gray */}
                   <p
                     className="text-center mb-8 text-[17px] leading-relaxed"
-                    style={{ color: '#86868B' }}
+                    style={{ color: "#86868B" }}
                   >
-                    Discover untapped opportunities to scale your business with actionable insights from our experts.
+                    Discover untapped opportunities to scale your business with
+                    actionable insights from our experts.
                   </p>
 
                   {/* Value props - clean Apple style */}
                   <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8">
-                    {['100% Free', 'No Commitment', 'Delivered in 48h'].map((item) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-2 text-[15px]"
-                        style={{ color: '#86868B' }}
-                      >
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="#00D4FF"
-                          strokeWidth={2.5}
+                    {["100% Free", "No Commitment", "Delivered in 48h"].map(
+                      (item) => (
+                        <div
+                          key={item}
+                          className="flex items-center gap-2 text-[15px]"
+                          style={{ color: "#86868B" }}
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="#00D4FF"
+                            strokeWidth={2.5}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span>{item}</span>
+                        </div>
+                      ),
+                    )}
                   </div>
 
                   {/* Form */}
@@ -184,19 +193,20 @@ export default function ExitIntentModal() {
                         placeholder="Enter your work email"
                         className="w-full rounded-xl px-4 py-4 text-[17px] transition-all duration-200 outline-none disabled:opacity-50"
                         style={{
-                          backgroundColor: '#F5F5F7',
-                          border: '1px solid transparent',
-                          color: '#1D1D1F',
+                          backgroundColor: "#F5F5F7",
+                          border: "1px solid transparent",
+                          color: "#1D1D1F",
                         }}
                         onFocus={(e) => {
-                          e.target.style.backgroundColor = '#FFFFFF';
-                          e.target.style.border = '1px solid #00D4FF';
-                          e.target.style.boxShadow = '0 0 0 3px rgba(0, 212, 255, 0.1)';
+                          e.target.style.backgroundColor = "#FFFFFF";
+                          e.target.style.border = "1px solid #00D4FF";
+                          e.target.style.boxShadow =
+                            "0 0 0 3px rgba(0, 212, 255, 0.1)";
                         }}
                         onBlur={(e) => {
-                          e.target.style.backgroundColor = '#F5F5F7';
-                          e.target.style.border = '1px solid transparent';
-                          e.target.style.boxShadow = 'none';
+                          e.target.style.backgroundColor = "#F5F5F7";
+                          e.target.style.border = "1px solid transparent";
+                          e.target.style.boxShadow = "none";
                         }}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -208,7 +218,7 @@ export default function ExitIntentModal() {
                     {submitError && (
                       <p
                         className="text-center text-[13px]"
-                        style={{ color: '#EF4444' }}
+                        style={{ color: "#EF4444" }}
                       >
                         Something went wrong. Please try again.
                       </p>
@@ -219,17 +229,17 @@ export default function ExitIntentModal() {
                       disabled={isSubmitting}
                       className="w-full rounded-xl px-6 py-4 text-[17px] font-semibold text-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       style={{
-                        backgroundColor: '#00D4FF',
+                        backgroundColor: "#00D4FF",
                       }}
                       onMouseEnter={(e) => {
                         if (!isSubmitting) {
-                          e.currentTarget.style.backgroundColor = '#00BFEA';
-                          e.currentTarget.style.transform = 'scale(1.01)';
+                          e.currentTarget.style.backgroundColor = "#00BFEA";
+                          e.currentTarget.style.transform = "scale(1.01)";
                         }
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = '#00D4FF';
-                        e.currentTarget.style.transform = 'scale(1)';
+                        e.currentTarget.style.backgroundColor = "#00D4FF";
+                        e.currentTarget.style.transform = "scale(1)";
                       }}
                     >
                       {isSubmitting ? (
@@ -256,14 +266,14 @@ export default function ExitIntentModal() {
                           <span>Submitting...</span>
                         </>
                       ) : (
-                        'Get My Free Audit'
+                        "Get My Free Audit"
                       )}
                     </button>
                   </form>
 
                   <p
                     className="text-center text-[13px] mt-5"
-                    style={{ color: '#86868B' }}
+                    style={{ color: "#86868B" }}
                   >
                     We respect your privacy. Unsubscribe anytime.
                   </p>
@@ -273,7 +283,7 @@ export default function ExitIntentModal() {
                 <div className="text-center py-4">
                   <div
                     className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(0, 212, 255, 0.1)' }}
+                    style={{ backgroundColor: "rgba(0, 212, 255, 0.1)" }}
                   >
                     <svg
                       className="w-8 h-8"
@@ -291,14 +301,11 @@ export default function ExitIntentModal() {
                   </div>
                   <h3
                     className="text-[24px] font-semibold mb-2"
-                    style={{ color: '#1D1D1F' }}
+                    style={{ color: "#1D1D1F" }}
                   >
                     You&apos;re All Set!
                   </h3>
-                  <p
-                    className="text-[17px]"
-                    style={{ color: '#86868B' }}
-                  >
+                  <p className="text-[17px]" style={{ color: "#86868B" }}>
                     Check your inbox for your free growth audit details.
                   </p>
                 </div>

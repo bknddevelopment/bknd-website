@@ -1,44 +1,46 @@
 // TODO: Replace YOUR_FORM_ID with actual Formspree form ID
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { useState, FormEvent } from "react";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 export default function Contact() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           email,
-          _subject: 'New Contact Request - BKND Development',
+          _subject: "New Contact Request - BKND Development",
         }),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
-        setEmail('');
+        setSubmitStatus("success");
+        setEmail("");
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -88,24 +90,24 @@ export default function Contact() {
                     disabled={isSubmitting}
                     className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'Sending...' : 'Get in Touch'}
+                    {isSubmitting ? "Sending..." : "Get in Touch"}
                   </button>
                 </div>
 
                 {/* Form Status Messages */}
-                {submitStatus === 'success' && (
+                {submitStatus === "success" && (
                   <p className="text-green-400 text-sm mt-4">
                     Thanks for reaching out! We&apos;ll be in touch soon.
                   </p>
                 )}
-                {submitStatus === 'error' && (
+                {submitStatus === "error" && (
                   <p className="text-red-400 text-sm mt-4">
                     Something went wrong. Please try again or email us directly.
                   </p>
                 )}
 
                 {/* Simple reassurance */}
-                {submitStatus === 'idle' && (
+                {submitStatus === "idle" && (
                   <p className="text-gray-500 text-sm mt-6">
                     We typically respond within 24 hours.
                   </p>

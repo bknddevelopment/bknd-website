@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import Link from 'next/link';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import Link from "next/link";
 import {
   ArrowRight,
   Brain,
@@ -19,156 +19,178 @@ import {
   Bot,
   Workflow,
   Sparkles,
-} from 'lucide-react';
-import { useState } from 'react';
+} from "lucide-react";
+import { useState } from "react";
 
 const services = [
   {
     icon: Database,
-    title: 'RAG Implementations',
-    description: 'Knowledge bases that answer questions from your documents. Turn company wikis, manuals, and documentation into intelligent assistants.',
-    price: '$40K-$100K',
+    title: "RAG Implementations",
+    description:
+      "Knowledge bases that answer questions from your documents. Turn company wikis, manuals, and documentation into intelligent assistants.",
+    price: "$40K-$100K",
   },
   {
     icon: Bot,
-    title: 'Custom AI Agents',
-    description: 'Autonomous systems that handle complex workflows. From customer service to data processing, agents that work around the clock.',
-    price: 'Custom pricing',
+    title: "Custom AI Agents",
+    description:
+      "Autonomous systems that handle complex workflows. From customer service to data processing, agents that work around the clock.",
+    price: "Custom pricing",
   },
   {
     icon: Cog,
-    title: 'AI Integration Services',
-    description: 'Connect AI to your existing tech stack. CRMs, ERPs, databases, and APIs working together with intelligent automation.',
-    price: 'Based on scope',
+    title: "AI Integration Services",
+    description:
+      "Connect AI to your existing tech stack. CRMs, ERPs, databases, and APIs working together with intelligent automation.",
+    price: "Based on scope",
   },
   {
     icon: Building2,
-    title: 'Industry-Specific AI',
-    description: 'Solutions built for healthcare, legal, finance, and more. AI that understands your domain and compliance requirements.',
-    price: 'Custom pricing',
+    title: "Industry-Specific AI",
+    description:
+      "Solutions built for healthcare, legal, finance, and more. AI that understands your domain and compliance requirements.",
+    price: "Custom pricing",
   },
   {
     icon: Lightbulb,
-    title: 'AI Strategy & Consulting',
-    description: 'Roadmaps for AI adoption and implementation. Identify opportunities, assess feasibility, and plan your AI journey.',
-    price: '$15K-$50K',
+    title: "AI Strategy & Consulting",
+    description:
+      "Roadmaps for AI adoption and implementation. Identify opportunities, assess feasibility, and plan your AI journey.",
+    price: "$15K-$50K",
   },
 ];
 
 const useCases = [
   {
     icon: FileText,
-    title: 'Internal Knowledge Assistants',
-    description: 'Train AI on company documentation, policies, and procedures. Employees get instant, accurate answers without searching through folders.',
+    title: "Internal Knowledge Assistants",
+    description:
+      "Train AI on company documentation, policies, and procedures. Employees get instant, accurate answers without searching through folders.",
   },
   {
     icon: MessageSquare,
-    title: 'Customer-Facing AI',
-    description: 'AI that knows your products deeply. Answer complex questions, recommend solutions, and escalate intelligently when needed.',
+    title: "Customer-Facing AI",
+    description:
+      "AI that knows your products deeply. Answer complex questions, recommend solutions, and escalate intelligently when needed.",
   },
   {
     icon: Workflow,
-    title: 'Automated Data Processing',
-    description: 'Extract, transform, and analyze data at scale. From invoice processing to report generation, AI handles the repetitive work.',
+    title: "Automated Data Processing",
+    description:
+      "Extract, transform, and analyze data at scale. From invoice processing to report generation, AI handles the repetitive work.",
   },
   {
     icon: Sparkles,
-    title: 'AI-Powered Content Generation',
-    description: 'Generate product descriptions, marketing copy, and technical documentation that matches your brand voice and standards.',
+    title: "AI-Powered Content Generation",
+    description:
+      "Generate product descriptions, marketing copy, and technical documentation that matches your brand voice and standards.",
   },
   {
     icon: Brain,
-    title: 'Intelligent Document Processing',
-    description: 'Parse contracts, extract key terms, categorize documents, and surface insights from unstructured text at enterprise scale.',
+    title: "Intelligent Document Processing",
+    description:
+      "Parse contracts, extract key terms, categorize documents, and surface insights from unstructured text at enterprise scale.",
   },
 ];
 
 const approach = [
   {
-    step: '01',
-    title: 'Discovery',
-    description: 'Deep dive into your challenges and data. We understand your workflows, pain points, and what success looks like.',
+    step: "01",
+    title: "Discovery",
+    description:
+      "Deep dive into your challenges and data. We understand your workflows, pain points, and what success looks like.",
   },
   {
-    step: '02',
-    title: 'Architecture',
-    description: 'Design the AI solution and integrations. Choose the right models, data pipelines, and infrastructure for your needs.',
+    step: "02",
+    title: "Architecture",
+    description:
+      "Design the AI solution and integrations. Choose the right models, data pipelines, and infrastructure for your needs.",
   },
   {
-    step: '03',
-    title: 'Development',
-    description: 'Build and train custom models. Iterative development with regular demos and feedback cycles.',
+    step: "03",
+    title: "Development",
+    description:
+      "Build and train custom models. Iterative development with regular demos and feedback cycles.",
   },
   {
-    step: '04',
-    title: 'Testing',
-    description: 'Rigorous QA and edge case handling. We test for accuracy, performance, and security before anything goes live.',
+    step: "04",
+    title: "Testing",
+    description:
+      "Rigorous QA and edge case handling. We test for accuracy, performance, and security before anything goes live.",
   },
   {
-    step: '05',
-    title: 'Deployment',
-    description: 'Launch with monitoring and support. Continuous improvement based on real-world usage and feedback.',
+    step: "05",
+    title: "Deployment",
+    description:
+      "Launch with monitoring and support. Continuous improvement based on real-world usage and feedback.",
   },
 ];
 
 const investmentTiers = [
   {
-    tier: 'Simple Chatbots',
-    range: '$5,000 - $15,000',
-    description: 'FAQ bots, basic customer service, simple document Q&A',
+    tier: "Simple Chatbots",
+    range: "$5,000 - $15,000",
+    description: "FAQ bots, basic customer service, simple document Q&A",
     features: [
-      'Pre-built model integration',
-      'Basic conversation flows',
-      'Standard web deployment',
-      'Basic analytics',
+      "Pre-built model integration",
+      "Basic conversation flows",
+      "Standard web deployment",
+      "Basic analytics",
     ],
   },
   {
-    tier: 'Smart Agents with Learning',
-    range: '$50,000 - $150,000',
-    description: 'RAG systems, workflow automation, custom-trained models',
+    tier: "Smart Agents with Learning",
+    range: "$50,000 - $150,000",
+    description: "RAG systems, workflow automation, custom-trained models",
     features: [
-      'Custom knowledge bases',
-      'Multi-step workflows',
-      'API integrations',
-      'Advanced analytics & feedback loops',
-      'Continuous learning capabilities',
+      "Custom knowledge bases",
+      "Multi-step workflows",
+      "API integrations",
+      "Advanced analytics & feedback loops",
+      "Continuous learning capabilities",
     ],
   },
   {
-    tier: 'Enterprise Solutions',
-    range: '$300,000+',
-    description: 'Full-scale AI platforms, multi-agent systems, industry-specific solutions',
+    tier: "Enterprise Solutions",
+    range: "$300,000+",
+    description:
+      "Full-scale AI platforms, multi-agent systems, industry-specific solutions",
     features: [
-      'Custom model training',
-      'Multi-system integration',
-      'Enterprise security & compliance',
-      'Dedicated support & SLAs',
-      'On-premise deployment options',
+      "Custom model training",
+      "Multi-system integration",
+      "Enterprise security & compliance",
+      "Dedicated support & SLAs",
+      "On-premise deployment options",
     ],
   },
 ];
 
 const faqs = [
   {
-    question: 'What makes your AI solutions different from off-the-shelf tools?',
-    answer: 'Off-the-shelf AI doesn\'t know your business. We build solutions trained on your data, designed for your workflows, and integrated with your systems. The result is AI that actually understands context and delivers accurate, relevant results.',
+    question:
+      "What makes your AI solutions different from off-the-shelf tools?",
+    answer:
+      "Off-the-shelf AI doesn't know your business. We build solutions trained on your data, designed for your workflows, and integrated with your systems. The result is AI that actually understands context and delivers accurate, relevant results.",
   },
   {
-    question: 'How long does a custom AI project take?',
-    answer: 'Simple chatbots can be deployed in 4-6 weeks. RAG implementations typically take 8-12 weeks. Enterprise solutions with custom training and integrations can take 4-6 months. We provide detailed timelines after discovery.',
+    question: "How long does a custom AI project take?",
+    answer:
+      "Simple chatbots can be deployed in 4-6 weeks. RAG implementations typically take 8-12 weeks. Enterprise solutions with custom training and integrations can take 4-6 months. We provide detailed timelines after discovery.",
   },
   {
-    question: 'What about data privacy and security?',
-    answer: 'Your data stays yours. We can deploy on your infrastructure, use private cloud instances, and implement enterprise-grade security. For regulated industries, we build compliance into the architecture from day one.',
+    question: "What about data privacy and security?",
+    answer:
+      "Your data stays yours. We can deploy on your infrastructure, use private cloud instances, and implement enterprise-grade security. For regulated industries, we build compliance into the architecture from day one.",
   },
   {
-    question: 'Do you handle the ongoing maintenance?',
-    answer: 'Yes. AI systems need monitoring, updates, and continuous improvement. We offer support packages that include performance monitoring, model updates, and regular optimization based on usage patterns.',
+    question: "Do you handle the ongoing maintenance?",
+    answer:
+      "Yes. AI systems need monitoring, updates, and continuous improvement. We offer support packages that include performance monitoring, model updates, and regular optimization based on usage patterns.",
   },
   {
-    question: 'What if we\'re not sure AI is right for our use case?',
-    answer: 'That\'s exactly what our strategy and consulting services are for. We\'ll assess your needs, identify the highest-impact opportunities, and give you an honest recommendation on whether AI makes sense for your situation.',
+    question: "What if we're not sure AI is right for our use case?",
+    answer:
+      "That's exactly what our strategy and consulting services are for. We'll assess your needs, identify the highest-impact opportunities, and give you an honest recommendation on whether AI makes sense for your situation.",
   },
 ];
 
@@ -185,15 +207,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-6" : "max-h-0"}`}
       >
-        <p className="text-[#86868B] leading-relaxed">
-          {answer}
-        </p>
+        <p className="text-[#86868B] leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -216,14 +236,18 @@ export default function CustomAIPage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Custom AI Solutions{' '}
-                  <span className="text-[#00D4FF]">Built for Your Business</span>
+                  Custom AI Solutions{" "}
+                  <span className="text-[#00D4FF]">
+                    Built for Your Business
+                  </span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  From RAG implementations to bespoke AI agents, we build intelligent systems that solve your specific challenges and drive measurable results.
+                  From RAG implementations to bespoke AI agents, we build
+                  intelligent systems that solve your specific challenges and
+                  drive measurable results.
                 </p>
               </AnimateOnScroll>
 
@@ -255,7 +279,11 @@ export default function CustomAIPage() {
                     Off-the-shelf AI doesn&apos;t understand your business.
                   </h2>
                   <p className="text-gray-400 text-lg leading-relaxed">
-                    Generic solutions create generic results. ChatGPT doesn&apos;t know your products. Claude doesn&apos;t understand your processes. Pre-built tools force you to adapt to their limitations instead of solving your actual problems.
+                    Generic solutions create generic results. ChatGPT
+                    doesn&apos;t know your products. Claude doesn&apos;t
+                    understand your processes. Pre-built tools force you to
+                    adapt to their limitations instead of solving your actual
+                    problems.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -269,7 +297,9 @@ export default function CustomAIPage() {
                     Custom AI built on your data.
                   </h2>
                   <p className="text-gray-400 text-lg leading-relaxed">
-                    Trained for your use cases. Integrated with your systems. AI that speaks your language, understands your context, and delivers results that matter to your business.
+                    Trained for your use cases. Integrated with your systems. AI
+                    that speaks your language, understands your context, and
+                    delivers results that matter to your business.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -294,7 +324,8 @@ export default function CustomAIPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From simple chatbots to enterprise-scale AI platforms, we build what you need.
+                From simple chatbots to enterprise-scale AI platforms, we build
+                what you need.
               </p>
             </AnimateOnScroll>
 
@@ -420,28 +451,39 @@ export default function CustomAIPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From quick wins to transformative platforms, we have options for every stage.
+                From quick wins to transformative platforms, we have options for
+                every stage.
               </p>
             </AnimateOnScroll>
 
             <div className="grid md:grid-cols-3 gap-6">
               {investmentTiers.map((tier, i) => (
                 <AnimateOnScroll key={i} delay={0.2 + i * 0.1}>
-                  <div className={`rounded-2xl p-8 h-full border transition-all duration-300 ${i === 1 ? 'bg-[#1D1D1F] border-[#00D4FF]/30' : 'bg-[#F5F5F7] border-gray-200/80'}`}>
-                    <h3 className={`text-xl font-semibold mb-2 ${i === 1 ? 'text-white' : 'text-[#1D1D1F]'}`}>
+                  <div
+                    className={`rounded-2xl p-8 h-full border transition-all duration-300 ${i === 1 ? "bg-[#1D1D1F] border-[#00D4FF]/30" : "bg-[#F5F5F7] border-gray-200/80"}`}
+                  >
+                    <h3
+                      className={`text-xl font-semibold mb-2 ${i === 1 ? "text-white" : "text-[#1D1D1F]"}`}
+                    >
                       {tier.tier}
                     </h3>
                     <p className="text-[#00D4FF] text-2xl font-bold mb-3">
                       {tier.range}
                     </p>
-                    <p className={`text-sm leading-relaxed mb-6 ${i === 1 ? 'text-gray-400' : 'text-[#86868B]'}`}>
+                    <p
+                      className={`text-sm leading-relaxed mb-6 ${i === 1 ? "text-gray-400" : "text-[#86868B]"}`}
+                    >
                       {tier.description}
                     </p>
                     <ul className="space-y-3">
                       {tier.features.map((feature, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${i === 1 ? 'text-[#00D4FF]' : 'text-[#00D4FF]'}`} />
-                          <span className={`text-sm ${i === 1 ? 'text-gray-300' : 'text-[#86868B]'}`}>
+                          <CheckCircle2
+                            className={`w-5 h-5 flex-shrink-0 mt-0.5 ${i === 1 ? "text-[#00D4FF]" : "text-[#00D4FF]"}`}
+                          />
+                          <span
+                            className={`text-sm ${i === 1 ? "text-gray-300" : "text-[#86868B]"}`}
+                          >
                             {feature}
                           </span>
                         </li>
@@ -473,7 +515,11 @@ export default function CustomAIPage() {
               <AnimateOnScroll delay={0.2}>
                 <div className="bg-white rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                   {faqs.map((faq, i) => (
-                    <FAQItem key={i} question={faq.question} answer={faq.answer} />
+                    <FAQItem
+                      key={i}
+                      question={faq.question}
+                      answer={faq.answer}
+                    />
                   ))}
                 </div>
               </AnimateOnScroll>
@@ -497,7 +543,8 @@ export default function CustomAIPage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Schedule a consultation to discuss your challenges and explore what custom AI can do for your business.
+                  Schedule a consultation to discuss your challenges and explore
+                  what custom AI can do for your business.
                 </p>
               </AnimateOnScroll>
 

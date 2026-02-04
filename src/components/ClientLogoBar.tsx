@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // Industries we serve - honest representation without fake company names
 const industries = [
-  'SaaS Companies',
-  'E-commerce Brands',
-  'B2B Tech',
-  'FinTech Startups',
-  'Healthcare Tech',
-  'Developer Tools',
-  'AI & ML Companies',
-  'Marketplace Platforms',
+  "SaaS Companies",
+  "E-commerce Brands",
+  "B2B Tech",
+  "FinTech Startups",
+  "Healthcare Tech",
+  "Developer Tools",
+  "AI & ML Companies",
+  "Marketplace Platforms",
 ];
 
 export default function ClientLogoBar() {
@@ -29,7 +29,9 @@ export default function ClientLogoBar() {
 
       <div className="container-sg relative z-10">
         {/* Header */}
-        <div className={`text-center mb-8 transition-all duration-700 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div
+          className={`text-center mb-8 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+        >
           <p className="text-[#E9EFF4]/50 text-sm font-medium tracking-wide">
             We work with ambitious teams in
           </p>
@@ -37,7 +39,7 @@ export default function ClientLogoBar() {
 
         {/* Text Marquee Container */}
         <div
-          className={`relative transition-all duration-700 delay-200 ${mounted ? 'opacity-100' : 'opacity-0'}`}
+          className={`relative transition-all duration-700 delay-200 ${mounted ? "opacity-100" : "opacity-0"}`}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -48,24 +50,28 @@ export default function ClientLogoBar() {
           {/* Scrolling container */}
           <div className="overflow-hidden py-4">
             <div
-              className={`flex items-center ${isPaused ? '' : 'animate-marquee'}`}
-              style={isPaused ? { animationPlayState: 'paused' } : {}}
+              className={`flex items-center ${isPaused ? "" : "animate-marquee"}`}
+              style={isPaused ? { animationPlayState: "paused" } : {}}
             >
               {/* Repeated industry labels with separators */}
-              {[...industries, ...industries, ...industries, ...industries].map((industry, i) => (
-                <div key={i} className="flex items-center flex-shrink-0">
-                  <span className="text-[#E9EFF4]/40 text-base lg:text-lg font-medium whitespace-nowrap px-4 lg:px-6 hover:text-[#E9EFF4]/70 transition-colors cursor-default">
-                    {industry}
-                  </span>
-                  <span className="text-[#F27038]/40 text-sm">•</span>
-                </div>
-              ))}
+              {[...industries, ...industries, ...industries, ...industries].map(
+                (industry, i) => (
+                  <div key={i} className="flex items-center flex-shrink-0">
+                    <span className="text-[#E9EFF4]/40 text-base lg:text-lg font-medium whitespace-nowrap px-4 lg:px-6 hover:text-[#E9EFF4]/70 transition-colors cursor-default">
+                      {industry}
+                    </span>
+                    <span className="text-[#F27038]/40 text-sm">•</span>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>
 
         {/* Bottom accent */}
-        <div className={`mt-6 flex justify-center transition-all duration-700 delay-300 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
+        <div
+          className={`mt-6 flex justify-center transition-all duration-700 delay-300 ${mounted ? "opacity-100" : "opacity-0"}`}
+        >
           <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#F27038]/20 to-transparent" />
         </div>
       </div>

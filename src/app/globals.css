@@ -11,45 +11,48 @@
      ============================================ */
 
   /* Primary Colors */
-  --color-apple-white: #FFFFFF;
-  --color-apple-gray: #F5F5F7;
-  --color-apple-black: #1D1D1F;
-  --color-apple-secondary: #86868B;
+  --color-apple-white: #ffffff;
+  --color-apple-gray: #f5f5f7;
+  --color-apple-black: #1d1d1f;
+  --color-apple-secondary: #86868b;
 
   /* Accent (Cyan from logo - use sparingly) */
-  --color-accent: #00D4FF;
-  --color-accent-hover: #00B8E0;
+  --color-accent: #00d4ff;
+  --color-accent-hover: #00b8e0;
   --color-accent-light: rgba(0, 212, 255, 0.1);
   --color-accent-glow: rgba(0, 212, 255, 0.3);
 
   /* ============================================
      COLORS - Backgrounds
      ============================================ */
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F5F5F7;
-  --color-bg-dark: #1D1D1F;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f5f7;
+  --color-bg-dark: #1d1d1f;
 
   /* ============================================
      COLORS - Text
      ============================================ */
-  --color-text-primary: #1D1D1F;
-  --color-text-secondary: #86868B;
-  --color-text-light: #FFFFFF;
-  --color-text-muted: #86868B;
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #86868b;
+  --color-text-light: #ffffff;
+  --color-text-muted: #86868b;
 
   /* ============================================
      COLORS - Borders
      ============================================ */
-  --color-border-light: #D2D2D7;
-  --color-border-default: #D2D2D7;
+  --color-border-light: #d2d2d7;
+  --color-border-default: #d2d2d7;
   --color-border-dark: rgba(0, 0, 0, 0.1);
 
   /* ============================================
      TYPOGRAPHY - Font Family
      Apple System Fonts
      ============================================ */
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+  --font-family-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-display:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
 
   /* ============================================
      BORDER RADIUS - CRITICAL: buttons are 2px
@@ -100,18 +103,34 @@
   --animate-scale-in: scale-in 0.4s ease-out;
 
   @keyframes slide-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes scale-in {
-    from { opacity: 0; transform: scale(0.98); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 
@@ -120,25 +139,25 @@
    ============================================ */
 :root {
   /* Apple Colors */
-  --apple-white: #FFFFFF;
-  --apple-gray: #F5F5F7;
-  --apple-black: #1D1D1F;
-  --apple-secondary: #86868B;
-  --accent: #00D4FF;
-  --accent-hover: #00B8E0;
+  --apple-white: #ffffff;
+  --apple-gray: #f5f5f7;
+  --apple-black: #1d1d1f;
+  --apple-secondary: #86868b;
+  --accent: #00d4ff;
+  --accent-hover: #00b8e0;
 
   /* Text */
-  --text-primary: #1D1D1F;
-  --text-secondary: #86868B;
-  --text-light: #FFFFFF;
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-light: #ffffff;
 
   /* Backgrounds */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F5F5F7;
-  --bg-dark: #1D1D1F;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --bg-dark: #1d1d1f;
 
   /* Border */
-  --border-color: #D2D2D7;
+  --border-color: #d2d2d7;
 
   /* Border Radius */
   --radius-button: 8px;
@@ -171,8 +190,8 @@ html {
 }
 
 body {
-  background-color: var(--apple-white, #FFFFFF);
-  color: var(--apple-black, #1D1D1F);
+  background-color: var(--apple-white, #ffffff);
+  color: var(--apple-black, #1d1d1f);
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -185,19 +204,22 @@ body {
 /* ============================================
    TYPOGRAPHY BASE
    ============================================ */
-h1, .h1 {
+h1,
+.h1 {
   font-size: 46px;
   line-height: 65px;
   font-weight: 700;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 48px;
   line-height: 52.8px;
   font-weight: 300;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 29px;
   line-height: 51px;
   font-weight: 300;
@@ -210,7 +232,7 @@ h3, .h3 {
 /* Primary CTA Button - Apple Black */
 .btn-primary {
   background-color: var(--apple-black);
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 17px;
   font-weight: 400;
   padding: 12px 24px;
@@ -254,7 +276,7 @@ h3, .h3 {
 /* Accent Button - Cyan (use sparingly) */
 .btn-accent {
   background-color: var(--accent);
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 17px;
   font-weight: 500;
   padding: 12px 24px;
@@ -323,7 +345,7 @@ h3, .h3 {
 /* Dark Input */
 .input-dark {
   background-color: rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 17px;
   padding: 12px 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -408,7 +430,7 @@ h3, .h3 {
 /* Footer section - charcoal */
 .section-footer {
   background-color: var(--apple-black);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Section padding utilities */
@@ -550,10 +572,18 @@ h3, .h3 {
    ============================================ */
 
 /* Text colors */
-.text-accent { color: var(--accent); }
-.text-muted { color: var(--apple-secondary); }
-.text-primary { color: var(--apple-black); }
-.text-light { color: var(--text-light); }
+.text-accent {
+  color: var(--accent);
+}
+.text-muted {
+  color: var(--apple-secondary);
+}
+.text-primary {
+  color: var(--apple-black);
+}
+.text-light {
+  color: var(--text-light);
+}
 
 .text-balance {
   text-wrap: balance;
@@ -575,10 +605,18 @@ h3, .h3 {
    BACKGROUND UTILITIES - APPLE-INSPIRED
    ============================================ */
 
-.bg-white { background-color: var(--apple-white); }
-.bg-gray { background-color: var(--apple-gray); }
-.bg-dark { background-color: var(--apple-black); }
-.bg-accent { background-color: var(--accent); }
+.bg-white {
+  background-color: var(--apple-white);
+}
+.bg-gray {
+  background-color: var(--apple-gray);
+}
+.bg-dark {
+  background-color: var(--apple-black);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
 
 /* ============================================
    ANIMATION UTILITIES
@@ -588,28 +626,41 @@ h3, .h3 {
   animation: slide-up 0.6s ease-out forwards;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
 
 /* ============================================
    RESPONSIVE TYPOGRAPHY
    ============================================ */
 
 @media (max-width: 768px) {
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 32px;
     line-height: 42px;
   }
 
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 28px;
     line-height: 34px;
   }
 
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: 22px;
     line-height: 32px;
   }

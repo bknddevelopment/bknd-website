@@ -1,80 +1,81 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { useState } from "react";
+import Image from "next/image";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
-const categories = ['All', 'SEO', 'Paid Media', 'CRO'];
+const categories = ["All", "SEO", "Paid Media", "CRO"];
 
 const capabilities = [
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '+400%', label: 'Traffic' },
-      { value: '50+', label: 'Citations' },
-      { value: 'Top 3', label: 'Map Pack' },
+      { value: "+400%", label: "Traffic" },
+      { value: "50+", label: "Citations" },
+      { value: "Top 3", label: "Map Pack" },
     ],
-    title: 'From invisible to page 1 in 90 days',
-    capability: 'Local SEO Dominance',
-    industry: 'Service Businesses',
-    image: '/images/case-studies/local-seo.jpg',
+    title: "From invisible to page 1 in 90 days",
+    capability: "Local SEO Dominance",
+    industry: "Service Businesses",
+    image: "/images/case-studies/local-seo.jpg",
   },
   {
-    category: 'Paid Media',
+    category: "Paid Media",
     stats: [
-      { value: '4.2x', label: 'ROAS' },
-      { value: '-40%', label: 'CPA' },
-      { value: '+180%', label: 'Conversions' },
+      { value: "4.2x", label: "ROAS" },
+      { value: "-40%", label: "CPA" },
+      { value: "+180%", label: "Conversions" },
     ],
-    title: 'Profitable campaigns from day one',
-    capability: 'Paid Media Scaling',
-    industry: 'E-commerce & Lead Gen',
-    image: '/images/case-studies/paid-media.jpg',
+    title: "Profitable campaigns from day one",
+    capability: "Paid Media Scaling",
+    industry: "E-commerce & Lead Gen",
+    image: "/images/case-studies/paid-media.jpg",
   },
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '+300%', label: 'Crawl Efficiency' },
-      { value: '95+', label: 'PageSpeed' },
-      { value: 'Zero', label: 'Critical Errors' },
+      { value: "+300%", label: "Crawl Efficiency" },
+      { value: "95+", label: "PageSpeed" },
+      { value: "Zero", label: "Critical Errors" },
     ],
-    title: 'Fixing what other agencies missed',
-    capability: 'Technical SEO Overhaul',
-    industry: 'All Industries',
-    image: '/images/case-studies/technical-seo.jpg',
+    title: "Fixing what other agencies missed",
+    capability: "Technical SEO Overhaul",
+    industry: "All Industries",
+    image: "/images/case-studies/technical-seo.jpg",
   },
   {
-    category: 'SEO',
+    category: "SEO",
     stats: [
-      { value: '50+', label: 'Page 1 Rankings' },
-      { value: '+250%', label: 'Organic Traffic' },
-      { value: '12x', label: 'Engagement' },
+      { value: "50+", label: "Page 1 Rankings" },
+      { value: "+250%", label: "Organic Traffic" },
+      { value: "12x", label: "Engagement" },
     ],
-    title: 'Strategic content, not content mills',
-    capability: 'Content That Ranks',
-    industry: 'B2B & Professional Services',
-    image: '/images/case-studies/content-marketing.jpg',
+    title: "Strategic content, not content mills",
+    capability: "Content That Ranks",
+    industry: "B2B & Professional Services",
+    image: "/images/case-studies/content-marketing.jpg",
   },
   {
-    category: 'CRO',
+    category: "CRO",
     stats: [
-      { value: '+85%', label: 'Conversion Rate' },
-      { value: '3x', label: 'Lead Volume' },
-      { value: '-25%', label: 'Bounce Rate' },
+      { value: "+85%", label: "Conversion Rate" },
+      { value: "3x", label: "Lead Volume" },
+      { value: "-25%", label: "Bounce Rate" },
     ],
-    title: 'Stop leaving money on the table',
-    capability: 'Conversion Optimization',
-    industry: 'Any Website',
-    image: '/images/case-studies/cro.jpg',
+    title: "Stop leaving money on the table",
+    capability: "Conversion Optimization",
+    industry: "Any Website",
+    image: "/images/case-studies/cro.jpg",
   },
 ];
 
 export default function CaseStudies() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filtered = activeCategory === 'All'
-    ? capabilities
-    : capabilities.filter(c => c.category === activeCategory);
+  const filtered =
+    activeCategory === "All"
+      ? capabilities
+      : capabilities.filter((c) => c.category === activeCategory);
 
   return (
     <section className="bg-[#F5F5F7] py-16 md:py-20">
@@ -86,13 +87,14 @@ export default function CaseStudies() {
               What We Deliver
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1D1D1F] tracking-tight mb-6">
-              Results That{' '}
+              Results That{" "}
               <span className="bg-gradient-to-r from-[#00D4FF] to-[#0071E3] bg-clip-text text-transparent">
                 Speak for Themselves
               </span>
             </h2>
             <p className="text-xl text-[#86868B] max-w-2xl mx-auto">
-              Proven capabilities that drive measurable growth for businesses like yours.
+              Proven capabilities that drive measurable growth for businesses
+              like yours.
             </p>
           </div>
         </AnimateOnScroll>
@@ -106,8 +108,8 @@ export default function CaseStudies() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === cat
-                    ? 'bg-[#1D1D1F] text-white'
-                    : 'bg-white text-[#1D1D1F] hover:bg-[#1D1D1F] hover:text-white border border-[#D2D2D7]'
+                    ? "bg-[#1D1D1F] text-white"
+                    : "bg-white text-[#1D1D1F] hover:bg-[#1D1D1F] hover:text-white border border-[#D2D2D7]"
                 }`}
               >
                 {cat}
@@ -142,7 +144,8 @@ export default function CaseStudies() {
                   {/* Industry info on image */}
                   <div className="absolute bottom-4 left-4 right-4 z-10">
                     <p className="text-white/90 text-sm font-medium">
-                      {item.capability} <span className="text-white/60">•</span> <span className="text-white/70">{item.industry}</span>
+                      {item.capability} <span className="text-white/60">•</span>{" "}
+                      <span className="text-white/70">{item.industry}</span>
                     </p>
                   </div>
                 </div>
@@ -156,7 +159,9 @@ export default function CaseStudies() {
                         <div className="text-xl md:text-2xl font-semibold text-[#00D4FF]">
                           {stat.value}
                         </div>
-                        <div className="text-[#86868B] text-xs mt-1">{stat.label}</div>
+                        <div className="text-[#86868B] text-xs mt-1">
+                          {stat.label}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -169,8 +174,18 @@ export default function CaseStudies() {
                   {/* Learn More Link */}
                   <div className="mt-5 flex items-center gap-2 text-[#0071E3] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Learn More
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg
+                      className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -187,8 +202,18 @@ export default function CaseStudies() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#1D1D1F] text-white rounded-full text-base font-medium hover:bg-[#000000] transition-all duration-300 hover:scale-105"
             >
               Explore Our Services
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
             </a>
           </div>

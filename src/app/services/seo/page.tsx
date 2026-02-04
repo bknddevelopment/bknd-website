@@ -1,136 +1,174 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, Search, Code, BarChart3, Zap, Globe, FileText, Shield, ChevronDown, Sparkles, Bot, Eye, Layers, Brain } from 'lucide-react';
-import Link from 'next/link';
-import { useState } from 'react';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import {
+  ArrowRight,
+  Search,
+  Code,
+  BarChart3,
+  Zap,
+  Globe,
+  FileText,
+  Shield,
+  ChevronDown,
+  Sparkles,
+  Bot,
+  Eye,
+  Layers,
+  Brain,
+} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const services = [
   {
     icon: Code,
-    title: 'Technical SEO',
-    description: 'Site architecture, schema markup, crawlability, indexation, and Core Web Vitals optimization built with engineering precision.',
+    title: "Technical SEO",
+    description:
+      "Site architecture, schema markup, crawlability, indexation, and Core Web Vitals optimization built with engineering precision.",
   },
   {
     icon: Search,
-    title: 'On-Page Optimization',
-    description: 'Content structure, meta tags, heading hierarchy, internal linking, and keyword targeting based on data, not guesswork.',
+    title: "On-Page Optimization",
+    description:
+      "Content structure, meta tags, heading hierarchy, internal linking, and keyword targeting based on data, not guesswork.",
   },
   {
     icon: Globe,
-    title: 'Local SEO',
-    description: 'Google Business Profile optimization, local citations, review management, and geo-targeted content for local visibility.',
+    title: "Local SEO",
+    description:
+      "Google Business Profile optimization, local citations, review management, and geo-targeted content for local visibility.",
   },
   {
     icon: FileText,
-    title: 'Content Strategy',
-    description: 'Keyword research, content gap analysis, topic clusters, and editorial calendars driven by search intent data.',
+    title: "Content Strategy",
+    description:
+      "Keyword research, content gap analysis, topic clusters, and editorial calendars driven by search intent data.",
   },
   {
     icon: BarChart3,
-    title: 'Link Building',
-    description: 'White-hat outreach, digital PR, and authority building through genuine relationships and valuable content.',
+    title: "Link Building",
+    description:
+      "White-hat outreach, digital PR, and authority building through genuine relationships and valuable content.",
   },
 ];
 
 const aiServices = [
   {
     icon: Sparkles,
-    title: 'Generative Engine Optimization (GEO)',
-    description: 'Optimize your content for AI search platforms like ChatGPT, Gemini, and Perplexity. Get cited in AI-generated responses.',
-    link: '/services/ai/geo',
+    title: "Generative Engine Optimization (GEO)",
+    description:
+      "Optimize your content for AI search platforms like ChatGPT, Gemini, and Perplexity. Get cited in AI-generated responses.",
+    link: "/services/ai/geo",
   },
   {
     icon: Bot,
-    title: 'AI Content Optimization at Scale',
-    description: 'Leverage AI to analyze, optimize, and enhance content across thousands of pages while maintaining brand voice and quality.',
+    title: "AI Content Optimization at Scale",
+    description:
+      "Leverage AI to analyze, optimize, and enhance content across thousands of pages while maintaining brand voice and quality.",
   },
   {
     icon: Eye,
-    title: 'LLM Visibility Tracking',
-    description: 'Monitor how often AI platforms cite your brand. Track your visibility in ChatGPT, Claude, Gemini, and other LLM responses.',
+    title: "LLM Visibility Tracking",
+    description:
+      "Monitor how often AI platforms cite your brand. Track your visibility in ChatGPT, Claude, Gemini, and other LLM responses.",
   },
   {
     icon: Layers,
-    title: 'Programmatic SEO',
-    description: 'Generate thousands of optimized pages automatically using data-driven templates and AI-powered content generation.',
+    title: "Programmatic SEO",
+    description:
+      "Generate thousands of optimized pages automatically using data-driven templates and AI-powered content generation.",
   },
   {
     icon: Brain,
-    title: 'AI-Powered Keyword Research',
-    description: 'Use machine learning to discover keyword clusters, predict search trends, and identify high-opportunity topics before competitors.',
+    title: "AI-Powered Keyword Research",
+    description:
+      "Use machine learning to discover keyword clusters, predict search trends, and identify high-opportunity topics before competitors.",
   },
 ];
 
 const approach = [
   {
-    step: '01',
-    title: 'Technical Audit',
-    description: 'We crawl your site like Google does. Identify crawl errors, broken links, duplicate content, schema issues, and performance bottlenecks.',
+    step: "01",
+    title: "Technical Audit",
+    description:
+      "We crawl your site like Google does. Identify crawl errors, broken links, duplicate content, schema issues, and performance bottlenecks.",
   },
   {
-    step: '02',
-    title: 'Fix Foundations',
-    description: 'Before chasing rankings, we fix the technical debt. Site speed, mobile usability, structured data, and crawl efficiency.',
+    step: "02",
+    title: "Fix Foundations",
+    description:
+      "Before chasing rankings, we fix the technical debt. Site speed, mobile usability, structured data, and crawl efficiency.",
   },
   {
-    step: '03',
-    title: 'Optimize Content',
-    description: 'Strategic on-page optimization targeting high-intent keywords. We align content with search intent and user expectations.',
+    step: "03",
+    title: "Optimize Content",
+    description:
+      "Strategic on-page optimization targeting high-intent keywords. We align content with search intent and user expectations.",
   },
   {
-    step: '04',
-    title: 'Create & Expand',
-    description: 'Build content that ranks. Topic clusters, pillar pages, and supporting content that demonstrates topical authority.',
+    step: "04",
+    title: "Create & Expand",
+    description:
+      "Build content that ranks. Topic clusters, pillar pages, and supporting content that demonstrates topical authority.",
   },
   {
-    step: '05',
-    title: 'Build Authority',
-    description: 'Earn quality backlinks through digital PR, guest content, and creating link-worthy assets. No black hat tactics, ever.',
+    step: "05",
+    title: "Build Authority",
+    description:
+      "Earn quality backlinks through digital PR, guest content, and creating link-worthy assets. No black hat tactics, ever.",
   },
 ];
 
 const benefits = [
   {
     icon: Shield,
-    title: 'No Black Hat Tactics',
-    description: 'We build sustainable rankings. No link schemes, no keyword stuffing, no cloaking. Just solid SEO that lasts.',
+    title: "No Black Hat Tactics",
+    description:
+      "We build sustainable rankings. No link schemes, no keyword stuffing, no cloaking. Just solid SEO that lasts.",
   },
   {
     icon: BarChart3,
-    title: 'Transparent Reporting',
-    description: 'Monthly reports with clear metrics: rankings, traffic, conversions. You always know exactly what we\'re doing and why.',
+    title: "Transparent Reporting",
+    description:
+      "Monthly reports with clear metrics: rankings, traffic, conversions. You always know exactly what we're doing and why.",
   },
   {
     icon: Code,
-    title: 'Technical Expertise',
-    description: 'Developer-built SEO means we can implement changes directly. No waiting on dev teams or explaining technical concepts.',
+    title: "Technical Expertise",
+    description:
+      "Developer-built SEO means we can implement changes directly. No waiting on dev teams or explaining technical concepts.",
   },
   {
     icon: Zap,
-    title: 'Performance-First',
-    description: 'Core Web Vitals aren\'t just an SEO factor—they\'re a user experience imperative. We optimize for both.',
+    title: "Performance-First",
+    description:
+      "Core Web Vitals aren't just an SEO factor—they're a user experience imperative. We optimize for both.",
   },
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to see SEO results?',
-    answer: 'SEO is a long-term investment. You\'ll typically see initial improvements in 3-4 months, with significant results in 6-12 months. Unlike paid ads, these results compound over time and don\'t disappear when you stop spending.',
+    question: "How long does it take to see SEO results?",
+    answer:
+      "SEO is a long-term investment. You'll typically see initial improvements in 3-4 months, with significant results in 6-12 months. Unlike paid ads, these results compound over time and don't disappear when you stop spending.",
   },
   {
-    question: 'What makes your approach different from other SEO agencies?',
-    answer: 'We\'re developers first. We don\'t just recommend changes—we implement them. Our technical foundation means we can optimize site speed, fix schema markup, and resolve crawl issues directly, without the back-and-forth with your dev team.',
+    question: "What makes your approach different from other SEO agencies?",
+    answer:
+      "We're developers first. We don't just recommend changes—we implement them. Our technical foundation means we can optimize site speed, fix schema markup, and resolve crawl issues directly, without the back-and-forth with your dev team.",
   },
   {
-    question: 'Do you guarantee first page rankings?',
-    answer: 'No legitimate SEO agency can guarantee specific rankings—Google\'s algorithm is outside anyone\'s control. What we guarantee is transparent work, measurable progress, and adherence to best practices that build sustainable organic growth.',
+    question: "Do you guarantee first page rankings?",
+    answer:
+      "No legitimate SEO agency can guarantee specific rankings—Google's algorithm is outside anyone's control. What we guarantee is transparent work, measurable progress, and adherence to best practices that build sustainable organic growth.",
   },
   {
-    question: 'How do you measure SEO success?',
-    answer: 'We track what matters to your business: organic traffic growth, keyword rankings, conversion rates, and revenue attribution. Vanity metrics like "impressions" are secondary to actual business impact.',
+    question: "How do you measure SEO success?",
+    answer:
+      'We track what matters to your business: organic traffic growth, keyword rankings, conversion rates, and revenue attribution. Vanity metrics like "impressions" are secondary to actual business impact.',
   },
 ];
 
@@ -146,13 +184,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         <span className="text-lg font-medium text-[#1D1D1F]">{question}</span>
         <ChevronDown
           className={`w-5 h-5 text-[#86868B] transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : ''
+            isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 pb-6' : 'max-h-0'
+          isOpen ? "max-h-96 pb-6" : "max-h-0"
         }`}
       >
         <p className="text-[#86868B] leading-relaxed">{answer}</p>
@@ -178,14 +216,16 @@ export default function SEOServicesPage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  SEO Built on{' '}
+                  SEO Built on{" "}
                   <span className="text-[#00D4FF]">Technical Excellence</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  Most agencies guess at SEO. We engineer it. Developer-built optimization that prioritizes Core Web Vitals, proper schema markup, and search intent—not outdated tactics.
+                  Most agencies guess at SEO. We engineer it. Developer-built
+                  optimization that prioritizes Core Web Vitals, proper schema
+                  markup, and search intent—not outdated tactics.
                 </p>
               </AnimateOnScroll>
 
@@ -221,7 +261,8 @@ export default function SEOServicesPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From technical foundations to content strategy, we cover every aspect of search optimization.
+                From technical foundations to content strategy, we cover every
+                aspect of search optimization.
               </p>
             </AnimateOnScroll>
 
@@ -262,13 +303,18 @@ export default function SEOServicesPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-6 max-w-2xl mx-auto">
-                AI doesn&apos;t replace traditional SEO—it amplifies it. We combine proven optimization strategies with cutting-edge AI capabilities to future-proof your search presence.
+                AI doesn&apos;t replace traditional SEO—it amplifies it. We
+                combine proven optimization strategies with cutting-edge AI
+                capabilities to future-proof your search presence.
               </p>
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.2}>
               <p className="text-[#6E6E73] text-base text-center mb-12 max-w-3xl mx-auto">
-                With ChatGPT, Gemini, and Perplexity becoming primary search interfaces for millions, optimizing for AI-generated responses is no longer optional. Our AI-enhanced approach ensures you&apos;re visible wherever your customers search.
+                With ChatGPT, Gemini, and Perplexity becoming primary search
+                interfaces for millions, optimizing for AI-generated responses
+                is no longer optional. Our AI-enhanced approach ensures
+                you&apos;re visible wherever your customers search.
               </p>
             </AnimateOnScroll>
 
@@ -330,7 +376,8 @@ export default function SEOServicesPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-gray-400 text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                A systematic, data-driven process that prioritizes long-term growth over quick fixes.
+                A systematic, data-driven process that prioritizes long-term
+                growth over quick fixes.
               </p>
             </AnimateOnScroll>
 
@@ -371,7 +418,8 @@ export default function SEOServicesPage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                No gimmicks. No shortcuts. Just technical excellence and transparent results.
+                No gimmicks. No shortcuts. Just technical excellence and
+                transparent results.
               </p>
             </AnimateOnScroll>
 
@@ -413,7 +461,10 @@ export default function SEOServicesPage() {
                       Coming Soon: Real Results from Real Clients
                     </h3>
                     <p className="text-[#86868B] leading-relaxed mb-6">
-                      We&apos;re currently working with clients on transformative SEO campaigns. Soon, we&apos;ll share detailed case studies showing ranking improvements, traffic growth, and revenue impact.
+                      We&apos;re currently working with clients on
+                      transformative SEO campaigns. Soon, we&apos;ll share
+                      detailed case studies showing ranking improvements,
+                      traffic growth, and revenue impact.
                     </p>
                     <Link
                       href="/contact"
@@ -427,27 +478,44 @@ export default function SEOServicesPage() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <span className="text-[#86868B]">Organic Traffic</span>
-                        <span className="text-[#1D1D1F] font-semibold">+247%</span>
+                        <span className="text-[#1D1D1F] font-semibold">
+                          +247%
+                        </span>
                       </div>
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#00D4FF] rounded-full" style={{ width: '75%' }}></div>
+                        <div
+                          className="h-full bg-[#00D4FF] rounded-full"
+                          style={{ width: "75%" }}
+                        ></div>
                       </div>
                       <div className="flex items-center justify-between pt-4">
                         <span className="text-[#86868B]">Keyword Rankings</span>
-                        <span className="text-[#1D1D1F] font-semibold">+156 positions</span>
+                        <span className="text-[#1D1D1F] font-semibold">
+                          +156 positions
+                        </span>
                       </div>
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#00D4FF] rounded-full" style={{ width: '85%' }}></div>
+                        <div
+                          className="h-full bg-[#00D4FF] rounded-full"
+                          style={{ width: "85%" }}
+                        ></div>
                       </div>
                       <div className="flex items-center justify-between pt-4">
                         <span className="text-[#86868B]">Core Web Vitals</span>
-                        <span className="text-[#1D1D1F] font-semibold">All Green</span>
+                        <span className="text-[#1D1D1F] font-semibold">
+                          All Green
+                        </span>
                       </div>
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#00D4FF] rounded-full" style={{ width: '100%' }}></div>
+                        <div
+                          className="h-full bg-[#00D4FF] rounded-full"
+                          style={{ width: "100%" }}
+                        ></div>
                       </div>
                     </div>
-                    <p className="text-xs text-[#86868B] mt-6 text-center">* Placeholder metrics for illustration</p>
+                    <p className="text-xs text-[#86868B] mt-6 text-center">
+                      * Placeholder metrics for illustration
+                    </p>
                   </div>
                 </div>
               </div>
@@ -479,7 +547,11 @@ export default function SEOServicesPage() {
             <AnimateOnScroll delay={0.2}>
               <div className="max-w-2xl mx-auto">
                 {faqs.map((faq, i) => (
-                  <FAQItem key={i} question={faq.question} answer={faq.answer} />
+                  <FAQItem
+                    key={i}
+                    question={faq.question}
+                    answer={faq.answer}
+                  />
                 ))}
               </div>
             </AnimateOnScroll>
@@ -502,7 +574,8 @@ export default function SEOServicesPage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Get a free technical SEO audit and discover opportunities you&apos;re missing.
+                  Get a free technical SEO audit and discover opportunities
+                  you&apos;re missing.
                 </p>
               </AnimateOnScroll>
 

@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { getPostBySlug, getAllPosts, formatDate } from '@/lib/blog';
+import Link from "next/link";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import { getPostBySlug, getAllPosts, formatDate } from "@/lib/blog";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -17,13 +17,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
   if (!post) {
     return {
-      title: 'Post Not Found | BKND Development',
+      title: "Post Not Found | BKND Development",
     };
   }
 
@@ -33,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      type: 'article',
+      type: "article",
       publishedTime: post.date,
       authors: [post.author],
     },
@@ -50,14 +52,17 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   // Helper function to process inline bold text
   const processInlineBold = (text: string): string => {
-    return text.replace(/\*\*(.+?)\*\*/g, '<strong class="text-[#1D1D1F]">$1</strong>');
+    return text.replace(
+      /\*\*(.+?)\*\*/g,
+      '<strong class="text-[#1D1D1F]">$1</strong>',
+    );
   };
 
   // Helper function to process inline links [text](url) -> <a href="url">text</a>
   const processInlineLinks = (text: string): string => {
     return text.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" class="text-[#00D4FF] hover:underline">$1</a>'
+      '<a href="$2" class="text-[#00D4FF] hover:underline">$1</a>',
     );
   };
 
@@ -74,7 +79,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       `<div class="my-8 p-6 bg-gradient-to-r from-[#00D4FF]/10 to-[#00D4FF]/5 border-l-4 border-[#00D4FF] rounded-r-lg">
         <div class="text-4xl lg:text-5xl font-bold text-[#00D4FF] mb-2">$1</div>
         <p class="text-[#1D1D1F] text-sm lg:text-base m-0">$2</p>
-      </div>`
+      </div>`,
     );
 
     // Process :::tip blocks
@@ -85,7 +90,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span class="text-emerald-500 text-xl">💡</span>
           <p class="text-[#1D1D1F] m-0">$1</p>
         </div>
-      </div>`
+      </div>`,
     );
 
     // Process :::warning blocks
@@ -96,7 +101,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span class="text-amber-500 text-xl">⚠️</span>
           <p class="text-[#1D1D1F] m-0">$1</p>
         </div>
-      </div>`
+      </div>`,
     );
 
     // Process :::key blocks
@@ -107,7 +112,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span class="text-[#00D4FF] text-xl">🔑</span>
           <p class="text-white m-0">$1</p>
         </div>
-      </div>`
+      </div>`,
     );
 
     // Process :::pullquote blocks
@@ -115,7 +120,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       /:::pullquote\n([\s\S]*?):::/g,
       `<blockquote class="my-8 pl-6 border-l-4 border-[#00D4FF] italic">
         <p class="text-xl lg:text-2xl text-[#1D1D1F] leading-relaxed m-0">$1</p>
-      </blockquote>`
+      </blockquote>`,
     );
 
     return content;
@@ -126,58 +131,71 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   // Convert markdown-style content to HTML
   const contentHtml = processedContent
-    .split('\n\n')
+    .split("\n\n")
     .map((paragraph) => {
       // Skip if it's already processed HTML from callouts
-      if (paragraph.trim().startsWith('<div') || paragraph.trim().startsWith('<blockquote')) {
+      if (
+        paragraph.trim().startsWith("<div") ||
+        paragraph.trim().startsWith("<blockquote")
+      ) {
         return paragraph;
       }
       // H2 headings
-      if (paragraph.startsWith('## ')) {
+      if (paragraph.startsWith("## ")) {
         return `<h2 class="text-2xl lg:text-3xl font-semibold text-[#1D1D1F] mt-12 mb-6">${paragraph.slice(3)}</h2>`;
       }
       // H3 headings
-      if (paragraph.startsWith('### ')) {
+      if (paragraph.startsWith("### ")) {
         return `<h3 class="text-xl lg:text-2xl font-semibold text-[#1D1D1F] mt-10 mb-4">${paragraph.slice(4)}</h3>`;
       }
       // Full paragraph bold (entire line wrapped in **)
-      if (paragraph.startsWith('**') && paragraph.endsWith('**') && paragraph.indexOf('**', 2) === paragraph.length - 2) {
+      if (
+        paragraph.startsWith("**") &&
+        paragraph.endsWith("**") &&
+        paragraph.indexOf("**", 2) === paragraph.length - 2
+      ) {
         return `<p class="text-[#1D1D1F] font-semibold mb-4">${paragraph.slice(2, -2)}</p>`;
       }
       // Bullet lists with bold labels
-      if (paragraph.startsWith('- **')) {
-        const items = paragraph.split('\n').map((item) => {
+      if (paragraph.startsWith("- **")) {
+        const items = paragraph.split("\n").map((item) => {
           const match = item.match(/- \*\*(.+?)\*\*: (.+)/);
           if (match) {
             return `<li class="mb-3"><strong class="text-[#1D1D1F]">${match[1]}:</strong> <span class="text-[#86868B]">${match[2]}</span></li>`;
           }
           return `<li class="mb-3 text-[#86868B]">${item.slice(2)}</li>`;
         });
-        return `<ul class="list-disc pl-6 mb-6 space-y-1">${items.join('')}</ul>`;
+        return `<ul class="list-disc pl-6 mb-6 space-y-1">${items.join("")}</ul>`;
       }
       // Plain bullet lists (starting with - but not bold)
-      if (paragraph.startsWith('- ')) {
-        const items = paragraph.split('\n').map((item) => {
-          if (item.startsWith('- ')) {
-            return `<li class="mb-3 text-[#86868B]">${processInlineFormatting(item.slice(2))}</li>`;
-          }
-          return '';
-        }).filter(Boolean);
-        return `<ul class="list-disc pl-6 mb-6 space-y-1">${items.join('')}</ul>`;
+      if (paragraph.startsWith("- ")) {
+        const items = paragraph
+          .split("\n")
+          .map((item) => {
+            if (item.startsWith("- ")) {
+              return `<li class="mb-3 text-[#86868B]">${processInlineFormatting(item.slice(2))}</li>`;
+            }
+            return "";
+          })
+          .filter(Boolean);
+        return `<ul class="list-disc pl-6 mb-6 space-y-1">${items.join("")}</ul>`;
       }
       // Numbered/ordered lists
       if (/^\d+\.\s/.test(paragraph)) {
-        const items = paragraph.split('\n').map((item) => {
-          const match = item.match(/^\d+\.\s(.+)/);
-          if (match) {
-            return `<li class="mb-3 text-[#86868B]">${processInlineFormatting(match[1])}</li>`;
-          }
-          return '';
-        }).filter(Boolean);
-        return `<ol class="list-decimal pl-6 mb-6 space-y-1">${items.join('')}</ol>`;
+        const items = paragraph
+          .split("\n")
+          .map((item) => {
+            const match = item.match(/^\d+\.\s(.+)/);
+            if (match) {
+              return `<li class="mb-3 text-[#86868B]">${processInlineFormatting(match[1])}</li>`;
+            }
+            return "";
+          })
+          .filter(Boolean);
+        return `<ol class="list-decimal pl-6 mb-6 space-y-1">${items.join("")}</ol>`;
       }
       // Bold label at start of paragraph
-      if (paragraph.startsWith('**')) {
+      if (paragraph.startsWith("**")) {
         const match = paragraph.match(/\*\*(.+?)\*\*: (.+)/);
         if (match) {
           return `<p class="text-[#86868B] mb-4 leading-relaxed"><strong class="text-[#1D1D1F]">${match[1]}:</strong> ${processInlineFormatting(match[2])}</p>`;
@@ -186,7 +204,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       // Regular paragraph with inline formatting (links + bold)
       return `<p class="text-[#86868B] mb-6 leading-relaxed">${processInlineFormatting(paragraph)}</p>`;
     })
-    .join('');
+    .join("");
 
   return (
     <>
@@ -207,9 +225,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <h1 className="text-[32px] lg:text-[48px] font-semibold text-[#1D1D1F] tracking-[-0.02em] leading-[1.1] mb-6">
                     {post.title}
                   </h1>
-                  <p className="text-[#86868B]">
-                    By {post.author}
-                  </p>
+                  <p className="text-[#86868B]">By {post.author}</p>
                 </div>
               </AnimateOnScroll>
 

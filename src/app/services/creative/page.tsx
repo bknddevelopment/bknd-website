@@ -1,107 +1,138 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import { ArrowRight, Palette, Layout, Video, Share2, BarChart2, Zap, RefreshCw, Target, TrendingUp, ChevronDown } from 'lucide-react';
-import Link from 'next/link';
-import { useState } from 'react';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import {
+  ArrowRight,
+  Palette,
+  Layout,
+  Video,
+  Share2,
+  BarChart2,
+  Zap,
+  RefreshCw,
+  Target,
+  TrendingUp,
+  ChevronDown,
+} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const services = [
   {
     icon: Palette,
-    title: 'Ad Creative',
-    description: 'Static and animated ads designed for clicks, not just likes. Every visual is built to convert.',
+    title: "Ad Creative",
+    description:
+      "Static and animated ads designed for clicks, not just likes. Every visual is built to convert.",
   },
   {
     icon: Layout,
-    title: 'Landing Pages',
-    description: 'High-converting landing pages that turn traffic into leads. Fast-loading, mobile-first, and A/B tested.',
+    title: "Landing Pages",
+    description:
+      "High-converting landing pages that turn traffic into leads. Fast-loading, mobile-first, and A/B tested.",
   },
   {
     icon: Video,
-    title: 'Video Ads',
-    description: 'Short-form video content optimized for social platforms. Thumb-stopping creative that drives action.',
+    title: "Video Ads",
+    description:
+      "Short-form video content optimized for social platforms. Thumb-stopping creative that drives action.",
   },
   {
     icon: Share2,
-    title: 'Social Creative',
-    description: 'Platform-native content for Meta, LinkedIn, TikTok, and more. Tailored formats that perform.',
+    title: "Social Creative",
+    description:
+      "Platform-native content for Meta, LinkedIn, TikTok, and more. Tailored formats that perform.",
   },
   {
     icon: BarChart2,
-    title: 'A/B Testing',
-    description: 'Systematic creative testing to find your winning combinations. Data reveals what actually works.',
+    title: "A/B Testing",
+    description:
+      "Systematic creative testing to find your winning combinations. Data reveals what actually works.",
   },
 ];
 
 const processSteps = [
   {
-    step: '01',
-    title: 'Data Analysis',
-    description: 'We analyze your existing performance data, competitor creative, and audience insights to identify opportunities.',
+    step: "01",
+    title: "Data Analysis",
+    description:
+      "We analyze your existing performance data, competitor creative, and audience insights to identify opportunities.",
   },
   {
-    step: '02',
-    title: 'Creative Brief',
-    description: 'A clear brief that defines objectives, messaging hierarchy, and success metrics before design begins.',
+    step: "02",
+    title: "Creative Brief",
+    description:
+      "A clear brief that defines objectives, messaging hierarchy, and success metrics before design begins.",
   },
   {
-    step: '03',
-    title: 'Design & Build',
-    description: 'Our team creates multiple variations across formats, optimized for each platform\'s specifications.',
+    step: "03",
+    title: "Design & Build",
+    description:
+      "Our team creates multiple variations across formats, optimized for each platform's specifications.",
   },
   {
-    step: '04',
-    title: 'Test & Learn',
-    description: 'We launch structured tests to identify top performers. Statistical significance, not gut feelings.',
+    step: "04",
+    title: "Test & Learn",
+    description:
+      "We launch structured tests to identify top performers. Statistical significance, not gut feelings.",
   },
   {
-    step: '05',
-    title: 'Iterate & Scale',
-    description: 'Winners get scaled. Learnings inform the next round. Your creative library compounds over time.',
+    step: "05",
+    title: "Iterate & Scale",
+    description:
+      "Winners get scaled. Learnings inform the next round. Your creative library compounds over time.",
   },
 ];
 
 const benefits = [
   {
     icon: Target,
-    title: 'Performance-Tested',
-    description: 'Every piece of creative is designed with testing in mind. We build variations from day one.',
+    title: "Performance-Tested",
+    description:
+      "Every piece of creative is designed with testing in mind. We build variations from day one.",
   },
   {
     icon: Zap,
-    title: 'Fast Iteration',
-    description: 'Weekly creative refreshes to combat ad fatigue. Your campaigns stay fresh and performing.',
+    title: "Fast Iteration",
+    description:
+      "Weekly creative refreshes to combat ad fatigue. Your campaigns stay fresh and performing.",
   },
   {
     icon: TrendingUp,
-    title: 'Conversion-Focused',
-    description: 'We optimize for your bottom line, not vanity metrics. Creative that drives revenue.',
+    title: "Conversion-Focused",
+    description:
+      "We optimize for your bottom line, not vanity metrics. Creative that drives revenue.",
   },
   {
     icon: RefreshCw,
-    title: 'Continuous Learning',
-    description: 'Every test adds to your creative playbook. Insights compound across campaigns.',
+    title: "Continuous Learning",
+    description:
+      "Every test adds to your creative playbook. Insights compound across campaigns.",
   },
 ];
 
 const faqs = [
   {
-    question: 'How is performance creative different from traditional creative agencies?',
-    answer: 'Traditional agencies focus on brand aesthetics and subjective approval. We focus on measurable outcomes. Every design decision is informed by data, and every piece of creative is built to be tested. We care less about awards and more about ROAS.',
+    question:
+      "How is performance creative different from traditional creative agencies?",
+    answer:
+      "Traditional agencies focus on brand aesthetics and subjective approval. We focus on measurable outcomes. Every design decision is informed by data, and every piece of creative is built to be tested. We care less about awards and more about ROAS.",
   },
   {
-    question: 'How quickly can you produce new creative?',
-    answer: 'Our standard turnaround is 5-7 business days for a full creative package (3-5 static variations + 1-2 video concepts). For active campaigns, we can deliver weekly creative refreshes to maintain performance and fight ad fatigue.',
+    question: "How quickly can you produce new creative?",
+    answer:
+      "Our standard turnaround is 5-7 business days for a full creative package (3-5 static variations + 1-2 video concepts). For active campaigns, we can deliver weekly creative refreshes to maintain performance and fight ad fatigue.",
   },
   {
-    question: 'Do you handle video production or just static ads?',
-    answer: 'Both. We produce short-form video content optimized for social platforms (15-60 second spots), motion graphics, and UGC-style content. For larger productions, we partner with specialized video teams while maintaining creative direction.',
+    question: "Do you handle video production or just static ads?",
+    answer:
+      "Both. We produce short-form video content optimized for social platforms (15-60 second spots), motion graphics, and UGC-style content. For larger productions, we partner with specialized video teams while maintaining creative direction.",
   },
   {
-    question: 'How do you measure creative performance?',
-    answer: 'We track the metrics that matter: click-through rate, cost per acquisition, conversion rate, and ROAS. We use statistical significance testing to ensure results are real, not random. You get weekly reports showing exactly what\'s working.',
+    question: "How do you measure creative performance?",
+    answer:
+      "We track the metrics that matter: click-through rate, cost per acquisition, conversion rate, and ROAS. We use statistical significance testing to ensure results are real, not random. You get weekly reports showing exactly what's working.",
   },
 ];
 
@@ -124,14 +155,16 @@ export default function CreativePage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Creative that{' '}
+                  Creative that{" "}
                   <span className="text-[#00D4FF]">performs.</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  Data-driven design, not just pretty pictures. We build ad creative, landing pages, and video content engineered for conversions. Every pixel has a purpose.
+                  Data-driven design, not just pretty pictures. We build ad
+                  creative, landing pages, and video content engineered for
+                  conversions. Every pixel has a purpose.
                 </p>
               </AnimateOnScroll>
 
@@ -165,7 +198,8 @@ export default function CreativePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From first impression to final conversion, we design every touchpoint for performance.
+                From first impression to final conversion, we design every
+                touchpoint for performance.
               </p>
             </AnimateOnScroll>
 
@@ -206,7 +240,8 @@ export default function CreativePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-gray-400 text-lg lg:text-xl text-center mb-16 max-w-2xl mx-auto">
-                Creative without strategy is just decoration. Here&apos;s how we ensure every design drives results.
+                Creative without strategy is just decoration. Here&apos;s how we
+                ensure every design drives results.
               </p>
             </AnimateOnScroll>
 
@@ -251,7 +286,8 @@ export default function CreativePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                Our approach builds a library of proven winners, not one-off designs.
+                Our approach builds a library of proven winners, not one-off
+                designs.
               </p>
             </AnimateOnScroll>
 
@@ -298,17 +334,44 @@ export default function CreativePage() {
 
                 <AnimateOnScroll delay={0.2}>
                   <p className="text-[#86868B] text-lg leading-relaxed mb-6">
-                    Through systematic creative testing and data-driven iteration, we transformed underperforming ads into top-performing assets that drove a 3x improvement in ROAS.
+                    Through systematic creative testing and data-driven
+                    iteration, we transformed underperforming ads into
+                    top-performing assets that drove a 3x improvement in ROAS.
                   </p>
                 </AnimateOnScroll>
 
                 <AnimateOnScroll delay={0.3}>
                   <ul className="space-y-3 mb-8">
-                    {['340% increase in click-through rate', '3.2x improvement in ROAS', '45% reduction in cost per acquisition'].map((item, i) => (
-                      <li key={i} className="flex items-center gap-3 text-[#1D1D1F]">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9" cy="9" r="9" fill="#00D4FF" fillOpacity="0.1"/>
-                          <path d="M13 6L7.5 11.5L5 9" stroke="#00D4FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    {[
+                      "340% increase in click-through rate",
+                      "3.2x improvement in ROAS",
+                      "45% reduction in cost per acquisition",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-[#1D1D1F]"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="9"
+                            cy="9"
+                            r="9"
+                            fill="#00D4FF"
+                            fillOpacity="0.1"
+                          />
+                          <path
+                            d="M13 6L7.5 11.5L5 9"
+                            stroke="#00D4FF"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
                         {item}
                       </li>
@@ -331,19 +394,27 @@ export default function CreativePage() {
                 <div className="bg-white rounded-2xl p-8 lg:p-10 border border-gray-200/80">
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center p-6 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">340%</p>
+                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">
+                        340%
+                      </p>
                       <p className="text-[#86868B] text-sm">CTR Increase</p>
                     </div>
                     <div className="text-center p-6 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">3.2x</p>
+                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">
+                        3.2x
+                      </p>
                       <p className="text-[#86868B] text-sm">ROAS Improvement</p>
                     </div>
                     <div className="text-center p-6 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">45%</p>
+                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">
+                        45%
+                      </p>
                       <p className="text-[#86868B] text-sm">Lower CPA</p>
                     </div>
                     <div className="text-center p-6 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">12</p>
+                      <p className="text-4xl lg:text-5xl font-semibold text-[#00D4FF] mb-2">
+                        12
+                      </p>
                       <p className="text-[#86868B] text-sm">Weeks to Results</p>
                     </div>
                   </div>
@@ -387,13 +458,13 @@ export default function CreativePage() {
                       </h3>
                       <ChevronDown
                         className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${
-                          openFaq === i ? 'rotate-180' : ''
+                          openFaq === i ? "rotate-180" : ""
                         }`}
                       />
                     </button>
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
-                        openFaq === i ? 'max-h-96 pb-6' : 'max-h-0'
+                        openFaq === i ? "max-h-96 pb-6" : "max-h-0"
                       }`}
                     >
                       <p className="text-[#86868B] leading-relaxed">
@@ -423,7 +494,8 @@ export default function CreativePage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Get a free creative audit and see how your ads stack up against top performers.
+                  Get a free creative audit and see how your ads stack up
+                  against top performers.
                 </p>
               </AnimateOnScroll>
 

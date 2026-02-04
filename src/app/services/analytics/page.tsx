@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-import Link from 'next/link';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import Link from "next/link";
 import {
   ArrowRight,
   BarChart3,
@@ -17,124 +17,146 @@ import {
   TrendingUp,
   Sparkles,
   AlertTriangle,
-  Route
-} from 'lucide-react';
-import { useState } from 'react';
+  Route,
+} from "lucide-react";
+import { useState } from "react";
 
 const services = [
   {
     icon: BarChart3,
-    title: 'GA4 Setup & Migration',
-    description: 'Complete Google Analytics 4 implementation with custom events, conversions, and e-commerce tracking configured correctly from day one.',
+    title: "GA4 Setup & Migration",
+    description:
+      "Complete Google Analytics 4 implementation with custom events, conversions, and e-commerce tracking configured correctly from day one.",
   },
   {
     icon: Target,
-    title: 'Tracking Implementation',
-    description: 'Server-side tagging, cross-domain tracking, and custom event architectures that capture every meaningful user interaction.',
+    title: "Tracking Implementation",
+    description:
+      "Server-side tagging, cross-domain tracking, and custom event architectures that capture every meaningful user interaction.",
   },
   {
     icon: LineChart,
-    title: 'Custom Dashboards',
-    description: 'Real-time dashboards built in Looker Studio or your preferred platform. See the metrics that matter, updated automatically.',
+    title: "Custom Dashboards",
+    description:
+      "Real-time dashboards built in Looker Studio or your preferred platform. See the metrics that matter, updated automatically.",
   },
   {
     icon: Eye,
-    title: 'Attribution Modeling',
-    description: 'Multi-touch attribution that shows the true customer journey. Know exactly which channels drive conversions.',
+    title: "Attribution Modeling",
+    description:
+      "Multi-touch attribution that shows the true customer journey. Know exactly which channels drive conversions.",
   },
 ];
 
 const approach = [
   {
-    step: '01',
-    title: 'Audit',
-    description: 'We analyze your current tracking setup, identify data gaps, and document what you\'re missing.',
+    step: "01",
+    title: "Audit",
+    description:
+      "We analyze your current tracking setup, identify data gaps, and document what you're missing.",
   },
   {
-    step: '02',
-    title: 'Implement',
-    description: 'Clean, documented tracking code deployed through GTM with proper testing and validation.',
+    step: "02",
+    title: "Implement",
+    description:
+      "Clean, documented tracking code deployed through GTM with proper testing and validation.",
   },
   {
-    step: '03',
-    title: 'Visualize',
-    description: 'Custom dashboards that translate raw data into actionable insights your team can actually use.',
+    step: "03",
+    title: "Visualize",
+    description:
+      "Custom dashboards that translate raw data into actionable insights your team can actually use.",
   },
   {
-    step: '04',
-    title: 'Analyze',
-    description: 'Ongoing analysis that connects user behavior to business outcomes and revenue.',
+    step: "04",
+    title: "Analyze",
+    description:
+      "Ongoing analysis that connects user behavior to business outcomes and revenue.",
   },
   {
-    step: '05',
-    title: 'Recommend',
-    description: 'Data-backed recommendations to optimize your marketing spend and improve conversion rates.',
+    step: "05",
+    title: "Recommend",
+    description:
+      "Data-backed recommendations to optimize your marketing spend and improve conversion rates.",
   },
 ];
 
 const aiCapabilities = [
   {
     icon: Brain,
-    title: 'AI-Powered Attribution Modeling',
-    description: 'Machine learning algorithms that analyze thousands of touchpoints to accurately credit each channel. No more guessing which campaigns actually drive conversions.',
+    title: "AI-Powered Attribution Modeling",
+    description:
+      "Machine learning algorithms that analyze thousands of touchpoints to accurately credit each channel. No more guessing which campaigns actually drive conversions.",
   },
   {
     icon: TrendingUp,
-    title: 'Predictive Analytics & Forecasting',
-    description: 'AI models that predict future performance based on historical patterns. Know what\'s coming before it happens and adjust strategy proactively.',
+    title: "Predictive Analytics & Forecasting",
+    description:
+      "AI models that predict future performance based on historical patterns. Know what's coming before it happens and adjust strategy proactively.",
   },
   {
     icon: Sparkles,
-    title: 'Automated Insight Generation',
-    description: 'Stop digging through dashboards. Our AI surfaces the insights that matter—automatically flagging opportunities and issues you\'d otherwise miss.',
+    title: "Automated Insight Generation",
+    description:
+      "Stop digging through dashboards. Our AI surfaces the insights that matter—automatically flagging opportunities and issues you'd otherwise miss.",
   },
   {
     icon: AlertTriangle,
-    title: 'Real-Time Anomaly Detection',
-    description: 'Instant alerts when metrics deviate from expected patterns. Catch tracking issues, traffic anomalies, or conversion drops the moment they happen.',
+    title: "Real-Time Anomaly Detection",
+    description:
+      "Instant alerts when metrics deviate from expected patterns. Catch tracking issues, traffic anomalies, or conversion drops the moment they happen.",
   },
   {
     icon: Route,
-    title: 'Customer Journey Analysis',
-    description: 'ML-powered path analysis that reveals how customers actually move through your funnel. Identify drop-off points and optimization opportunities automatically.',
+    title: "Customer Journey Analysis",
+    description:
+      "ML-powered path analysis that reveals how customers actually move through your funnel. Identify drop-off points and optimization opportunities automatically.",
   },
 ];
 
 const benefits = [
   {
-    title: 'Developer-Built Tracking',
-    description: 'Your analytics are implemented by engineers who understand both code and marketing. No tag soup, no broken events.',
+    title: "Developer-Built Tracking",
+    description:
+      "Your analytics are implemented by engineers who understand both code and marketing. No tag soup, no broken events.",
   },
   {
-    title: 'No Data Gaps',
-    description: 'Complete visibility into user journeys from first touch to conversion. Every interaction captured, nothing lost.',
+    title: "No Data Gaps",
+    description:
+      "Complete visibility into user journeys from first touch to conversion. Every interaction captured, nothing lost.",
   },
   {
-    title: 'Real-Time Dashboards',
-    description: 'Live data at your fingertips. No more waiting for weekly reports or digging through spreadsheets.',
+    title: "Real-Time Dashboards",
+    description:
+      "Live data at your fingertips. No more waiting for weekly reports or digging through spreadsheets.",
   },
   {
-    title: 'Privacy Compliant',
-    description: 'GDPR and CCPA compliant implementations with proper consent management and data retention policies.',
+    title: "Privacy Compliant",
+    description:
+      "GDPR and CCPA compliant implementations with proper consent management and data retention policies.",
   },
 ];
 
 const faqs = [
   {
-    question: 'How long does a GA4 implementation take?',
-    answer: 'A standard GA4 setup takes 2-3 weeks. Complex implementations with custom events, e-commerce tracking, and multi-domain setups typically take 4-6 weeks. We\'ll provide a detailed timeline after our initial audit.',
+    question: "How long does a GA4 implementation take?",
+    answer:
+      "A standard GA4 setup takes 2-3 weeks. Complex implementations with custom events, e-commerce tracking, and multi-domain setups typically take 4-6 weeks. We'll provide a detailed timeline after our initial audit.",
   },
   {
-    question: 'Can you work with our existing analytics setup?',
-    answer: 'Absolutely. We often audit and improve existing implementations. We\'ll identify what\'s working, what\'s broken, and what\'s missing—then fix it without losing historical data.',
+    question: "Can you work with our existing analytics setup?",
+    answer:
+      "Absolutely. We often audit and improve existing implementations. We'll identify what's working, what's broken, and what's missing—then fix it without losing historical data.",
   },
   {
-    question: 'What platforms do you integrate with?',
-    answer: 'We work with GA4, Google Tag Manager, Looker Studio, BigQuery, Segment, Mixpanel, Amplitude, and most major marketing platforms. If you use it, we can track it.',
+    question: "What platforms do you integrate with?",
+    answer:
+      "We work with GA4, Google Tag Manager, Looker Studio, BigQuery, Segment, Mixpanel, Amplitude, and most major marketing platforms. If you use it, we can track it.",
   },
   {
-    question: 'How do you handle attribution across channels?',
-    answer: 'We implement proper UTM structures, cross-domain tracking, and custom attribution models that account for the full customer journey—not just last-click. You\'ll finally know which channels actually drive revenue.',
+    question: "How do you handle attribution across channels?",
+    answer:
+      "We implement proper UTM structures, cross-domain tracking, and custom attribution models that account for the full customer journey—not just last-click. You'll finally know which channels actually drive revenue.",
   },
 ];
 
@@ -151,15 +173,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-[#86868B] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-6" : "max-h-0"}`}
       >
-        <p className="text-[#86868B] leading-relaxed">
-          {answer}
-        </p>
+        <p className="text-[#86868B] leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -182,14 +202,17 @@ export default function AnalyticsServicePage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Data You Can{' '}
+                  Data You Can{" "}
                   <span className="text-[#00D4FF]">Actually Use.</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl mb-8">
-                  Most analytics setups are broken. Events fire inconsistently, attribution is guesswork, and dashboards show vanity metrics. We build tracking systems that tell you exactly what&apos;s working—and what isn&apos;t.
+                  Most analytics setups are broken. Events fire inconsistently,
+                  attribution is guesswork, and dashboards show vanity metrics.
+                  We build tracking systems that tell you exactly what&apos;s
+                  working—and what isn&apos;t.
                 </p>
               </AnimateOnScroll>
 
@@ -225,7 +248,8 @@ export default function AnalyticsServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                From implementation to insights, we handle every layer of your analytics stack.
+                From implementation to insights, we handle every layer of your
+                analytics stack.
               </p>
             </AnimateOnScroll>
 
@@ -266,7 +290,9 @@ export default function AnalyticsServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                While others manually analyze spreadsheets, our AI surfaces insights in seconds. Get the competitive edge of enterprise-level analytics intelligence.
+                While others manually analyze spreadsheets, our AI surfaces
+                insights in seconds. Get the competitive edge of
+                enterprise-level analytics intelligence.
               </p>
             </AnimateOnScroll>
 
@@ -304,24 +330,38 @@ export default function AnalyticsServicePage() {
                       From weeks of analysis to instant insights
                     </h3>
                     <p className="text-[#86868B] leading-relaxed">
-                      Traditional analytics requires analysts to manually query data, build reports, and interpret results. Our AI does this continuously—processing millions of data points to surface what matters most. You get actionable recommendations, not just dashboards.
+                      Traditional analytics requires analysts to manually query
+                      data, build reports, and interpret results. Our AI does
+                      this continuously—processing millions of data points to
+                      surface what matters most. You get actionable
+                      recommendations, not just dashboards.
                     </p>
                   </div>
                   <div className="flex-shrink-0 grid grid-cols-2 gap-4 lg:gap-6">
                     <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">10x</p>
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">
+                        10x
+                      </p>
                       <p className="text-[#86868B] text-sm">Faster insights</p>
                     </div>
                     <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">24/7</p>
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">
+                        24/7
+                      </p>
                       <p className="text-[#86868B] text-sm">Monitoring</p>
                     </div>
                     <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">95%</p>
-                      <p className="text-[#86868B] text-sm">Attribution accuracy</p>
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">
+                        95%
+                      </p>
+                      <p className="text-[#86868B] text-sm">
+                        Attribution accuracy
+                      </p>
                     </div>
                     <div className="text-center p-4 bg-[#F5F5F7] rounded-xl">
-                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">0</p>
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#00D4FF]">
+                        0
+                      </p>
                       <p className="text-[#86868B] text-sm">Manual reports</p>
                     </div>
                   </div>
@@ -348,7 +388,8 @@ export default function AnalyticsServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                A systematic process that transforms raw data into actionable insights.
+                A systematic process that transforms raw data into actionable
+                insights.
               </p>
             </AnimateOnScroll>
 
@@ -358,7 +399,9 @@ export default function AnalyticsServicePage() {
                   <AnimateOnScroll key={i} delay={0.2 + i * 0.08}>
                     <div className="flex gap-6 items-start bg-white rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                       <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1D1D1F] flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">{item.step}</span>
+                        <span className="text-white text-sm font-semibold">
+                          {item.step}
+                        </span>
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">
@@ -393,7 +436,8 @@ export default function AnalyticsServicePage() {
 
             <AnimateOnScroll delay={0.15}>
               <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                This is BKND&apos;s core strength. We don&apos;t just configure tools—we engineer solutions.
+                This is BKND&apos;s core strength. We don&apos;t just configure
+                tools—we engineer solutions.
               </p>
             </AnimateOnScroll>
 
@@ -437,20 +481,36 @@ export default function AnalyticsServicePage() {
                     How proper tracking revealed $127K in hidden attribution
                   </h3>
                   <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                    A B2B SaaS client thought their paid campaigns were underperforming. After implementing cross-domain tracking and proper conversion attribution, we discovered their paid search was actually driving 3x more revenue than previously measured.
+                    A B2B SaaS client thought their paid campaigns were
+                    underperforming. After implementing cross-domain tracking
+                    and proper conversion attribution, we discovered their paid
+                    search was actually driving 3x more revenue than previously
+                    measured.
                   </p>
                   <div className="flex flex-wrap gap-8 text-center">
                     <div>
-                      <p className="text-3xl font-semibold text-[#00D4FF]">312%</p>
-                      <p className="text-gray-400 text-sm">Attribution accuracy improvement</p>
+                      <p className="text-3xl font-semibold text-[#00D4FF]">
+                        312%
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        Attribution accuracy improvement
+                      </p>
                     </div>
                     <div>
-                      <p className="text-3xl font-semibold text-[#00D4FF]">$127K</p>
-                      <p className="text-gray-400 text-sm">Previously untracked revenue</p>
+                      <p className="text-3xl font-semibold text-[#00D4FF]">
+                        $127K
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        Previously untracked revenue
+                      </p>
                     </div>
                     <div>
-                      <p className="text-3xl font-semibold text-[#00D4FF]">2 weeks</p>
-                      <p className="text-gray-400 text-sm">Implementation time</p>
+                      <p className="text-3xl font-semibold text-[#00D4FF]">
+                        2 weeks
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        Implementation time
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -478,7 +538,11 @@ export default function AnalyticsServicePage() {
               <AnimateOnScroll delay={0.2}>
                 <div className="bg-white rounded-2xl p-6 lg:p-8 border border-gray-200/80">
                   {faqs.map((faq, i) => (
-                    <FAQItem key={i} question={faq.question} answer={faq.answer} />
+                    <FAQItem
+                      key={i}
+                      question={faq.question}
+                      answer={faq.answer}
+                    />
                   ))}
                 </div>
               </AnimateOnScroll>
@@ -502,7 +566,8 @@ export default function AnalyticsServicePage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Start with a free analytics audit. We&apos;ll show you exactly what&apos;s broken and how to fix it.
+                  Start with a free analytics audit. We&apos;ll show you exactly
+                  what&apos;s broken and how to fix it.
                 </p>
               </AnimateOnScroll>
 

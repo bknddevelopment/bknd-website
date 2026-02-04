@@ -1,15 +1,30 @@
-'use client';
+"use client";
 
-import { Check, X, ArrowRight } from 'lucide-react';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { Check, X, ArrowRight } from "lucide-react";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const comparisons = [
-  { them: 'Focus on vanity metrics', us: 'Laser-focused on revenue-driving KPIs' },
-  { them: 'Incremental improvements', us: 'Transformative growth strategies' },
-  { them: 'Cookie-cutter approaches', us: 'Custom, innovative solutions for each client' },
-  { them: 'Reactive to market trends', us: 'Proactive in creating new marketing angles' },
-  { them: 'Limited cross-channel integration', us: 'Seamless multi-platform strategies' },
-  { them: 'Manual, time-consuming processes', us: 'AI-driven, scalable solutions' },
+  {
+    them: "Focus on vanity metrics",
+    us: "Laser-focused on revenue-driving KPIs",
+  },
+  { them: "Incremental improvements", us: "Transformative growth strategies" },
+  {
+    them: "Cookie-cutter approaches",
+    us: "Custom, innovative solutions for each client",
+  },
+  {
+    them: "Reactive to market trends",
+    us: "Proactive in creating new marketing angles",
+  },
+  {
+    them: "Limited cross-channel integration",
+    us: "Seamless multi-platform strategies",
+  },
+  {
+    them: "Manual, time-consuming processes",
+    us: "AI-driven, scalable solutions",
+  },
 ];
 
 export default function WhyUs() {
@@ -55,10 +70,7 @@ export default function WhyUs() {
             {/* Comparison Rows */}
             <div className="space-y-4">
               {comparisons.map((item, i) => (
-                <div
-                  key={i}
-                  className="grid md:grid-cols-2 gap-4 md:gap-6"
-                >
+                <div key={i} className="grid md:grid-cols-2 gap-4 md:gap-6">
                   {/* Traditional Agency Card */}
                   <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-gray-300">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center">
@@ -72,7 +84,10 @@ export default function WhyUs() {
                   {/* BKND Card */}
                   <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#00D4FF]/10 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-[#00D4FF]" strokeWidth={3} />
+                      <Check
+                        className="w-3.5 h-3.5 text-[#00D4FF]"
+                        strokeWidth={3}
+                      />
                     </div>
                     <span className="text-[#1D1D1F] text-base leading-relaxed font-medium">
                       {item.us}
