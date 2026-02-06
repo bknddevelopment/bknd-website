@@ -109,7 +109,7 @@ const jsonLd = {
         postalCode: "07202",
         addressCountry: "US",
       },
-      sameAs: [],
+      sameAs: ["https://www.linkedin.com/company/bknddevelopment"],
     },
     // LocalBusiness Schema
     {
@@ -158,7 +158,7 @@ const jsonLd = {
       currenciesAccepted: "USD",
       paymentAccepted: "Credit Card, Invoice",
     },
-    // WebSite Schema with SearchAction
+    // WebSite Schema
     {
       "@type": "WebSite",
       "@id": "https://bknddevelopment.com/#website",
@@ -168,14 +168,6 @@ const jsonLd = {
         "Marketing Built Like Software - Developer-built campaigns with data-driven decisions.",
       publisher: {
         "@id": "https://bknddevelopment.com/#organization",
-      },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: "https://bknddevelopment.com/?s={search_term_string}",
-        },
-        "query-input": "required name=search_term_string",
       },
     },
     // WebPage Schema

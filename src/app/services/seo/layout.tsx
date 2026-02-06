@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BKND Development",
-    url: "https://charwinvanryckdegroot.github.io/bknd-website/services/seo",
+    url: "https://bknddevelopment.com/services/seo",
     images: [
       {
         url: "/images/bknd-logo-new.png",
@@ -54,14 +54,12 @@ const jsonLd = {
     // Service Schema
     {
       "@type": "Service",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/services/seo#service",
+      "@id": "https://bknddevelopment.com/services/seo#service",
       name: "SEO Services",
       description:
         "Developer-built SEO services including technical optimization, Core Web Vitals, schema markup, local SEO, content strategy, and white-hat link building.",
       provider: {
-        "@id":
-          "https://charwinvanryckdegroot.github.io/bknd-website/#organization",
+        "@id": "https://bknddevelopment.com/#organization",
       },
       serviceType: "Search Engine Optimization",
       areaServed: [
@@ -137,18 +135,16 @@ const jsonLd = {
     // WebPage Schema
     {
       "@type": "WebPage",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/services/seo#webpage",
-      url: "https://charwinvanryckdegroot.github.io/bknd-website/services/seo",
+      "@id": "https://bknddevelopment.com/services/seo#webpage",
+      url: "https://bknddevelopment.com/services/seo",
       name: "Technical SEO Services | Developer-Built Optimization | BKND Development",
       description:
         "SEO built by developers, for results. Technical SEO, Core Web Vitals optimization, schema markup, and data-driven content strategy.",
       isPartOf: {
-        "@id": "https://charwinvanryckdegroot.github.io/bknd-website/#website",
+        "@id": "https://bknddevelopment.com/#website",
       },
       about: {
-        "@id":
-          "https://charwinvanryckdegroot.github.io/bknd-website/services/seo#service",
+        "@id": "https://bknddevelopment.com/services/seo#service",
       },
       datePublished: "2026-01-26",
       dateModified: "2026-01-26",
@@ -161,27 +157,26 @@ const jsonLd = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/",
+          item: "https://bknddevelopment.com/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/services",
+          item: "https://bknddevelopment.com/services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "SEO",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/services/seo",
+          item: "https://bknddevelopment.com/services/seo",
         },
       ],
     },
     // FAQPage Schema
     {
       "@type": "FAQPage",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/services/seo#faq",
+      "@id": "https://bknddevelopment.com/services/seo#faq",
       mainEntity: [
         {
           "@type": "Question",

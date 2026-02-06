@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: "AI Corner | BKND Development",
   description:
     "AI news, tools, guides, and industry updates. Stay ahead with the latest in artificial intelligence for marketing and business.",
+  alternates: {
+    canonical: "/ai",
+  },
   openGraph: {
     title: "AI Corner | BKND Development",
     description:
       "AI news, tools, guides, and industry updates. Stay ahead with the latest in artificial intelligence for marketing and business.",
     type: "website",
+    url: "https://bknddevelopment.com/ai",
   },
 };
 

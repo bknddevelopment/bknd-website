@@ -13,11 +13,15 @@ export const metadata: Metadata = {
     "thought leadership",
     "content creation agency",
   ],
+  alternates: {
+    canonical: "/services/content",
+  },
   openGraph: {
     title: "Content Marketing Services | BKND Development",
     description:
       "Strategy-first content marketing that builds authority, drives organic traffic, and converts readers into customers.",
     type: "website",
+    url: "https://bknddevelopment.com/services/content",
   },
   twitter: {
     card: "summary_large_image",

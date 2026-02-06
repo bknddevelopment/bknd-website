@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: "Marketing Hub | BKND Development",
   description:
     "Marketing strategy, tactics, campaigns, and case studies. Practical guides for service businesses and contractors.",
+  alternates: {
+    canonical: "/marketing",
+  },
   openGraph: {
     title: "Marketing Hub | BKND Development",
     description:
       "Marketing strategy, tactics, campaigns, and case studies. Practical guides for service businesses and contractors.",
     type: "website",
+    url: "https://bknddevelopment.com/marketing",
   },
 };
 

@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: "Industry News | BKND Development",
   description:
     "Platform updates, algorithm changes, and market trends. Stay informed about the latest developments in marketing and technology.",
+  alternates: {
+    canonical: "/industry-news",
+  },
   openGraph: {
     title: "Industry News | BKND Development",
     description:
       "Platform updates, algorithm changes, and market trends. Stay informed about the latest developments in marketing and technology.",
     type: "website",
+    url: "https://bknddevelopment.com/industry-news",
   },
 };
 

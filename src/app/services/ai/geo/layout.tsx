@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BKND Development",
-    url: "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo",
+    url: "https://bknddevelopment.com/services/ai/geo",
     images: [
       {
         url: "/images/bknd-logo-new.png",
@@ -58,14 +58,12 @@ const jsonLd = {
     // Service Schema
     {
       "@type": "Service",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo#service",
+      "@id": "https://bknddevelopment.com/services/ai/geo#service",
       name: "Generative Engine Optimization (GEO)",
       description:
         "GEO services that optimize your content for AI search engines including ChatGPT, Google Gemini, Perplexity, Claude, and Microsoft Copilot. Get cited, referenced, and recommended in AI-generated answers.",
       provider: {
-        "@id":
-          "https://charwinvanryckdegroot.github.io/bknd-website/#organization",
+        "@id": "https://bknddevelopment.com/#organization",
       },
       serviceType: "Generative Engine Optimization",
       areaServed: [
@@ -141,18 +139,16 @@ const jsonLd = {
     // WebPage Schema
     {
       "@type": "WebPage",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo#webpage",
-      url: "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo",
+      "@id": "https://bknddevelopment.com/services/ai/geo#webpage",
+      url: "https://bknddevelopment.com/services/ai/geo",
       name: "Generative Engine Optimization (GEO) | AI Search Optimization | BKND Development",
       description:
         "Get found in AI search. GEO optimizes your content for ChatGPT, Gemini, Perplexity, and other AI platforms.",
       isPartOf: {
-        "@id": "https://charwinvanryckdegroot.github.io/bknd-website/#website",
+        "@id": "https://bknddevelopment.com/#website",
       },
       about: {
-        "@id":
-          "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo#service",
+        "@id": "https://bknddevelopment.com/services/ai/geo#service",
       },
       datePublished: "2026-01-28",
       dateModified: "2026-01-28",
@@ -165,33 +161,32 @@ const jsonLd = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/",
+          item: "https://bknddevelopment.com/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/services",
+          item: "https://bknddevelopment.com/services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "AI",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/services/ai",
+          item: "https://bknddevelopment.com/services/ai",
         },
         {
           "@type": "ListItem",
           position: 4,
           name: "GEO",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo",
+          item: "https://bknddevelopment.com/services/ai/geo",
         },
       ],
     },
     // FAQPage Schema
     {
       "@type": "FAQPage",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo#faq",
+      "@id": "https://bknddevelopment.com/services/ai/geo#faq",
       mainEntity: [
         {
           "@type": "Question",

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BKND Development",
-    url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai",
+    url: "https://bknddevelopment.com/methodology/ai",
     images: [
       {
         url: "/images/bknd-logo-new.png",
@@ -53,8 +53,7 @@ const jsonLd = {
     // HowTo Schema for the Methodology
     {
       "@type": "HowTo",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#howto",
+      "@id": "https://bknddevelopment.com/methodology/ai#howto",
       name: "BKND AI Implementation Methodology",
       description:
         "Our proven 5-phase approach to implementing AI solutions that deliver measurable business results.",
@@ -70,35 +69,35 @@ const jsonLd = {
           position: 1,
           name: "Assess",
           text: "Comprehensive AI readiness evaluation including technology audit, process analysis, and opportunity identification.",
-          url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#assess",
+          url: "https://bknddevelopment.com/methodology/ai#assess",
         },
         {
           "@type": "HowToStep",
           position: 2,
           name: "Strategize",
           text: "Develop a customized AI implementation roadmap aligned with business objectives and prioritized by ROI potential.",
-          url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#strategize",
+          url: "https://bknddevelopment.com/methodology/ai#strategize",
         },
         {
           "@type": "HowToStep",
           position: 3,
           name: "Build",
           text: "Develop AI solutions using agile sprints with continuous stakeholder feedback and iterative improvements.",
-          url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#build",
+          url: "https://bknddevelopment.com/methodology/ai#build",
         },
         {
           "@type": "HowToStep",
           position: 4,
           name: "Deploy",
           text: "Systematic integration and launch with proper testing, training, and change management support.",
-          url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#deploy",
+          url: "https://bknddevelopment.com/methodology/ai#deploy",
         },
         {
           "@type": "HowToStep",
           position: 5,
           name: "Optimize",
           text: "Continuous monitoring, performance analysis, and iterative improvements to maximize ROI over time.",
-          url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#optimize",
+          url: "https://bknddevelopment.com/methodology/ai#optimize",
         },
       ],
       supply: [
@@ -133,14 +132,12 @@ const jsonLd = {
     // Service Schema
     {
       "@type": "Service",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#service",
+      "@id": "https://bknddevelopment.com/methodology/ai#service",
       name: "AI Implementation Services",
       description:
         "End-to-end AI implementation services following our proven 5-phase methodology: Assess, Strategize, Build, Deploy, Optimize.",
       provider: {
-        "@id":
-          "https://charwinvanryckdegroot.github.io/bknd-website/#organization",
+        "@id": "https://bknddevelopment.com/#organization",
       },
       serviceType: "AI Consulting and Implementation",
       areaServed: [
@@ -153,18 +150,16 @@ const jsonLd = {
     // WebPage Schema
     {
       "@type": "WebPage",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#webpage",
-      url: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai",
+      "@id": "https://bknddevelopment.com/methodology/ai#webpage",
+      url: "https://bknddevelopment.com/methodology/ai",
       name: "AI Methodology | How We Implement AI Solutions | BKND Development",
       description:
         "Our proven 5-phase AI implementation methodology delivers measurable ROI through systematic assessment, strategy, development, deployment, and optimization.",
       isPartOf: {
-        "@id": "https://charwinvanryckdegroot.github.io/bknd-website/#website",
+        "@id": "https://bknddevelopment.com/#website",
       },
       about: {
-        "@id":
-          "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#howto",
+        "@id": "https://bknddevelopment.com/methodology/ai#howto",
       },
       datePublished: "2026-01-28",
       dateModified: "2026-01-28",
@@ -177,27 +172,26 @@ const jsonLd = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/",
+          item: "https://bknddevelopment.com/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Methodology",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/methodology",
+          item: "https://bknddevelopment.com/methodology",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "AI",
-          item: "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai",
+          item: "https://bknddevelopment.com/methodology/ai",
         },
       ],
     },
     // FAQPage Schema
     {
       "@type": "FAQPage",
-      "@id":
-        "https://charwinvanryckdegroot.github.io/bknd-website/methodology/ai#faq",
+      "@id": "https://bknddevelopment.com/methodology/ai#faq",
       mainEntity: [
         {
           "@type": "Question",

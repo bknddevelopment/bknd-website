@@ -23,9 +23,9 @@ const resourceLinks = [
 ];
 
 const navItems = [
-  { label: "Services", href: "#services", hasDropdown: true },
-  { label: "Resources", href: "#resources", hasDropdown: true },
-  { label: "Industries", href: "#industries", hasDropdown: true },
+  { label: "Services", href: "/#services", hasDropdown: true },
+  { label: "Resources", href: "/#resources", hasDropdown: true },
+  { label: "Industries", href: "/#industries", hasDropdown: true },
   { label: "About Us", href: "/about", hasDropdown: false },
   { label: "Contact", href: "/contact", hasDropdown: false },
 ];
@@ -138,7 +138,7 @@ export default function Header() {
 
           {/* CTA Button - Cyan with white text */}
           <Link
-            href="#contact"
+            href="/contact"
             className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all group shadow-sm"
           >
             Work With Us
@@ -229,7 +229,7 @@ export default function Header() {
                 </div>
               ))}
               <Link
-                href="#contact"
+                href="/contact"
                 className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >

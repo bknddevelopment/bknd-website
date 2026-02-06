@@ -14,10 +14,17 @@ const footerLinks = {
     { label: "Data & Analytics", href: "/services/analytics" },
     { label: "Paid Advertising", href: "/services/paid-advertising" },
   ],
+  Resources: [
+    { label: "AI Corner", href: "/ai" },
+    { label: "Marketing Hub", href: "/marketing" },
+    { label: "SEO Insights", href: "/seo-insights" },
+    { label: "Industry News", href: "/industry-news" },
+    { label: "All Articles", href: "/blog" },
+  ],
   Company: [
     { label: "About Us", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ],
   Contact: [
     {
@@ -87,7 +94,7 @@ export default function Footer() {
 
         {/* Link Columns */}
         <AnimateOnScroll delay={0.1}>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-10 border-b border-[#424245]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-b border-[#424245]">
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
                 {/* Column Header - Apple style: white, semibold, small */}

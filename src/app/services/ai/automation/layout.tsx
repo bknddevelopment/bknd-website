@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BKND Development",
-    url: "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/automation",
+    url: "https://bknddevelopment.com/services/ai/automation",
   },
   twitter: {
     card: "summary_large_image",
@@ -52,7 +52,7 @@ const jsonLd = {
   provider: {
     "@type": "Organization",
     name: "BKND Development",
-    url: "https://charwinvanryckdegroot.github.io/bknd-website/",
+    url: "https://bknddevelopment.com/",
   },
   serviceType: "AI Marketing Automation",
   areaServed: {

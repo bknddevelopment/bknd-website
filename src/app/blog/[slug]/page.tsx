@@ -29,15 +29,26 @@ export async function generateMetadata({
     };
   }
 
+  const categoryToHub: Record<string, string> = {
+    ai: "ai",
+    marketing: "marketing",
+    seo: "seo-insights",
+    news: "industry-news",
+  };
+
   return {
     title: `${post.title} | BKND Development`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/${categoryToHub[post.category] || "blog"}/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      url: `https://bknddevelopment.com/${categoryToHub[post.category] || "blog"}/${slug}`,
     },
   };
 }

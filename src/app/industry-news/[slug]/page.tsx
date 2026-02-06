@@ -32,12 +32,16 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Industry News | BKND Development`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/industry-news/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      url: `https://bknddevelopment.com/industry-news/${slug}`,
     },
   };
 }

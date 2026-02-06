@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: "SEO Insights | BKND Development",
   description:
     "Search optimization, content marketing, and technical SEO guides. Learn how to dominate local search and drive organic traffic.",
+  alternates: {
+    canonical: "/seo-insights",
+  },
   openGraph: {
     title: "SEO Insights | BKND Development",
     description:
       "Search optimization, content marketing, and technical SEO guides. Learn how to dominate local search and drive organic traffic.",
     type: "website",
+    url: "https://bknddevelopment.com/seo-insights",
   },
 };
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BKND Development",
-    url: "https://charwinvanryckdegroot.github.io/bknd-website/services/creative",
+    url: "https://bknddevelopment.com/services/creative",
   },
   twitter: {
     card: "summary_large_image",

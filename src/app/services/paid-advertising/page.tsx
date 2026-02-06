@@ -33,13 +33,16 @@ export const metadata: Metadata = {
     description:
       "Data-driven paid advertising that delivers measurable ROI. Developer-built tracking for complete transparency.",
     type: "website",
-    url: "https://bknd.dev/services/paid-advertising",
+    url: "https://bknddevelopment.com/services/paid-advertising",
   },
   twitter: {
     card: "summary_large_image",
     title: "Paid Advertising Services | BKND Development",
     description:
       "Data-driven paid advertising that delivers measurable ROI. Developer-built tracking for complete transparency.",
+  },
+  alternates: {
+    canonical: "/services/paid-advertising",
   },
 };
 
