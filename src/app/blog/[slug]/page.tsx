@@ -49,6 +49,14 @@ export async function generateMetadata({
       publishedTime: post.date,
       authors: [post.author],
       url: `https://bknddevelopment.com/${categoryToHub[post.category] || "blog"}/${slug}`,
+      ...(post.image && {
+        images: [
+          {
+            url: `https://bknddevelopment.com${post.image}`,
+            alt: post.imageAlt || post.title,
+          },
+        ],
+      }),
     },
   };
 }
@@ -239,6 +247,19 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <p className="text-[#86868B]">By {post.author}</p>
                 </div>
               </AnimateOnScroll>
+
+              {/* Hero Image */}
+              {post.image && (
+                <AnimateOnScroll delay={0.1}>
+                  <div className="mb-10 -mx-4 lg:-mx-16 overflow-hidden rounded-lg">
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt || post.title}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </AnimateOnScroll>
+              )}
 
               {/* Content */}
               <AnimateOnScroll delay={0.15}>

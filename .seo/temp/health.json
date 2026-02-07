@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-02-05",
+  "overall_status": "healthy",
+  "checks": {
+    "site_up": true,
+    "ssl_valid": true,
+    "sitemap_exists": true,
+    "robots_exists": true,
+    "key_pages": {
+      "/": true,
+      "/services/seo/": true,
+      "/services/ai/": true,
+      "/blog": true
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "details": {
+    "homepage": "HTTP 200 - Full content rendered, JSON-LD schema present, GA4 active (G-G6C4G1SQ44)",
+    "sitemap": "Valid XML with 150+ URLs, proper priorities (0.3-1.0), image namespace declared, dates current (2026-02-04)",
+    "robots_txt": "Permits all crawlers, sitemap reference correct, 1s crawl-delay, no blocked paths",
+    "seo_page": "Full service content with FAQ schema, breadcrumbs, 5-step methodology",
+    "ai_page": "4 AI service offerings detailed, metrics highlighted, schema markup present",
+    "blog_page": "40+ articles across AI/Marketing/SEO/News categories, proper metadata and schema"
+  }
+}

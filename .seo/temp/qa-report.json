@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-02-05",
+  "build_passes": true,
+  "checks": {
+    "canonical_tags": {
+      "pass": true,
+      "issues": [],
+      "details": {
+        "blog_slug": "PASS - src/app/blog/[slug]/page.tsx has categoryToHub mapping with alternates.canonical pointing to hub version (line 43: /${categoryToHub[post.category] || 'blog'}/${slug})",
+        "ai_slug": "PASS - src/app/ai/[slug]/page.tsx has alternates.canonical: /ai/${slug} (line 36)",
+        "marketing_slug": "PASS - src/app/marketing/[slug]/page.tsx has alternates.canonical: /marketing/${slug} (line 36)",
+        "seo_insights_slug": "PASS - src/app/seo-insights/[slug]/page.tsx has alternates.canonical: /seo-insights/${slug} (line 36)",
+        "industry_news_slug": "PASS - src/app/industry-news/[slug]/page.tsx has alternates.canonical: /industry-news/${slug} (line 36)",
+        "ai_hub": "PASS - src/app/ai/page.tsx has alternates.canonical: /ai (line 13)",
+        "marketing_hub": "PASS - src/app/marketing/page.tsx has alternates.canonical: /marketing (line 13)",
+        "seo_insights_hub": "PASS - src/app/seo-insights/page.tsx has alternates.canonical: /seo-insights (line 13)",
+        "industry_news_hub": "PASS - src/app/industry-news/page.tsx has alternates.canonical: /industry-news (line 13)",
+        "blog_layout": "PASS - src/app/blog/layout.tsx has alternates.canonical: /blog (line 8)",
+        "about_layout": "PASS - src/app/about/layout.tsx EXISTS with alternates.canonical: /about (line 8)",
+        "services_ai_layout": "PASS - src/app/services/ai/layout.tsx EXISTS with alternates.canonical: /services/ai (line 19) + Service schema with @graph",
+        "services_content_layout": "PASS - src/app/services/content/layout.tsx EXISTS with alternates.canonical: /services/content (line 17)"
+      }
+    },
+    "old_domain_references": {
+      "pass": false,
+      "remaining_count": 17,
+      "issues": [
+        "FAIL: src/app/methodology/ai/layout.tsx contains 17 references to 'charwinvanryckdegroot.github.io/bknd-website'. All schema markup URLs in this file still point to the old GitHub Pages domain instead of bknddevelopment.com. This file was missed during the domain migration."
+      ],
+      "affected_files": ["src/app/methodology/ai/layout.tsx"]
+    },
+    "sitemap_cleanup": {
+      "pass": true,
+      "total_urls": 68,
+      "duplicate_blog_entries": 0,
+      "issues": [],
+      "details": "No /blog/[slug] entries found in sitemap (only /blog/ index). All hub articles are listed under their hub paths (/ai/, /marketing/, /seo-insights/, /industry-news/). Total 68 URL entries."
+    },
+    "navigation_fixes": {
+      "pass": true,
+      "issues": [],
+      "details": {
+        "services_link": "PASS - Uses /#services (line 26)",
+        "resources_link": "PASS - Uses /#resources (line 27)",
+        "industries_link": "PASS - Uses /#industries (line 28)",
+        "desktop_cta": "PASS - Uses /contact (line 141)",
+        "mobile_cta": "PASS - Uses /contact (line 232)",
+        "contact_nav": "PASS - Uses /contact (line 30)",
+        "resources_dropdown": "PASS - Contains links to /ai, /marketing, /seo-insights, /industry-news, /blog (lines 18-23)",
+        "services_dropdown": "PASS - Contains links to all 7 service pages (lines 8-15)"
+      }
+    },
+    "footer_hub_links": {
+      "pass": true,
+      "issues": [],
+      "details": {
+        "resources_section": "PASS - Resources section exists with AI Corner (/ai), Marketing Hub (/marketing), SEO Insights (/seo-insights), Industry News (/industry-news), All Articles (/blog)",
+        "grid_columns": "PASS - Grid is md:grid-cols-4 (line 97)",
+        "contact_link": "PASS - Company section Contact link uses /contact (line 27)",
+        "four_columns": "PASS - Services, Resources, Company, Contact columns all present"
+      }
+    },
+    "homepage_schema": {
+      "pass": true,
+      "issues": [],
+      "details": {
+        "sameAs": "PASS - Contains LinkedIn URL: https://www.linkedin.com/company/bknddevelopment (line 112)",
+        "potentialAction": "PASS - No potentialAction/SearchAction block exists in schema",
+        "canonical": "PASS - alternates.canonical is '/' (line 42)"
+      }
+    }
+  },
+  "overall_pass": false,
+  "issues_found": [
+    {
+      "severity": "high",
+      "category": "old_domain_references",
+      "file": "src/app/methodology/ai/layout.tsx",
+      "description": "17 references to old domain 'charwinvanryckdegroot.github.io/bknd-website' remain in schema markup. All URLs in the JSON-LD schema (HowTo, Service, WebPage, BreadcrumbList, FAQPage schemas) still point to the old GitHub Pages domain. These need to be replaced with 'https://bknddevelopment.com'."
+    }
+  ],
+  "summary": "6 of 7 checks PASS. Build compiles successfully with zero errors (115 static pages). All canonical tags are correctly set. Sitemap has 68 URLs with no duplicate /blog/[slug] entries. Navigation uses correct /#section format and /contact paths. Footer has 4-column grid with all hub links. Homepage schema has LinkedIn sameAs and no SearchAction. ONE FAILURE: src/app/methodology/ai/layout.tsx still has 17 old domain references (charwinvanryckdegroot.github.io/bknd-website) that need to be updated to bknddevelopment.com."
+}

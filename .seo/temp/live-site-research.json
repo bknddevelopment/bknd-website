@@ -1,0 +1,398 @@
+{
+  "timestamp": "2026-02-05",
+  "research_type": "live_site_audit",
+  "findings": {
+    "duplicate_content": {
+      "blog_url_works": true,
+      "hub_url_works": true,
+      "content_identical": true,
+      "canonical_tags_found": true,
+      "canonical_correct": false,
+      "canonical_issue": "Both /blog/agentic-ai-enterprise-2026 and /ai/agentic-ai-enterprise-2026 have canonical pointing to homepage (https://bknddevelopment.com/) instead of pointing to one authoritative URL",
+      "schema_differences": "Blog version has 1 schema (global Organization/LocalBusiness/WebSite/WebPage only, NO Article schema). Hub version has 2 schemas (global + Article schema with headline). Hub version also has 'AI Corner' in the title suffix. Neither has og:url set to the correct page URL.",
+      "title_differences": {
+        "blog": "Agentic AI in Enterprise: From Copilots to Autonomous Workflows | BKND Development",
+        "hub": "Agentic AI in Enterprise: From Copilots to Autonomous Workflows | AI Corner | BKND Development"
+      },
+      "severity": "CRITICAL - Google sees 44 pairs of duplicate pages with all canonicals pointing to homepage"
+    },
+    "service_page_schemas": {
+      "old_domain_references_found": true,
+      "affected_pages": [
+        "/services/seo/",
+        "/services/ai/geo/",
+        "/services/creative/",
+        "/services/cro/",
+        "/services/analytics/"
+      ],
+      "pages_with_correct_schemas": [],
+      "pages_without_old_domain_but_other_issues": [
+        {
+          "page": "/services/ai/",
+          "issue": "No page-specific schema at all. Uses homepage title/description/canonical. Only has global schema."
+        },
+        {
+          "page": "/services/content/",
+          "issue": "Canonical points to homepage. No OG URL. Only 1 schema (global)."
+        },
+        {
+          "page": "/services/paid-advertising/",
+          "issue": "OG URL points to https://bknd.dev/services/paid-advertising (wrong domain). Canonical points to homepage."
+        }
+      ],
+      "example_references": [
+        "https://charwinvanryckdegroot.github.io/bknd-website/services/seo#service",
+        "https://charwinvanryckdegroot.github.io/bknd-website/#organization",
+        "https://charwinvanryckdegroot.github.io/bknd-website/services/seo#webpage",
+        "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo#service",
+        "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo#faq",
+        "https://charwinvanryckdegroot.github.io/bknd-website/services/cro (in schema)",
+        "https://charwinvanryckdegroot.github.io/bknd-website/services/analytics (in schema)"
+      ],
+      "og_url_issues": [
+        {
+          "page": "/services/seo/",
+          "og_url": "https://charwinvanryckdegroot.github.io/bknd-website/services/seo"
+        },
+        {
+          "page": "/services/ai/geo/",
+          "og_url": "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo"
+        },
+        {
+          "page": "/services/creative/",
+          "og_url": "https://charwinvanryckdegroot.github.io/bknd-website/services/creative"
+        },
+        {
+          "page": "/services/cro/",
+          "og_url": "https://charwinvanryckdegroot.github.io/bknd-website/services/cro"
+        },
+        {
+          "page": "/services/analytics/",
+          "og_url": "https://charwinvanryckdegroot.github.io/bknd-website/services/analytics"
+        },
+        {
+          "page": "/services/paid-advertising/",
+          "og_url": "https://bknd.dev/services/paid-advertising"
+        }
+      ],
+      "severity": "CRITICAL - Old GitHub Pages domain in JSON-LD schemas and OG tags confuses search engines about site identity"
+    },
+    "geo_page": {
+      "title": "Generative Engine Optimization (GEO) | AI Search Optimization | BKND Development",
+      "description": "Get found in AI search. GEO optimizes your content for ChatGPT, Gemini, Perplexity, and other AI platforms. Be cited, referenced, and recommended in AI-generated answers.",
+      "h1": "Generative Engine Optimization (GEO)",
+      "canonical": "https://bknddevelopment.com/services/ai/geo/",
+      "canonical_correct": true,
+      "schema_present": true,
+      "schema_has_old_domain": true,
+      "og_url_wrong": true,
+      "og_url_value": "https://charwinvanryckdegroot.github.io/bknd-website/services/ai/geo",
+      "current_keywords": [
+        "generative engine optimization (2 mentions)",
+        "geo services (1 mention)",
+        "ai search optimization (1 mention)",
+        "llm optimization (1 mention)",
+        "ai visibility (1 mention)",
+        "ai search (23 mentions)"
+      ],
+      "missing_for_target": [
+        "geo agency (0 mentions)",
+        "geo consultant (0 mentions)",
+        "chatgpt optimization (0 mentions)",
+        "perplexity optimization (0 mentions)",
+        "geo services (only 1 mention, needs more)",
+        "generative engine optimization (only 2 mentions for primary keyword)"
+      ],
+      "h2_headings": [
+        "GEO Services",
+        "Platforms We Optimize For",
+        "How We Optimize for AI Search",
+        "GEO Impact",
+        "Why GEO Matters Now",
+        "Common Questions",
+        "Get found in AI-generated answers."
+      ],
+      "severity": "MEDIUM - Good foundation but old domain in schema/OG, and keyword density could be improved"
+    },
+    "ai_services_page": {
+      "has_title": false,
+      "has_description": false,
+      "has_schema": false,
+      "current_title": "BKND Development | Marketing Built Like Software",
+      "current_description": "Developer-built campaigns. Data-driven decisions. Revenue you can measure. BKND Development is the marketing agency for companies that demand speed, t...",
+      "current_canonical": "https://bknddevelopment.com/",
+      "actual_h1": "AI Solutions That Actually Drive Revenue",
+      "issues": [
+        "Page uses default homepage metadata (title, description, canonical, OG tags) instead of page-specific metadata",
+        "Canonical points to homepage instead of /services/ai/",
+        "OG URL points to homepage",
+        "No Service schema or page-specific JSON-LD",
+        "Title does not mention AI services at all",
+        "Description does not mention AI"
+      ],
+      "severity": "CRITICAL - Google may treat this as duplicate of homepage"
+    },
+    "navigation": {
+      "broken_anchor_links": [
+        {
+          "text": "Services",
+          "href": "#services",
+          "issue": "Only scrolls to section on homepage. On other pages, does nothing."
+        },
+        {
+          "text": "Resources",
+          "href": "#resources",
+          "issue": "Only scrolls to section on homepage. On other pages, does nothing."
+        },
+        {
+          "text": "Industries",
+          "href": "#industries",
+          "issue": "Only scrolls to section on homepage. On other pages, does nothing."
+        },
+        {
+          "text": "Work With Us",
+          "href": "#contact",
+          "issue": "Only scrolls to section on homepage. On other pages, does nothing."
+        },
+        {
+          "text": "Contact (footer)",
+          "href": "#contact",
+          "issue": "Footer contact link uses anchor that only works on homepage"
+        }
+      ],
+      "industries_dropdown_state": "No dropdown content - Industries nav item only links to #industries homepage anchor with no sub-items. The dropdown appears empty or non-functional on non-homepage pages.",
+      "dropdown_items_present": {
+        "services_dropdown": [
+          "AI Solutions -> /services/ai/",
+          "SEO -> /services/seo/",
+          "Content -> /services/content/",
+          "Creative -> /services/creative/",
+          "CRO -> /services/cro/",
+          "Analytics -> /services/analytics/",
+          "Paid Advertising -> /services/paid-advertising/"
+        ],
+        "resources_dropdown": [
+          "AI Corner -> /ai/",
+          "Marketing Hub -> /marketing/",
+          "SEO Insights -> /seo-insights/",
+          "Industry News -> /industry-news/",
+          "All Articles -> /blog/"
+        ]
+      },
+      "issues": [
+        "Main nav parent items use homepage-only anchors instead of proper section landing pages",
+        "Industries section has no sub-links - appears as dead navigation on non-homepage pages",
+        "Work With Us should link to /contact/ page or /#contact on non-homepage",
+        "Footer Contact link also uses #contact anchor"
+      ],
+      "severity": "HIGH - Broken navigation on all non-homepage pages affects UX and internal linking"
+    },
+    "hub_pages": {
+      "canonical_tags": false,
+      "canonical_issue": "All hub landing pages (/ai/, /marketing/, /seo-insights/, /industry-news/) have canonical pointing to homepage instead of their own URL",
+      "schema_present": true,
+      "schema_issue": "Hub pages have 4 JSON-LD schemas each - the global schema appears to be duplicated (Organization,LocalBusiness,WebSite,WebPage appears twice) plus 2 CollectionPage schemas",
+      "meta_tags_present": true,
+      "details": {
+        "/ai/": {
+          "title": "AI Corner | BKND Development",
+          "canonical": "https://bknddevelopment.com/",
+          "schemas": 4,
+          "description": "AI news, tools, guides, and industry updates..."
+        },
+        "/marketing/": {
+          "title": "Marketing Hub | BKND Development",
+          "canonical": "https://bknddevelopment.com/",
+          "schemas": 4,
+          "description": "Marketing strategy, tactics, campaigns, and case studies..."
+        },
+        "/seo-insights/": {
+          "title": "SEO Insights | BKND Development",
+          "canonical": "https://bknddevelopment.com/",
+          "schemas": 4
+        },
+        "/industry-news/": {
+          "title": "Industry News | BKND Development",
+          "canonical": "https://bknddevelopment.com/",
+          "schemas": 4
+        }
+      },
+      "severity": "HIGH - Wrong canonicals tell Google all hub pages are duplicates of homepage. Duplicate schemas waste crawl budget."
+    },
+    "footer": {
+      "hub_links_present": false,
+      "missing_links": [
+        "/ai/ (AI Corner)",
+        "/marketing/ (Marketing Hub)",
+        "/seo-insights/ (SEO Insights)",
+        "/industry-news/ (Industry News)"
+      ],
+      "footer_links_found": [
+        "LinkedIn (social)",
+        "/services/ai/ (AI Solutions)",
+        "/services/seo/ (SEO Services)",
+        "/services/content/ (Content Marketing)",
+        "/services/creative/ (Performance Creative)",
+        "/services/cro/ (CRO)",
+        "/services/analytics/ (Data & Analytics)",
+        "/services/paid-advertising/ (Paid Advertising)",
+        "/about/ (About Us)",
+        "/blog/ (Blog)",
+        "#contact (Contact - broken anchor)",
+        "mailto:info@bknddevelopment.com",
+        "tel:+19735185600",
+        "/privacy/",
+        "/terms/",
+        "/accessibility/",
+        "/sitemap.xml"
+      ],
+      "issues": [
+        "No content hub links in footer - major internal linking opportunity missed",
+        "Contact uses #contact anchor instead of /contact/ page link",
+        "No social links beyond LinkedIn (Twitter/X, GitHub, etc. missing)"
+      ],
+      "severity": "MEDIUM - Missing internal links to hub pages reduces their authority and crawlability"
+    },
+    "sitemap": {
+      "total_urls": 113,
+      "duplicate_blog_hub_pairs": 44,
+      "duplicates_by_hub": {
+        "ai": 8,
+        "marketing": 21,
+        "seo-insights": 8,
+        "industry-news": 7
+      },
+      "examples": [
+        {
+          "slug": "chatgpt-ads-launch-what-marketers-need-to-know",
+          "blog_url": "https://bknddevelopment.com/blog/chatgpt-ads-launch-what-marketers-need-to-know",
+          "hub_url": "https://bknddevelopment.com/industry-news/chatgpt-ads-launch-what-marketers-need-to-know/"
+        },
+        {
+          "slug": "google-universal-commerce-protocol-ai-shopping",
+          "blog_url": "https://bknddevelopment.com/blog/google-universal-commerce-protocol-ai-shopping",
+          "hub_url": "https://bknddevelopment.com/industry-news/google-universal-commerce-protocol-ai-shopping/"
+        },
+        {
+          "slug": "agentic-ai-enterprise-2026",
+          "blog_url": "https://bknddevelopment.com/blog/agentic-ai-enterprise-2026",
+          "hub_url": "https://bknddevelopment.com/ai/agentic-ai-enterprise-2026/"
+        },
+        {
+          "slug": "meta-andromeda-algorithm-advertising-2026",
+          "blog_url": "https://bknddevelopment.com/blog/meta-andromeda-algorithm-advertising-2026",
+          "hub_url": "https://bknddevelopment.com/industry-news/meta-andromeda-algorithm-advertising-2026/"
+        },
+        {
+          "slug": "google-ai-overviews-ads-expansion-2026",
+          "blog_url": "https://bknddevelopment.com/blog/google-ai-overviews-ads-expansion-2026",
+          "hub_url": "https://bknddevelopment.com/seo-insights/google-ai-overviews-ads-expansion-2026/"
+        }
+      ],
+      "severity": "CRITICAL - Every blog article appears twice in sitemap (once under /blog/ and once under hub path). 44 duplicate pairs out of 113 total URLs means ~39% of sitemap is duplicated content."
+    },
+    "homepage_schema": {
+      "organization": true,
+      "local_business": true,
+      "same_as_populated": false,
+      "same_as_value": "[] (empty array - no social profiles linked)",
+      "search_action_functional": false,
+      "search_action_target": "https://bknddevelopment.com/?s={search_term_string}",
+      "search_action_issue": "Points to ?s= query parameter search which does not exist on this static Next.js site. Will result in showing homepage for any search.",
+      "web_page_schema": true,
+      "schema_graph_types": [
+        "Organization",
+        "LocalBusiness",
+        "WebSite",
+        "WebPage"
+      ],
+      "issues": [
+        "sameAs array is empty - should include LinkedIn, Twitter/X, GitHub profiles",
+        "SearchAction points to non-functional search endpoint (static site has no search)",
+        "WebPage URL in schema always shows homepage URL even on subpages (same schema used globally)"
+      ],
+      "severity": "MEDIUM - Empty sameAs misses authority signals. Non-functional SearchAction is misleading."
+    },
+    "canonical_tag_summary": {
+      "pages_with_correct_canonical": [
+        "/services/seo/",
+        "/services/ai/geo/",
+        "/services/creative/",
+        "/services/cro/",
+        "/services/analytics/"
+      ],
+      "pages_with_homepage_canonical": [
+        "/services/ai/",
+        "/services/content/",
+        "/services/paid-advertising/",
+        "/about/",
+        "/blog/",
+        "/blog/[any-slug]/",
+        "/ai/",
+        "/ai/[any-slug]/",
+        "/marketing/",
+        "/seo-insights/",
+        "/industry-news/"
+      ],
+      "pattern": "Pages with their own generateMetadata() in their page.tsx have correct canonicals. Pages that fall back to the root layout's default metadata get homepage canonical.",
+      "severity": "CRITICAL - Most pages tell Google they are the homepage"
+    },
+    "additional_findings": {
+      "www_redirect": "Site serves on both bknddevelopment.com and www.bknddevelopment.com (browser auto-redirects to www but canonical uses non-www). This is fine as long as Vercel handles the redirect.",
+      "about_page_metadata": "About page uses default homepage title/description - has no page-specific metadata at all",
+      "blog_listing_page": "Blog listing (/blog/) has title 'Insights | BKND Development' but canonical points to homepage",
+      "og_image": "Most pages use the same generic logo image for og:image instead of page-specific images"
+    }
+  },
+  "priority_fixes": [
+    {
+      "priority": 1,
+      "issue": "Canonical tags pointing to homepage on most pages",
+      "impact": "CRITICAL - Google treats all these pages as duplicates of homepage, destroying indexing",
+      "fix": "Add proper canonical URLs in generateMetadata() for every page, or fix the root layout default canonical to use the actual page path"
+    },
+    {
+      "priority": 2,
+      "issue": "44 duplicate blog/hub article pairs in sitemap with no canonical differentiation",
+      "impact": "CRITICAL - Splits ranking signals across duplicate URLs",
+      "fix": "Either add canonical from hub articles pointing to /blog/ versions (or vice versa), or remove duplicates from sitemap and set up redirects"
+    },
+    {
+      "priority": 3,
+      "issue": "Old GitHub Pages domain (charwinvanryckdegroot.github.io/bknd-website) in JSON-LD schemas and OG tags on 5+ service pages",
+      "impact": "HIGH - Confuses search engines about site identity and domain authority",
+      "fix": "Replace all charwinvanryckdegroot.github.io/bknd-website references with bknddevelopment.com in service page components"
+    },
+    {
+      "priority": 4,
+      "issue": "Navigation broken on non-homepage pages (anchor links to #services, #resources, #industries, #contact)",
+      "impact": "HIGH - Poor UX and broken internal linking on all subpages",
+      "fix": "Change anchor links to proper page links (e.g., /#services or /services/) or make them smart links that prepend / when not on homepage"
+    },
+    {
+      "priority": 5,
+      "issue": "/services/ai/ page has no unique metadata at all",
+      "impact": "HIGH - Treated as duplicate of homepage by Google",
+      "fix": "Add generateMetadata() with proper title, description, canonical, and Service schema"
+    },
+    {
+      "priority": 6,
+      "issue": "Empty sameAs in Organization schema and non-functional SearchAction",
+      "impact": "MEDIUM - Missing authority signals and misleading structured data",
+      "fix": "Populate sameAs with LinkedIn URL and remove or fix SearchAction"
+    },
+    {
+      "priority": 7,
+      "issue": "No content hub links in footer",
+      "impact": "MEDIUM - Missing internal linking opportunity for hub pages",
+      "fix": "Add Resources section to footer with hub page links"
+    },
+    {
+      "priority": 8,
+      "issue": "Duplicate global schemas on hub pages (4 schemas instead of expected 2-3)",
+      "impact": "LOW-MEDIUM - Schema duplication wastes crawl budget and may confuse structured data parsing",
+      "fix": "Ensure global schema renders only once per page"
+    }
+  ],
+  "summary": "The BKND Development live site has several critical SEO issues that are likely suppressing search visibility. The most damaging problem is that canonical tags on the majority of pages (blog posts, hub pages, some service pages, about page) all point to the homepage, which tells Google every page is a duplicate of the homepage. Combined with 44 duplicate blog/hub article pairs in the sitemap (each article exists at both /blog/slug and /hub/slug with identical content and no canonical differentiation), this creates massive duplicate content signals. Additionally, 5+ service pages still reference the old GitHub Pages domain (charwinvanryckdegroot.github.io/bknd-website) in their JSON-LD schemas and OG tags, which confuses search engines about site identity. The /services/ai/ page has zero unique metadata and is essentially invisible as a distinct page to Google. Navigation anchor links (#services, #resources, etc.) are broken on all non-homepage pages. The Organization schema has an empty sameAs array (no social profiles) and a non-functional SearchAction pointing to a search endpoint that does not exist on this static site. Content hubs are not linked from the footer, missing a key internal linking opportunity."
+}

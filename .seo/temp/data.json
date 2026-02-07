@@ -1,0 +1,948 @@
+{
+  "timestamp": "2026-02-05",
+  "data_pull_level": "FULL_BASELINE",
+  "data_source": "DataForSEO",
+  "domain": "bknddevelopment.com",
+
+  "domain_overview": {
+    "location": "United States (2840)",
+    "language": "English",
+    "organic_metrics": {
+      "total_keywords_ranking": 32,
+      "estimated_traffic_value": 14.66,
+      "estimated_paid_traffic_cost_usd": 41.3,
+      "position_distribution": {
+        "pos_1": 0,
+        "pos_2_3": 0,
+        "pos_4_10": 0,
+        "pos_11_20": 0,
+        "pos_21_30": 4,
+        "pos_31_40": 5,
+        "pos_41_50": 2,
+        "pos_51_60": 5,
+        "pos_61_70": 6,
+        "pos_71_80": 4,
+        "pos_81_90": 3,
+        "pos_91_100": 3
+      },
+      "keyword_movement": {
+        "is_new": 28,
+        "is_up": 0,
+        "is_down": 3,
+        "is_lost": 25
+      }
+    },
+    "paid_metrics": {
+      "total_keywords": 0,
+      "etv": 0,
+      "note": "No paid campaigns detected"
+    },
+    "summary": "Very early-stage domain. 32 keywords ranking, all outside top 20. 28 are newly discovered. Average position ~60. Estimated organic traffic value is only $14.66/month. No page 1 rankings whatsoever. The domain is in a 'discovery' phase with Google -- lots of new keyword appearances but all deep in results."
+  },
+
+  "ranked_keywords": {
+    "total_count": 32,
+    "best_position": 23,
+    "worst_position": 99,
+    "average_position": 59.7,
+    "keywords_by_page": {
+      "page_1_top_10": 0,
+      "page_2_11_20": 0,
+      "page_3_21_30": 4,
+      "page_4_31_40": 5,
+      "page_5_41_50": 2,
+      "pages_6_plus": 21
+    },
+    "top_keywords": [
+      {
+        "keyword": "developer mode squarespace",
+        "search_volume": 110,
+        "rank": 23,
+        "url": "https://bknddevelopment.com/resources/squarespace-developer-limitations",
+        "cpc": 12.36,
+        "etv": 0.23
+      },
+      {
+        "keyword": "squarespace developer mode",
+        "search_volume": 110,
+        "rank": 23,
+        "url": "https://bknddevelopment.com/resources/squarespace-developer-limitations",
+        "cpc": 12.36,
+        "etv": 0.23
+      },
+      {
+        "keyword": "cranford businesses",
+        "search_volume": 40,
+        "rank": 30,
+        "url": "https://www.bknddevelopment.com/locations/cranford/",
+        "cpc": null,
+        "etv": 0.08
+      },
+      {
+        "keyword": "cranford chamber of commerce",
+        "search_volume": 50,
+        "rank": 30,
+        "url": "https://www.bknddevelopment.com/locations/cranford/",
+        "cpc": null,
+        "etv": 0.11
+      },
+      {
+        "keyword": "businesses in cranford nj",
+        "search_volume": 40,
+        "rank": 31,
+        "url": "https://www.bknddevelopment.com/locations/cranford/",
+        "cpc": null,
+        "etv": 0.08
+      },
+      {
+        "keyword": "elizabeth development company",
+        "search_volume": 170,
+        "rank": 34,
+        "url": "https://www.bknddevelopment.com/locations/elizabeth-nj/",
+        "cpc": null,
+        "etv": 0.36
+      },
+      {
+        "keyword": "cranford nj businesses",
+        "search_volume": 40,
+        "rank": 35,
+        "url": "https://www.bknddevelopment.com/locations/cranford/",
+        "cpc": 0.46,
+        "etv": 0.08
+      },
+      {
+        "keyword": "business in elizabeth nj",
+        "search_volume": 30,
+        "rank": 37,
+        "url": "https://www.bknddevelopment.com/locations/elizabeth-nj/",
+        "cpc": null,
+        "etv": 0.06
+      },
+      {
+        "keyword": "edc elizabeth nj",
+        "search_volume": 30,
+        "rank": 38,
+        "url": "https://www.bknddevelopment.com/locations/elizabeth-nj/",
+        "cpc": null,
+        "etv": 0.06
+      },
+      {
+        "keyword": "shopify calculator",
+        "search_volume": 140,
+        "rank": 47,
+        "url": "https://www.bknddevelopment.com/resources/shopify-true-cost-calculator/",
+        "cpc": null,
+        "etv": 0.29
+      },
+      {
+        "keyword": "seo google local business",
+        "search_volume": 110,
+        "rank": 55,
+        "url": "https://www.bknddevelopment.com/blog/local-seo-google-complete-guide/",
+        "cpc": null,
+        "etv": 0.23
+      },
+      {
+        "keyword": "webflow price",
+        "search_volume": 4400,
+        "rank": 70,
+        "url": "https://www.bknddevelopment.com/resources/webflow-pricing-explained/",
+        "cpc": 3.04,
+        "etv": 9.24
+      },
+      {
+        "keyword": "nj internet marketing",
+        "search_volume": 590,
+        "rank": 88,
+        "url": "https://www.bknddevelopment.com/services/internet-marketing/",
+        "cpc": null,
+        "etv": 1.24
+      },
+      {
+        "keyword": "email marketing agency nj",
+        "search_volume": 90,
+        "rank": 94,
+        "url": "https://www.bknddevelopment.com/services/email-marketing/",
+        "cpc": null,
+        "etv": 0.19
+      }
+    ],
+    "all_keywords": [
+      {
+        "keyword": "developer mode squarespace",
+        "volume": 110,
+        "rank": 23,
+        "url": "/resources/squarespace-developer-limitations"
+      },
+      {
+        "keyword": "squarespace developer mode",
+        "volume": 110,
+        "rank": 23,
+        "url": "/resources/squarespace-developer-limitations"
+      },
+      {
+        "keyword": "cranford businesses",
+        "volume": 40,
+        "rank": 30,
+        "url": "/locations/cranford/"
+      },
+      {
+        "keyword": "cranford chamber of commerce",
+        "volume": 50,
+        "rank": 30,
+        "url": "/locations/cranford/"
+      },
+      {
+        "keyword": "businesses in cranford nj",
+        "volume": 40,
+        "rank": 31,
+        "url": "/locations/cranford/"
+      },
+      {
+        "keyword": "elizabeth development company",
+        "volume": 170,
+        "rank": 34,
+        "url": "/locations/elizabeth-nj/"
+      },
+      {
+        "keyword": "cranford nj businesses",
+        "volume": 40,
+        "rank": 35,
+        "url": "/locations/cranford/"
+      },
+      {
+        "keyword": "business in elizabeth nj",
+        "volume": 30,
+        "rank": 37,
+        "url": "/locations/elizabeth-nj/"
+      },
+      {
+        "keyword": "edc elizabeth nj",
+        "volume": 30,
+        "rank": 38,
+        "url": "/locations/elizabeth-nj/"
+      },
+      {
+        "keyword": "shopify calculator",
+        "volume": 140,
+        "rank": 47,
+        "url": "/resources/shopify-true-cost-calculator/"
+      },
+      {
+        "keyword": "201 bay ave elizabeth nj",
+        "volume": 70,
+        "rank": 49,
+        "url": "/locations/elizabeth-nj/"
+      },
+      {
+        "keyword": "cranford business park",
+        "volume": 170,
+        "rank": 54,
+        "url": "/locations/cranford/"
+      },
+      {
+        "keyword": "seo google local business",
+        "volume": 110,
+        "rank": 55,
+        "url": "/blog/local-seo-google-complete-guide/"
+      },
+      {
+        "keyword": "businesses in westfield nj",
+        "volume": 30,
+        "rank": 57,
+        "url": "/locations/westfield/"
+      },
+      {
+        "keyword": "westfield nj businesses",
+        "volume": 30,
+        "rank": 59,
+        "url": "/locations/westfield/"
+      },
+      {
+        "keyword": "downtown westfield nj shopping",
+        "volume": 140,
+        "rank": 60,
+        "url": "/locations/westfield/"
+      },
+      {
+        "keyword": "google ads vs facebook ads cost",
+        "volume": 30,
+        "rank": 61,
+        "url": "/blog/google-ads-vs-facebook-ads-cost/"
+      },
+      {
+        "keyword": "mckinsey summit nj",
+        "volume": 30,
+        "rank": 66,
+        "url": "/locations/summit/"
+      },
+      {
+        "keyword": "companies in summit nj",
+        "volume": 50,
+        "rank": 67,
+        "url": "/locations/summit/"
+      },
+      {
+        "keyword": "466 springfield ave summit nj",
+        "volume": 40,
+        "rank": 68,
+        "url": "/locations/summit/"
+      },
+      {
+        "keyword": "webflow hosting price",
+        "volume": 90,
+        "rank": 69,
+        "url": "/resources/webflow-pricing-explained/"
+      },
+      {
+        "keyword": "webflow price",
+        "volume": 4400,
+        "rank": 70,
+        "url": "/resources/webflow-pricing-explained/"
+      },
+      {
+        "keyword": "google ad vs facebook ad cost",
+        "volume": 30,
+        "rank": 72,
+        "url": "/blog/google-ads-vs-facebook-ads-cost/"
+      },
+      {
+        "keyword": "elizabeth nj commercial real estate",
+        "volume": 70,
+        "rank": 75,
+        "url": "/locations/elizabeth-nj/"
+      },
+      {
+        "keyword": "20 commerce dr cranford nj 07016",
+        "volume": 70,
+        "rank": 78,
+        "url": "/locations/cranford/"
+      },
+      {
+        "keyword": "summit nj businesses",
+        "volume": 30,
+        "rank": 79,
+        "url": "/locations/summit/"
+      },
+      {
+        "keyword": "businesses in summit nj",
+        "volume": 30,
+        "rank": 81,
+        "url": "/locations/summit/"
+      },
+      {
+        "keyword": "email marketing nj",
+        "volume": 40,
+        "rank": 87,
+        "url": "/services/email-marketing/"
+      },
+      {
+        "keyword": "nj internet marketing",
+        "volume": 590,
+        "rank": 88,
+        "url": "/services/internet-marketing/"
+      },
+      {
+        "keyword": "email marketing agency nj",
+        "volume": 90,
+        "rank": 94,
+        "url": "/services/email-marketing/"
+      },
+      {
+        "keyword": "pharmaceutical companies summit nj",
+        "volume": 40,
+        "rank": 94,
+        "url": "/locations/summit/"
+      },
+      {
+        "keyword": "shopify transaction fee calculator",
+        "volume": 40,
+        "rank": 99,
+        "url": "/resources/shopify-true-cost-calculator/"
+      }
+    ],
+    "keyword_categories": {
+      "local_location_queries": {
+        "count": 18,
+        "note": "Majority of rankings are for NJ location pages (Cranford, Elizabeth, Westfield, Summit). These are navigational/local queries, not marketing service queries.",
+        "best_rank": 30,
+        "keywords": [
+          "cranford businesses",
+          "cranford chamber of commerce",
+          "elizabeth development company",
+          "businesses in westfield nj",
+          "companies in summit nj"
+        ]
+      },
+      "resource_tool_queries": {
+        "count": 6,
+        "note": "Rankings for resource/tool pages (Squarespace, Shopify, Webflow). 'webflow price' at rank 70 has highest search volume (4,400/mo).",
+        "keywords": [
+          "developer mode squarespace",
+          "shopify calculator",
+          "webflow price",
+          "webflow hosting price"
+        ]
+      },
+      "marketing_service_queries": {
+        "count": 5,
+        "note": "Only 5 keywords relate to actual marketing services. All ranking 55+. This is the gap to close.",
+        "keywords": [
+          "seo google local business",
+          "google ads vs facebook ads cost",
+          "email marketing nj",
+          "nj internet marketing",
+          "email marketing agency nj"
+        ]
+      },
+      "irrelevant_queries": {
+        "count": 3,
+        "note": "Some rankings for queries not aligned with business goals (address lookups, real estate, pharmaceutical companies)",
+        "keywords": [
+          "201 bay ave elizabeth nj",
+          "elizabeth nj commercial real estate",
+          "pharmaceutical companies summit nj"
+        ]
+      }
+    },
+    "analysis": "The domain ranks for 32 keywords but NONE are on page 1. The highest-ranking keywords (positions 23-30) are location-based queries for NJ towns, not marketing service queries. The single highest-volume keyword is 'webflow price' (4,400/mo) at position 70 -- driving the most estimated traffic but not a target keyword. Only 5 of 32 keywords relate to marketing services, all ranking 55+. The domain has ZERO rankings for target keywords like 'AI marketing agency', 'GEO optimization', 'marketing agency Elizabeth NJ', etc. There is a massive gap between current rankings and target keywords."
+  },
+
+  "competitors": {
+    "total_found": 1354,
+    "note": "Competitors are based on keyword intersection (shared ranking keywords). Most are generic large domains, not direct business competitors.",
+    "top_domain_competitors": [
+      {
+        "domain": "youtube.com",
+        "intersections": 24,
+        "avg_position": 31.6,
+        "type": "generic"
+      },
+      {
+        "domain": "mapquest.com",
+        "intersections": 20,
+        "avg_position": 26.1,
+        "type": "generic"
+      },
+      {
+        "domain": "yelp.com",
+        "intersections": 20,
+        "avg_position": 12.8,
+        "type": "generic"
+      },
+      {
+        "domain": "facebook.com",
+        "intersections": 18,
+        "avg_position": 24.2,
+        "type": "generic"
+      },
+      {
+        "domain": "tapinto.net",
+        "intersections": 17,
+        "avg_position": 32.2,
+        "type": "local_news"
+      },
+      {
+        "domain": "instagram.com",
+        "intersections": 17,
+        "avg_position": 29.0,
+        "type": "generic"
+      },
+      {
+        "domain": "loopnet.com",
+        "intersections": 15,
+        "avg_position": 21.1,
+        "type": "real_estate"
+      },
+      {
+        "domain": "reddit.com",
+        "intersections": 15,
+        "avg_position": 19.5,
+        "type": "generic"
+      },
+      {
+        "domain": "indeed.com",
+        "intersections": 14,
+        "avg_position": 19.0,
+        "type": "jobs"
+      },
+      {
+        "domain": "nj.gov",
+        "intersections": 12,
+        "avg_position": 46.8,
+        "type": "government"
+      },
+      {
+        "domain": "patch.com",
+        "intersections": 12,
+        "avg_position": 29.6,
+        "type": "local_news"
+      },
+      {
+        "domain": "linkedin.com",
+        "intersections": 12,
+        "avg_position": 39.6,
+        "type": "generic"
+      },
+      {
+        "domain": "dubsbusinessadvisor.com",
+        "intersections": 10,
+        "avg_position": 23.2,
+        "type": "potential_direct_competitor",
+        "organic_keywords": 381,
+        "organic_etv": 233.68
+      },
+      {
+        "domain": "bbb.org",
+        "intersections": 10,
+        "avg_position": 40.6,
+        "type": "directory"
+      }
+    ],
+    "analysis": "No direct marketing agency competitors found in the top 20 keyword intersection results. The competitors are overwhelmingly generic large domains (YouTube, Facebook, Yelp, Reddit) and local NJ content sites (tapinto.net, patch.com, nj.gov). This confirms that BKND's current rankings are primarily for local NJ queries and resource pages, NOT marketing service queries. The one potentially relevant direct competitor is dubsbusinessadvisor.com (10 intersections, avg position 23.2, 381 total organic keywords). True marketing agency competitors (e.g., single grain, neil patel, hub spot) don't appear because BKND doesn't yet rank for the same keywords they do."
+  },
+
+  "backlinks": {
+    "status": "UNAVAILABLE",
+    "error": "DataForSEO Backlinks API subscription not active. Access denied (error 40204).",
+    "recommendation": "Activate the Backlinks API subscription at https://app.dataforseo.com/backlinks-subscription to pull backlink data. Alternatively, use a free tool like Ahrefs Webmaster Tools or Moz Link Explorer for initial backlink baseline."
+  },
+
+  "keyword_opportunities": {
+    "ai_marketing_agency": {
+      "seed_keyword": "AI marketing agency",
+      "seed_metrics": {
+        "search_volume": 1600,
+        "cpc": 21.04,
+        "competition_level": "MEDIUM",
+        "keyword_difficulty": 28,
+        "yearly_trend": "+14%",
+        "serp_features": [
+          "organic",
+          "people_also_search",
+          "video",
+          "perspectives",
+          "local_pack",
+          "related_searches"
+        ]
+      },
+      "suggestions": [
+        {
+          "keyword": "ai marketing agency",
+          "volume": 1600,
+          "kd": 28,
+          "cpc": 21.04,
+          "intent": "navigational",
+          "competition": "MEDIUM"
+        },
+        {
+          "keyword": "ai digital marketing agency",
+          "volume": 320,
+          "kd": 44,
+          "cpc": 15.3,
+          "intent": "commercial",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "marketing ai agency",
+          "volume": 260,
+          "kd": 28,
+          "cpc": 18.23,
+          "intent": "navigational",
+          "competition": "HIGH"
+        },
+        {
+          "keyword": "ai powered marketing agency",
+          "volume": 140,
+          "kd": 44,
+          "cpc": 28.75,
+          "intent": "commercial",
+          "competition": "LOW",
+          "yearly_trend": "+1600%"
+        },
+        {
+          "keyword": "ai marketing agency near me",
+          "volume": 110,
+          "kd": 63,
+          "cpc": 6.59,
+          "intent": "navigational",
+          "competition": "LOW",
+          "yearly_trend": "+767%"
+        },
+        {
+          "keyword": "ai tools for marketing agency",
+          "volume": 70,
+          "kd": 32,
+          "cpc": null,
+          "intent": "commercial",
+          "competition": "MEDIUM"
+        },
+        {
+          "keyword": "ai driven marketing agency",
+          "volume": 50,
+          "kd": 22,
+          "cpc": 25.14,
+          "intent": "navigational",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "what is an ai marketing agency",
+          "volume": 40,
+          "kd": 3,
+          "cpc": null,
+          "intent": "informational",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "ai for marketing agency",
+          "volume": 40,
+          "kd": 25,
+          "cpc": 15.8,
+          "intent": "commercial",
+          "competition": "LOW",
+          "yearly_trend": "+400%"
+        },
+        {
+          "keyword": "ai tools for digital marketing agency",
+          "volume": 30,
+          "kd": 31,
+          "cpc": 15.83,
+          "intent": "commercial",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "ai influencer marketing agency",
+          "volume": 30,
+          "kd": 71,
+          "cpc": null,
+          "intent": "commercial",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "ai marketing agency services",
+          "volume": 30,
+          "kd": null,
+          "cpc": null,
+          "intent": "navigational",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "digital marketing agency ai",
+          "volume": 30,
+          "kd": 45,
+          "cpc": null,
+          "intent": "commercial",
+          "competition": "LOW"
+        },
+        {
+          "keyword": "ai social media marketing agency",
+          "volume": 30,
+          "kd": 76,
+          "cpc": null,
+          "intent": "commercial",
+          "competition": "HIGH"
+        }
+      ],
+      "total_suggestions": 61,
+      "quick_wins": [
+        {
+          "keyword": "what is an ai marketing agency",
+          "volume": 40,
+          "kd": 3,
+          "rationale": "Extremely low KD (3), informational intent -- perfect for blog content"
+        },
+        {
+          "keyword": "ai driven marketing agency",
+          "volume": 50,
+          "kd": 22,
+          "rationale": "Low KD with decent volume, BKND can target this directly on homepage/services"
+        },
+        {
+          "keyword": "ai for marketing agency",
+          "volume": 40,
+          "kd": 25,
+          "rationale": "Low KD, commercial intent, growing +400% YoY"
+        },
+        {
+          "keyword": "ai marketing agency",
+          "volume": 1600,
+          "kd": 28,
+          "rationale": "Primary target. KD 28 is achievable. High volume. Needs strong page + backlinks."
+        }
+      ]
+    },
+    "marketing_agency_elizabeth_nj": {
+      "seed_keyword": "marketing agency elizabeth nj",
+      "seed_metrics": {
+        "search_volume": null,
+        "note": "No keyword data available from DataForSEO for this exact term. The keyword may have too low volume to be tracked."
+      },
+      "suggestions": [],
+      "total_suggestions": 0,
+      "analysis": "DataForSEO returned no suggestions for 'marketing agency elizabeth nj'. This hyper-local keyword likely has very low search volume (<10/mo) and is not tracked in DataForSEO's database. However, this is still valuable for local SEO targeting -- Google Business Profile optimization and local landing pages can capture this traffic even without volume data."
+    },
+    "geo_optimization": {
+      "seed_keyword": "GEO optimization",
+      "seed_metrics": {
+        "search_volume": 720,
+        "cpc": 16.74,
+        "competition_level": "HIGH",
+        "keyword_difficulty": 52,
+        "yearly_trend": "+1660%",
+        "serp_features": [
+          "ai_overview",
+          "organic",
+          "people_also_search",
+          "people_also_ask",
+          "product_considerations",
+          "carousel",
+          "related_searches"
+        ],
+        "note": "EXPLOSIVE GROWTH keyword. Went from 110/mo in Jan 2025 to 880/mo in Dec 2025. AI Overviews showing in SERP."
+      },
+      "suggestions": [
+        {
+          "keyword": "geo optimization",
+          "volume": 720,
+          "kd": 52,
+          "cpc": 16.74,
+          "intent": "commercial",
+          "competition": "HIGH",
+          "yearly_trend": "+1660%"
+        },
+        {
+          "keyword": "generative engine optimization geo",
+          "volume": 720,
+          "kd": 53,
+          "cpc": 16.66,
+          "intent": "commercial",
+          "competition": "MEDIUM",
+          "yearly_trend": "+4233%"
+        },
+        {
+          "keyword": "geo generative engine optimization",
+          "volume": 590,
+          "kd": 53,
+          "cpc": 15.72,
+          "intent": "commercial",
+          "competition": "HIGH",
+          "yearly_trend": "+556%"
+        },
+        {
+          "keyword": "geo: generative engine optimization",
+          "volume": 590,
+          "kd": 53,
+          "cpc": 15.72,
+          "intent": "commercial",
+          "competition": "HIGH",
+          "yearly_trend": "+556%"
+        },
+        {
+          "keyword": "what is geo in search engine optimization",
+          "volume": 210,
+          "kd": null,
+          "cpc": 10.42,
+          "intent": "informational",
+          "competition": "LOW",
+          "yearly_trend": "+950%"
+        },
+        {
+          "keyword": "generative engine optimization geo services",
+          "volume": 110,
+          "kd": 0,
+          "cpc": 25.35,
+          "intent": "commercial",
+          "competition": "LOW",
+          "yearly_trend": "NEW (exploding)"
+        },
+        {
+          "keyword": "what is generative engine optimization geo",
+          "volume": 110,
+          "kd": 53,
+          "cpc": 2.93,
+          "intent": "informational",
+          "competition": "MEDIUM",
+          "yearly_trend": "+350%"
+        },
+        {
+          "keyword": "what is geo optimization",
+          "volume": 70,
+          "kd": 30,
+          "cpc": 9.28,
+          "intent": "informational",
+          "competition": "MEDIUM"
+        },
+        {
+          "keyword": "generative engine optimization geo tools",
+          "volume": 70,
+          "kd": 0,
+          "cpc": 19.96,
+          "intent": "transactional",
+          "competition": "LOW",
+          "yearly_trend": "NEW (exploding)"
+        },
+        {
+          "keyword": "geo search optimization",
+          "volume": 70,
+          "kd": 50,
+          "cpc": 16.76,
+          "intent": "informational",
+          "competition": "HIGH"
+        },
+        {
+          "keyword": "what is geo generative engine optimization",
+          "volume": 50,
+          "kd": 44,
+          "cpc": 2.29,
+          "intent": "commercial",
+          "competition": "MEDIUM",
+          "yearly_trend": "+600%"
+        },
+        {
+          "keyword": "geo engine optimization",
+          "volume": 50,
+          "kd": 34,
+          "cpc": 8.83,
+          "intent": "commercial",
+          "competition": "HIGH"
+        },
+        {
+          "keyword": "geo ai optimization",
+          "volume": 40,
+          "kd": 25,
+          "cpc": 8.42,
+          "intent": "commercial",
+          "competition": "HIGH"
+        },
+        {
+          "keyword": "geo optimization tools",
+          "volume": 30,
+          "kd": null,
+          "cpc": 16.69,
+          "intent": "transactional",
+          "competition": "HIGH"
+        },
+        {
+          "keyword": "geo generative optimization",
+          "volume": 10,
+          "kd": null,
+          "cpc": null,
+          "intent": "commercial",
+          "competition": "MEDIUM"
+        }
+      ],
+      "total_suggestions": 35,
+      "quick_wins": [
+        {
+          "keyword": "generative engine optimization geo services",
+          "volume": 110,
+          "kd": 0,
+          "rationale": "KD is literally 0 -- brand new keyword exploding in volume (0 to 1000/mo in Dec 2025). BKND already has a GEO services page. This is the #1 quick win."
+        },
+        {
+          "keyword": "generative engine optimization geo tools",
+          "volume": 70,
+          "kd": 0,
+          "rationale": "Another KD 0 keyword with rapid growth. Create a tools/resources page."
+        },
+        {
+          "keyword": "geo ai optimization",
+          "volume": 40,
+          "kd": 25,
+          "rationale": "Low KD, commercial intent, directly aligned with BKND's AI+GEO positioning."
+        },
+        {
+          "keyword": "what is geo optimization",
+          "volume": 70,
+          "kd": 30,
+          "rationale": "Informational intent, low KD -- perfect for a definitive blog post or FAQ section."
+        },
+        {
+          "keyword": "geo engine optimization",
+          "volume": 50,
+          "kd": 34,
+          "rationale": "Moderate KD, commercial intent, exact match for BKND's GEO service page."
+        }
+      ],
+      "strategic_note": "GEO/Generative Engine Optimization is a MASSIVE opportunity. The entire keyword cluster is exploding (many keywords showing +500-4000% YoY growth). BKND already has a dedicated GEO services page at /services/ai/geo/. Several keywords in this cluster have KD 0 (brand new, no one has optimized for them yet). This is BKND's biggest SEO opportunity -- first-mover advantage on an emerging category."
+    }
+  },
+
+  "baseline_summary": {
+    "domain_authority_equivalent": "Very low (no page 1 rankings, 32 total keywords)",
+    "estimated_monthly_organic_traffic": "~15 visits/month (from DataForSEO ETV)",
+    "total_keywords_ranking": 32,
+    "keywords_page_1": 0,
+    "keywords_page_2": 0,
+    "keywords_page_3": 4,
+    "best_ranking_keyword": "developer mode squarespace (pos 23)",
+    "highest_volume_keyword": "webflow price (vol 4,400, pos 70)",
+    "backlink_profile": "Unknown (API subscription required)",
+    "paid_campaigns": "None detected",
+    "top_opportunities": [
+      {
+        "priority": 1,
+        "category": "GEO / Generative Engine Optimization",
+        "rationale": "Exploding keyword cluster (+1660% YoY). Multiple KD 0 keywords. BKND has existing GEO service page. First-mover advantage.",
+        "target_keywords": [
+          "generative engine optimization geo services",
+          "generative engine optimization geo tools",
+          "geo optimization",
+          "geo ai optimization"
+        ],
+        "estimated_monthly_search_volume": 2800
+      },
+      {
+        "priority": 2,
+        "category": "AI Marketing Agency",
+        "rationale": "Core brand positioning keyword. KD 28 is achievable. 1,600/mo volume. Growing market.",
+        "target_keywords": [
+          "ai marketing agency",
+          "ai driven marketing agency",
+          "what is an ai marketing agency",
+          "ai for marketing agency"
+        ],
+        "estimated_monthly_search_volume": 2300
+      },
+      {
+        "priority": 3,
+        "category": "Local NJ Marketing",
+        "rationale": "Already ranking for NJ location queries (pos 30-80). Optimize existing pages to move into top 20.",
+        "target_keywords": [
+          "nj internet marketing",
+          "email marketing agency nj",
+          "seo google local business"
+        ],
+        "estimated_monthly_search_volume": 720
+      },
+      {
+        "priority": 4,
+        "category": "Quick Content Wins",
+        "rationale": "Low-KD informational keywords where a good blog post can rank. Build topical authority.",
+        "target_keywords": [
+          "what is an ai marketing agency",
+          "what is geo optimization",
+          "google ads vs facebook ads cost"
+        ],
+        "estimated_monthly_search_volume": 140
+      }
+    ],
+    "critical_issues": [
+      "ZERO page 1 rankings -- no target keywords ranking in top 10",
+      "Majority of rankings are for location/directory queries, not marketing service queries",
+      "No rankings for ANY target keywords (AI marketing agency, GEO optimization, etc.)",
+      "Duplicate content risk: blog posts accessible via both /blog/[slug] and /[hub]/[slug] without canonical tags",
+      "Backlink data unavailable -- likely very thin backlink profile for a new domain",
+      "28 of 32 keyword rankings are 'new' -- domain is still in Google's discovery/sandbox phase"
+    ],
+    "recommended_next_steps": [
+      "1. IMMEDIATE: Add canonical tags to resolve /blog/ vs /hub/ duplicate content",
+      "2. IMMEDIATE: Optimize /services/ai/geo/ page for 'generative engine optimization geo services' (KD 0, exploding volume)",
+      "3. THIS WEEK: Create definitive blog post targeting 'what is geo optimization' and 'what is an ai marketing agency' (KD 3-30)",
+      "4. THIS WEEK: Optimize homepage and key service pages for 'ai marketing agency' (KD 28)",
+      "5. ONGOING: Build backlinks -- activate backlink API to monitor and set targets",
+      "6. ONGOING: Improve existing NJ location page rankings from pos 30-80 to top 20",
+      "7. ONGOING: Monitor keyword movement -- 28 new keywords need nurturing to move up"
+    ]
+  }
+}

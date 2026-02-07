@@ -1,0 +1,508 @@
+{
+  "timestamp": "2026-02-05",
+  "overall_score": "D",
+  "summary": "The site has solid foundational SEO (root schema, meta tags, GA4) but suffers from a CRITICAL duplicate content problem: every blog post is accessible at both /blog/[slug] AND /[hub]/[slug] with NO canonical tags on any of the 5 article page templates. The sitemap explicitly lists both URL versions for all ~35 blog posts, effectively doubling the indexed URL count with identical content. Combined with legacy GitHub Pages URLs in service page schemas and missing canonicals on content hub pages, this creates significant crawl budget waste and ranking dilution.",
+
+  "critical_issues": [
+    {
+      "id": "CRIT-001",
+      "title": "Duplicate content: Every blog post served at 2 URLs with no canonical tags",
+      "severity": "critical",
+      "category": "duplicate-content",
+      "detail": "Each blog post is accessible at BOTH /blog/[slug] (via src/app/blog/[slug]/page.tsx using getAllPosts()) AND at /[hub]/[slug] (via src/app/ai/[slug]/page.tsx, src/app/marketing/[slug]/page.tsx, src/app/seo-insights/[slug]/page.tsx, src/app/industry-news/[slug]/page.tsx using getPostsByCategory()). Both routes call getPostBySlug() with the same slug and render the IDENTICAL post content. NEITHER template sets canonical tags via metadata.alternates. Google will see these as duplicate pages and must guess which to index, causing ranking dilution across every article.",
+      "affected_files": [
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ],
+      "affected_urls": "All ~35 blog posts x 2 URLs each = ~70 duplicate pages",
+      "impact": "Google splits ranking signals between 2 URLs per article. Neither version may rank well. Crawl budget is wasted crawling duplicate content. Risk of Google choosing the wrong URL as canonical."
+    },
+    {
+      "id": "CRIT-002",
+      "title": "Sitemap explicitly lists BOTH duplicate URL versions for every blog post",
+      "severity": "critical",
+      "category": "sitemap",
+      "detail": "The sitemap at public/sitemap.xml contains both /blog/[slug] and /[hub]/[slug] entries for every post. For example, 'agentic-ai-enterprise-2026' appears as BOTH /blog/agentic-ai-enterprise-2026/ AND /ai/agentic-ai-enterprise-2026/. This is the worst possible signal to Google: it explicitly tells the crawler to index both duplicate versions. Counted: 8 AI posts duplicated, 20 marketing posts duplicated, 8 SEO posts duplicated, 7 news posts duplicated = 43 unnecessary duplicate URLs in the sitemap.",
+      "affected_files": ["public/sitemap.xml"],
+      "impact": "Actively instructs Google to crawl and index duplicate content. Doubles the effective sitemap size with identical content at different URLs."
+    }
+  ],
+
+  "high_issues": [
+    {
+      "id": "HIGH-001",
+      "title": "Legacy GitHub Pages domain in service page schemas and OG URLs",
+      "severity": "high",
+      "category": "schema-markup",
+      "detail": "Multiple service page layouts still reference 'charwinvanryckdegroot.github.io/bknd-website' instead of 'bknddevelopment.com' in their JSON-LD schema markup AND OpenGraph URLs. This affects: services/seo/layout.tsx (14 occurrences), services/analytics/layout.tsx, services/creative/layout.tsx, services/cro/layout.tsx, services/ai/custom/layout.tsx, services/ai/automation/layout.tsx, services/ai/geo/layout.tsx, and methodology/ai/layout.tsx. The root layout.tsx correctly uses bknddevelopment.com, but all service layouts use the old domain. This creates conflicting domain signals in structured data and breaks social sharing previews.",
+      "affected_files": [
+        "src/app/services/seo/layout.tsx",
+        "src/app/services/analytics/layout.tsx",
+        "src/app/services/creative/layout.tsx",
+        "src/app/services/cro/layout.tsx",
+        "src/app/services/ai/custom/layout.tsx",
+        "src/app/services/ai/automation/layout.tsx",
+        "src/app/services/ai/geo/layout.tsx",
+        "src/app/methodology/ai/layout.tsx"
+      ],
+      "impact": "Schema markup references a different domain than the actual site. Google may treat this as inconsistent/untrustworthy structured data. OpenGraph URLs point to wrong domain, breaking social sharing."
+    },
+    {
+      "id": "HIGH-002",
+      "title": "No canonical tags on blog/[slug] pages",
+      "severity": "high",
+      "category": "canonical-tags",
+      "detail": "The /blog/[slug]/page.tsx template has NO metadata.alternates.canonical set. Even if the hub pages were removed, the blog posts themselves lack self-referencing canonical tags. The generateMetadata function returns title, description, and openGraph but no alternates.canonical. This means Google must infer the canonical URL rather than being explicitly told.",
+      "affected_files": ["src/app/blog/[slug]/page.tsx"],
+      "impact": "Without self-referencing canonicals, Google must guess the canonical URL. Combined with the duplicate hub URLs, this creates maximum ambiguity."
+    },
+    {
+      "id": "HIGH-003",
+      "title": "No canonical tags on hub article pages (/ai/[slug], /marketing/[slug], etc.)",
+      "severity": "high",
+      "category": "canonical-tags",
+      "detail": "None of the 4 hub article templates (ai/[slug], marketing/[slug], seo-insights/[slug], industry-news/[slug]) include metadata.alternates.canonical. If these hub URLs are the intended canonical (they have richer schema), they need to declare themselves as canonical. If /blog/[slug] is the intended canonical, these pages need to point canonical to /blog/[slug].",
+      "affected_files": [
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ],
+      "impact": "Neither URL version declares itself canonical, leaving Google to determine which to index for every article."
+    },
+    {
+      "id": "HIGH-004",
+      "title": "No canonical tags on content hub landing pages or blog index",
+      "severity": "high",
+      "category": "canonical-tags",
+      "detail": "The content hub landing pages (/ai, /marketing, /seo-insights, /industry-news) and the /blog index page all lack metadata.alternates.canonical. Only the root layout (/) and service pages have canonical tags set. Every indexable page should have a self-referencing canonical.",
+      "affected_files": [
+        "src/app/ai/page.tsx",
+        "src/app/marketing/page.tsx",
+        "src/app/seo-insights/page.tsx",
+        "src/app/industry-news/page.tsx",
+        "src/app/blog/page.tsx"
+      ],
+      "impact": "Missing self-referencing canonicals on key content hub pages."
+    },
+    {
+      "id": "HIGH-005",
+      "title": "Blog post template (/blog/[slug]) has NO JSON-LD schema, while hub versions DO",
+      "severity": "high",
+      "category": "schema-markup",
+      "detail": "The /blog/[slug]/page.tsx template renders article content with NO Article schema markup. However, all 4 hub article templates (/ai/[slug], /marketing/[slug], /seo-insights/[slug], /industry-news/[slug]) include proper Article JSON-LD schema with headline, description, datePublished, author, publisher, and mainEntityOfPage. This inconsistency means the hub versions are technically better for SEO, but the blog version (which is likely what many internal links point to) lacks structured data entirely.",
+      "affected_files": ["src/app/blog/[slug]/page.tsx"],
+      "impact": "The /blog/ version of articles gets no rich snippet eligibility. If Google picks /blog/ as canonical (which it might since /blog/ generates params for ALL posts), articles lose structured data benefits."
+    }
+  ],
+
+  "medium_issues": [
+    {
+      "id": "MED-001",
+      "title": "Blog index page links to /blog/[slug] while hub pages link to /[hub]/[slug]",
+      "severity": "medium",
+      "category": "internal-linking",
+      "detail": "The blog index (src/app/blog/page.tsx) links all articles to /blog/${post.slug}, while content hub pages link to /[hub]/${post.slug} (e.g., /ai/${post.slug}). This creates competing internal link signals. The blog index sends link equity to /blog/ URLs while hub pages send it to /hub/ URLs, further confusing Google about which URL to prioritize.",
+      "affected_files": [
+        "src/app/blog/page.tsx",
+        "src/app/ai/page.tsx",
+        "src/app/marketing/page.tsx",
+        "src/app/seo-insights/page.tsx",
+        "src/app/industry-news/page.tsx"
+      ],
+      "impact": "Internal linking signals are split between two URL patterns for every article."
+    },
+    {
+      "id": "MED-002",
+      "title": "Industries dropdown in header has no content (placeholder href '#industries')",
+      "severity": "medium",
+      "category": "internal-linking",
+      "detail": "The Header navigation includes an 'Industries' item with hasDropdown: true and href: '#industries', but unlike 'Services' and 'Resources' which have dropdown menus with actual page links, 'Industries' has no dropdown rendered. This results in a dead navigation item that goes nowhere meaningful.",
+      "affected_files": ["src/components/Header.tsx"],
+      "impact": "Dead navigation item confuses users and wastes a prime navigation slot. If industry pages exist, they are not linked. If they don't exist, the menu item should not be there."
+    },
+    {
+      "id": "MED-003",
+      "title": "Services dropdown href '#services' is an anchor link, not a page",
+      "severity": "medium",
+      "category": "internal-linking",
+      "detail": "The main 'Services' nav item has href='#services', which only works on the homepage. On any other page, clicking 'Services' text (not the dropdown) navigates to currentPage#services which is a broken anchor. Same issue with Industries (#industries) and the 'Work With Us' CTA (#contact).",
+      "affected_files": ["src/components/Header.tsx"],
+      "impact": "Broken navigation links on non-homepage pages. Users clicking 'Services' or 'Work With Us' from blog/service pages get no navigation."
+    },
+    {
+      "id": "MED-004",
+      "title": "Footer does not link to content hubs (AI Corner, Marketing Hub, etc.)",
+      "severity": "medium",
+      "category": "internal-linking",
+      "detail": "The Footer only links to /blog under Company > Blog. It does not include links to the 4 content hub landing pages (/ai, /marketing, /seo-insights, /industry-news). These hub pages are only accessible via the Header's Resources dropdown. Footer links provide important crawling signals and are a standard SEO best practice.",
+      "affected_files": ["src/components/Footer.tsx"],
+      "impact": "Content hub pages receive fewer internal links, reducing their crawl discoverability and link equity."
+    },
+    {
+      "id": "MED-005",
+      "title": "AI Services page (use client) has no metadata export - loses SEO meta",
+      "severity": "medium",
+      "category": "meta-tags",
+      "detail": "The AI Services page (src/app/services/ai/page.tsx) is marked 'use client' and has no generateMetadata or metadata export. There is also no layout.tsx for /services/ai/. This means this key service page relies entirely on the root layout's generic metadata. It has no page-specific title, description, canonical, or OG tags. Other service pages (SEO, CRO, Analytics, Creative) all have dedicated layout.tsx files with rich metadata and schema.",
+      "affected_files": ["src/app/services/ai/page.tsx"],
+      "impact": "The AI Services hub page -- arguably the most important service page -- has generic metadata, no canonical tag, no service schema, and no breadcrumb schema. It will appear in search results with the generic homepage title/description."
+    },
+    {
+      "id": "MED-006",
+      "title": "Paid Advertising service page has no layout with canonical/schema",
+      "severity": "medium",
+      "category": "meta-tags",
+      "detail": "The /services/paid-advertising/ page has no layout.tsx file, meaning it lacks canonical tags, service schema, breadcrumb schema, and FAQ schema that other service pages have. No layout.tsx was found at src/app/services/paid-advertising/layout.tsx.",
+      "affected_files": [],
+      "impact": "Paid advertising service page has no structured data and relies on root layout generic metadata."
+    },
+    {
+      "id": "MED-007",
+      "title": "Organization schema sameAs array is empty",
+      "severity": "medium",
+      "category": "schema-markup",
+      "detail": "In the root layout's JSON-LD schema, the Organization schema has 'sameAs: []' (empty array). This should contain links to the company's social profiles (LinkedIn, etc.). The Footer has a LinkedIn link to 'https://www.linkedin.com/company/bknddevelopment' that should be included in sameAs.",
+      "affected_files": ["src/app/layout.tsx"],
+      "impact": "Google cannot associate the company's social profiles with the Organization entity. Missed Knowledge Panel signal."
+    },
+    {
+      "id": "MED-008",
+      "title": "SearchAction in WebSite schema uses query parameter format that doesn't work with static export",
+      "severity": "medium",
+      "category": "schema-markup",
+      "detail": "The root layout includes a SearchAction schema with urlTemplate 'https://bknddevelopment.com/?s={search_term_string}'. However, this is a static export site with no server-side search functionality. This search URL will 404 or return the homepage. The SearchAction schema is misleading.",
+      "affected_files": ["src/app/layout.tsx"],
+      "impact": "If Google uses this to display a search box in SERPs, users clicking it will get a non-functional result. Could result in structured data manual action."
+    }
+  ],
+
+  "low_issues": [
+    {
+      "id": "LOW-001",
+      "title": "All sitemap lastmod dates are identical (2026-02-04)",
+      "severity": "low",
+      "category": "sitemap",
+      "detail": "Every URL in the sitemap has the same lastmod date of 2026-02-04. This provides no useful signal to search engines about which pages have actually been updated. Google may discount the lastmod field entirely for this sitemap.",
+      "affected_files": ["public/sitemap.xml"],
+      "impact": "Crawl priority signals are not differentiated. New content does not get priority crawling."
+    },
+    {
+      "id": "LOW-002",
+      "title": "Blog post OG meta missing URL field",
+      "severity": "low",
+      "category": "meta-tags",
+      "detail": "The generateMetadata for both /blog/[slug] and all hub article pages (/ai/[slug], etc.) include openGraph with title, description, type, publishedTime, and authors, but do NOT include the 'url' field. The OG URL should be the canonical URL of the article.",
+      "affected_files": [
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ],
+      "impact": "Social sharing may not have a definitive URL, though most platforms fall back to the page URL."
+    },
+    {
+      "id": "LOW-003",
+      "title": "Blog post OG meta missing image field",
+      "severity": "low",
+      "category": "meta-tags",
+      "detail": "None of the blog post templates (either /blog/ or /hub/) include an og:image. Articles shared on social media will either show no image or fall back to the root layout's generic logo image.",
+      "affected_files": [
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ],
+      "impact": "Poor social sharing appearance. Articles shared on LinkedIn/Twitter show generic branding instead of article-specific imagery."
+    },
+    {
+      "id": "LOW-004",
+      "title": "Content hub landing pages missing OG image and URL",
+      "severity": "low",
+      "category": "meta-tags",
+      "detail": "The 4 content hub landing pages (/ai, /marketing, /seo-insights, /industry-news) have openGraph with title, description, and type but are missing url and images fields.",
+      "affected_files": [
+        "src/app/ai/page.tsx",
+        "src/app/marketing/page.tsx",
+        "src/app/seo-insights/page.tsx",
+        "src/app/industry-news/page.tsx"
+      ],
+      "impact": "Hub landing pages shared on social media have incomplete OG data."
+    },
+    {
+      "id": "LOW-005",
+      "title": "Massive code duplication across hub article templates",
+      "severity": "low",
+      "category": "code-quality",
+      "detail": "All 5 article page templates (blog/[slug], ai/[slug], marketing/[slug], seo-insights/[slug], industry-news/[slug]) contain identical markdown-to-HTML rendering logic (~200 lines each). This should be a shared component. Any rendering fix must be applied to 5 files.",
+      "affected_files": [
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ],
+      "impact": "Maintenance burden. If the markdown rendering is updated in one template but not others, content appears differently at different URLs."
+    },
+    {
+      "id": "LOW-006",
+      "title": "dateModified in root layout schema is hardcoded to 2026-01-26",
+      "severity": "low",
+      "category": "schema-markup",
+      "detail": "The WebPage schema in the root layout has dateModified hardcoded to '2026-01-26'. This should be updated whenever the page content changes, or dynamically generated.",
+      "affected_files": ["src/app/layout.tsx"],
+      "impact": "Stale dateModified may cause Google to deprioritize the page in crawl schedules."
+    }
+  ],
+
+  "passing": [
+    {
+      "id": "PASS-001",
+      "title": "Root layout has comprehensive JSON-LD schema",
+      "detail": "The root layout includes Organization, LocalBusiness, WebSite, and WebPage schemas in a proper @graph structure. LocalBusiness includes geo coordinates, areaServed, priceRange, and contact info. Organization includes founder, address, and contact details. All use the correct bknddevelopment.com domain."
+    },
+    {
+      "id": "PASS-002",
+      "title": "Root layout has proper meta tags, OG tags, and Twitter cards",
+      "detail": "The root layout includes title, description, keywords, metadataBase, openGraph (with image, locale, siteName), twitter card, and robots directives (index, follow, max-image-preview: large, max-snippet: -1). Google verification tag is present."
+    },
+    {
+      "id": "PASS-003",
+      "title": "Service pages have rich schema with BreadcrumbList and FAQPage",
+      "detail": "Service pages like /services/seo have Service, WebPage, BreadcrumbList, and FAQPage schemas. The SEO service page has 4 FAQ entries with proper Question/Answer schema. GEO service page similarly has comprehensive schema."
+    },
+    {
+      "id": "PASS-004",
+      "title": "Content hub landing pages have CollectionPage schema with ItemList",
+      "detail": "All 4 hub landing pages (/ai, /marketing, /seo-insights, /industry-news) include CollectionPage schema with ItemList that enumerates all articles with positions and URLs. This is good for discovery."
+    },
+    {
+      "id": "PASS-005",
+      "title": "Hub article pages have Article schema",
+      "detail": "The hub versions of articles (/ai/[slug], /marketing/[slug], etc.) include Article JSON-LD with headline, description, datePublished, author (Person), publisher (Organization), and mainEntityOfPage."
+    },
+    {
+      "id": "PASS-006",
+      "title": "robots.txt is properly configured",
+      "detail": "robots.txt allows all crawling, references the correct sitemap URL (bknddevelopment.com/sitemap.xml), and includes a reasonable crawl-delay of 1 second."
+    },
+    {
+      "id": "PASS-007",
+      "title": "Google Analytics 4 is properly integrated",
+      "detail": "GA4 (G-G6C4G1SQ44) is loaded via next/Script with afterInteractive strategy, which is the recommended approach for Next.js."
+    },
+    {
+      "id": "PASS-008",
+      "title": "Header navigation links to all 4 content hubs via Resources dropdown",
+      "detail": "The Header component includes a Resources dropdown with links to AI Corner (/ai), Marketing Hub (/marketing), SEO Insights (/seo-insights), Industry News (/industry-news), and All Articles (/blog). This provides good navigation structure."
+    },
+    {
+      "id": "PASS-009",
+      "title": "Footer includes sitemap link and legal pages",
+      "detail": "Footer links to Privacy Policy, Terms of Service, Accessibility, and sitemap.xml. Contact information (email, phone, address) is present."
+    },
+    {
+      "id": "PASS-010",
+      "title": "Google Search Console verification tag is present",
+      "detail": "The root layout includes verification.google with the tag 'c9auD4d1EqN--1_vKGCVADAt-HXid2ua0LFJYTd7O70'."
+    },
+    {
+      "id": "PASS-011",
+      "title": "Hub article pages have proper category filtering",
+      "detail": "Hub article pages correctly filter by category (e.g., ai/[slug] checks post.category !== 'ai' and returns notFound). This prevents cross-category content from appearing at wrong hub URLs."
+    }
+  ],
+
+  "recommendations": [
+    {
+      "priority": 1,
+      "title": "DECISION: Choose canonical URL pattern and implement canonical tags",
+      "detail": "You must decide: should the canonical URL for articles be /blog/[slug] or /[hub]/[slug]? RECOMMENDATION: Make /[hub]/[slug] the canonical because (a) hub pages already have Article JSON-LD schema, (b) hub URLs provide topical context signals to Google (e.g., /ai/article-name tells Google this is AI content), (c) this supports the content hub/topical authority architecture. Then: add metadata.alternates.canonical to EVERY hub article page pointing to itself (e.g., /ai/${slug}), and add metadata.alternates.canonical to /blog/[slug] pages pointing to the hub version. Alternatively, consider removing /blog/[slug] individual pages entirely and only generating hub URLs.",
+      "effort": "medium",
+      "files_to_change": [
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ]
+    },
+    {
+      "priority": 2,
+      "title": "Remove duplicate URLs from sitemap - only list canonical versions",
+      "detail": "After deciding canonical URLs, remove all non-canonical article URLs from sitemap.xml. If hub URLs are canonical, remove all /blog/[slug] entries. The sitemap should go from ~90 URLs to ~55 URLs. Each article should appear exactly ONCE.",
+      "effort": "low",
+      "files_to_change": ["public/sitemap.xml"]
+    },
+    {
+      "priority": 3,
+      "title": "Replace all GitHub Pages domain references with bknddevelopment.com",
+      "detail": "Find and replace all instances of 'charwinvanryckdegroot.github.io/bknd-website' with 'bknddevelopment.com' across all service page layouts and methodology layouts. There are 50+ occurrences across 8 files. This is a simple find-and-replace operation.",
+      "effort": "low",
+      "files_to_change": [
+        "src/app/services/seo/layout.tsx",
+        "src/app/services/analytics/layout.tsx",
+        "src/app/services/creative/layout.tsx",
+        "src/app/services/cro/layout.tsx",
+        "src/app/services/ai/custom/layout.tsx",
+        "src/app/services/ai/automation/layout.tsx",
+        "src/app/services/ai/geo/layout.tsx",
+        "src/app/methodology/ai/layout.tsx"
+      ]
+    },
+    {
+      "priority": 4,
+      "title": "Add layout.tsx with metadata and schema for /services/ai/ page",
+      "detail": "Create src/app/services/ai/layout.tsx with proper metadata (title, description, canonical, OG), Service schema, BreadcrumbList schema, and FAQPage schema -- matching the pattern used by /services/seo/layout.tsx. The AI services page is currently the only major service page without structured data.",
+      "effort": "medium",
+      "files_to_change": ["src/app/services/ai/layout.tsx (create new)"]
+    },
+    {
+      "priority": 5,
+      "title": "Add Article JSON-LD schema to /blog/[slug] template",
+      "detail": "Even if hub URLs become canonical, the /blog/[slug] pages should still have Article schema (matching the hub template pattern) for any cases where Google indexes them. Add the same jsonLd block used in hub templates.",
+      "effort": "low",
+      "files_to_change": ["src/app/blog/[slug]/page.tsx"]
+    },
+    {
+      "priority": 6,
+      "title": "Add self-referencing canonical tags to all content hub landing pages",
+      "detail": "Add metadata.alternates.canonical to /ai, /marketing, /seo-insights, /industry-news, and /blog index pages. Each should self-reference (e.g., canonical: '/ai' for the AI hub).",
+      "effort": "low",
+      "files_to_change": [
+        "src/app/ai/page.tsx",
+        "src/app/marketing/page.tsx",
+        "src/app/seo-insights/page.tsx",
+        "src/app/industry-news/page.tsx",
+        "src/app/blog/page.tsx"
+      ]
+    },
+    {
+      "priority": 7,
+      "title": "Update blog index internal links to point to hub URLs (if hub is canonical)",
+      "detail": "If hub URLs are chosen as canonical, the blog index page (src/app/blog/page.tsx) should link to /[hub]/[slug] instead of /blog/[slug]. This requires mapping each post's category to its hub path. This consolidates internal link signals to the canonical URL.",
+      "effort": "medium",
+      "files_to_change": ["src/app/blog/page.tsx"]
+    },
+    {
+      "priority": 8,
+      "title": "Add content hub links to Footer",
+      "detail": "Add a 'Resources' column to the Footer linking to AI Corner, Marketing Hub, SEO Insights, and Industry News. This provides additional crawl paths and internal link equity to hub pages.",
+      "effort": "low",
+      "files_to_change": ["src/components/Footer.tsx"]
+    },
+    {
+      "priority": 9,
+      "title": "Fix header navigation - replace anchor links with page links",
+      "detail": "Change 'Services' href from '#services' to '/services' (or keep as dropdown trigger only), and 'Work With Us' from '#contact' to '/contact'. The current anchor links only work on the homepage.",
+      "effort": "low",
+      "files_to_change": ["src/components/Header.tsx"]
+    },
+    {
+      "priority": 10,
+      "title": "Remove or populate the Industries dropdown",
+      "detail": "The Industries nav item has hasDropdown: true but no dropdown content is rendered (unlike Services and Resources). Either add industry pages/links or remove the Industries nav item to avoid dead navigation.",
+      "effort": "low",
+      "files_to_change": ["src/components/Header.tsx"]
+    },
+    {
+      "priority": 11,
+      "title": "Add LinkedIn URL to Organization schema sameAs array",
+      "detail": "Update the Organization schema in root layout to include the LinkedIn URL: sameAs: ['https://www.linkedin.com/company/bknddevelopment'].",
+      "effort": "low",
+      "files_to_change": ["src/app/layout.tsx"]
+    },
+    {
+      "priority": 12,
+      "title": "Remove or fix SearchAction schema",
+      "detail": "The WebSite schema includes a SearchAction with urlTemplate 'https://bknddevelopment.com/?s={search_term_string}'. Since this is a static site with no search functionality, this schema should be removed to avoid misleading structured data.",
+      "effort": "low",
+      "files_to_change": ["src/app/layout.tsx"]
+    },
+    {
+      "priority": 13,
+      "title": "Add layout.tsx with metadata for /services/paid-advertising/ page",
+      "detail": "Create src/app/services/paid-advertising/layout.tsx with metadata, canonical, and Service schema matching the pattern of other service pages.",
+      "effort": "medium",
+      "files_to_change": [
+        "src/app/services/paid-advertising/layout.tsx (create new)"
+      ]
+    },
+    {
+      "priority": 14,
+      "title": "Extract shared article rendering into a reusable component",
+      "detail": "The ~200 lines of markdown-to-HTML rendering logic is duplicated across 5 article page templates. Extract into a shared ArticleContent component to reduce maintenance burden and ensure consistent rendering.",
+      "effort": "medium",
+      "files_to_change": [
+        "src/components/ArticleContent.tsx (create new)",
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/ai/[slug]/page.tsx",
+        "src/app/marketing/[slug]/page.tsx",
+        "src/app/seo-insights/[slug]/page.tsx",
+        "src/app/industry-news/[slug]/page.tsx"
+      ]
+    }
+  ],
+
+  "duplicate_content_analysis": {
+    "description": "Detailed mapping of duplicate URLs found in the codebase",
+    "pattern": "Every blog post is served at /blog/[slug] AND /[category-hub]/[slug]",
+    "mechanism": {
+      "blog_route": "src/app/blog/[slug]/page.tsx calls getAllPosts() in generateStaticParams, generating a page for EVERY post regardless of category. Uses getPostBySlug(slug) to render.",
+      "hub_routes": "src/app/ai/[slug]/page.tsx calls getPostsByCategory('ai') in generateStaticParams. Uses getPostBySlug(slug) to render. Checks post.category === 'ai' to filter. Same pattern for marketing, seo-insights, industry-news.",
+      "result": "Both routes call the SAME getPostBySlug() function and render the SAME post.content. The only differences are: (1) hub pages add Article JSON-LD schema, (2) hub pages have slightly different title format (e.g., '| AI Corner |' vs plain '|'), (3) hub pages link back to their hub, blog pages link back to /blog."
+    },
+    "category_to_hub_mapping": {
+      "ai": "/ai/[slug]",
+      "marketing": "/marketing/[slug]",
+      "seo": "/seo-insights/[slug]",
+      "news": "/industry-news/[slug]"
+    },
+    "total_duplicate_pairs": "~35 articles x 2 URLs each = ~70 total article pages, ~35 of which are duplicates"
+  },
+
+  "schema_health": {
+    "root_layout": {
+      "domain": "bknddevelopment.com (CORRECT)",
+      "schemas": ["Organization", "LocalBusiness", "WebSite", "WebPage"],
+      "issues": [
+        "sameAs empty",
+        "SearchAction non-functional",
+        "dateModified hardcoded"
+      ]
+    },
+    "service_pages_with_old_domain": {
+      "domain": "charwinvanryckdegroot.github.io/bknd-website (WRONG)",
+      "affected": [
+        "seo",
+        "analytics",
+        "creative",
+        "cro",
+        "ai/custom",
+        "ai/automation",
+        "ai/geo",
+        "methodology/ai"
+      ],
+      "schemas_affected": ["Service", "WebPage", "BreadcrumbList", "FAQPage"]
+    },
+    "hub_article_pages": {
+      "domain": "bknddevelopment.com (CORRECT)",
+      "schemas": ["Article"],
+      "issues": ["No canonical tags"]
+    },
+    "blog_article_pages": {
+      "schemas": ["NONE - missing Article schema"],
+      "issues": ["No schema at all", "No canonical tags"]
+    },
+    "hub_landing_pages": {
+      "domain": "bknddevelopment.com (CORRECT)",
+      "schemas": ["CollectionPage with ItemList"],
+      "issues": ["No canonical tags"]
+    }
+  }
+}

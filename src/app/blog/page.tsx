@@ -74,6 +74,15 @@ export default function BlogPage() {
                   <AnimateOnScroll key={post.slug} delay={index * 0.1}>
                     <Link href={`/blog/${post.slug}`} className="group block">
                       <article className="h-full">
+                        {post.image && (
+                          <div className="mb-4 overflow-hidden rounded">
+                            <img
+                              src={post.image}
+                              alt={post.imageAlt || post.title}
+                              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        )}
                         <div className="mb-4">
                           <span className="text-[#86868B] text-sm">
                             {formatDate(post.date)}

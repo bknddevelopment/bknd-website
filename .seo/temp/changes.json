@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-02-05",
+  "last_known_run": "2026-02-02",
+  "commits_since": [
+    "797e55e chore: update sitemap with content hubs and new blog posts",
+    "06d80c3 style: reformat code with consistent quote style and line wrapping",
+    "b63b3a5 feat: add content hubs with 20 new professional blog posts"
+  ],
+  "files_changed": [
+    "next.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "public/images/team/founder-avatar.jpg",
+    "public/robots.txt",
+    "public/sitemap.xml",
+    "src/app/about/page.tsx",
+    "src/app/accessibility/layout.tsx",
+    "src/app/accessibility/page.tsx",
+    "src/app/ai/[slug]/page.tsx",
+    "src/app/ai/page.tsx",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/blog/layout.tsx",
+    "src/app/blog/page.tsx",
+    "src/app/case-studies/layout.tsx",
+    "src/app/case-studies/page.tsx",
+    "src/app/contact/page.tsx",
+    "src/app/globals.css",
+    "src/app/industry-news/[slug]/page.tsx",
+    "src/app/industry-news/page.tsx",
+    "src/app/layout.tsx",
+    "src/app/marketing/[slug]/page.tsx",
+    "src/app/marketing/page.tsx",
+    "src/app/methodology/ai/layout.tsx",
+    "src/app/methodology/ai/page.tsx",
+    "src/app/page.tsx",
+    "src/app/privacy/layout.tsx",
+    "src/app/privacy/page.tsx",
+    "src/app/seo-insights/[slug]/page.tsx",
+    "src/app/seo-insights/page.tsx",
+    "src/app/services/ai/automation/layout.tsx",
+    "src/app/services/ai/automation/page.tsx",
+    "src/app/services/ai/chatbots/layout.tsx",
+    "src/app/services/ai/chatbots/page.tsx",
+    "src/app/services/ai/custom/layout.tsx",
+    "src/app/services/ai/custom/page.tsx",
+    "src/app/services/ai/geo/layout.tsx",
+    "src/app/services/ai/geo/page.tsx",
+    "src/app/services/ai/page.tsx",
+    "src/app/services/analytics/layout.tsx",
+    "src/app/services/analytics/page.tsx",
+    "src/app/services/content/layout.tsx",
+    "src/app/services/content/page.tsx",
+    "src/app/services/creative/layout.tsx",
+    "src/app/services/creative/page.tsx",
+    "src/app/services/cro/layout.tsx",
+    "src/app/services/cro/page.tsx",
+    "src/app/services/paid-advertising/page.tsx",
+    "src/app/services/seo/layout.tsx",
+    "src/app/services/seo/page.tsx",
+    "src/app/terms/layout.tsx",
+    "src/app/terms/page.tsx",
+    "src/components/AnimateOnScroll.tsx",
+    "src/components/ArticleGrid.tsx",
+    "src/components/CaseStudies.tsx",
+    "src/components/ClientLogoBar.tsx",
+    "src/components/Contact.tsx",
+    "src/components/CountUp.tsx",
+    "src/components/ExitIntentModal.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Header.tsx",
+    "src/components/Hero.tsx",
+    "src/components/HubHero.tsx",
+    "src/components/Methodology.tsx",
+    "src/components/Services.tsx",
+    "src/components/StickyCtaBar.tsx",
+    "src/components/Testimonials.tsx",
+    "src/components/WhyUs.tsx",
+    "src/lib/blog.ts",
+    "tailwind.config.ts"
+  ],
+  "new_pages_added": [
+    "src/app/ai/page.tsx",
+    "src/app/ai/[slug]/page.tsx",
+    "src/app/marketing/page.tsx",
+    "src/app/marketing/[slug]/page.tsx",
+    "src/app/seo-insights/page.tsx",
+    "src/app/seo-insights/[slug]/page.tsx",
+    "src/app/industry-news/page.tsx",
+    "src/app/industry-news/[slug]/page.tsx",
+    "src/app/methodology/ai/page.tsx",
+    "src/app/methodology/ai/layout.tsx",
+    "src/app/services/ai/geo/page.tsx",
+    "src/app/services/ai/geo/layout.tsx",
+    "src/app/services/ai/automation/page.tsx",
+    "src/app/services/ai/automation/layout.tsx",
+    "src/app/blog/layout.tsx",
+    "src/components/ArticleGrid.tsx",
+    "src/components/HubHero.tsx"
+  ],
+  "seo_relevant_changes": [
+    {
+      "type": "new_page",
+      "detail": "4 content hub landing pages added: /ai/, /marketing/, /seo-insights/, /industry-news/ -- each with dynamic [slug] article routes"
+    },
+    {
+      "type": "new_page",
+      "detail": "New service page: /services/ai/geo/ (Generative Engine Optimization)"
+    },
+    {
+      "type": "new_page",
+      "detail": "New service page: /services/ai/automation/ (AI Marketing Automation)"
+    },
+    {
+      "type": "new_page",
+      "detail": "New methodology page: /methodology/ai/"
+    },
+    {
+      "type": "new_blog",
+      "detail": "20 new professional blog posts added to src/lib/blog.ts with category system (ai, marketing, seo, news). New posts include: chatgpt-ads-launch, google-universal-commerce-protocol, meta-andromeda-algorithm, tiktok-us-deal, google-ai-overviews-ads, google-february-2026-core-update, the-real-cost-of-vanity-metrics, ai-overviews-zero-click-seo, core-web-vitals-inp, eeat-seo-strategy, internal-linking-architecture, llm-visibility-ai-search, first-party-data-strategy, employee-advocacy-b2b, account-based-experience-abx, ai-marketing-automation-90-day, ai-roi-reckoning-2026, agentic-ai-enterprise-2026, ai-compliance-tsunami-2026, multimodal-ai-marketing-2026"
+    },
+    {
+      "type": "sitemap_update",
+      "detail": "Sitemap massively expanded from ~20 URLs to ~100+ URLs. All content hub landing pages and their article routes added. All blog posts now have entries. Content hub articles are duplicated across /blog/[slug] and /[hub]/[slug] paths (potential duplicate content issue)."
+    },
+    {
+      "type": "modified_meta",
+      "detail": "Root layout.tsx: Google Search Console verification tag added (c9auD4d1EqN--1_vKGCVADAt-HXid2ua0LFJYTd7O70). Favicon paths fixed from /bknd-website/ prefix to root /. OG image paths fixed similarly."
+    },
+    {
+      "type": "modified_meta",
+      "detail": "robots.txt updated: Sitemap URL changed from GitHub Pages (charwinvanryckdegroot.github.io/bknd-website/sitemap.xml) to production domain (bknddevelopment.com/sitemap.xml). Base URL comment updated."
+    },
+    {
+      "type": "code_reformat",
+      "detail": "Massive code reformatting across all existing files -- single quotes to double quotes, consistent line wrapping. 70 files affected, ~17,800 insertions / ~3,800 deletions. Most are formatting-only, no SEO content impact."
+    },
+    {
+      "type": "modified_meta",
+      "detail": "Blog post data model updated: BlogCategory type added (ai, marketing, seo, news). All existing blog posts now have category assignments. New blog layout.tsx added."
+    },
+    {
+      "type": "new_component",
+      "detail": "New components: ArticleGrid.tsx (for content hub article listings), HubHero.tsx (for content hub hero sections)"
+    },
+    {
+      "type": "infrastructure",
+      "detail": "basePath made conditional (Vercel vs GitHub Pages). Package renamed from singlegrain-site to bknd-development. next.config.ts updated."
+    }
+  ],
+  "sitemap_stats": {
+    "total_urls": 97,
+    "content_hub_landing_pages": 4,
+    "service_pages": 10,
+    "blog_posts_in_sitemap": 36,
+    "content_hub_articles": 39,
+    "legal_pages": 3,
+    "core_pages": 5,
+    "all_lastmod": "2026-02-04",
+    "potential_issues": [
+      "Blog posts appear under both /blog/[slug] AND /[hub]/[slug] paths in sitemap -- this creates duplicate URLs for the same content and may cause duplicate content issues with Google",
+      "All lastmod dates set to 2026-02-04 uniformly, not reflecting actual per-page modification dates",
+      "No canonical tags observed in content hub article pages to resolve /blog/ vs /hub/ duplicate paths"
+    ]
+  },
+  "summary": "Major content expansion since last SEO run on Feb 2. Three commits landed: (1) 20 new professional blog posts with a category system across 4 content hubs (AI, Marketing, SEO Insights, Industry News), (2) code reformatting across all files, and (3) sitemap update. New pages include 4 content hub landing pages with dynamic article routes, 2 new AI service pages (GEO, Automation), and an AI methodology page. The sitemap expanded from ~20 to ~97 URLs. Key SEO concern: blog posts are duplicated across /blog/[slug] and /[hub]/[slug] paths in the sitemap without apparent canonical resolution, which could cause duplicate content indexing issues. Google Search Console verification was added. robots.txt and favicon/OG image paths were corrected for the production domain."
+}
