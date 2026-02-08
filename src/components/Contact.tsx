@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
@@ -48,30 +47,64 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative">
-      {/* Full-width dark charcoal background - Apple style */}
-      <div className="bg-[#1D1D1F] py-24 lg:py-32">
-        <div className="container-sg">
+      {/* Full-width dark background with gradient mesh */}
+      <div className="bg-[#1D1D1F] py-24 lg:py-32 relative overflow-hidden">
+        {/* Gradient mesh background effects */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%)",
+          }}
+        />
+        {/* Floating decorative orbs */}
+        <div
+          className="absolute top-20 left-[15%] w-[300px] h-[300px] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(6, 182, 212, 0.04) 0%, transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute bottom-20 right-[10%] w-[400px] h-[400px] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(0, 212, 255, 0.03) 0%, transparent 70%)",
+          }}
+        />
+
+        <div className="container-sg relative">
           <div className="max-w-3xl mx-auto text-center">
-            <AnimateOnScroll>
+            <div>
               {/* Overline */}
               <p className="text-gray-400 text-sm font-medium tracking-wide uppercase mb-6">
                 Get Started
               </p>
 
-              {/* Main headline - Apple typography style */}
+              {/* Main headline */}
               <h2 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight mb-6">
                 Let&apos;s build something
                 <br />
-                <span className="text-[#06B6D4]">extraordinary.</span>
+                <span
+                  className="inline-block bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #00D4FF, #06B6D4, #00D4FF)",
+                    backgroundSize: "200% 100%",
+                    animation: "gradientShift 4s ease infinite",
+                  }}
+                >
+                  extraordinary.
+                </span>
               </h2>
 
               {/* Subtitle */}
               <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
                 Share your vision with us and discover what&apos;s possible.
               </p>
-            </AnimateOnScroll>
+            </div>
 
-            <AnimateOnScroll>
+            <div>
               {/* Clean email form */}
               <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -79,7 +112,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="flex-1 bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#06B6D4]/50 focus:bg-white/10 transition-all text-base disabled:opacity-50"
+                    className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#06B6D4]/60 focus:ring-1 focus:ring-[#06B6D4]/30 focus:bg-white/10 transition-all text-base disabled:opacity-50"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -88,7 +121,11 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="relative bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{
+                      boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
+                      animation: "ctaPulse 3s ease-in-out infinite",
+                    }}
                   >
                     {isSubmitting ? "Sending..." : "Get in Touch"}
                   </button>
@@ -113,21 +150,24 @@ export default function Contact() {
                   </p>
                 )}
               </form>
-            </AnimateOnScroll>
+            </div>
 
             {/* Alternative contact option */}
-            <AnimateOnScroll>
+            <div>
               <div className="mt-16 pt-12 border-t border-white/10">
                 <p className="text-gray-400 text-base mb-4">
                   Prefer to talk directly?
                 </p>
                 <a
                   href="mailto:info@bknddevelopment.com"
-                  className="inline-flex items-center gap-2 text-white hover:text-[#06B6D4] transition-colors text-lg font-medium"
+                  className="group inline-flex items-center gap-2 text-white text-lg font-medium transition-colors hover:text-[#06B6D4]"
                 >
-                  info@bknddevelopment.com
+                  <span className="relative">
+                    info@bknddevelopment.com
+                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#06B6D4] transition-all duration-300 group-hover:w-full" />
+                  </span>
                   <svg
-                    className="w-5 h-5"
+                    className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -141,7 +181,7 @@ export default function Contact() {
                   </svg>
                 </a>
               </div>
-            </AnimateOnScroll>
+            </div>
           </div>
         </div>
       </div>

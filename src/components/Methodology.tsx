@@ -1,6 +1,7 @@
 "use client";
 
-import { AnimateOnScroll } from "./AnimateOnScroll";
+import { useRef, useEffect, useState } from "react";
+import { useInView } from "framer-motion";
 
 interface Step {
   id: number;
@@ -213,6 +214,110 @@ const steps: Step[] = [
   },
 ];
 
+function AnimatedCounter({
+  value,
+  suffix = "",
+  isSpecial = false,
+}: {
+  value: string;
+  suffix?: string;
+  isSpecial?: boolean;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [displayed, setDisplayed] = useState(value);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    // Try to parse numeric values
+    const match = value.match(/^(\d+\.?\d*)(.*)/);
+    if (!match) {
+      setDisplayed(value);
+      return;
+    }
+
+    const target = parseFloat(match[1]);
+    const valueSuffix = match[2];
+    const duration = 1400;
+    const startTime = performance.now();
+
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+
+      if (target % 1 !== 0) {
+        setDisplayed(`${current.toFixed(1)}${valueSuffix}`);
+      } else {
+        setDisplayed(`${Math.round(current)}${valueSuffix}`);
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setDisplayed(value);
+      }
+    };
+
+    setDisplayed(`0${match[2]}`);
+    requestAnimationFrame(animate);
+  }, [isInView, value]);
+
+  return (
+    <div ref={ref}>
+      <p
+        className={`text-3xl lg:text-4xl font-semibold mb-1 ${
+          isSpecial ? "text-[#00D4FF]" : "text-white"
+        }`}
+        style={
+          isSpecial
+            ? {
+                textShadow: "0 0 20px rgba(0, 212, 255, 0.5)",
+                animation: "cyanPulse 3s ease-in-out infinite",
+              }
+            : undefined
+        }
+      >
+        {displayed}
+        {suffix}
+      </p>
+    </div>
+  );
+}
+
+function TimelineDot({ index }: { index: number; totalSteps: number }) {
+  return (
+    <div className="absolute -top-[52px] left-1/2 transform -translate-x-1/2">
+      <div
+        className="w-4 h-4 rounded-full border-2 relative"
+        style={{
+          borderColor: "#00D4FF",
+          backgroundColor: "#0a1628",
+        }}
+      >
+        <div className="absolute inset-1 rounded-full bg-[#00D4FF]" />
+      </div>
+    </div>
+  );
+}
+
+function AnimatedTimelineLine() {
+  return (
+    <div className="relative mb-12">
+      <div className="absolute left-0 right-0 top-1/2 h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      <div
+        className="absolute left-[10%] right-[10%] top-1/2 h-[2px]"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(0,212,255,0.4) 50%, rgba(0,212,255,0.1) 100%)",
+        }}
+      />
+    </div>
+  );
+}
+
 export default function Methodology() {
   return (
     <section
@@ -222,6 +327,28 @@ export default function Methodology() {
         background: "linear-gradient(180deg, #0a1628 0%, #0f1d32 100%)",
       }}
     >
+      {/* Keyframe animations */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+        @keyframes cyanPulse {
+          0%, 100% { text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+          50% { text-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 60px rgba(0, 212, 255, 0.2); }
+        }
+        @keyframes orbDrift1 {
+          0%, 100% { transform: translate(0, 0); }
+          33% { transform: translate(30px, -20px); }
+          66% { transform: translate(-20px, 15px); }
+        }
+        @keyframes orbDrift2 {
+          0%, 100% { transform: translate(0, 0); }
+          33% { transform: translate(-25px, 20px); }
+          66% { transform: translate(15px, -25px); }
+        }
+      `,
+        }}
+      />
+
       {/* Subtle grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -230,12 +357,13 @@ export default function Methodology() {
         }}
       />
 
-      {/* Gradient orbs for depth */}
+      {/* Gradient orbs with drift animation */}
       <div
         className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%)",
+          animation: "orbDrift1 20s ease-in-out infinite",
         }}
       />
       <div
@@ -243,59 +371,43 @@ export default function Methodology() {
         style={{
           background:
             "radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%)",
+          animation: "orbDrift2 25s ease-in-out infinite",
         }}
       />
 
       <div className="container-sg relative z-10">
         {/* Header */}
-        <AnimateOnScroll>
-          <div className="text-center mb-16 lg:mb-20">
-            <p
-              className="text-sm font-semibold tracking-widest uppercase mb-4"
-              style={{ color: "#00D4FF" }}
-            >
-              Our Methodology
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 tracking-tight">
-              Marketing Systems, Not Campaigns
-            </h2>
-            <p className="text-white/60 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
-              We engineer growth the way developers build software—with
-              architecture, automation, and measurable outcomes at every step.
-            </p>
-          </div>
-        </AnimateOnScroll>
+        <div className="text-center mb-16 lg:mb-20">
+          <p
+            className="text-sm font-semibold tracking-widest uppercase mb-4"
+            style={{ color: "#00D4FF" }}
+          >
+            Our Methodology
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 tracking-tight">
+            Marketing Systems, Not Campaigns
+          </h2>
+          <p className="text-white/60 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+            We engineer growth the way developers build software—with
+            architecture, automation, and measurable outcomes at every step.
+          </p>
+        </div>
 
         {/* Desktop: Horizontal Timeline */}
         <div className="hidden lg:block">
-          {/* Timeline Line */}
-          <AnimateOnScroll delay={0.1}>
-            <div className="relative mb-12">
-              <div className="absolute left-0 right-0 top-1/2 h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-              <div
-                className="absolute left-[10%] right-[10%] top-1/2 h-[2px]"
-                style={{
-                  background:
-                    "linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(0,212,255,0.4) 50%, rgba(0,212,255,0.1) 100%)",
-                }}
-              />
-            </div>
-          </AnimateOnScroll>
+          {/* Animated Timeline Line */}
+          <AnimatedTimelineLine />
 
           {/* Steps Grid */}
           <div className="grid grid-cols-5 gap-6">
             {steps.map((step, index) => (
-              <AnimateOnScroll key={step.id} delay={0.1 + index * 0.1}>
+              <div key={step.id}>
                 <div className="group relative">
-                  {/* Connector dot */}
-                  <div className="absolute -top-[52px] left-1/2 transform -translate-x-1/2">
-                    <div className="w-4 h-4 rounded-full bg-[#0a1628] border-2 border-white/30 group-hover:border-[#00D4FF] transition-colors duration-300">
-                      <div className="absolute inset-1 rounded-full bg-[#00D4FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  </div>
+                  {/* Animated connector dot */}
+                  <TimelineDot index={index} totalSteps={steps.length} />
 
-                  {/* Card */}
-                  <div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 transition-all duration-500 hover:bg-white/[0.06] hover:border-[#00D4FF]/30 hover:-translate-y-1 group-hover:shadow-[0_0_40px_rgba(0,212,255,0.1)]">
+                  {/* Card with glassmorphism glow on hover */}
+                  <div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#00D4FF]/40 hover:-translate-y-1 group-hover:shadow-[0_0_60px_rgba(0,212,255,0.15),0_4px_0_0_rgba(0,212,255,0.4)]">
                     {/* Step Number */}
                     <div className="flex items-center justify-between mb-4">
                       <span
@@ -338,7 +450,7 @@ export default function Methodology() {
                     </div>
                   </div>
                 </div>
-              </AnimateOnScroll>
+              </div>
             ))}
           </div>
         </div>
@@ -350,8 +462,8 @@ export default function Methodology() {
             <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#00D4FF]/40 via-[#00D4FF]/20 to-transparent" />
 
             <div className="space-y-6">
-              {steps.map((step, index) => (
-                <AnimateOnScroll key={step.id} delay={index * 0.1}>
+              {steps.map((step) => (
+                <div key={step.id}>
                   <div className="relative flex gap-6">
                     {/* Timeline dot */}
                     <div className="relative z-10 flex-shrink-0">
@@ -396,71 +508,61 @@ export default function Methodology() {
                       </div>
                     </div>
                   </div>
-                </AnimateOnScroll>
+                </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom Stats Bar */}
-        <AnimateOnScroll delay={0.6}>
-          <div className="mt-16 lg:mt-20 pt-10 border-t border-white/10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-3xl lg:text-4xl font-semibold text-white mb-1">
-                  6
-                </p>
-                <p className="text-white/50 text-sm">Weeks to First Results</p>
-              </div>
-              <div>
-                <p className="text-3xl lg:text-4xl font-semibold text-white mb-1">
-                  24/7
-                </p>
-                <p className="text-white/50 text-sm">AI-Powered Optimization</p>
-              </div>
-              <div>
-                <p className="text-3xl lg:text-4xl font-semibold text-white mb-1">
-                  100%
-                </p>
-                <p className="text-white/50 text-sm">Data-Driven Decisions</p>
-              </div>
-              <div>
-                <p className="text-3xl lg:text-4xl font-semibold text-[#00D4FF] mb-1">
-                  3.2x
-                </p>
-                <p className="text-white/50 text-sm">Average Client ROI</p>
-              </div>
+        {/* Bottom Stats Bar with animated counters */}
+        <div className="mt-16 lg:mt-20 pt-10 border-t border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <AnimatedCounter value="6" />
+              <p className="text-white/50 text-sm">Weeks to First Results</p>
+            </div>
+            <div>
+              <p className="text-3xl lg:text-4xl font-semibold text-white mb-1">
+                24/7
+              </p>
+              <p className="text-white/50 text-sm">AI-Powered Optimization</p>
+            </div>
+            <div>
+              <AnimatedCounter value="100%" />
+              <p className="text-white/50 text-sm">Data-Driven Decisions</p>
+            </div>
+            <div>
+              <AnimatedCounter value="3.2x" isSpecial />
+              <p className="text-white/50 text-sm">Average Client ROI</p>
             </div>
           </div>
-        </AnimateOnScroll>
+        </div>
 
         {/* CTA */}
-        <AnimateOnScroll delay={0.7}>
-          <div className="text-center mt-12">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#00D4FF] text-white font-medium rounded-full hover:bg-[#00B8E0] transition-all duration-300 shadow-[0_0_30px_rgba(0,212,255,0.3)] hover:shadow-[0_0_40px_rgba(0,212,255,0.5)]"
+        <div className="text-center mt-12">
+          <a
+            href="#contact"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-[#00D4FF] text-white font-medium rounded-full hover:bg-[#00B8E0] transition-all duration-300 shadow-[0_0_30px_rgba(0,212,255,0.3)] hover:shadow-[0_0_40px_rgba(0,212,255,0.5)]"
+          >
+            Start Your Growth Engine
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              Start Your Growth Engine
-              <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-            <p className="text-white/40 text-sm mt-4">
-              Free 30-minute strategy call. No commitment required.
-            </p>
-          </div>
-        </AnimateOnScroll>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+          <p className="text-white/40 text-sm mt-4">
+            Free 30-minute strategy call. No commitment required.
+          </p>
+        </div>
       </div>
     </section>
   );

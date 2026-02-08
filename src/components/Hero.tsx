@@ -1,22 +1,18 @@
 // TODO: Replace YOUR_FORM_ID with actual Formspree form ID
 "use client";
 
-import { useEffect, useState, FormEvent } from "react";
-import Image from "next/image";
+import { useState, FormEvent } from "react";
+import { motion } from "framer-motion";
+import NetworkBackground from "./NetworkBackground";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -53,18 +49,10 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen pt-24 pb-16 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=2560&q=80"
-          alt="Abstract blue network data visualization background"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/90 via-[#0a1628]/80 to-[#0a1628]/70" />
+      {/* Animated Network Background */}
+      <div className="absolute inset-0 z-0 bg-[#0a1628]">
+        <NetworkBackground />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/60 via-[#0a1628]/40 to-[#0a1628]/30" />
       </div>
       <div className="relative z-10 max-w-[1148px] mx-auto px-6 lg:px-20">
         {/* Two-column asymmetric layout */}
@@ -72,8 +60,11 @@ export default function Hero() {
           {/* Left Column - 60% */}
           <div>
             {/* Urgency Badge */}
-            <div
-              className={`inline-flex items-center gap-2 mb-8 transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            <motion.div
+              className="inline-flex items-center gap-2 mb-8"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D4FF] opacity-75"></span>
@@ -89,33 +80,59 @@ export default function Hero() {
               >
                 Check capacity
               </a>
-            </div>
+            </motion.div>
 
             {/* Large Headline */}
-            <h1
-              className={`text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-white mb-6 leading-[1.1] tracking-[-0.02em] transition-all duration-500 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            <motion.h1
+              className="text-[36px] sm:text-[44px] lg:text-[60px] font-semibold text-white mb-6 leading-[1.05] tracking-[-0.03em]"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.1,
+                type: "spring",
+                stiffness: 80,
+                damping: 20,
+              }}
               style={{
                 fontFamily:
                   "SF Pro Display, -apple-system, BlinkMacSystemFont, Inter, sans-serif",
               }}
             >
-              We are the marketing + AI partner that companies never outgrow.
-            </h1>
+              We are the{" "}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(135deg, #00D4FF 0%, #0088CC 50%, #00D4FF 100%)",
+                  backgroundSize: "200% 200%",
+                }}
+              >
+                marketing + AI
+              </span>{" "}
+              partner that companies never outgrow.
+            </motion.h1>
 
             {/* Stats Line */}
-            <p
-              className={`text-[#00D4FF] text-base font-medium mb-4 transition-all duration-500 delay-150 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            <motion.p
+              className="text-[#00D4FF] text-base font-medium mb-4"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
             >
               <span className="underline decoration-[#00D4FF] decoration-1 underline-offset-4">
                 ROI-focused approach
               </span>
-              <span className="mx-3 text-white/50">—</span>
+              <span className="mx-3 text-white/50">&mdash;</span>
               <span className="text-white">Results that compound</span>
-            </p>
+            </motion.p>
 
             {/* Subheadline */}
-            <p
-              className={`text-white/70 text-[17px] leading-[1.65] mb-10 max-w-lg transition-all duration-500 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            <motion.p
+              className="text-white/70 text-[17px] leading-[1.65] mb-10 max-w-lg"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
               style={{
                 fontFamily:
                   "SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif",
@@ -123,12 +140,15 @@ export default function Hero() {
             >
               Developer-built campaigns. AI-powered optimization. Revenue you
               can measure. We deliver marketing that actually works.
-            </p>
+            </motion.p>
 
             {/* Email Form - Side by Side */}
-            <form
+            <motion.form
               onSubmit={handleSubmit}
-              className={`flex flex-col sm:flex-row gap-3 mb-4 transition-all duration-500 delay-250 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              className="flex flex-col sm:flex-row gap-3 mb-4"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
             >
               <input
                 type="email"
@@ -138,7 +158,7 @@ export default function Hero() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="flex-1 bg-white/10 backdrop-blur-sm text-white text-[15px] px-5 py-4 h-[52px] border border-white/20 rounded-xl placeholder:text-white/50 focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF] focus:bg-white/15 transition-all disabled:opacity-50"
+                className="flex-1 bg-white/8 backdrop-blur-md text-white text-[15px] px-5 py-4 h-[52px] border border-white/15 rounded-xl placeholder:text-white/40 focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF] focus:bg-white/12 transition-all disabled:opacity-50"
                 style={{
                   fontFamily:
                     "SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif",
@@ -147,7 +167,7 @@ export default function Hero() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#00D4FF] hover:bg-[#00B8E0] text-white text-[15px] font-medium px-7 py-4 h-[52px] rounded-xl inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#00D4FF] hover:bg-[#00B8E0] text-white text-[15px] font-medium px-7 py-4 h-[52px] rounded-xl inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all shadow-sm hover:shadow-[0_4px_20px_rgba(0,212,255,0.4)] disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   fontFamily:
                     "SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif",
@@ -173,31 +193,39 @@ export default function Hero() {
                   </svg>
                 )}
               </button>
-            </form>
+            </motion.form>
 
             {/* Form Status Messages */}
             {submitStatus === "success" && (
-              <p
-                className={`text-green-400 text-sm mb-4 transition-all duration-500 ${mounted ? "opacity-100" : "opacity-0"}`}
+              <motion.p
+                className="text-green-400 text-sm mb-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
               >
                 Thanks! We&apos;ll be in touch soon.
-              </p>
+              </motion.p>
             )}
             {submitStatus === "error" && (
-              <p
-                className={`text-red-400 text-sm mb-4 transition-all duration-500 ${mounted ? "opacity-100" : "opacity-0"}`}
+              <motion.p
+                className="text-red-400 text-sm mb-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
               >
                 Something went wrong. Please try again.
-              </p>
+              </motion.p>
             )}
 
             {/* Trust Badges */}
-            <div
-              className={`flex flex-wrap gap-8 text-sm transition-all duration-500 delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-            >
+            <div className="flex flex-wrap gap-8 text-sm">
               {["ROI-focused", "AI-powered", "Developer-built"].map(
                 (badge, i) => (
-                  <span key={i} className="flex items-center gap-2 text-white">
+                  <motion.span
+                    key={i}
+                    className="flex items-center gap-2 text-white"
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.55 + i * 0.1 }}
+                  >
                     <svg
                       width="18"
                       height="18"
@@ -221,23 +249,34 @@ export default function Hero() {
                       />
                     </svg>
                     {badge}
-                  </span>
+                  </motion.span>
                 ),
               )}
             </div>
           </div>
 
           {/* Right Column - 40% - Floating Cards */}
-          <div
-            className={`hidden lg:block relative transition-all duration-700 delay-300 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
-          >
-            {/* Quote Card - Slightly Rotated */}
-            <div
-              className="bg-white rounded-2xl p-6 relative mb-[-60px] z-10"
+          <div className="hidden lg:block relative">
+            {/* Quote Card - Glassmorphism with float animation */}
+            <motion.div
+              className="relative mb-[-60px] z-10 rounded-2xl p-6"
+              initial={{ opacity: 0, x: 40, rotate: -2 }}
+              animate={{ opacity: 1, x: 0, rotate: -2 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.3,
+                type: "spring",
+                stiffness: 60,
+                damping: 16,
+              }}
               style={{
-                transform: "rotate(-2deg)",
+                background: "rgba(255, 255, 255, 0.92)",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
                 boxShadow:
-                  "0 4px 6px rgba(0,0,0,0.04), 0 10px 15px rgba(0,0,0,0.03)",
+                  "0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06)",
+                animation: "floatCard1 6s ease-in-out infinite",
               }}
             >
               {/* Cyan Quote Marks */}
@@ -262,68 +301,7 @@ export default function Hero() {
               <p className="text-[#86868B] text-sm mt-4">
                 — Charwin Vanryck deGroot, Founder &amp; CEO
               </p>
-            </div>
-
-            {/* Client Testimonial Card - Overlapping */}
-            <div
-              className="bg-white rounded-2xl overflow-hidden relative z-20"
-              style={{
-                transform: "rotate(1deg)",
-                marginLeft: "30px",
-                boxShadow:
-                  "0 4px 6px rgba(0,0,0,0.04), 0 10px 15px rgba(0,0,0,0.03), 0 20px 25px rgba(0,0,0,0.02)",
-              }}
-            >
-              {/* Google Review Badge */}
-              <div className="p-5 border-b border-[#F5F5F7]">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-4 h-4 text-[#FBBC04]"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-[#1D1D1F] text-sm font-medium">
-                    5.0
-                  </span>
-                  <span className="text-[#86868B] text-xs">Google Review</span>
-                </div>
-                <p
-                  className="text-[#1D1D1F] text-[14px] leading-relaxed"
-                  style={{
-                    fontFamily:
-                      "SF Pro Text, -apple-system, BlinkMacSystemFont, Inter, sans-serif",
-                  }}
-                >
-                  &quot;Finally an agency that understands our tech stack. They
-                  plugged in and started driving results from week one.&quot;
-                </p>
-              </div>
-              {/* Client Info */}
-              <div className="p-5 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden relative ring-2 ring-[#F5F5F7]">
-                  <Image
-                    src="/images/team/founder-avatar.jpg"
-                    alt="Charwin Vanryck deGroot, Founder & CEO of BKND"
-                    fill
-                    className="object-cover"
-                    sizes="40px"
-                  />
-                </div>
-                <div>
-                  <p className="text-[#1D1D1F] text-sm font-medium">
-                    Charwin Vanryck deGroot
-                  </p>
-                  <p className="text-[#86868B] text-xs">Founder & CEO, BKND</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

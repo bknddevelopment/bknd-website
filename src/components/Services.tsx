@@ -20,7 +20,7 @@ const PaidAdvertisingIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F]"
+    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
   >
     <path
       d="M6 12h36M6 24h36M6 36h36"
@@ -48,7 +48,7 @@ const PerformanceCreativeIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F]"
+    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
   >
     <rect
       x="6"
@@ -92,7 +92,7 @@ const SEOIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F]"
+    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
   >
     <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="2" />
     <path
@@ -123,7 +123,7 @@ const CROIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F]"
+    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
   >
     <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" />
     <path
@@ -144,7 +144,7 @@ const DataAnalyticsIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F]"
+    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
   >
     <path
       d="M6 42V18l10 8 8-14 8 10 10-16v36H6z"
@@ -166,7 +166,7 @@ const ContentMarketingIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F]"
+    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
   >
     <rect
       x="8"
@@ -257,11 +257,7 @@ const services: Service[] = [
   },
 ];
 
-// Apple-style card shadow
-const appleCardStyle =
-  "bg-white rounded-[18px] shadow-[0_4px_6px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.08)]";
-
-// Service card component - Apple aesthetic
+// Service card component - Apple aesthetic with hover effects
 function ServiceCard({
   service,
   className = "",
@@ -271,7 +267,7 @@ function ServiceCard({
 }) {
   return (
     <div
-      className={`${appleCardStyle} p-8 transition-all duration-500 hover:shadow-[0_8px_25px_rgba(0,0,0,0.08),0_4px_10px_rgba(0,0,0,0.06)] hover:-translate-y-1 ${className}`}
+      className={`group bg-white rounded-[18px] shadow-[0_4px_6px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.08)] p-8 border border-transparent transition-all duration-500 hover:shadow-[0_8px_25px_rgba(0,0,0,0.08),0_4px_10px_rgba(0,0,0,0.06)] hover:-translate-y-2 hover:border-[#00D4FF]/30 hover:shadow-[0_8px_25px_rgba(0,0,0,0.08),0_0_20px_rgba(0,212,255,0.1)] ${className}`}
     >
       {/* Icon */}
       <div className="mb-6">{service.icon}</div>
@@ -292,7 +288,7 @@ function ServiceCard({
       {/* Black button with arrow - Apple style */}
       <a
         href={service.link}
-        className="inline-flex items-center gap-2 bg-[#1D1D1F] text-white px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#000000] group"
+        className="inline-flex items-center gap-2 bg-[#1D1D1F] text-white px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#000000] hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,212,255,0.15)]"
       >
         Learn More
         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -337,6 +333,11 @@ export default function Services() {
             </div>
           </AnimateOnScroll>
 
+          {/* Gradient divider */}
+          <div className="flex justify-center py-2">
+            <div className="w-48 h-px bg-gradient-to-r from-transparent via-[#00D4FF]/15 to-transparent" />
+          </div>
+
           {/* Row 2: 1 full-width card - SEO */}
           <AnimateOnScroll delay={0.2}>
             <div className="grid grid-cols-1">
@@ -346,6 +347,11 @@ export default function Services() {
               />
             </div>
           </AnimateOnScroll>
+
+          {/* Gradient divider */}
+          <div className="flex justify-center py-2">
+            <div className="w-48 h-px bg-gradient-to-r from-transparent via-[#00D4FF]/15 to-transparent" />
+          </div>
 
           {/* Row 3: 3 cards (33% each) - CRO, Data & Analytics, Content Marketing */}
           <AnimateOnScroll delay={0.3}>

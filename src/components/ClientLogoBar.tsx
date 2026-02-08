@@ -23,15 +23,10 @@ export default function ClientLogoBar() {
   }, []);
 
   return (
-    <section className="py-12 lg:py-16 bg-[#2F333B] relative overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#2F333B] via-[#2F343A]/20 to-[#2F333B]" />
-
+    <section className="py-12 lg:py-16 bg-gradient-to-b from-[#0f1724] via-[#141e2e] to-[#1a2332] relative overflow-hidden">
       <div className="container-sg relative z-10">
         {/* Header */}
-        <div
-          className={`text-center mb-8 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-        >
+        <div className="text-center mb-8">
           <p className="text-[#E9EFF4]/50 text-sm font-medium tracking-wide">
             We work with ambitious teams in
           </p>
@@ -39,13 +34,16 @@ export default function ClientLogoBar() {
 
         {/* Text Marquee Container */}
         <div
-          className={`relative transition-all duration-700 delay-200 ${mounted ? "opacity-100" : "opacity-0"}`}
+          className="relative"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Gradient fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-r from-[#2F333B] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-l from-[#2F333B] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-r from-[#0f1724] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-l from-[#1a2332] to-transparent z-10 pointer-events-none" />
+
+          {/* Center glow effect */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-16 bg-[#00D4FF]/5 rounded-full blur-3xl pointer-events-none" />
 
           {/* Scrolling container */}
           <div className="overflow-hidden py-4">
@@ -57,10 +55,10 @@ export default function ClientLogoBar() {
               {[...industries, ...industries, ...industries, ...industries].map(
                 (industry, i) => (
                   <div key={i} className="flex items-center flex-shrink-0">
-                    <span className="text-[#E9EFF4]/40 text-base lg:text-lg font-medium whitespace-nowrap px-4 lg:px-6 hover:text-[#E9EFF4]/70 transition-colors cursor-default">
+                    <span className="text-[#E9EFF4]/40 text-base lg:text-lg font-medium whitespace-nowrap px-4 lg:px-6 hover:text-[#E9EFF4]/80 hover:scale-105 transition-all duration-300 cursor-default inline-block">
                       {industry}
                     </span>
-                    <span className="text-[#F27038]/40 text-sm">•</span>
+                    <span className="text-[#00D4FF]/30 text-sm">&#x2022;</span>
                   </div>
                 ),
               )}
@@ -69,10 +67,8 @@ export default function ClientLogoBar() {
         </div>
 
         {/* Bottom accent */}
-        <div
-          className={`mt-6 flex justify-center transition-all duration-700 delay-300 ${mounted ? "opacity-100" : "opacity-0"}`}
-        >
-          <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#F27038]/20 to-transparent" />
+        <div className="mt-6 flex justify-center">
+          <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#00D4FF]/20 to-transparent" />
         </div>
       </div>
     </section>

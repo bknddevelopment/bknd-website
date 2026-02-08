@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const footerLinks = {
   Services: [
@@ -43,7 +42,7 @@ const linkedInLink = {
   href: "https://www.linkedin.com/company/bknddevelopment",
   icon: (
     <svg
-      className="w-4 h-4"
+      className="w-5 h-5"
       fill="currentColor"
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -62,13 +61,32 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1D1D1F]">
+    <footer className="bg-[#1D1D1F] relative overflow-hidden">
+      {/* Gradient top border */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[1px]"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 0%, #00D4FF 50%, transparent 100%)",
+        }}
+      />
+
+      {/* Subtle grid pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+
       {/* Main Footer Content */}
-      <div className="max-w-[980px] mx-auto px-6 lg:px-4 py-12 lg:py-16">
+      <div className="max-w-[980px] mx-auto px-6 lg:px-4 py-14 lg:py-20 relative">
         {/* Top Section: Logo and Social */}
-        <AnimateOnScroll>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-8 border-b border-[#424245]">
-            {/* Logo - inverted/white for dark background */}
+        <div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-10 border-b border-[#424245]">
+            {/* Logo */}
             <div className="mb-6 md:mb-0">
               <Image
                 src="/images/bknd-logo-new.png"
@@ -79,26 +97,26 @@ export default function Footer() {
               />
             </div>
 
-            {/* Social Icon */}
+            {/* Social Icon with glow on hover */}
             <a
               href={linkedInLink.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#86868B] hover:text-[#00D4FF] transition-colors duration-200"
+              className="text-[#86868B] hover:text-[#00D4FF] transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
               aria-label={linkedInLink.label}
             >
               {linkedInLink.icon}
             </a>
           </div>
-        </AnimateOnScroll>
+        </div>
 
         {/* Link Columns */}
-        <AnimateOnScroll delay={0.1}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-b border-[#424245]">
+        <div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-b border-[#424245]">
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
-                {/* Column Header - Apple style: white, semibold, small */}
-                <h4 className="text-white font-semibold text-xs tracking-wide mb-4">
+                {/* Column Header */}
+                <h4 className="text-white font-semibold text-xs tracking-wide mb-5">
                   {title}
                 </h4>
 
@@ -108,9 +126,10 @@ export default function Footer() {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-[#86868B] text-xs hover:text-[#00D4FF] transition-colors duration-200"
+                        className="group relative text-[#86868B] text-xs hover:text-[#00D4FF] transition-colors duration-200 inline-block"
                       >
                         {link.label}
+                        <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-[#00D4FF] transition-all duration-300 group-hover:w-full" />
                       </Link>
                     </li>
                   ))}
@@ -118,11 +137,11 @@ export default function Footer() {
               </div>
             ))}
           </div>
-        </AnimateOnScroll>
+        </div>
 
         {/* Bottom Bar */}
-        <AnimateOnScroll delay={0.2}>
-          <div className="pt-6">
+        <div>
+          <div className="pt-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               {/* Copyright */}
               <p className="text-[#86868B] text-[11px]">
@@ -130,7 +149,7 @@ export default function Footer() {
                 All rights reserved.
               </p>
 
-              {/* Legal Links - Apple style: small text with subtle dividers */}
+              {/* Legal Links */}
               <div className="flex flex-wrap items-center gap-x-1 text-[11px]">
                 {legalLinks.map((link, index) => (
                   <span key={link.label} className="flex items-center">
@@ -148,7 +167,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </AnimateOnScroll>
+        </div>
       </div>
     </footer>
   );

@@ -51,9 +51,9 @@ export default function WhyUs() {
         </AnimateOnScroll>
 
         {/* Comparison Cards */}
-        <AnimateOnScroll delay={0.2}>
-          <div className="max-w-5xl mx-auto">
-            {/* Desktop Table Headers */}
+        <div className="max-w-5xl mx-auto">
+          {/* Desktop Table Headers */}
+          <AnimateOnScroll delay={0.2}>
             <div className="hidden md:grid md:grid-cols-2 gap-6 mb-6">
               <div className="text-center">
                 <span className="text-[#86868B] text-sm font-medium uppercase tracking-wide">
@@ -66,13 +66,18 @@ export default function WhyUs() {
                 </span>
               </div>
             </div>
+          </AnimateOnScroll>
 
-            {/* Comparison Rows */}
-            <div className="space-y-4">
-              {comparisons.map((item, i) => (
-                <div key={i} className="grid md:grid-cols-2 gap-4 md:gap-6">
+          {/* Comparison Rows - each row animates in with stagger */}
+          <div className="space-y-4 relative">
+            {/* Subtle connecting line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#00D4FF]/20 to-transparent -translate-x-1/2 pointer-events-none" />
+
+            {comparisons.map((item, i) => (
+              <AnimateOnScroll key={i} delay={0.25 + i * 0.08}>
+                <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                   {/* Traditional Agency Card */}
-                  <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-gray-300">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-red-300/50 hover:bg-red-50/30">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center">
                       <X className="w-3.5 h-3.5 text-[#86868B]" />
                     </div>
@@ -82,7 +87,7 @@ export default function WhyUs() {
                   </div>
 
                   {/* BKND Card */}
-                  <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200/80 flex items-start gap-4 transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.15)]">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#00D4FF]/10 flex items-center justify-center">
                       <Check
                         className="w-3.5 h-3.5 text-[#00D4FF]"
@@ -94,17 +99,17 @@ export default function WhyUs() {
                     </span>
                   </div>
                 </div>
-              ))}
-            </div>
+              </AnimateOnScroll>
+            ))}
           </div>
-        </AnimateOnScroll>
+        </div>
 
         {/* CTA Button */}
-        <AnimateOnScroll delay={0.4}>
+        <AnimateOnScroll delay={0.7}>
           <div className="text-center mt-12">
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full hover:bg-[#000000] transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full transition-all duration-300 hover:bg-[#000000] hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] hover:scale-[1.03]"
             >
               Get Your Custom Growth Strategy
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

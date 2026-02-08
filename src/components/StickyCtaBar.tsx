@@ -34,8 +34,17 @@ export function StickyCtaBar() {
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: "100%", opacity: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-0 left-0 right-0 z-40 md:bottom-auto md:top-20 bg-white/80 backdrop-blur-xl border-t border-neutral-200/60 md:border-t-0 md:border-b shadow-sm"
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 25,
+            mass: 0.8,
+          }}
+          className="fixed bottom-0 left-0 right-0 z-40 md:bottom-auto md:top-20 bg-white/70 backdrop-blur-2xl border-t border-neutral-200/40 md:border-t-0 md:border-b md:border-neutral-200/40"
+          style={{
+            boxShadow:
+              "0 -4px 20px rgba(0, 0, 0, 0.06), 0 -1px 4px rgba(0, 0, 0, 0.04)",
+          }}
         >
           <div className="container-sg">
             <div className="flex items-center justify-between gap-4 py-3">
@@ -58,6 +67,10 @@ export function StickyCtaBar() {
                 <Link
                   href="#contact"
                   className="inline-flex items-center gap-1.5 bg-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#00D4FF]/90 transition-all hover:shadow-md"
+                  style={{
+                    boxShadow: "0 0 16px rgba(0, 212, 255, 0.3)",
+                    animation: "stickyCtaPulse 3s ease-in-out infinite",
+                  }}
                 >
                   Get Started
                   <svg

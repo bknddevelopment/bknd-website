@@ -5,7 +5,6 @@ import WhyUs from "@/components/WhyUs";
 import Services from "@/components/Services";
 import CaseStudies from "@/components/CaseStudies";
 import Methodology from "@/components/Methodology";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import StickyCtaBar from "@/components/StickyCtaBar";
@@ -22,7 +21,6 @@ export default function Home() {
         <Services />
         <CaseStudies />
         <Methodology />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />
