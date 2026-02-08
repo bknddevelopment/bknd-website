@@ -9,11 +9,32 @@ import {
   BarChart3,
   Shield,
   Target,
-  Users,
   Brain,
   Zap,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
+const teamMembers = [
+  {
+    name: "Charwin Vanryck deGroot",
+    role: "Founder & CEO",
+    image: "/images/team/founder-avatar.jpg",
+    bio: "With a background in software development and a passion for growth marketing, Charwin founded BKND Development to bridge the gap between technical excellence and marketing results. His developer-first approach has helped businesses of all sizes achieve measurable growth through data-driven strategies.",
+  },
+  {
+    name: "Ocyrus Jean Baptiste",
+    role: "Head of Sales",
+    image: "/images/team/ocyrus-headshot.jpg",
+    bio: "Ocyrus drives client relationships and business growth at BKND. With a sharp eye for opportunity and a consultative approach, he connects businesses with the right marketing and AI solutions to fuel their growth.",
+  },
+  {
+    name: "Dean Holland",
+    role: "Head of AI Innovation",
+    image: "/images/team/dean-headshot.jpg",
+    bio: "Dean leads AI strategy and implementation at BKND. He architects intelligent systems that amplify marketing performance — from predictive analytics to automated optimization — ensuring our clients stay ahead of the curve.",
+  },
+];
 
 const values = [
   {
@@ -169,7 +190,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Founder Section */}
+        {/* Meet the Team Section */}
         <section className="py-16 lg:py-24 bg-[#F5F5F7]">
           <div className="container-sg">
             <AnimateOnScroll>
@@ -179,41 +200,44 @@ export default function AboutPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.1}>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-12 tracking-tight">
-                Meet the Founder
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                Meet the Team
               </h2>
             </AnimateOnScroll>
 
-            <AnimateOnScroll delay={0.2}>
-              <div className="max-w-3xl mx-auto bg-white rounded-2xl p-8 lg:p-12 border border-gray-200/80">
-                <div className="flex flex-col md:flex-row items-start gap-8">
-                  <div className="flex-shrink-0">
-                    <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-2xl bg-gradient-to-br from-[#00D4FF]/10 to-[#00D4FF]/5 flex items-center justify-center">
-                      <Users className="w-12 h-12 lg:w-16 lg:h-16 text-[#00D4FF]" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-[#1D1D1F] mb-2">
-                      Charwin Vanryck deGroot
-                    </h3>
-                    <p className="text-[#00D4FF] font-medium mb-4">
-                      Founder & CEO
-                    </p>
-                    <p className="text-[#86868B] text-lg leading-relaxed mb-4">
-                      With a background in software development and a passion
-                      for growth marketing, Charwin founded BKND Development to
-                      bridge the gap between technical excellence and marketing
-                      results.
-                    </p>
-                    <p className="text-[#86868B] text-lg leading-relaxed">
-                      His developer-first approach to marketing has helped
-                      businesses of all sizes achieve measurable growth through
-                      data-driven strategies and transparent partnerships.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
+                The people behind your growth. Marketing expertise meets
+                technical excellence.
+              </p>
             </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {teamMembers.map((member, i) => (
+                <AnimateOnScroll key={i} delay={0.2 + i * 0.1}>
+                  <div className="bg-white rounded-2xl p-8 border border-gray-200/80 text-center h-full transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
+                    <div className="relative w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden">
+                      <Image
+                        src={member.image}
+                        alt={`${member.name}, ${member.role} at BKND Development`}
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#1D1D1F] mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-[#00D4FF] font-medium text-sm mb-4">
+                      {member.role}
+                    </p>
+                    <p className="text-[#86868B] leading-relaxed text-sm">
+                      {member.bio}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -347,42 +371,6 @@ export default function AboutPage() {
                 </AnimateOnScroll>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Team Section (Placeholder) */}
-        <section className="py-16 lg:py-24 bg-white">
-          <div className="container-sg">
-            <AnimateOnScroll>
-              <p className="text-[#6E6E73] text-sm font-medium tracking-wide uppercase text-center mb-4">
-                Our Team
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
-                Growing together
-              </h2>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.15}>
-              <p className="text-[#86868B] text-lg lg:text-xl text-center mb-12 max-w-2xl mx-auto">
-                We&apos;re building a team of exceptional marketers and
-                developers. Interested in joining us?
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.2}>
-              <div className="text-center">
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full hover:bg-[#000000] transition-all duration-300"
-                >
-                  Get in Touch
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
-            </AnimateOnScroll>
           </div>
         </section>
 
