@@ -17,6 +17,7 @@ const caseStudies = [
     client: "Randy's Sealcoating & Striping",
     industry: "Construction / Paving",
     image: "/images/case-studies/randys-sealcoating.jpg",
+    website: "https://randysealcoatingandstriping.com",
   },
   {
     category: "SEO",
@@ -28,6 +29,7 @@ const caseStudies = [
     client: "Rohnert Park Transmission",
     industry: "Automotive",
     image: "/images/case-studies/rohnert-park-transmission.jpg",
+    website: "https://rohnertparktransmission.com",
   },
   {
     category: "Local SEO",
@@ -39,6 +41,7 @@ const caseStudies = [
     client: "The Library NJ",
     industry: "Hospitality / Entertainment",
     image: "/images/case-studies/the-library-nj.jpg",
+    website: "https://thelibrarynj.com",
   },
   {
     category: "SEO",
@@ -50,17 +53,19 @@ const caseStudies = [
     client: "Weathershield Roofers",
     industry: "Roofing",
     image: "/images/case-studies/weathershield-roofers.jpg",
+    website: "https://weathershieldroofers.com",
   },
   {
-    category: "SEO",
+    category: "Web Design",
     stats: [
-      { value: "$16.4K", label: "Traffic Value/Month" },
-      { value: "3.5K", label: "Keywords" },
+      { value: "5", label: "Pages Built" },
+      { value: "98", label: "Performance Score" },
     ],
-    title: "International SEO Reach Across US, Canada & Brazil",
-    client: "Linta Roofing",
-    industry: "Roofing",
-    image: "/images/case-studies/linta-roofing.jpg",
+    title: "Custom Website Launch with Mobile-First Design",
+    client: "Costa1 Cleaning",
+    industry: "Cleaning Services",
+    image: "/images/case-studies/costa1-cleaning.jpg",
+    website: "https://costa1cleaning.com",
   },
 ];
 
@@ -141,6 +146,29 @@ export default function CaseStudiesPage() {
                       <h3 className="text-lg font-semibold text-[#1D1D1F] leading-snug">
                         {study.title}
                       </h3>
+
+                      {/* Visit Website */}
+                      <a
+                        href={study.website}
+                        target="_blank"
+                        rel="noopener"
+                        className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-[#00D4FF] hover:text-[#00b8d9] transition-colors duration-200"
+                      >
+                        Visit Website
+                        <svg
+                          className="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </AnimateOnScroll>
