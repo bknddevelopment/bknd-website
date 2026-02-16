@@ -18,6 +18,21 @@ export const metadata: Metadata = {
       "Search optimization, content marketing, and technical SEO guides. Learn how to dominate local search and drive organic traffic.",
     type: "website",
     url: "https://bknddevelopment.com/seo-insights",
+    images: [
+      {
+        url: "/images/bknd-logo-new.png",
+        width: 1536,
+        height: 1024,
+        alt: "BKND Development Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO Insights | BKND Development",
+    description:
+      "Search optimization, content marketing, and technical SEO guides. Learn how to dominate local search and drive organic traffic.",
+    images: ["/images/bknd-logo-new.png"],
   },
 };
 

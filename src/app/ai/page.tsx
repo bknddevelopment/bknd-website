@@ -18,6 +18,21 @@ export const metadata: Metadata = {
       "AI news, tools, guides, and industry updates. Stay ahead with the latest in artificial intelligence for marketing and business.",
     type: "website",
     url: "https://bknddevelopment.com/ai",
+    images: [
+      {
+        url: "/images/bknd-logo-new.png",
+        width: 1536,
+        height: 1024,
+        alt: "BKND Development Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Corner | BKND Development",
+    description:
+      "AI news, tools, guides, and industry updates. Stay ahead with the latest in artificial intelligence for marketing and business.",
+    images: ["/images/bknd-logo-new.png"],
   },
 };
 

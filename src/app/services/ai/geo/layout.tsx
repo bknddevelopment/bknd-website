@@ -66,24 +66,7 @@ const jsonLd = {
         "@id": "https://bknddevelopment.com/#organization",
       },
       serviceType: "Generative Engine Optimization",
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Elizabeth",
-          containedInPlace: {
-            "@type": "State",
-            name: "New Jersey",
-          },
-        },
-        {
-          "@type": "State",
-          name: "New Jersey",
-        },
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-      ],
+      areaServed: [{ "@type": "Country", name: "United States" }],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "GEO Services",

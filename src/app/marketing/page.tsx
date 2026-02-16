@@ -18,6 +18,21 @@ export const metadata: Metadata = {
       "Marketing strategy, tactics, campaigns, and case studies. Practical guides for service businesses and contractors.",
     type: "website",
     url: "https://bknddevelopment.com/marketing",
+    images: [
+      {
+        url: "/images/bknd-logo-new.png",
+        width: 1536,
+        height: 1024,
+        alt: "BKND Development Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketing Hub | BKND Development",
+    description:
+      "Marketing strategy, tactics, campaigns, and case studies. Practical guides for service businesses and contractors.",
+    images: ["/images/bknd-logo-new.png"],
   },
 };
 

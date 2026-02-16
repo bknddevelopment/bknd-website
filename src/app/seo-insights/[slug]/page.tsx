@@ -42,6 +42,29 @@ export async function generateMetadata({
       publishedTime: post.date,
       authors: [post.author],
       url: `https://bknddevelopment.com/seo-insights/${slug}`,
+      images: post.image
+        ? [
+            {
+              url: `https://bknddevelopment.com${post.image}`,
+              alt: post.imageAlt || post.title,
+            },
+          ]
+        : [
+            {
+              url: "/images/bknd-logo-new.png",
+              width: 1536,
+              height: 1024,
+              alt: "BKND Development Logo",
+            },
+          ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: post.image
+        ? [`https://bknddevelopment.com${post.image}`]
+        : ["/images/bknd-logo-new.png"],
     },
   };
 }
@@ -54,25 +77,99 @@ export default async function SEOArticlePage({ params }: PageProps) {
     notFound();
   }
 
+  const pageUrl = `https://bknddevelopment.com/seo-insights/${post.slug}`;
+
+  // Build JSON-LD @graph array
+  const graphItems: Record<string, unknown>[] = [
+    // Article schema
+    {
+      "@type": "Article",
+      "@id": `${pageUrl}#article`,
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      dateModified: post.date,
+      ...(post.image && {
+        image: {
+          "@type": "ImageObject",
+          url: `https://bknddevelopment.com${post.image}`,
+        },
+      }),
+      author: {
+        "@type": "Person",
+        name: post.author,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "BKND Development",
+        url: "https://bknddevelopment.com",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+    },
+    // BreadcrumbList schema
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://bknddevelopment.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "SEO Insights",
+          item: "https://bknddevelopment.com/seo-insights",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
+
+  // FAQPage schema (when post has FAQ data)
+  if (post.faqData && post.faqData.length > 0) {
+    graphItems.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: post.faqData.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  // ItemList schema (when post has list data)
+  if (post.itemListData && post.itemListData.length > 0) {
+    graphItems.push({
+      "@type": "ItemList",
+      "@id": `${pageUrl}#itemlist`,
+      name: post.title,
+      numberOfItems: post.itemListData.length,
+      itemListElement: post.itemListData.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        description: item.description,
+      })),
+    });
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
-    author: {
-      "@type": "Person",
-      name: post.author,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "BKND Development",
-      url: "https://bknddevelopment.com",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://bknddevelopment.com/seo-insights/${post.slug}`,
-    },
+    "@graph": graphItems,
   };
 
   // Helper function to process inline bold text

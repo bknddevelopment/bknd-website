@@ -18,6 +18,21 @@ export const metadata: Metadata = {
       "Platform updates, algorithm changes, and market trends. Stay informed about the latest developments in marketing and technology.",
     type: "website",
     url: "https://bknddevelopment.com/industry-news",
+    images: [
+      {
+        url: "/images/bknd-logo-new.png",
+        width: 1536,
+        height: 1024,
+        alt: "BKND Development Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industry News | BKND Development",
+    description:
+      "Platform updates, algorithm changes, and market trends. Stay informed about the latest developments in marketing and technology.",
+    images: ["/images/bknd-logo-new.png"],
   },
 };
 

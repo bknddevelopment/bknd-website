@@ -16,8 +16,6 @@ export const metadata: Metadata = {
     "creative testing",
     "ad design",
     "digital advertising creative",
-    "Elizabeth NJ",
-    "New Jersey",
   ],
   openGraph: {
     title: "Performance Creative Services | BKND Development",

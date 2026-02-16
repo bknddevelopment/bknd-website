@@ -14,8 +14,6 @@ export const metadata: Metadata = {
     "local SEO",
     "content strategy",
     "link building",
-    "Elizabeth NJ SEO",
-    "New Jersey SEO agency",
     "developer SEO",
   ],
   alternates: {
@@ -62,24 +60,7 @@ const jsonLd = {
         "@id": "https://bknddevelopment.com/#organization",
       },
       serviceType: "Search Engine Optimization",
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Elizabeth",
-          containedInPlace: {
-            "@type": "State",
-            name: "New Jersey",
-          },
-        },
-        {
-          "@type": "State",
-          name: "New Jersey",
-        },
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-      ],
+      areaServed: [{ "@type": "Country", name: "United States" }],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "SEO Services",

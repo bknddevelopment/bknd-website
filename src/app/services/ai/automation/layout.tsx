@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "predictive personalization",
     "automated email campaigns",
     "machine learning marketing",
-    "New Jersey marketing automation",
   ],
   openGraph: {
     title: "AI Marketing Automation | BKND Development",

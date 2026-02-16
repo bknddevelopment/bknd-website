@@ -15,8 +15,6 @@ export const metadata: Metadata = {
     "sales qualification bot",
     "AI assistants",
     "chatbot integration",
-    "Elizabeth NJ AI development",
-    "New Jersey chatbot agency",
   ],
   alternates: {
     canonical: "/services/ai/chatbots",
@@ -62,24 +60,7 @@ const jsonLd = {
         "@id": "https://bknddevelopment.com/#organization",
       },
       serviceType: "AI Chatbot Development",
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Elizabeth",
-          containedInPlace: {
-            "@type": "State",
-            name: "New Jersey",
-          },
-        },
-        {
-          "@type": "State",
-          name: "New Jersey",
-        },
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-      ],
+      areaServed: [{ "@type": "Country", name: "United States" }],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "AI Chatbot Services",

@@ -45,3 +45,8 @@ next-env.d.ts
 .planning/
 .playwright-mcp/
 .clinerules-*
+.claude-activity.log
+.seo/
+
+# screenshots/local images in root
+*.png

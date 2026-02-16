@@ -5,7 +5,29 @@ export const metadata: Metadata = {
   description:
     "Real results for real businesses. See how BKND Development has helped companies achieve breakthrough growth through SEO and digital marketing.",
   alternates: {
-    canonical: "https://bknddevelopment.com/case-studies",
+    canonical: "/case-studies",
+  },
+  openGraph: {
+    title: "Client Results | BKND Development",
+    description:
+      "Real results for real businesses. See how BKND Development has helped companies achieve breakthrough growth.",
+    type: "website",
+    url: "https://bknddevelopment.com/case-studies",
+    images: [
+      {
+        url: "/images/bknd-logo-new.png",
+        width: 1536,
+        height: 1024,
+        alt: "BKND Development Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Client Results | BKND Development",
+    description:
+      "Real results for real businesses. See how BKND Development has helped companies achieve breakthrough growth.",
+    images: ["/images/bknd-logo-new.png"],
   },
 };
 

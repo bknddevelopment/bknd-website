@@ -20,8 +20,6 @@ export const metadata: Metadata = {
     "paid advertising",
     "SEO",
     "performance marketing",
-    "Elizabeth NJ",
-    "New Jersey marketing agency",
   ],
   authors: [{ name: "BKND Development" }],
   verification: {
@@ -110,53 +108,6 @@ const jsonLd = {
         addressCountry: "US",
       },
       sameAs: ["https://www.linkedin.com/company/bknddevelopment"],
-    },
-    // LocalBusiness Schema
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://bknddevelopment.com/#localbusiness",
-      name: "BKND Development",
-      description:
-        "Developer-built marketing campaigns with data-driven decisions and measurable revenue results.",
-      url: "https://bknddevelopment.com/",
-      logo: "https://bknddevelopment.com/images/bknd-logo-new.png",
-      image: "https://bknddevelopment.com/images/bknd-logo-new.png",
-      email: "info@bknddevelopment.com",
-      telephone: "+19735185600",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "30 Union St, Unit 13",
-        addressLocality: "Elizabeth",
-        addressRegion: "NJ",
-        postalCode: "07202",
-        addressCountry: "US",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 40.6639,
-        longitude: -74.2107,
-      },
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Elizabeth",
-          containedInPlace: {
-            "@type": "State",
-            name: "New Jersey",
-          },
-        },
-        {
-          "@type": "State",
-          name: "New Jersey",
-        },
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-      ],
-      priceRange: "$$",
-      currenciesAccepted: "USD",
-      paymentAccepted: "Credit Card, Invoice",
     },
     // WebSite Schema
     {

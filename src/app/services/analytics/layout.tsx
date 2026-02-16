@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     "cross-domain tracking",
     "marketing analytics",
     "conversion tracking",
-    "New Jersey analytics agency",
   ],
   openGraph: {
     title: "Data & Analytics Services | BKND Development",
