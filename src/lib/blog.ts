@@ -18,6 +18,394 @@ export interface BlogPost {
 // Blog posts data
 const blogPosts: BlogPost[] = [
   {
+    slug: "agentic-ai-for-marketing-definitive-guide-2026",
+    title:
+      "Agentic AI for Marketing: The Definitive Guide From an Agency That Actually Builds It (2026)",
+    date: "2026-02-22",
+    image: "/images/blog/agentic-ai-marketing.jpg",
+    imageAlt:
+      "Dashboard showing autonomous AI agents managing marketing campaigns across channels with real-time performance data and optimization insights",
+    excerpt:
+      "Agentic AI is not another chatbot. It is an autonomous system that plans, executes, and optimizes your marketing campaigns while you sleep. The market is projected to hit $199 billion by 2034. Here is what it actually is, how it works, who is using it, and exactly how to implement it in 90 days. Written by an agency that builds these systems for clients every day.",
+    content: `
+Every few years, a technology shift forces marketers to rethink everything. Search engines did it in the early 2000s. Social media did it around 2010. Mobile did it around 2015. Generative AI did it in 2023.
+
+Agentic AI is doing it right now, and this shift is bigger than all of them.
+
+We are not writing this from a newsroom. We are writing it from inside an agency that builds and deploys agentic AI systems for marketing clients every week. What follows is not theory. It is field-tested reality from the teams actually doing this work.
+
+:::stat $199 Billion
+The projected size of the agentic AI market by 2034, up from $7.55 billion in 2025. That is a compound annual growth rate of 43.84 percent. No technology category in marketing history has grown this fast.
+:::
+
+## What Agentic AI Actually Is (And What It Is Not)
+
+The term gets thrown around loosely. Let us be precise.
+
+**Agentic AI** refers to artificial intelligence systems that can autonomously plan, reason, make decisions, and take actions toward complex goals with minimal human intervention. They do not wait for prompts. They observe their environment, identify opportunities or problems, develop strategies, and execute them.
+
+This is fundamentally different from the three types of AI that marketers already know:
+
+**Traditional automation** follows preset rules. If a customer opens an email, send the follow-up three days later. It cannot adapt, learn, or handle situations it was not explicitly programmed for.
+
+**Generative AI** like ChatGPT and Claude creates content on demand. You give it a prompt, it gives you an output. It is reactive. It waits for you. It does not wake up at 3 AM and decide your ad spend needs rebalancing.
+
+**Agentic AI** combines both capabilities and adds autonomy. It monitors your campaign performance at 3 AM. It notices your cost per acquisition on Meta is climbing while Google is steady. It shifts budget automatically. It adjusts creative. It tests new audience segments. It reports what it did in the morning.
+
+The difference is not incremental. It is structural. Generative AI gives you a better tool. Agentic AI gives you a tireless team member.
+
+:::key
+Agentic AI does not replace your marketing team. It gives every person on your team a squad of autonomous specialists that handle execution while humans focus on strategy, creativity, and judgment calls that require experience.
+:::
+
+### The Technical Architecture (Simplified)
+
+Every agentic AI marketing system has four components:
+
+1. **Perception layer.** The system ingests data from your marketing channels, analytics platforms, CRM, and external sources like competitor activity and search trends. This is its eyes and ears.
+
+2. **Reasoning layer.** The AI interprets the data against your goals and constraints. Not just what is happening, but why it is happening and what should be done about it. This is the part that separates agentic AI from basic automation.
+
+3. **Action layer.** The system executes decisions. It adjusts bids, publishes content, sends emails, creates audience segments, generates reports. It does not just recommend. It acts.
+
+4. **Learning layer.** Every action produces results. The system measures those results and refines its reasoning. Over weeks and months, it gets better at predicting what will work for your specific business, audience, and market.
+
+## Why This Matters Right Now: The Numbers Tell the Story
+
+This is not a future trend. The adoption curve is steep and it is happening today.
+
+**62 percent** of organizations are already experimenting with agentic AI, according to McKinsey's 2025 State of AI report. Only 23 percent are scaling, which means the window for early-mover advantage is still open, but it is closing fast.
+
+**40 percent** of enterprise applications will include task-specific AI agents by the end of 2026, up from just 5 percent in 2025, according to Gartner. That is an 8x increase in 12 months.
+
+**70 percent** of consumers say they welcome AI agents to help them shop and make purchasing decisions, according to Incubeta research. Your customers are ready for this even if you are not.
+
+**97 percent** of industry leaders expect conversational AI agents to be mainstream within two to three years, according to Acxiom.
+
+And the money follows the adoption. The global agentic AI market reached $7.55 billion in 2025 and is projected to hit $199 billion by 2034, a compound annual growth rate of 43.84 percent. That is not gradual growth. That is an explosion.
+
+:::stat 62%
+The percentage of organizations already experimenting with agentic AI according to McKinsey. Only 23 percent are scaling up, meaning the first-mover window is still open for businesses that act now.
+:::
+
+## The 4 Levels of Marketing AI Maturity
+
+After building agentic AI systems for dozens of clients across industries, we have identified a clear maturity model. Most businesses are stuck at Level 1 or 2. The competitive advantage lives at Level 3 and 4.
+
+### Level 1: AI-Assisted (Where Most Businesses Are Today)
+
+Humans do the work. AI helps with specific tasks. You use ChatGPT to draft email copy. You use Canva AI to generate image variations. You use Google's automated bidding on your ad campaigns.
+
+The AI is a tool in your hand. You decide what to work on, when to work on it, and what to do with the output. The AI cannot operate independently.
+
+**Typical monthly cost:** $50 to $200 in AI tool subscriptions.
+
+**Competitive advantage:** Minimal. Everyone has access to these same tools.
+
+### Level 2: AI-Automated (Where Smart Businesses Are Moving)
+
+Workflows are connected. When a lead fills out a form, an automated sequence triggers: the CRM updates, a personalized email sends, the sales team gets notified, and the lead gets scored based on behavior data. AI handles the content generation within these workflows.
+
+The AI operates within defined rails. It has more autonomy than Level 1, but it cannot deviate from the workflows you built. If something unexpected happens, it stops and waits for human input.
+
+**Typical monthly cost:** $500 to $2,000 across marketing automation platforms.
+
+**Competitive advantage:** Moderate. You are faster than Level 1 businesses but still limited by the workflows you can imagine and build.
+
+### Level 3: AI-Autonomous (Where the Advantage Lives)
+
+This is where agentic AI begins. The system does not just execute your workflows. It creates and optimizes its own workflows based on your goals and constraints.
+
+You tell the system: increase qualified leads by 20 percent while maintaining cost per acquisition under $50. The agent figures out how. It might test new audience segments you never considered. It might shift budget between channels at times of day you never analyzed. It might identify that a specific combination of headline, image, and landing page converts 3x better for a segment you did not know existed.
+
+The human role shifts from execution to governance. You set the goals, define the guardrails, and review the results. The agent handles everything in between.
+
+**Typical monthly cost:** $2,000 to $10,000 including platform costs and management.
+
+**Competitive advantage:** Significant. You are operating at a speed and scale that Level 1 and 2 businesses cannot match manually.
+
+### Level 4: AI-Orchestrated (The Emerging Frontier)
+
+Multiple specialized agents work together as a coordinated system. One agent manages paid media. Another handles content. Another monitors competitors. Another optimizes the website for conversions. Another manages email sequences. A supervisory agent coordinates them all, resolves conflicts, and allocates resources.
+
+Humans run marketing like a control room, not an assembly line. You oversee the fleet of agents, make strategic decisions, handle creative judgment calls, and manage client relationships. The agents handle execution, optimization, and reporting.
+
+This is where the industry is headed. The organizations that get here first will outperform those running marketing like a relay race between specialized human teams.
+
+**Typical monthly cost:** $5,000 to $25,000 depending on scale and complexity.
+
+**Competitive advantage:** Transformational. A 10-person marketing team at Level 4 outperforms a 50-person team at Level 1.
+
+:::pullquote
+"We stopped thinking about AI as a tool and started thinking about it as a team member. The day we made that mental shift, our output tripled and our costs dropped by 40 percent. That is not an exaggeration. That is what the dashboard shows." This reflects the experience of businesses making the jump from Level 2 to Level 3.
+:::
+
+## 7 Ways Agentic AI Is Transforming Marketing Right Now
+
+These are not hypothetical use cases. These are implementations running in production today.
+
+### 1. Autonomous Campaign Optimization
+
+Traditional approach: a media buyer reviews campaign performance daily, makes bid adjustments, pauses underperforming ads, and tests new creative on a weekly cycle.
+
+Agentic approach: an AI agent monitors campaigns continuously across Google, Meta, LinkedIn, and TikTok. It detects performance shifts within minutes, not days. It adjusts bids in real time based on conversion probability, shifts budget between platforms based on marginal return analysis, and generates creative variations to test automatically.
+
+The result is not marginal improvement. Businesses deploying agentic campaign optimization report 20 to 40 percent improvements in return on ad spend within the first 90 days. The agent does not get tired, does not forget to check on weekends, and processes more data points in an hour than a human can in a week.
+
+**Tools in this space:** Albert AI, Smartly.io, Madgicx, Adzooma with AI agents.
+
+### 2. Content Production at Scale
+
+The bottleneck in content marketing has always been production capacity. A typical marketing team can produce maybe 4 to 8 quality blog posts per month, 20 to 30 social media posts, and a handful of email campaigns.
+
+Agentic AI does not just write faster. It manages the entire content operation. It identifies topics based on search demand and competitor gaps. It creates content briefs. It produces first drafts optimized for SEO. It generates social media variations. It schedules distribution across channels. It monitors performance and feeds those insights back into future content decisions.
+
+One agentic content system can produce the output of a 5-person content team at roughly 20 percent of the cost. The quality requires human review and refinement, but the 80 percent of work that is research, structuring, drafting, and optimizing is handled autonomously.
+
+**Tools in this space:** Writer, Jasper Enterprise, MarketMuse with AI workflows, Surfer AI agents.
+
+### 3. Customer Journey Orchestration
+
+The old approach: build a journey map, create email sequences for each stage, hope customers follow the path you designed.
+
+The agentic approach: the AI observes actual customer behavior in real time and orchestrates individualized journeys for every single person. Customer A responds to email but ignores social ads. Customer B clicks social ads but never opens email. Customer C engages with blog content before converting through direct search.
+
+Instead of forcing everyone through the same funnel, the agent creates unique paths based on observed behavior, predicted preferences, and real-time signals. It does not just personalize content. It personalizes the entire channel strategy, timing, and messaging sequence per individual.
+
+**Tools in this space:** Braze with AI agents, Salesforce Agentforce, Adobe Experience Platform.
+
+### 4. SEO and Search Visibility
+
+Search is being fundamentally reshaped by AI. Google AI Overviews are reducing click-through rates for traditional organic results. ChatGPT, Perplexity, and Gemini are becoming discovery channels. Your business needs to be visible across all of them.
+
+Agentic AI for SEO monitors your rankings across traditional and AI search platforms continuously. It identifies content gaps by analyzing what your competitors rank for that you do not. It optimizes existing content based on real-time ranking signals. It tracks your visibility in AI-generated answers and recommends structural changes to improve citation probability.
+
+This is not the SEO of five years ago. It is a discipline that requires monitoring dozens of signals across multiple platforms simultaneously. No human team can keep pace manually. The businesses winning in search in 2026 are the ones with agentic systems watching their visibility 24/7.
+
+**Tools in this space:** Semrush Copilot, Ahrefs AI features, Surfer AI, custom AI monitoring stacks.
+
+### 5. Email Marketing and Hyper-Personalization
+
+Traditional email marketing sends the same campaign to segmented lists. Agentic email marketing creates unique emails for individual recipients based on their behavior history, purchase patterns, browsing activity, and predicted preferences.
+
+The agent decides when to send (optimized per recipient), what to include (products, content, offers tailored to individual interests), and what format to use (long-form vs. short, image-heavy vs. text-based). It runs continuous tests not on broad segments but on micro-cohorts, learning what resonates at a granular level no human team could manage.
+
+The result: businesses using agentic email systems report 30 to 60 percent improvements in open rates and 2 to 3x increases in click-through rates compared to traditional segmented campaigns.
+
+**Tools in this space:** Klaviyo AI, Braze, Iterable, Customer.io with AI features.
+
+### 6. Social Media Management
+
+Managing social media across multiple platforms is one of the most time-consuming tasks in marketing. An agentic system handles it end to end: monitoring brand mentions and sentiment, generating platform-native content variations, scheduling posts at optimal times per platform, engaging with comments and messages, identifying trending conversations relevant to your brand, and reporting on performance.
+
+The human role becomes creative direction and brand voice governance. The agent handles the volume and velocity that modern social media demands.
+
+**Tools in this space:** Sprout Social AI, Hootsuite with AI agents, Buffer AI features.
+
+### 7. Analytics and Reporting
+
+Perhaps the most immediate impact of agentic AI in marketing is in analytics. Instead of dashboards that show you what happened and require you to figure out why and what to do next, agentic analytics systems proactively surface insights, diagnose problems, and recommend actions.
+
+Your cost per lead increased 15 percent this week. The agent has already identified the cause: a competitor launched a campaign targeting the same audience, driving up auction prices. It has already shifted your targeting to adjacent audience segments where costs are lower and conversion rates are comparable. And it compiled a report with the analysis, the actions taken, and the projected impact.
+
+That cycle used to take a human analyst three to five days. The agent completed it in three hours.
+
+**Tools in this space:** Amplitude AI, Mixpanel AI, custom reporting agents built on Claude or GPT APIs.
+
+## The 90-Day Implementation Playbook
+
+Here is exactly how to go from Level 1 to Level 3. This is the playbook we use with our clients.
+
+### Days 1 to 14: Foundation and Audit
+
+**Week 1:** Audit every marketing process in your business. Document who does what, how long it takes, and how often. Identify the top 10 tasks by time investment.
+
+**Week 2:** Categorize those tasks. Which are pattern-based (same steps every time)? Which require judgment? Which require creativity? The pattern-based tasks are your automation candidates. Focus on the three highest-volume pattern-based tasks.
+
+**Cost:** Free. This is analysis, not tool investment.
+
+**Deliverable:** A prioritized automation opportunity map with estimated time savings and ROI for each task.
+
+### Days 15 to 45: First Agent Deployment
+
+**Week 3:** Deploy your first agentic tool on your single highest-impact task. For most businesses, this is either campaign optimization or content production.
+
+**Week 4:** Configure the agent with your specific goals, constraints, brand guidelines, and performance benchmarks. Do not use default settings. The more context you give the agent, the better it performs.
+
+**Week 5 to 6:** Monitor closely. Review every action the agent takes. Correct mistakes. Refine constraints. This is the training period. The agent is learning your business and you are learning how to govern it.
+
+**Cost:** $200 to $2,000 per month depending on the tool and channel volume.
+
+**Deliverable:** One fully operational AI agent handling a core marketing function with measurable performance data.
+
+### Days 46 to 75: Expansion and Integration
+
+**Week 7 to 8:** Deploy agents on your second and third priority tasks. Use the lessons from your first deployment to accelerate setup.
+
+**Week 9 to 10:** Connect the agents. Your campaign optimization agent should inform your content production agent about which topics and angles convert best. Your analytics agent should feed insights to all other agents. Integration is where the real power emerges.
+
+**Cost:** $1,000 to $5,000 per month total across all agents.
+
+**Deliverable:** Three integrated AI agents working together, with data flowing between them.
+
+### Days 76 to 90: Optimization and Governance
+
+**Week 11 to 12:** Establish governance protocols. Define what agents can do autonomously versus what requires human approval. Set spending limits. Create escalation rules. Document your agent management processes.
+
+**Week 13:** Measure the full impact. Compare your key metrics from Day 1 to Day 90. Calculate the actual time saved, cost reduced, and performance improved. Use these numbers to plan your next phase of expansion.
+
+**Cost:** Governance setup is process work, not tool cost. Total monthly tool investment at this point is typically $1,500 to $7,000.
+
+**Deliverable:** A fully governed agentic marketing operation with documented processes, measurable results, and a clear roadmap for continued expansion.
+
+:::stat 90 Days
+The timeline to go from basic AI tool usage to a fully operational agentic marketing system. Most businesses see measurable ROI within the first 30 days, with compounding improvements through day 90 and beyond.
+:::
+
+## What Is Coming Next: Agent-to-Agent Commerce
+
+The next frontier is not humans interacting with AI agents. It is AI agents interacting with other AI agents.
+
+Here is the scenario that is already emerging: a consumer's personal AI assistant needs to book a marketing agency for a small business. The consumer's agent researches options, evaluates websites, reads reviews, compares pricing, and negotiates with the agency's AI agent. The entire discovery, evaluation, and initial engagement happens without a human on either side touching a keyboard.
+
+This is what researchers call **agent-to-agent commerce**. It changes the entire concept of marketing because your customer is no longer a person browsing your website. Your customer is an AI agent evaluating your digital presence against structured criteria.
+
+This means a new KPI is emerging: **Share of Model**. Just as marketers tracked Share of Voice in traditional media and Share of Search in digital, Share of Model measures how often your brand is recommended by AI systems when they answer relevant queries.
+
+The businesses that prepare for this now, by structuring their data, optimizing for AI readability, and building APIs that AI agents can interact with, will dominate the next era. Those that wait will find themselves invisible to the fastest-growing discovery channel in history.
+
+:::key
+The question is no longer whether to adopt agentic AI for marketing. The question is whether you adopt it now while the competitive advantage is available, or later when it is table stakes and the advantage belongs to someone else.
+:::
+
+## The Businesses That Wait Will Lose
+
+This is not alarmism. It is math.
+
+A business using agentic AI marketing operates at 3 to 5x the speed of a business using traditional methods. It processes more data, tests more variations, responds faster to market changes, and optimizes more continuously.
+
+Over 90 days, that speed advantage compounds. Over a year, the gap becomes nearly impossible to close. The agentic business has run thousands more experiments, collected exponentially more data, and refined its approach through millions of AI-driven micro-optimizations.
+
+The cost of waiting is not standing still. It is falling behind at an accelerating rate while your competitors pull ahead.
+
+At BKND Development, we build these systems for businesses that refuse to fall behind. We do not sell AI hype. We build agentic marketing systems that produce measurable results, and we measure everything.
+
+If you are ready to move from Level 1 to Level 3, we should talk.
+
+## Frequently Asked Questions
+
+### What is agentic AI for marketing?
+
+Agentic AI for marketing refers to autonomous artificial intelligence systems that can independently plan, execute, and optimize marketing campaigns with minimal human intervention. Unlike traditional AI tools that require constant prompting, agentic AI systems observe marketing performance data, identify opportunities and problems, develop strategies, and take action on their own. They handle tasks like adjusting ad spend across channels, generating and distributing content, personalizing customer journeys, and monitoring SEO performance around the clock.
+
+### How is agentic AI different from marketing automation?
+
+Traditional marketing automation follows fixed rules that humans program. If trigger X happens, execute action Y. It cannot adapt to unexpected situations or optimize beyond its programmed workflows. Agentic AI adds a reasoning layer that allows it to analyze situations, develop novel strategies, and take actions it was never explicitly programmed to take. Marketing automation is like a train on tracks. Agentic AI is like a driver who can choose any road to reach the destination.
+
+### How much does agentic AI for marketing cost?
+
+Costs vary by maturity level. Level 1 AI-assisted tools cost $50 to $200 per month. Level 2 automated workflows cost $500 to $2,000 per month. Level 3 semi-autonomous agent systems cost $2,000 to $10,000 per month. Level 4 fully orchestrated multi-agent systems cost $5,000 to $25,000 per month. Most businesses see positive ROI within 30 to 60 days because the efficiency gains and performance improvements offset the tool costs quickly.
+
+### Is agentic AI going to replace marketing teams?
+
+No. Agentic AI changes what marketing teams do, not whether they exist. The role shifts from execution to governance and strategy. Instead of manually managing campaigns, writing every piece of content, and building reports, marketers define goals, set guardrails, review agent performance, make creative judgment calls, and focus on high-level strategy. A 5-person marketing team with agentic AI can produce the output of a 20-person team without it.
+
+### What marketing tasks can agentic AI handle today?
+
+In 2026, agentic AI can autonomously manage paid advertising optimization across channels, content production and distribution, email marketing personalization, social media management, SEO monitoring and optimization, customer journey orchestration, analytics and reporting, competitor monitoring, and lead scoring and nurturing. The technology handles pattern-based execution and data-driven optimization exceptionally well. Tasks requiring pure creativity, ethical judgment, and deep client relationships remain human domains.
+
+### How do I get started with agentic AI marketing?
+
+Start with a 14-day audit of your marketing processes to identify the highest-impact automation opportunities. Then deploy one AI agent on your single biggest time sink, usually campaign optimization or content production. Monitor it closely for two weeks, refine its parameters, and expand from there. Most businesses can reach Level 3 maturity within 90 days following a structured implementation approach.
+
+### What is Share of Model and why does it matter?
+
+Share of Model is an emerging metric that measures how often your brand is recommended by AI systems, including ChatGPT, Google Gemini, Perplexity, and other AI assistants, when users ask questions relevant to your business. As more consumers use AI agents to research products and services, your visibility within these AI recommendation systems becomes as important as your Google search rankings. Businesses that optimize for AI visibility now will capture a growing share of discovery traffic.
+    `.trim(),
+    author: "Charwin Vanryck deGroot",
+    readTime: "18 min read",
+    category: "ai" as BlogCategory,
+    faqData: [
+      {
+        question: "What is agentic AI for marketing?",
+        answer:
+          "Agentic AI for marketing refers to autonomous artificial intelligence systems that can independently plan, execute, and optimize marketing campaigns with minimal human intervention. Unlike traditional AI tools that require constant prompting, agentic AI systems observe marketing performance data, identify opportunities and problems, develop strategies, and take action on their own.",
+      },
+      {
+        question:
+          "How is agentic AI different from marketing automation?",
+        answer:
+          "Traditional marketing automation follows fixed rules that humans program. Agentic AI adds a reasoning layer that allows it to analyze situations, develop novel strategies, and take actions it was never explicitly programmed to take. Marketing automation is like a train on tracks. Agentic AI is like a driver who can choose any road to reach the destination.",
+      },
+      {
+        question: "How much does agentic AI for marketing cost?",
+        answer:
+          "Costs vary by maturity level. Level 1 AI-assisted tools cost $50 to $200 per month. Level 2 automated workflows cost $500 to $2,000 per month. Level 3 semi-autonomous agent systems cost $2,000 to $10,000 per month. Level 4 fully orchestrated systems cost $5,000 to $25,000 per month. Most businesses see positive ROI within 30 to 60 days.",
+      },
+      {
+        question:
+          "Is agentic AI going to replace marketing teams?",
+        answer:
+          "No. Agentic AI changes what marketing teams do, not whether they exist. The role shifts from execution to governance and strategy. A 5-person marketing team with agentic AI can produce the output of a 20-person team without it.",
+      },
+      {
+        question:
+          "What marketing tasks can agentic AI handle today?",
+        answer:
+          "In 2026, agentic AI can autonomously manage paid advertising optimization, content production and distribution, email marketing personalization, social media management, SEO monitoring, customer journey orchestration, analytics and reporting, competitor monitoring, and lead scoring. Tasks requiring pure creativity, ethical judgment, and deep client relationships remain human domains.",
+      },
+      {
+        question:
+          "How do I get started with agentic AI marketing?",
+        answer:
+          "Start with a 14-day audit of your marketing processes to identify high-impact automation opportunities. Then deploy one AI agent on your biggest time sink, usually campaign optimization or content production. Monitor closely for two weeks, refine parameters, and expand from there. Most businesses reach Level 3 maturity within 90 days.",
+      },
+      {
+        question:
+          "What is Share of Model and why does it matter?",
+        answer:
+          "Share of Model measures how often your brand is recommended by AI systems like ChatGPT, Google Gemini, and Perplexity when users ask relevant questions. As more consumers use AI agents to research products, visibility within AI recommendation systems becomes as important as Google search rankings.",
+      },
+    ],
+    itemListData: [
+      {
+        name: "Autonomous Campaign Optimization",
+        description:
+          "AI agents monitor campaigns continuously across Google, Meta, LinkedIn, and TikTok, adjusting bids and shifting budget in real time for 20-40% ROAS improvement.",
+      },
+      {
+        name: "Content Production at Scale",
+        description:
+          "Agentic systems manage the entire content operation from topic identification to distribution, producing the output of a 5-person content team at 20% of the cost.",
+      },
+      {
+        name: "Customer Journey Orchestration",
+        description:
+          "AI observes real-time customer behavior and creates individualized journeys per person, personalizing channel strategy, timing, and messaging sequences.",
+      },
+      {
+        name: "SEO and Search Visibility",
+        description:
+          "Continuous monitoring across traditional and AI search platforms, identifying content gaps and optimizing for visibility in Google, ChatGPT, Perplexity, and Gemini.",
+      },
+      {
+        name: "Email Marketing and Hyper-Personalization",
+        description:
+          "Individual-level email optimization for send time, content, and format, achieving 30-60% improvement in open rates and 2-3x click-through rate increases.",
+      },
+      {
+        name: "Social Media Management",
+        description:
+          "End-to-end social media operations including content generation, optimal scheduling, community engagement, trend monitoring, and performance reporting.",
+      },
+      {
+        name: "Analytics and Reporting",
+        description:
+          "Proactive insight surfacing, automated problem diagnosis, and recommended actions instead of passive dashboards. Reduces analysis cycles from days to hours.",
+      },
+    ],
+  },
+  {
     slug: "ai-white-collar-automation-small-business-guide",
     title:
       "Microsoft Says AI Will Replace White-Collar Jobs in 18 Months: What Small Businesses Should Do Right Now",

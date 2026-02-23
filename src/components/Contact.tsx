@@ -1,9 +1,9 @@
-// TODO: Replace YOUR_FORM_ID with actual Formspree form ID
 "use client";
 
 import { useState, FormEvent } from "react";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const OPUSITE_WEBHOOK =
+  "https://www.opusite.com/api/forms/webhook/cd52152b-ae9c-4171-a67f-a3d62e32e268";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -20,15 +20,19 @@ export default function Contact() {
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(OPUSITE_WEBHOOK, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify({
           email,
-          _subject: "New Contact Request - BKND Development",
+          name: "",
+          consent: true,
+          fields: {
+            subject: "New Contact Request - BKND Development",
+            message: "",
+          },
         }),
       });
 

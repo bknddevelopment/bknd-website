@@ -1,11 +1,11 @@
-// TODO: Replace YOUR_FORM_ID with actual Formspree form ID
 "use client";
 
 import { useState, useEffect, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const OPUSITE_WEBHOOK =
+  "https://www.opusite.com/api/forms/webhook/cd52152b-ae9c-4171-a67f-a3d62e32e268";
 
 export default function ExitIntentModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,15 +40,19 @@ export default function ExitIntentModal() {
     setSubmitError(false);
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(OPUSITE_WEBHOOK, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify({
           email,
-          _subject: "Free Growth Audit Request - BKND Development",
+          name: "",
+          consent: true,
+          fields: {
+            subject: "Free Growth Audit Request - BKND Development",
+            message: "",
+          },
         }),
       });
 

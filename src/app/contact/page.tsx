@@ -16,14 +16,37 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const response = await fetch(
+        "https://www.opusite.com/api/forms/webhook/cd52152b-ae9c-4171-a67f-a3d62e32e268",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: formData.email,
+            name: formData.name,
+            consent: true,
+            fields: {
+              subject: "Contact Form Submission - BKND Development",
+              message: `Company: ${formData.company || "N/A"}\n\n${formData.message}`,
+            },
+          }),
+        },
+      );
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      }
+    } catch {
+      // Fall through — show success state anyway to not block UX,
+      // user can also email directly
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1000);
+    }
   };
 
   const handleChange = (

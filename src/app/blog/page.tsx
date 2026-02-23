@@ -15,6 +15,13 @@ const categoryFilters: { label: string; value: BlogCategory | "all" }[] = [
   { label: "News", value: "news" },
 ];
 
+const categoryToHub: Record<BlogCategory, string> = {
+  ai: "/ai",
+  marketing: "/marketing",
+  seo: "/seo-insights",
+  news: "/industry-news",
+};
+
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState<BlogCategory | "all">(
     "all",
@@ -72,7 +79,7 @@ export default function BlogPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post, index) => (
                   <AnimateOnScroll key={post.slug} delay={index * 0.1}>
-                    <Link href={`/blog/${post.slug}`} className="group block">
+                    <Link href={`${categoryToHub[post.category]}/${post.slug}`} className="group block">
                       <article className="h-full">
                         {post.image && (
                           <div className="mb-4 overflow-hidden rounded">
