@@ -20,7 +20,7 @@ const PaidAdvertisingIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
+    className="text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#00D4FF] group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
   >
     <path
       d="M6 12h36M6 24h36M6 36h36"
@@ -48,7 +48,7 @@ const PerformanceCreativeIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
+    className="text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#00D4FF] group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
   >
     <rect
       x="6"
@@ -92,7 +92,7 @@ const SEOIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
+    className="text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#00D4FF] group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
   >
     <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="2" />
     <path
@@ -123,7 +123,7 @@ const CROIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
+    className="text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#00D4FF] group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
   >
     <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" />
     <path
@@ -144,7 +144,7 @@ const DataAnalyticsIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
+    className="text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#00D4FF] group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
   >
     <path
       d="M6 42V18l10 8 8-14 8 10 10-16v36H6z"
@@ -166,7 +166,7 @@ const ContentMarketingIcon = () => (
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[#1D1D1F] transition-transform duration-500 group-hover:scale-110"
+    className="text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#00D4FF] group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
   >
     <rect
       x="8"
@@ -267,32 +267,51 @@ function ServiceCard({
 }) {
   return (
     <div
-      className={`group bg-white rounded-[18px] shadow-[0_4px_6px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.08)] p-8 border border-transparent transition-all duration-500 hover:shadow-[0_8px_25px_rgba(0,0,0,0.08),0_4px_10px_rgba(0,0,0,0.06)] hover:-translate-y-2 hover:border-[#00D4FF]/30 hover:shadow-[0_8px_25px_rgba(0,0,0,0.08),0_0_20px_rgba(0,212,255,0.1)] ${className}`}
+      className={`group relative overflow-hidden bg-[#0A0F1A]/80 backdrop-blur-3xl rounded-[24px] p-10 transition-all duration-700 hover:-translate-y-2 ${className}`}
     >
-      {/* Icon */}
-      <div className="mb-6">{service.icon}</div>
+      {/* 1px Default Border */}
+      <div className="absolute inset-0 border border-white/[0.08] rounded-[24px] pointer-events-none" />
 
-      {/* Title & Subtitle */}
-      <h3 className="text-xl font-semibold text-[#1D1D1F] mb-1 tracking-tight">
-        {service.title}
-      </h3>
-      <p className="text-cyan-500 text-sm font-medium mb-4">
-        {service.subtitle}
-      </p>
+      {/* Animated Glowing Border Mask on Hover */}
+      <div className="absolute inset-0 rounded-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none p-[1px] overflow-hidden">
+        <div className="absolute inset-[-50%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#00D4FF_100%)] opacity-30" />
+        <div className="absolute inset-[1px] bg-[#0A0F1A]/90 rounded-[23px]" />
+      </div>
 
-      {/* Description */}
-      <p className="text-[#86868B] text-sm leading-relaxed mb-6">
-        {service.description}
-      </p>
+      {/* Ambient hover glow inside card */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00D4FF]/0 via-transparent to-[#8A2BE2]/0 group-hover:from-[#00D4FF]/10 group-hover:to-[#8A2BE2]/5 transition-all duration-700 delay-100" />
 
-      {/* Black button with arrow - Apple style */}
-      <a
-        href={service.link}
-        className="inline-flex items-center gap-2 bg-[#1D1D1F] text-white px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#000000] hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,212,255,0.15)]"
-      >
-        Learn More
-        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-      </a>
+      <div className="relative z-10 flex flex-col h-full">
+        {/* Icon */}
+        <div className="mb-8">{service.icon}</div>
+
+        {/* Title & Subtitle */}
+        <h3 className="text-2xl font-bold text-white mb-2 tracking-tight group-hover:text-[#00D4FF] transition-colors duration-500">
+          {service.title}
+        </h3>
+        <p className="text-[#00D4FF]/70 text-[13px] uppercase tracking-widest font-semibold mb-6 group-hover:text-[#00D4FF] transition-colors duration-500">
+          {service.subtitle}
+        </p>
+
+        {/* Description */}
+        <p className="text-[#86868B] text-[15px] leading-[1.7] mb-10 flex-grow group-hover:text-white/70 transition-colors duration-500 font-light">
+          {service.description}
+        </p>
+
+        {/* Magnetic CTA Text Link (replacing bulky button) */}
+        <div className="mt-auto">
+          <a
+            href={service.link}
+            className="inline-flex items-center gap-3 text-white/50 text-sm font-semibold uppercase tracking-wider transition-all duration-500 group-hover:text-white"
+          >
+            <span className="relative overflow-hidden">
+              <span className="block transition-transform duration-500 group-hover:-translate-y-full">Explore Service</span>
+              <span className="absolute top-0 left-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0 text-[#00D4FF]">Explore Service</span>
+            </span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-2 group-hover:text-[#00D4FF]" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
@@ -301,19 +320,23 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[#F5F5F7] py-16 md:py-20 relative overflow-hidden"
+      className="bg-[#050A14] py-16 md:py-24 relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      {/* Background glow effects */}
+      <div className="absolute top-[20%] left-[-10%] w-[40%] h-[40%] bg-[#00D4FF]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[50%] bg-[#8A2BE2]/5 blur-[150px] rounded-full pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Logo Divider */}
         <AnimateOnScroll>
           <LogoDivider />
         </AnimateOnScroll>
 
-        {/* Header - Apple style centered */}
+        {/* Header - Dark mode premium */}
         <AnimateOnScroll>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-4xl md:text-5xl font-semibold text-[#1D1D1F] tracking-tight mb-6">
-              Our Services
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-6 group">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#0088CC]">Services</span>
             </h2>
             <p className="text-lg md:text-xl text-[#86868B] leading-relaxed">
               Full-stack digital marketing built for growth. From paid

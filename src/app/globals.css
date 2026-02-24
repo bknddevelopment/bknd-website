@@ -190,8 +190,8 @@ html {
 }
 
 body {
-  background-color: var(--apple-white, #ffffff);
-  color: var(--apple-black, #1d1d1f);
+  background-color: var(--apple-black, #1d1d1f);
+  color: var(--apple-white, #ffffff);
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -206,16 +206,18 @@ body {
    ============================================ */
 h1,
 .h1 {
-  font-size: 46px;
-  line-height: 65px;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
   font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
 h2,
 .h2 {
-  font-size: 48px;
-  line-height: 52.8px;
-  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.03em;
 }
 
 h3,

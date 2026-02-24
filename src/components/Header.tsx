@@ -118,28 +118,20 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/85 backdrop-blur-2xl border-b border-black/5 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_0_8px_rgba(0,212,255,0.03)]"
-          : "bg-white/80 backdrop-blur-xl border-b border-black/5"
-      }`}
+      className={`w-full fixed top-0 z-50 transition-all duration-500 pt-4 px-6 ${scrolled
+          ? "transform translate-y-0"
+          : "transform translate-y-2"
+        }`}
     >
       <div className="container-sg">
-        <div className="flex items-center justify-between h-[80px]">
+        <div className={`flex items-center justify-between h-[70px] px-8 rounded-full border transition-all duration-500 ${scrolled ? 'bg-[#050A14]/70 backdrop-blur-2xl border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5),0_0_15px_rgba(0,212,255,0.05)]' : 'bg-[#050A14]/40 backdrop-blur-xl border-white/5 shadow-[0_4px_24px_rgba(0,0,0,0.3)]'}`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/bknd-logo-new.png"
-              alt="BKND Development"
-              width={288}
-              height={192}
-              className="h-20 w-auto"
-              priority
-            />
+          <Link href="/" className="flex items-center group">
+            <span className="text-white text-xl font-bold tracking-tight group-hover:text-[#00D4FF] transition-colors duration-500">BKND.</span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -151,14 +143,13 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="text-[#1D1D1F] text-[15px] font-normal hover:text-[#1D1D1F]/60 transition-colors flex items-center gap-1"
+                  className="text-white/80 text-[14px] font-medium tracking-wide hover:text-white transition-colors duration-300 flex items-center gap-1.5"
                 >
                   {item.label}
                   {item.hasDropdown && (
                     <ChevronDownIcon
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        openDropdown === item.label ? "rotate-180" : ""
-                      }`}
+                      className={`w-3.5 h-3.5 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180 text-[#00D4FF]" : "text-white/40"
+                        }`}
                     />
                   )}
                 </Link>
@@ -173,12 +164,14 @@ export default function Header() {
                         exit="hidden"
                         variants={dropdownVariants}
                       >
-                        <div className="bg-white/95 backdrop-blur-xl rounded-xl shadow-lg border border-black/5 py-2 min-w-[200px]">
+                        <div className="bg-[#050A14]/90 backdrop-blur-2xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.6)] border border-white/10 py-3 min-w-[220px] overflow-hidden relative">
+                          {/* Inner glow */}
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-[#00D4FF]/20 blur-md rounded-full" />
                           {getDropdownLinks(item.label)!.map((link) => (
                             <Link
                               key={link.label}
                               href={link.href}
-                              className="block px-4 py-2.5 text-sm text-[#1D1D1F] hover:bg-[#F5F5F7] hover:text-[#00D4FF] transition-colors"
+                              className="block px-5 py-2.5 text-[14px] text-white/70 hover:bg-white/5 hover:text-[#00D4FF] hover:translate-x-1 transition-all duration-300"
                             >
                               {link.label}
                             </Link>
@@ -192,18 +185,21 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button with glow on hover */}
+          {/* Magnetic CTA Button */}
           <Link
             href="/contact"
-            className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-[15px] font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all group shadow-sm hover:shadow-[0_4px_15px_rgba(0,212,255,0.35)]"
+            className="hidden lg:flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-[#050A14] text-[14px] font-semibold bg-white hover:bg-[#00D4FF] transition-all duration-500 group relative overflow-hidden"
           >
-            Work With Us
-            <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            <span className="relative z-10 flex items-center gap-2">
+              Work With Us
+              <ArrowRightIcon className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] skew-x-[-20deg] group-hover:translate-x-[150%] transition-transform duration-700 ease-out" />
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-[#1D1D1F] p-2"
+            className="lg:hidden text-white p-2 hover:text-[#00D4FF] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >

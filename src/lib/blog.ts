@@ -8413,10 +8413,11 @@ But if you're doing it yourself, this guide is the playbook. Follow it step by s
   },
   {
     slug: "roofing-company-marketing",
-    title: "Roofing Company Marketing: 15 Strategies That Generate Leads",
+    title:
+      "How to Market a Roofing Company: 15 Strategies That Generate Leads in 2026",
     date: "2026-01-26",
     excerpt:
-      "Most roofing marketing advice ignores seasonality, storm chasing, and the trust problem. Here are 15 strategies that actually fill your pipeline.",
+      "Learn how to market a roofing company when most advice ignores seasonality, storm chasing, and the trust problem. 15 field-tested strategies from companies doing $400K to $8M in revenue.",
     content: `
 Roofing is one of the hardest businesses to market. Not because it's complicated, but because most marketing advice doesn't account for what makes roofing different.
 
@@ -8839,6 +8840,36 @@ If you want help building out these systems properly, implementing tracking that
     author: "Charwin Vanryck deGroot",
     readTime: "15 min read",
     category: "marketing",
+    faqData: [
+      {
+        question: "How do I market my roofing company?",
+        answer:
+          "Start with three foundations: optimize your Google Business Profile so you appear in map pack results for local searches, build a website with before-and-after photos and clear calls to action, and generate consistent Google reviews from completed jobs. Then layer on Local Service Ads for pay-per-lead traffic and local SEO pages targeting each city you serve. These five strategies generate the most leads per dollar for roofing companies.",
+      },
+      {
+        question: "How much should a roofing company spend on marketing?",
+        answer:
+          "Most successful roofing companies invest 5 to 10 percent of revenue in marketing. For a company doing $1M in revenue, that is $50,000 to $100,000 per year. Start with Google Business Profile optimization and Local Service Ads, which cost nothing until you receive a lead. Add Google Ads at $2,000 to $5,000 per month once you have proper tracking in place.",
+      },
+      {
+        question:
+          "What is the best way to get roofing leads?",
+        answer:
+          "Google Business Profile optimization and Local Service Ads consistently generate the highest quality roofing leads at the lowest cost. GBP is free and puts you in the map pack when homeowners search for roofers near them. LSAs charge per lead, not per click, and include a Google Guaranteed badge that builds trust. Together they outperform every other lead source for most roofing companies.",
+      },
+      {
+        question:
+          "How do roofing companies get customers after storms?",
+        answer:
+          "Prepare storm-specific content before storm season. Create pages targeting phrases like hail damage roof repair and how to file a roof insurance claim in your state. When a storm hits, your content is already ranking. Then run geo-targeted Google Ads for the affected zip codes, post before-and-after photos from storm jobs on your Google Business Profile, and proactively reach out to past customers in the affected area.",
+      },
+      {
+        question:
+          "Does SEO work for roofing companies?",
+        answer:
+          "Yes. SEO is one of the highest-ROI marketing channels for roofers because it compounds over time. A roofing company serving 8 to 10 cities with properly built location pages typically generates 50 or more additional organic leads per month. The key is targeting commercial-intent keywords like roof replacement plus your city name, not informational keywords that attract DIYers.",
+      },
+    ],
   },
   {
     slug: "contractor-marketing-ideas",

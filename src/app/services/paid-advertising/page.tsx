@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
@@ -44,6 +45,140 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services/paid-advertising",
   },
+};
+
+const paidAdJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://bknddevelopment.com/services/paid-advertising#service",
+      name: "Paid Advertising Services",
+      description:
+        "Data-driven paid advertising that delivers measurable ROI. Google Ads, Meta Ads, LinkedIn Ads and programmatic campaigns managed by developers who understand tracking.",
+      provider: { "@id": "https://bknddevelopment.com/#organization" },
+      serviceType: "Paid Advertising",
+      areaServed: [{ "@type": "Country", name: "United States" }],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Paid Advertising Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Google Ads Management",
+              description:
+                "Search, Display, Shopping, and YouTube campaigns optimized for ROI.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Meta Ads Management",
+              description:
+                "Facebook and Instagram advertising with precise audience targeting.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "LinkedIn Ads Management",
+              description:
+                "B2B lead generation targeting decision-makers by job title and company.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Programmatic Advertising",
+              description:
+                "Automated media buying with real-time bidding optimization.",
+            },
+          },
+        ],
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bknddevelopment.com/services/paid-advertising#webpage",
+      url: "https://bknddevelopment.com/services/paid-advertising",
+      name: "Paid Advertising Services | BKND Development",
+      description:
+        "Data-driven paid advertising that delivers measurable ROI. Developer-built tracking for complete transparency.",
+      isPartOf: { "@id": "https://bknddevelopment.com/#website" },
+      about: {
+        "@id":
+          "https://bknddevelopment.com/services/paid-advertising#service",
+      },
+      datePublished: "2026-01-26",
+      dateModified: "2026-02-23",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://bknddevelopment.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Services",
+          item: "https://bknddevelopment.com/services",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Paid Advertising",
+          item: "https://bknddevelopment.com/services/paid-advertising",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bknddevelopment.com/services/paid-advertising#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What budget do I need to start with paid advertising?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We recommend a minimum of $3,000/month in ad spend to gather meaningful data and optimize effectively. However, the right budget depends on your industry, competition, and goals. We'll help you determine the optimal starting point during our strategy call.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How is your approach different from other agencies?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We're developers first. That means proper tracking implementation, server-side conversions, and technical integrations that most agencies can't deliver. We build the infrastructure to actually measure ROI\u2014not just report on vanity metrics.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long until I see results?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You'll see data from day one. Meaningful optimization typically takes 2-4 weeks as we gather conversion data. Most clients see significant improvement within 60-90 days.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you require long-term contracts?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. We work month-to-month because we believe in earning your business with results. Our retention comes from performance, not legal lock-ins.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 const platforms = [
@@ -192,6 +327,11 @@ const faqs = [
 export default function PaidAdvertisingPage() {
   return (
     <>
+      <Script
+        id="paid-advertising-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(paidAdJsonLd) }}
+      />
       <Header />
       <main>
         {/* Hero Section */}

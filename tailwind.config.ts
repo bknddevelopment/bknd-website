@@ -182,11 +182,23 @@ const config: Config = {
           from: { opacity: "0", transform: "scale(0.98)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "mesh-float": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "25%": { transform: "translate(2%, 4%) scale(1.05)" },
+          "50%": { transform: "translate(-2%, 2%) scale(0.95)" },
+          "75%": { transform: "translate(-4%, -2%) scale(1.02)" },
+        }
       },
       animation: {
         "slide-up": "slide-up 0.5s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
+        "gradient-shift": "gradient-shift 15s ease infinite",
+        "mesh-float": "mesh-float 20s ease-in-out infinite",
       },
 
       // ============================================

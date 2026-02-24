@@ -12,26 +12,22 @@ import {
   Brain,
   Zap,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const teamMembers = [
   {
     name: "Charwin Vanryck deGroot",
     role: "Founder & CEO",
-    image: "/images/team/founder-avatar.jpg",
     bio: "With a background in software development and a passion for growth marketing, Charwin founded BKND Development to bridge the gap between technical excellence and marketing results. His developer-first approach has helped businesses of all sizes achieve measurable growth through data-driven strategies.",
   },
   {
     name: "Ocyrus Jean Baptiste",
     role: "Head of Sales",
-    image: "/images/team/ocyrus-headshot.jpg",
     bio: "Ocyrus drives client relationships and business growth at BKND. With a sharp eye for opportunity and a consultative approach, he connects businesses with the right marketing and AI solutions to fuel their growth.",
   },
   {
     name: "Dean Holland",
     role: "Head of AI Innovation",
-    image: "/images/team/dean-headshot.jpg",
     bio: "Dean leads AI strategy and implementation at BKND. He architects intelligent systems that amplify marketing performance — from predictive analytics to automated optimization — ensuring our clients stay ahead of the curve.",
   },
 ];
@@ -216,15 +212,6 @@ export default function AboutPage() {
               {teamMembers.map((member, i) => (
                 <AnimateOnScroll key={i} delay={0.2 + i * 0.1}>
                   <div className="bg-white rounded-2xl p-8 border border-gray-200/80 text-center h-full transition-all duration-300 hover:border-[#00D4FF]/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]">
-                    <div className="relative w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden">
-                      <Image
-                        src={member.image}
-                        alt={`${member.name}, ${member.role} at BKND Development`}
-                        fill
-                        className="object-cover"
-                        sizes="128px"
-                      />
-                    </div>
                     <h3 className="text-xl font-semibold text-[#1D1D1F] mb-1">
                       {member.name}
                     </h3>

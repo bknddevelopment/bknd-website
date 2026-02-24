@@ -23,27 +23,29 @@ export default function ClientLogoBar() {
   }, []);
 
   return (
-    <section className="py-12 lg:py-16 bg-gradient-to-b from-[#0f1724] via-[#141e2e] to-[#1a2332] relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-[#050A14] relative overflow-hidden border-t border-b border-white/5">
       <div className="container-sg relative z-10">
         {/* Header */}
-        <div className="text-center mb-8">
-          <p className="text-[#E9EFF4]/50 text-sm font-medium tracking-wide">
-            We work with ambitious teams in
+        <div className="flex justify-center items-center gap-4 mb-12">
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#00D4FF]/50" />
+          <p className="text-white/40 text-[11px] font-bold tracking-[0.2em] uppercase">
+            Engineering growth for
           </p>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#00D4FF]/50" />
         </div>
 
         {/* Text Marquee Container */}
         <div
-          className="relative"
+          className="relative group cursor-default"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Gradient fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-r from-[#0f1724] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-l from-[#1a2332] to-transparent z-10 pointer-events-none" />
+          {/* True black gradient fade edges matching the new background */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-48 bg-gradient-to-r from-[#050A14] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-48 bg-gradient-to-l from-[#050A14] to-transparent z-10 pointer-events-none" />
 
-          {/* Center glow effect */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-16 bg-[#00D4FF]/5 rounded-full blur-3xl pointer-events-none" />
+          {/* Sharp glowing track line behind text */}
+          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
 
           {/* Scrolling container */}
           <div className="overflow-hidden py-4">
@@ -55,10 +57,10 @@ export default function ClientLogoBar() {
               {[...industries, ...industries, ...industries, ...industries].map(
                 (industry, i) => (
                   <div key={i} className="flex items-center flex-shrink-0">
-                    <span className="text-[#E9EFF4]/40 text-base lg:text-lg font-medium whitespace-nowrap px-4 lg:px-6 hover:text-[#E9EFF4]/80 hover:scale-105 transition-all duration-300 cursor-default inline-block">
+                    <span className="text-white/30 text-xl lg:text-3xl font-bold tracking-tight whitespace-nowrap px-8 lg:px-12 hover:text-white transition-colors duration-500 inline-block drop-shadow-[0_0_15px_rgba(255,255,255,0)] hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
                       {industry}
                     </span>
-                    <span className="text-[#00D4FF]/30 text-sm">&#x2022;</span>
+                    <span className="text-[#00D4FF]/40 text-lg group-hover:text-[#00D4FF] transition-colors duration-500">&#x2022;</span>
                   </div>
                 ),
               )}
@@ -66,10 +68,6 @@ export default function ClientLogoBar() {
           </div>
         </div>
 
-        {/* Bottom accent */}
-        <div className="mt-6 flex justify-center">
-          <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#00D4FF]/20 to-transparent" />
-        </div>
       </div>
     </section>
   );
