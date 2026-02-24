@@ -18,6 +18,360 @@ export interface BlogPost {
 // Blog posts data
 const blogPosts: BlogPost[] = [
   {
+    slug: "webflow-pricing-explained",
+    title:
+      "Webflow Pricing Explained: How Much Does Webflow Actually Cost in 2026?",
+    date: "2026-02-23",
+    image: "/images/blog/webflow-pricing.jpg",
+    imageAlt:
+      "Side-by-side comparison of Webflow pricing plans with cost breakdowns for different business types",
+    excerpt:
+      "Webflow pricing starts at $0 and scales to $212/month for advanced ecommerce. But the sticker price never tells the whole story. We break down every plan, every add-on, hidden costs most agencies ignore, and real cost scenarios so you know exactly what Webflow will cost for your project in 2026.",
+    content: `
+We build websites on Webflow every week. We have launched portfolio sites on the free Starter plan, scaled ecommerce stores on the Advanced plan, and talked clients out of plans they did not need. So when someone asks us how much Webflow costs, we do not point them to a pricing page. We give them the real answer.
+
+The real answer is: it depends on what you are building, how much content you have, whether you are selling products, and what add-ons you actually need. The Webflow price you see on the marketing page is the starting point, not the finish line.
+
+This guide breaks down every Webflow plan, every add-on, the costs most people forget about, and what you will actually spend based on your specific situation.
+
+:::key
+All prices listed in this guide are billed annually. Monthly billing is available but costs significantly more. We always recommend annual billing for clients who are committed to Webflow long-term.
+:::
+
+## Webflow Site Plans: The Foundation
+
+Every Webflow project starts with a site plan. This is the hosting and infrastructure layer that determines how many pages you can build, how much content you can manage, and how much traffic your site can handle.
+
+### Starter Plan: Free
+
+The Starter plan costs nothing. Zero. You get a webflow.io subdomain, 2 pages, 50 CMS items, 50 form submissions for the lifetime of the project, and 1GB of bandwidth.
+
+Who this is for: students learning Webflow, developers testing a concept, or anyone who wants to experiment before committing money. This is not a plan you launch a real business on. The webflow.io domain alone signals "this is not a real website" to visitors.
+
+:::warning
+The Starter plan limits you to 50 form submissions total, not per month. Once those are gone, forms stop working unless you upgrade. If you are building anything that collects leads, skip this plan.
+:::
+
+### Basic Plan: $14/month
+
+The Basic plan is Webflow's entry point for real websites. You get a custom domain, 150 pages, unlimited form submissions, and 10GB of bandwidth. There is no CMS functionality on this plan.
+
+Who this is for: simple brochure sites, personal portfolios, and landing pages that do not need a blog or dynamic content. If you have a five-page website with a contact form and nothing else, this is your plan.
+
+The catch: no CMS means no blog, no team member pages, no portfolio collections, no dynamic content of any kind. Every page is static and hand-built. For most businesses, this is a dealbreaker.
+
+### CMS Plan: $23/month
+
+This is where Webflow starts making sense for real businesses. The CMS plan gives you a custom domain, 150 pages, 2,000 CMS items across 20 collections, unlimited form submissions, 50GB of bandwidth, and site search.
+
+Who this is for: small to mid-sized businesses that need a blog, a portfolio, a team page, or any other dynamic content. This is the plan we recommend most often to clients because it hits the sweet spot between capability and cost.
+
+:::stat $23/month
+The CMS plan is where most small businesses should start. You get 2,000 CMS items, which is enough for years of blog posts, portfolio pieces, and team listings. Most of our clients never outgrow this plan.
+:::
+
+### Business Plan: $39/month
+
+The Business plan is designed for larger sites with serious content operations. You get a custom domain, 300 pages, up to 20,000 CMS items across 40 collections, unlimited form submissions, up to 2.5TB of bandwidth, and form file uploads.
+
+Who this is for: content-heavy businesses, directory sites, real estate listings, job boards, or any project that pushes past 2,000 CMS items. The jump from 150 to 300 pages and from 20 to 40 collections makes this the plan for complex sites.
+
+The bandwidth upgrade is significant. Going from 50GB to 2.5TB means this plan can handle serious traffic spikes without issues. If you are running paid advertising or expect viral content, this headroom matters.
+
+### Enterprise Plan: Contact Sales
+
+Enterprise is Webflow's white-glove tier. Pricing is custom and based on your specific needs. You get everything in Business plus advanced security, SLAs, dedicated support, and custom solutions.
+
+Who this is for: large organizations with compliance requirements, custom integration needs, or traffic volumes that exceed what the Business plan can handle. Most small and mid-sized businesses never need this.
+
+## Webflow Ecommerce Plans: Selling Online
+
+If you are selling physical or digital products through your Webflow site, you need an ecommerce plan instead of (or in addition to) a site plan. These plans include everything from the site plans plus the commerce engine.
+
+### Standard Ecommerce: $29/month
+
+The entry-level commerce plan gives you 500 ecommerce items, 2,000 CMS items, and charges a 2% transaction fee on top of your payment processor's fees.
+
+That 2% fee adds up fast. On $10,000 in monthly sales, you are paying $200/month to Webflow in transaction fees alone, plus the $29 plan cost. That is $229/month before payment processing fees.
+
+:::warning
+The 2% transaction fee on the Standard ecommerce plan is a hidden cost that catches people off guard. If you are doing more than a few thousand dollars in monthly sales, the Plus plan pays for itself by eliminating that fee.
+:::
+
+### Plus Ecommerce: $74/month
+
+The Plus plan jumps to 5,000 ecommerce items, 10,000 CMS items, and drops the transaction fee to 0%. This is the breakeven plan. If your store does more than roughly $2,250/month in sales, the Plus plan costs less than Standard after you factor in the transaction fee savings.
+
+Here is the math:
+- Standard at $2,250/month in sales: $29 plan + $45 in transaction fees = $74/month total
+- Plus at $2,250/month in sales: $74 plan + $0 in transaction fees = $74/month total
+
+Anything above $2,250/month in sales and Plus is cheaper. Most stores hit that threshold within a few months of launching.
+
+### Advanced Ecommerce: $212/month
+
+The top-tier commerce plan gives you 15,000 ecommerce items, 10,000 CMS items, and 0% transaction fees. This is for established stores with large catalogs that need the full inventory capacity.
+
+Who this is for: stores with thousands of products, multiple product variants, or complex catalog structures. If you have 500 products with 5 variants each, you need 2,500 item slots. The Standard plan cannot handle that.
+
+## Webflow Add-Ons: Where Costs Sneak Up
+
+Webflow has been expanding its add-on ecosystem. These are optional, but some of them are essential for certain use cases.
+
+### Optimize (A/B Testing): $299/month
+
+Webflow's native A/B testing tool lets you test page variations without third-party tools. At $299/month, this is a premium add-on that makes sense only for high-traffic sites where conversion rate improvements translate to meaningful revenue.
+
+Our take: most businesses are better off using a third-party tool like Google Optimize alternatives or VWO's free tier until their traffic justifies this cost. $299/month is steep for a site getting under 50,000 monthly visitors.
+
+### Analyze: $9/month
+
+Basic analytics built into Webflow. It provides page-level traffic data without needing Google Analytics.
+
+Our take: just use Google Analytics 4. It is free, more powerful, and industry standard. We rarely recommend this add-on to clients.
+
+### Localization Essential: $9/month
+
+Supports up to 3 additional locales for multilingual sites. This means you can have your site in English plus two other languages.
+
+### Localization Advanced: $29/month
+
+Supports up to 10 additional locales. For businesses that operate in multiple countries or regions with different language requirements.
+
+Our take: if you need multilingual support, these add-ons are reasonably priced compared to third-party translation management systems. The Essential plan at $9/month covers most North American businesses that need English and Spanish.
+
+## The True Cost of Webflow: What Most Pricing Guides Miss
+
+The plan price is only one piece of the total cost. Here is what else you will spend money on.
+
+### Domain Registration: $10-50/year
+
+Webflow does not include a domain. You need to buy one separately. A .com runs about $10-15/year through registrars like Namecheap, Cloudflare, or Google Domains.
+
+### Design and Development
+
+Unless you are building the site yourself, you are paying someone to design and develop it. Webflow development costs vary widely:
+
+- **Template-based site:** $500-2,000
+- **Custom design, simple site:** $3,000-8,000
+- **Custom design, complex site:** $8,000-25,000+
+- **Ecommerce store:** $5,000-30,000+
+
+These are one-time costs, but they dwarf the monthly hosting fees for most projects.
+
+### Third-Party Integrations
+
+Most Webflow sites need at least a few integrations:
+
+- **Email marketing** (Mailchimp, ConvertKit): $0-100+/month
+- **CRM** (HubSpot, Salesforce): $0-300+/month
+- **Scheduling** (Calendly, Acuity): $0-16+/month
+- **Live chat** (Intercom, Drift): $0-100+/month
+- **Advanced forms** (Typeform, Jotform): $0-50+/month
+
+These costs are not Webflow-specific, but they are part of your total website cost.
+
+### Ongoing Maintenance
+
+Webflow sites are lower maintenance than WordPress, but they are not zero maintenance. Budget for:
+
+- Content updates and new pages
+- Design refreshes every 12-24 months
+- Bug fixes and browser compatibility
+- SEO optimization and monitoring
+- Security monitoring
+
+:::tip
+Webflow handles hosting, SSL, CDN, and security updates automatically. You never have to update plugins, patch security vulnerabilities, or manage servers. This is one of the biggest cost savings compared to WordPress, where maintenance can easily run $100-300/month.
+:::
+
+## Real Cost Scenarios: What You Will Actually Pay
+
+Theory is nice. Here is what real projects cost.
+
+### Scenario 1: Freelancer Portfolio
+
+**What you need:** 5-page site, project gallery, contact form, custom domain
+
+**Webflow cost:**
+- Plan: CMS at $23/month ($276/year)
+- Domain: $12/year
+- **Total: roughly $288/year or $24/month**
+
+**Alternative comparison:**
+- Squarespace Personal: $16/month ($192/year) but less design control
+- WordPress + hosting: $5-15/month for hosting + $0-100 for theme + maintenance time
+- Custom coded on Vercel: $0-20/month hosting but $3,000-5,000 to build
+
+The CMS plan gives you a portfolio collection that automatically creates project pages. This alone saves hours of manual page creation.
+
+### Scenario 2: Small Business (5-15 Pages)
+
+**What you need:** service pages, about page, blog, contact form, Google Analytics, basic SEO
+
+**Webflow cost:**
+- Plan: CMS at $23/month ($276/year)
+- Domain: $12/year
+- Development: $3,000-6,000 one-time
+- **Year 1 total: $3,288-6,288**
+- **Year 2+ total: $288/year**
+
+**Alternative comparison:**
+- Squarespace Business: $33/month ($396/year) + $2,000-4,000 to design
+- WordPress: $15-50/month hosting + $3,000-8,000 development + $100-300/month maintenance
+- Custom development: $10,000-30,000 + $200-500/month maintenance
+
+:::pullquote
+Most small businesses overpay for their website platform and underpay for design and content. The plan cost is the smallest line item. Invest in making the site actually work for your business.
+:::
+
+### Scenario 3: Agency Client Site (20-50 Pages)
+
+**What you need:** custom design, CMS-driven blog and case studies, integrations, fast performance, client editing capability
+
+**Webflow cost:**
+- Plan: CMS at $23/month or Business at $39/month ($276-468/year)
+- Domain: $12/year
+- Development: $8,000-20,000 one-time
+- **Year 1 total: $8,288-20,480**
+- **Year 2+ total: $288-480/year**
+
+The Business plan makes sense here if you have more than 20 CMS collections or expect the site to grow past 2,000 CMS items over time. Most agency client sites fit comfortably on the CMS plan.
+
+### Scenario 4: Ecommerce Store (100-500 Products)
+
+**What you need:** product catalog, cart and checkout, inventory management, customer accounts, order management
+
+**Webflow cost:**
+- Plan: Plus Ecommerce at $74/month ($888/year)
+- Domain: $12/year
+- Development: $5,000-15,000 one-time
+- Email marketing integration: $30-100/month
+- **Year 1 total: $6,260-16,260**
+- **Year 2+ total: $1,260-2,100/year**
+
+**Alternative comparison:**
+- Shopify Basic: $39/month + 2.9% + $0.30 per transaction + $5,000-15,000 development
+- WooCommerce: $15-50/month hosting + $5,000-20,000 development + $100-300/month maintenance + plugin costs
+- BigCommerce Standard: $39/month + $5,000-15,000 development
+
+:::stat $74/month
+The Plus ecommerce plan eliminates the 2% transaction fee. For a store doing $5,000/month in sales, that saves $100/month in fees, making Plus effectively cheaper than Standard despite the higher sticker price.
+:::
+
+## Webflow vs. the Alternatives: An Honest Comparison
+
+We build on Webflow. We also build on WordPress, Shopify, and custom frameworks. Here is our honest assessment.
+
+### Webflow vs. WordPress
+
+**Webflow wins on:** maintenance costs (no plugin updates, no security patches, no server management), design flexibility without code, visual editing experience, hosting performance out of the box, and built-in SSL/CDN.
+
+**WordPress wins on:** plugin ecosystem (60,000+ plugins vs. Webflow's limited integrations), ecommerce flexibility through WooCommerce, content scale (WordPress handles millions of pages; Webflow caps at 300), developer pool (far more WordPress developers available), and raw cost for simple sites.
+
+**Our recommendation:** Webflow for design-forward sites under 300 pages where visual quality and low maintenance matter. WordPress for content-heavy sites, complex ecommerce, or projects that need specific plugin functionality.
+
+### Webflow vs. Squarespace
+
+**Webflow wins on:** design control (not even close), CMS flexibility, custom interactions and animations, code export capability, and professional-grade output.
+
+**Squarespace wins on:** ease of use for non-designers, lower starting price, built-in ecommerce on most plans, all-in-one simplicity, and email marketing tools.
+
+**Our recommendation:** Webflow if you are hiring a designer or developer. Squarespace if the business owner is building it themselves and values simplicity over customization.
+
+### Webflow vs. Custom Development
+
+**Webflow wins on:** speed to launch (weeks vs. months), total cost for most projects, visual content editing for non-technical teams, and built-in hosting infrastructure.
+
+**Custom development wins on:** unlimited flexibility, no platform constraints, no vendor lock-in, better performance optimization potential, and scalability for complex applications.
+
+**Our recommendation:** Webflow for marketing sites, portfolios, and standard business websites. Custom development for web applications, complex SaaS products, or sites that need functionality Webflow cannot provide.
+
+## Who Should Not Use Webflow
+
+Being honest about limitations matters more than selling you on a platform.
+
+**Skip Webflow if:**
+- You need more than 300 pages (Webflow's hard cap on the Business plan)
+- You are building a web application, not a website
+- You need complex ecommerce features like subscriptions, memberships, or multi-vendor marketplaces
+- Your team is heavily invested in WordPress and does not want to retrain
+- You need deep database functionality beyond what the CMS offers
+- Budget is extremely tight and you need the cheapest possible option
+
+:::tip
+The biggest mistake we see is choosing Webflow for the wrong project. A content publisher with 5,000 articles should not be on Webflow. A SaaS startup building an app should not be on Webflow. But a professional services firm that wants a fast, beautiful, low-maintenance website? Webflow is one of the best choices available.
+:::
+
+## How to Choose the Right Webflow Plan
+
+Decision tree:
+
+**Are you selling products online?**
+- Yes, under $2,250/month in sales -> Standard Ecommerce ($29/month)
+- Yes, over $2,250/month in sales -> Plus Ecommerce ($74/month)
+- Yes, with 500+ products -> Advanced Ecommerce ($212/month)
+- No -> Continue below
+
+**Do you need a blog, portfolio, or dynamic content?**
+- No -> Basic ($14/month)
+- Yes -> Continue below
+
+**Will you have more than 2,000 CMS items or 20 collections?**
+- No -> CMS ($23/month)
+- Yes -> Business ($39/month)
+
+**Do you need multilingual support?**
+- Up to 3 languages -> Add Localization Essential ($9/month)
+- Up to 10 languages -> Add Localization Advanced ($29/month)
+
+That is it. Do not overcomplicate it. Start with the plan that fits your current needs. Webflow makes it easy to upgrade later.
+
+## The Bottom Line on Webflow Pricing
+
+Webflow is not the cheapest website platform. It is also not the most expensive. What it offers is a predictable, transparent cost structure with no surprise plugin fees, no security emergencies, and no server management overhead.
+
+For most businesses, you are looking at $23-39/month for a site plan, plus whatever you invest in design and development. Ecommerce adds cost, but the elimination of transaction fees on the Plus plan makes it competitive with Shopify and WooCommerce when you factor in total cost of ownership.
+
+The platform's real value is not in the monthly price. It is in what you do not have to spend on: maintenance, security patches, plugin conflicts, hosting optimization, and the general headaches that come with self-hosted platforms.
+
+---
+
+**Need help figuring out the right Webflow setup for your project?** We build Webflow sites for businesses every week and can give you a straight answer on what you actually need, no upselling, no fluff. [Get in touch with BKND](/contact) and let us scope your project.
+    `.trim(),
+    author: "BKND Team",
+    readTime: "12 min read",
+    category: "marketing",
+    faqData: [
+      {
+        question: "How much does Webflow cost per month?",
+        answer:
+          "Webflow site plans range from free (Starter) to $39/month (Business) when billed annually. The CMS plan at $23/month is the most popular for small businesses. Ecommerce plans range from $29/month (Standard) to $212/month (Advanced). Enterprise pricing is custom. Monthly billing is available at higher rates.",
+      },
+      {
+        question: "Is Webflow free to use?",
+        answer:
+          "Webflow offers a free Starter plan that includes a webflow.io subdomain, 2 pages, 50 CMS items, and 50 lifetime form submissions. You can design and prototype for free, but launching a professional site with a custom domain requires a paid plan starting at $14/month billed annually.",
+      },
+      {
+        question: "Is Webflow cheaper than WordPress?",
+        answer:
+          "Webflow's hosting costs are higher than basic WordPress hosting, but total cost of ownership is often lower. WordPress requires separate costs for hosting, security plugins, maintenance, backups, and developer time for updates. Webflow includes hosting, SSL, CDN, and automatic security updates in every paid plan, eliminating $100-300/month in typical WordPress maintenance costs.",
+      },
+      {
+        question:
+          "Does Webflow charge transaction fees on ecommerce?",
+        answer:
+          "The Standard ecommerce plan charges a 2% transaction fee on all sales, on top of your payment processor fees. The Plus plan at $74/month and Advanced plan at $212/month have 0% Webflow transaction fees. If your store does more than $2,250/month in sales, the Plus plan is cheaper than Standard after accounting for the transaction fee savings.",
+      },
+      {
+        question: "What Webflow plan do I need for a small business website?",
+        answer:
+          "Most small businesses need the CMS plan at $23/month billed annually. It includes a custom domain, 150 pages, 2,000 CMS items for blog posts and dynamic content, 20 collections, unlimited form submissions, 50GB bandwidth, and site search. The Basic plan at $14/month works for simple sites without a blog, but most businesses outgrow it quickly.",
+      },
+    ],
+  },
+  {
     slug: "agentic-ai-for-marketing-definitive-guide-2026",
     title:
       "Agentic AI for Marketing: The Definitive Guide From an Agency That Actually Builds It (2026)",
