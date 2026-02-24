@@ -74,7 +74,7 @@ export default function Hero() {
         <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-[#00D4FF]/10 blur-[130px] rounded-full mix-blend-screen animate-mesh-float" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-[#8A2BE2]/10 blur-[160px] rounded-full mix-blend-screen animate-mesh-float" style={{ animationDelay: "4s", animationDuration: "25s" }} />
         <div className="absolute top-[30%] right-[20%] w-[40vw] h-[40vw] bg-[#0088CC]/10 blur-[100px] rounded-full mix-blend-screen animate-mesh-float" style={{ animationDelay: "8s", animationDuration: "18s" }} />
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none" />
+        <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "url('/noise.png')" }} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050A14]/50 to-[#050A14] pointer-events-none" />
       </div>
 
