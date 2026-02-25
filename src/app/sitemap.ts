@@ -41,6 +41,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/creative`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Methodology
     { url: `${BASE_URL}/methodology/ai`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Locations
+    { url: `${BASE_URL}/locations/elizabeth-nj`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Legal
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },

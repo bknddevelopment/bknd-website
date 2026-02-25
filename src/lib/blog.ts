@@ -20,13 +20,13 @@ const blogPosts: BlogPost[] = [
   {
     slug: "webflow-pricing-explained",
     title:
-      "Webflow Pricing Explained: How Much Does Webflow Actually Cost in 2026?",
+      "Webflow Pricing Explained: Real Costs in 2026",
     date: "2026-02-23",
     image: "/images/blog/webflow-pricing.jpg",
     imageAlt:
       "Side-by-side comparison of Webflow pricing plans with cost breakdowns for different business types",
     excerpt:
-      "Webflow pricing starts at $0 and scales to $212/month for advanced ecommerce. But the sticker price never tells the whole story. We break down every plan, every add-on, hidden costs most agencies ignore, and real cost scenarios so you know exactly what Webflow will cost for your project in 2026.",
+      "Webflow pricing starts at $0 and scales to $212/month. We break down every plan, hidden costs, and real scenarios so you know what you will actually pay.",
     content: `
 We build websites on Webflow every week. We have launched portfolio sites on the free Starter plan, scaled ecommerce stores on the Advanced plan, and talked clients out of plans they did not need. So when someone asks us how much Webflow costs, we do not point them to a pricing page. We give them the real answer.
 
@@ -374,13 +374,13 @@ The platform's real value is not in the monthly price. It is in what you do not 
   {
     slug: "agentic-ai-for-marketing-definitive-guide-2026",
     title:
-      "Agentic AI for Marketing: The Definitive Guide From an Agency That Actually Builds It (2026)",
+      "Agentic AI for Marketing: The Complete 2026 Guide",
     date: "2026-02-22",
     image: "/images/blog/agentic-ai-marketing.jpg",
     imageAlt:
       "Dashboard showing autonomous AI agents managing marketing campaigns across channels with real-time performance data and optimization insights",
     excerpt:
-      "Agentic AI is not another chatbot. It is an autonomous system that plans, executes, and optimizes your marketing campaigns while you sleep. The market is projected to hit $199 billion by 2034. Here is what it actually is, how it works, who is using it, and exactly how to implement it in 90 days. Written by an agency that builds these systems for clients every day.",
+      "Agentic AI plans, executes, and optimizes marketing campaigns autonomously. What it is, how it works, and a 90-day implementation guide.",
     content: `
 Every few years, a technology shift forces marketers to rethink everything. Search engines did it in the early 2000s. Social media did it around 2010. Mobile did it around 2015. Generative AI did it in 2023.
 
@@ -762,13 +762,13 @@ Share of Model is an emerging metric that measures how often your brand is recom
   {
     slug: "ai-white-collar-automation-small-business-guide",
     title:
-      "Microsoft Says AI Will Replace White-Collar Jobs in 18 Months: What Small Businesses Should Do Right Now",
+      "AI Will Replace White-Collar Jobs: What to Do Now",
     date: "2026-02-16",
     image: "/images/blog/ai-white-collar-jobs.jpg",
     imageAlt:
       "Business owner reviewing AI automation tools on a laptop with charts showing workforce transformation data",
     excerpt:
-      "Microsoft AI chief Mustafa Suleyman says every desk job will be automated within 18 months. Software stocks just crashed. White-collar workers are already switching to trades. Here is what is actually happening, what is hype, and the 7 steps small businesses should take right now.",
+      "Microsoft says AI will automate most desk jobs in 18 months. Here is what is real, what is hype, and the 7 steps small businesses should take now.",
     content: `
 The week of February 10, 2026 will be remembered as the moment AI panic went mainstream.
 
@@ -2704,10 +2704,10 @@ For many queries, AI Overviews appear above traditional results but do not repla
   {
     slug: "google-february-2026-core-update-recovery-guide",
     title:
-      "Google's February 2026 Core Update: What Changed and How to Recover",
+      "Google February 2026 Core Update: Recovery Guide",
     date: "2026-02-04",
     excerpt:
-      "Google's February 2026 Core Update continues the shift toward AI-powered quality evaluation. Sites lost rankings not from penalties, but from being re-ranked. Here is what actually changed and how to recover.",
+      "Google's February 2026 Core Update shifted to AI-powered quality evaluation. What actually changed and how to recover your rankings.",
     content: `
 Google released another core update in February 2026. If you woke up to traffic drops, you are not alone.
 
@@ -3717,10 +3717,10 @@ They make E-E-A-T signals machine-readable, which helps algorithms understand yo
   {
     slug: "internal-linking-architecture-topical-authority-2026",
     title:
-      "Internal Linking Architecture: Building Topical Authority That Ranks",
+      "Internal Linking Architecture for Topical Authority",
     date: "2026-02-04",
     excerpt:
-      "Your internal linking structure is not just navigation—it is how you tell Google what your site is about. Here is how to build a linking architecture that establishes topical authority and concentrates ranking power.",
+      "Internal linking tells Google what your site is about. How to build a linking architecture that establishes topical authority and ranks.",
     content: `
 Internal linking is the most underrated SEO lever available.
 
@@ -8768,10 +8768,10 @@ But if you're doing it yourself, this guide is the playbook. Follow it step by s
   {
     slug: "roofing-company-marketing",
     title:
-      "How to Market a Roofing Company: 15 Strategies That Generate Leads in 2026",
+      "How to Market a Roofing Company: 15 Strategies",
     date: "2026-01-26",
     excerpt:
-      "Learn how to market a roofing company when most advice ignores seasonality, storm chasing, and the trust problem. 15 field-tested strategies from companies doing $400K to $8M in revenue.",
+      "15 roofing marketing strategies that account for seasonality, storm chasing, and the trust problem. From companies doing $400K to $8M.",
     content: `
 Roofing is one of the hardest businesses to market. Not because it's complicated, but because most marketing advice doesn't account for what makes roofing different.
 
@@ -13662,10 +13662,10 @@ The goal is not data for data's sake. It is knowing which marketing dollars come
   {
     slug: "lead-generation-for-contractors",
     title:
-      "Lead Generation for Contractors: 12 Proven Methods That Actually Work",
+      "Lead Generation for Contractors: 12 Proven Methods",
     date: "2026-01-26",
     excerpt:
-      "Most contractor lead gen advice is written by people who have never closed a roofing job. Here are 12 methods that actually fill your calendar, ranked by what works versus what sounds good.",
+      "12 contractor lead generation methods ranked by what works versus what sounds good. Written for people who actually close jobs.",
     content: `
 Most lead generation advice for contractors is written by marketers who have never given an estimate, never dealt with a no-show, and never lost a job to a lowballer.
 
@@ -14760,6 +14760,307 @@ Launching without clear, measurable objectives. "Improve customer service" is no
     author: "Charwin Vanryck deGroot",
     readTime: "12 min read",
     category: "ai",
+  },
+  {
+    slug: "squarespace-developer-mode-complete-guide",
+    title: "Squarespace Developer Mode: The Complete Guide",
+    date: "2026-02-25",
+    image: "/images/blog/squarespace-developer-mode.jpg",
+    imageAlt:
+      "Squarespace developer mode interface showing code editor and template files",
+    excerpt:
+      "Squarespace developer mode gives you full access to template code via Git. Learn how to enable it, what you can customize, the limitations, and when it makes sense for your project.",
+    content: `
+We build and maintain websites on Squarespace, Webflow, WordPress, and custom stacks. When clients ask about Squarespace developer mode, the conversation usually goes one of two ways: either they need it and don't know it exists, or they think they need it and actually don't.
+
+This guide covers everything: what developer mode is, how to enable it, what you can and cannot do with it, and the critical trade-offs most guides skip entirely.
+
+:::key
+Squarespace developer mode is a one-way door for your site. Once enabled, your site stops receiving Squarespace template updates and you cannot switch templates. Disabling it later means losing all custom code changes permanently. Read this entire guide before turning it on.
+:::
+
+## What Is Squarespace Developer Mode?
+
+Squarespace developer mode gives you direct access to your site's template files through a Git repository. Instead of being limited to the visual editor and code injection blocks, you get full control over the HTML, CSS, JavaScript, and JSON-T template files that power your site.
+
+When you enable developer mode, Squarespace creates a hosted Git repository for your site. You clone that repository to your local machine, edit the template code directly, and push changes back using standard Git workflows. Every git push deploys your changes live.
+
+**Without developer mode,** you are limited to:
+- The visual drag-and-drop editor
+- Code injection blocks (header, footer, per-page)
+- Custom CSS in the Design panel
+- Third-party plugins and embeds
+
+**With developer mode,** you get access to:
+- Full template source code (HTML, CSS, JS)
+- JSON-T templating engine for dynamic content
+- Custom page layouts and regions
+- LESS stylesheets for advanced CSS
+- Complete control over markup structure
+- Custom collections and content types
+
+For most business websites, the visual editor and code injection are enough. Developer mode is for projects that need structural changes the visual editor cannot handle.
+
+## Who Needs Squarespace Developer Mode?
+
+Developer mode is not for everyone. Here is how to know if you actually need it.
+
+### You Need Developer Mode If:
+
+- **You need custom page layouts** that Squarespace's built-in sections cannot create. This includes unique grid systems, custom content layouts, or page structures that don't follow Squarespace's section-based model.
+- **You need to modify template markup** for SEO or accessibility reasons. Developer mode lets you control the exact HTML structure, heading hierarchy, and semantic elements.
+- **You are building a client site** that requires custom functionality beyond what code injection can handle. Agencies building complex Squarespace sites often need developer mode for template-level customization.
+- **You need custom content types** beyond what Squarespace's built-in blog, gallery, and product collections offer.
+
+### You Do NOT Need Developer Mode If:
+
+- You just want to add custom CSS. Use the Design panel or a code injection block instead.
+- You want to add tracking scripts or third-party tools. Header code injection handles this.
+- You want minor layout tweaks. Squarespace's visual editor with CSS overrides covers most adjustments.
+- You are not comfortable with Git, HTML, CSS, and JavaScript. Developer mode requires real development skills.
+
+:::warning
+We see agencies enable developer mode for simple CSS changes. That is like buying a commercial kitchen to make toast. The visual editor plus code injection handles 90% of customization needs without the trade-offs of developer mode.
+:::
+
+## How to Enable Squarespace Developer Mode
+
+Enabling developer mode takes about two minutes. The consequences last forever. Here is the process.
+
+### Prerequisites
+
+Before you start, make sure you have:
+
+1. **A Squarespace Business plan or higher.** Developer mode is not available on Personal plans. You need Business, Commerce Basic, or Commerce Advanced.
+2. **Git installed** on your local machine. If you are on macOS, you likely have it already. Run git --version in your terminal to check.
+3. **A code editor.** VS Code, Sublime Text, or any editor you prefer.
+4. **Working knowledge of HTML, CSS, JavaScript, and Git.** This is not optional. Squarespace's developer documentation assumes you know these technologies.
+
+### Step-by-Step Activation
+
+1. Log into your Squarespace account and open the site you want to modify.
+2. Navigate to **Settings** in the left sidebar.
+3. Click **Advanced** to expand the submenu.
+4. Click **Developer Mode**.
+5. Toggle the switch to enable developer mode.
+6. Read the warning message carefully. It explains that template updates will stop and disabling developer mode will erase your custom code.
+7. Click **Yes** to confirm.
+
+After enabling, Squarespace displays a Git repository URL. Clone this repository to your local machine:
+
+git clone https://your-site.squarespace.com/template.git
+
+You now have a local copy of your site's template files. Make changes, commit them, and push to deploy.
+
+:::stat 7.0 Only
+Squarespace developer mode is only available on version 7.0 sites. Version 7.1 sites cannot enable developer mode. If your site is on 7.1, you are limited to code injection and the visual editor. Check your version in Settings > General > Site Version.
+:::
+
+## What You Can Customize in Developer Mode
+
+Once developer mode is active, here is what you have access to.
+
+### Template Files
+
+Your repository contains the complete template structure:
+
+- ***.region** files define page layouts (header, footer, main content areas)
+- ***.block** files control individual content blocks
+- ***.list** and **.item** files handle collection layouts (blog lists, individual posts)
+- **site.region** is the master template that wraps every page
+
+### JSON-T Templating
+
+Squarespace uses JSON-T, a templating language that combines JSON data with HTML output. You write templates that reference Squarespace's data model to render dynamic content.
+
+For example, a blog list template loops through posts and outputs HTML for each one. You control the exact markup, classes, and structure. This is powerful for SEO because you can ensure proper heading hierarchy, add schema markup, and control exactly what content appears where.
+
+### Stylesheets (LESS)
+
+Developer mode uses LESS for stylesheets, not plain CSS. LESS extends CSS with variables, mixins, and nested rules. Your template includes a styles directory with LESS files that compile to CSS.
+
+### JavaScript
+
+You have full control over JavaScript files in the template. Add custom scripts, modify existing behavior, or integrate third-party libraries at the template level instead of through code injection.
+
+### Custom Collections
+
+Developer mode lets you create custom collection types beyond Squarespace's built-in blog, gallery, events, and products. Need a team members collection, a portfolio with custom fields, or a directory? You can build it.
+
+## The Critical Trade-Offs
+
+Here is where most guides fail. They explain how to enable developer mode without explaining what it costs you.
+
+### Trade-Off 1: No More Template Updates
+
+Squarespace regularly updates templates with new features, bug fixes, and performance improvements. When developer mode is active, your site stops receiving these updates. You are responsible for maintaining your own code.
+
+This means security patches, new Squarespace features, and template improvements will not reach your site automatically. You have to monitor Squarespace's changelog and manually implement anything you need.
+
+### Trade-Off 2: No Template Switching
+
+You are locked into your current template. Want to switch to a different Squarespace template? You cannot. You would need to disable developer mode first, which erases all custom code, then switch templates, then re-enable and re-implement everything.
+
+### Trade-Off 3: Disabling Is Destructive
+
+If you disable developer mode, all custom code changes are permanently deleted. Custom collections become uneditable. Custom layouts revert to defaults. There is no undo.
+
+:::warning
+We have seen businesses enable developer mode for a minor project, then want to go back months later. There is no going back without losing everything. Treat this as a permanent decision.
+:::
+
+### Trade-Off 4: Sites Cannot Be Duplicated
+
+Squarespace allows you to duplicate sites for testing or creating templates. Sites with developer mode enabled cannot be duplicated. This limits your ability to create staging environments.
+
+### Trade-Off 5: Higher Maintenance Costs
+
+Without developer mode, Squarespace handles updates, compatibility, and template maintenance. With developer mode, your developer handles all of that. Budget 2-5 hours per month for ongoing maintenance, depending on site complexity.
+
+## Developer Mode vs. Code Injection: When to Use What
+
+This is the decision most people get wrong. Here is a clear comparison.
+
+### Use Code Injection When:
+
+- **Adding tracking scripts** like Google Analytics, Meta Pixel, or HubSpot.
+- **Custom CSS overrides** to change colors, fonts, spacing, or hide elements.
+- **Adding third-party widgets** like chat tools, booking systems, or review displays.
+- **Per-page customizations** that only affect specific pages.
+- **Simple JavaScript** for interactions, animations, or form handling.
+
+Code injection works within Squarespace's existing template. You add on top without modifying the foundation.
+
+### Use Developer Mode When:
+
+- **Rebuilding page layouts** that the section editor cannot create.
+- **Custom content types** beyond blogs, galleries, and products.
+- **Modifying HTML structure** for SEO, accessibility, or integration requirements.
+- **Complex JavaScript applications** that need to integrate deeply with the template.
+- **Building a truly custom design** where the visual editor is too restrictive.
+
+:::tip
+Start with code injection. If you hit a wall that code injection genuinely cannot solve, then consider developer mode. Most projects never hit that wall.
+:::
+
+## Squarespace Developer Mode vs. Other Platforms
+
+If you need full code control, Squarespace developer mode is one option. But it is not the only one.
+
+### Webflow
+
+[Webflow gives you visual design control](/marketing/webflow-pricing-explained) with clean code output. No developer mode toggle needed. You get full CSS control, custom interactions, and CMS capabilities without sacrificing template updates. For most custom projects, Webflow is the better choice.
+
+### WordPress
+
+WordPress offers complete code control through custom themes and plugins. No artificial limits on what you can modify. But you also manage hosting, security, and updates yourself.
+
+### Next.js or Custom Build
+
+For truly custom web applications, a framework like Next.js gives you unlimited flexibility. This is what we use for projects that need more than any website builder can offer. Higher development cost, but zero platform restrictions.
+
+### Our Recommendation
+
+If you are evaluating Squarespace developer mode because you need more control, step back and ask: would a different platform give me what I need without the trade-offs? Often the answer is yes. We help clients make this decision based on their specific needs, timeline, and budget. [Talk to us](/contact) if you want an honest assessment.
+
+## Common Developer Mode Mistakes
+
+After working with dozens of Squarespace developer mode projects, these are the mistakes we see most often.
+
+### Mistake 1: Enabling It Too Early
+
+Teams enable developer mode during initial development, before they know whether they actually need it. Then they discover code injection would have been sufficient, but they can't go back.
+
+**Fix:** Build the site with the visual editor and code injection first. Only enable developer mode after you have confirmed that standard tools cannot accomplish what you need.
+
+### Mistake 2: No Version Control Discipline
+
+Developer mode uses Git, but not everyone uses it properly. No branching strategy, no commit messages, no documentation of changes.
+
+**Fix:** Treat your Squarespace repository like any other codebase. Use meaningful commit messages. Document your changes. Keep a changelog.
+
+### Mistake 3: Ignoring the 7.0 vs 7.1 Issue
+
+Developer mode only works on Squarespace 7.0 sites. Some users try to enable it on 7.1 and cannot find the option. Others are on 7.0 and do not realize they cannot upgrade to 7.1 without disabling developer mode and losing their work.
+
+**Fix:** Check your site version before making any decisions. If you need 7.1 features, developer mode is not an option.
+
+### Mistake 4: No Staging Environment
+
+Since developer mode sites cannot be duplicated, there is no built-in staging. Developers push changes directly to production.
+
+**Fix:** Use a separate Squarespace site as a staging environment. It costs an extra subscription, but it prevents broken deployments on your live site.
+
+### Mistake 5: Custom Code Without Documentation
+
+A developer builds a complex custom template. Six months later, a different developer needs to make changes. There is no documentation. The codebase is a mystery.
+
+**Fix:** Document everything. Comment your code. Maintain a README in your repository. Future developers (including yourself) will thank you.
+
+## FAQ
+
+### Is Squarespace developer mode free?
+
+Developer mode itself does not cost extra, but it requires a Business plan ($33/month billed annually) or higher. Personal plans at $16/month and the discontinued Basic Commerce plan do not support developer mode. The ongoing maintenance costs of having a developer manage your custom code are the real expense.
+
+### Can I disable Squarespace developer mode after enabling it?
+
+Technically yes, but it is destructive. Disabling developer mode permanently deletes all custom template changes, custom collections become uneditable, and your site reverts to the stock template. There is no way to recover your custom code after disabling. Treat enabling developer mode as a permanent decision.
+
+### Does Squarespace developer mode work on version 7.1?
+
+No. Developer mode is only available on Squarespace 7.0 sites. Version 7.1 uses a different architecture that does not support template-level code access. If your site is on 7.1, your customization options are limited to the visual editor, code injection, and CSS overrides.
+
+### What programming languages do I need for Squarespace developer mode?
+
+You need proficiency in HTML, CSS (specifically LESS), JavaScript, and Git. Squarespace templates also use JSON-T, a proprietary templating language that combines JSON data with HTML templates. JSON-T is specific to Squarespace and documented on their developer platform.
+
+### Is Squarespace developer mode worth it?
+
+It depends on your project. For sites that need custom page layouts, custom content types, or structural changes that the visual editor cannot handle, developer mode is the only way to achieve them on Squarespace. For most business websites, code injection and the visual editor are sufficient. If you need full code control and are considering developer mode, also evaluate whether Webflow, WordPress, or a custom build would be a better fit with fewer trade-offs.
+
+### Can I use developer mode to add custom e-commerce features?
+
+Developer mode gives you access to modify product listing layouts, cart pages, and checkout flow templates. However, you cannot override Squarespace's core commerce functionality like payment processing or inventory management. For advanced e-commerce customization, Shopify or a custom solution typically offers more flexibility.
+    `.trim(),
+    author: "Charwin Vanryck deGroot",
+    readTime: "10 min read",
+    category: "marketing",
+    faqData: [
+      {
+        question: "Is Squarespace developer mode free?",
+        answer:
+          "Developer mode itself does not cost extra, but it requires a Business plan ($33/month billed annually) or higher. Personal plans do not support developer mode. The real cost is ongoing maintenance by a developer to manage custom template code.",
+      },
+      {
+        question:
+          "Can I disable Squarespace developer mode after enabling it?",
+        answer:
+          "Technically yes, but disabling developer mode permanently deletes all custom template changes and reverts your site to the stock template. Custom collections become uneditable. There is no way to recover custom code after disabling. Treat it as a permanent decision.",
+      },
+      {
+        question: "Does Squarespace developer mode work on version 7.1?",
+        answer:
+          "No. Developer mode is only available on Squarespace 7.0 sites. Version 7.1 uses a different architecture that does not support template-level code access. Customization on 7.1 is limited to the visual editor, code injection, and CSS overrides.",
+      },
+      {
+        question:
+          "What programming languages do I need for Squarespace developer mode?",
+        answer:
+          "You need proficiency in HTML, CSS (specifically LESS), JavaScript, and Git. Squarespace templates also use JSON-T, a proprietary templating language that combines JSON data with HTML output. JSON-T is specific to Squarespace and documented on their developer platform.",
+      },
+      {
+        question: "Is Squarespace developer mode worth it?",
+        answer:
+          "For sites that need custom page layouts, custom content types, or structural changes the visual editor cannot handle, developer mode is the only way on Squarespace. For most business websites, code injection and the visual editor are sufficient. If you need full code control, also evaluate Webflow, WordPress, or a custom build for fewer trade-offs.",
+      },
+      {
+        question:
+          "Can I use developer mode to add custom e-commerce features?",
+        answer:
+          "Developer mode lets you modify product listing layouts, cart pages, and checkout flow templates. However, you cannot override core commerce functionality like payment processing or inventory management. For advanced e-commerce customization, Shopify or a custom solution typically offers more flexibility.",
+      },
+    ],
   },
 ];
 

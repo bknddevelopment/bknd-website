@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BKND Development | Marketing Built Like Software",
   description:
-    "Developer-built campaigns. Data-driven decisions. Revenue you can measure. BKND Development is the marketing agency for companies that demand speed, transparency, and measurable results.",
+    "Developer-built campaigns. Data-driven decisions. Revenue you can measure. BKND Development is the marketing agency for measurable results.",
   keywords: [
     "digital marketing agency",
     "developer marketing",
