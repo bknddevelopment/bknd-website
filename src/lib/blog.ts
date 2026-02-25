@@ -14769,7 +14769,7 @@ Launching without clear, measurable objectives. "Improve customer service" is no
     imageAlt:
       "Squarespace developer mode interface showing code editor and template files",
     excerpt:
-      "Squarespace developer mode gives you full access to template code via Git. Learn how to enable it, what you can customize, the limitations, and when it makes sense for your project.",
+      "Squarespace developer mode gives you full template code access via Git. How to enable it, what you can customize, and the trade-offs.",
     content: `
 We build and maintain websites on Squarespace, Webflow, WordPress, and custom stacks. When clients ask about Squarespace developer mode, the conversation usually goes one of two ways: either they need it and don't know it exists, or they think they need it and actually don't.
 
