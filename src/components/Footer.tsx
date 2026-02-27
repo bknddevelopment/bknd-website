@@ -20,6 +20,14 @@ const footerLinks = {
     { label: "Industry News", href: "/industry-news" },
     { label: "All Articles", href: "/blog" },
   ],
+  Industries: [
+    { label: "All Industries", href: "/industries" },
+    { label: "HVAC Marketing", href: "/industries/hvac-marketing" },
+    { label: "Dental Marketing", href: "/industries/dental-marketing" },
+    { label: "Roofing Marketing", href: "/industries/roofing-marketing" },
+    { label: "Plumbing Marketing", href: "/industries/plumbing-marketing" },
+    { label: "Restaurant Marketing", href: "/industries/restaurant-marketing" },
+  ],
   Company: [
     { label: "About Us", href: "/about" },
     { label: "Case Studies", href: "/case-studies" },
@@ -113,7 +121,7 @@ export default function Footer() {
 
         {/* Link Columns */}
         <div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-b border-[#424245]">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-12 border-b border-[#424245]">
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
                 {/* Column Header */}

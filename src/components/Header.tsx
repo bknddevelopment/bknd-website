@@ -23,10 +23,18 @@ const resourceLinks = [
   { label: "All Articles", href: "/blog" },
 ];
 
+const industryLinks = [
+  { label: "HVAC Marketing", href: "/industries/hvac-marketing" },
+  { label: "Dental Marketing", href: "/industries/dental-marketing" },
+  { label: "Roofing Marketing", href: "/industries/roofing-marketing" },
+  { label: "Plumbing Marketing", href: "/industries/plumbing-marketing" },
+  { label: "Restaurant Marketing", href: "/industries/restaurant-marketing" },
+];
+
 const navItems = [
   { label: "Services", href: "/#services", hasDropdown: true },
   { label: "Resources", href: "/#resources", hasDropdown: true },
-  { label: "Industries", href: "/#industries", hasDropdown: true },
+  { label: "Industries", href: "/industries", hasDropdown: true },
   { label: "About Us", href: "/about", hasDropdown: false },
   { label: "Contact", href: "/contact", hasDropdown: false },
 ];
@@ -113,6 +121,7 @@ export default function Header() {
   const getDropdownLinks = (label: string) => {
     if (label === "Services") return serviceLinks;
     if (label === "Resources") return resourceLinks;
+    if (label === "Industries") return industryLinks;
     return null;
   };
 
@@ -247,6 +256,7 @@ export default function Header() {
                       onClick={() =>
                         item.label !== "Services" &&
                         item.label !== "Resources" &&
+                        item.label !== "Industries" &&
                         setMobileMenuOpen(false)
                       }
                     >
@@ -281,6 +291,21 @@ export default function Header() {
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {resource.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                    {/* Mobile Industries Sub-menu */}
+                    {item.label === "Industries" && (
+                      <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
+                        {industryLinks.map((industry) => (
+                          <Link
+                            key={industry.label}
+                            href={industry.href}
+                            className="block text-sm text-[#86868B] hover:text-[#00D4FF] transition-colors py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {industry.label}
                           </Link>
                         ))}
                       </div>

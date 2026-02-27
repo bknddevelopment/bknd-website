@@ -42,6 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/creative`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Methodology
     { url: `${BASE_URL}/methodology/ai`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Industries
+    { url: `${BASE_URL}/industries`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/industries/hvac-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/industries/dental-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/industries/roofing-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/industries/plumbing-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/industries/restaurant-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Locations
     { url: `${BASE_URL}/locations/elizabeth-nj`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Legal
