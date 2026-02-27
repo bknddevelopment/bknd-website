@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import Image from "next/image";
 import {
   ArrowRight,
   Search,
@@ -353,6 +354,19 @@ export default function NJSEOPage() {
               </AnimateOnScroll>
             </div>
           </div>
+        </section>
+
+        {/* Hero Image */}
+        <section className="relative w-full h-[300px] lg:h-[420px] overflow-hidden">
+          <Image
+            src="/images/hero/nj-skyline.jpg"
+            alt="New Jersey skyline at sunset — Jersey City waterfront"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1D1D1F] via-transparent to-transparent" />
         </section>
 
         {/* Stats Bar */}
