@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/ai/custom`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/services/ai/automation`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/services/seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/services/seo/new-jersey`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/services/content`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/services/paid-advertising`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/services/analytics`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
