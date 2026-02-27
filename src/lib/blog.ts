@@ -23,7 +23,7 @@ const blogPosts: BlogPost[] = [
     date: "2026-02-27",
     image: "/images/blog/website-cost-guide.jpg",
     imageAlt:
-      "Calculator and laptop on a desk representing website cost planning and budgeting for small businesses",
+      "Laptop showing financial charts on a clean desk with notebook and coffee — website cost planning",
     excerpt:
       "We build websites every week and clients always ask what it costs. Here are the real numbers: DIY runs $0-50/month, freelancers charge $1,500-5,000, and agencies charge $5,000-25,000+. We break down every cost factor so you know exactly what to budget.",
     content: `
