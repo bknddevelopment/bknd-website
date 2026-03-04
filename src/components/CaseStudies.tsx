@@ -283,10 +283,10 @@ export default function CaseStudies() {
         {/* View All CTA */}
         <div className="text-center mt-12">
           <a
-            href="/services"
+            href="/work"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#1D1D1F] text-white rounded-full text-base font-medium hover:bg-[#000000] transition-all duration-300 hover:scale-[1.03] shadow-lg hover:shadow-xl"
           >
-            Explore Our Services
+            See Our Work
             <svg
               className="w-4 h-4 transition-transform duration-300 hover:translate-x-1"
               fill="none"

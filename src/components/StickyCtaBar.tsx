@@ -62,17 +62,17 @@ export function StickyCtaBar() {
               {/* Value Prop + CTA */}
               <div className="flex items-center gap-4">
                 <span className="text-neutral-500 text-sm hidden md:block">
-                  Ready to grow?
+                  Ready to build?
                 </span>
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-1.5 bg-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#00D4FF]/90 transition-all hover:shadow-md"
                   style={{
                     boxShadow: "0 0 16px rgba(0, 212, 255, 0.3)",
                     animation: "stickyCtaPulse 3s ease-in-out infinite",
                   }}
                 >
-                  Get Started
+                  Let&apos;s Build
                   <svg
                     className="w-3.5 h-3.5"
                     fill="none"

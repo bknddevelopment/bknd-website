@@ -5,14 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-const serviceLinks = [
-  { label: "AI Solutions", href: "/services/ai" },
-  { label: "SEO", href: "/services/seo" },
-  { label: "Content", href: "/services/content" },
-  { label: "Creative", href: "/services/creative" },
-  { label: "CRO", href: "/services/cro" },
-  { label: "Analytics", href: "/services/analytics" },
-  { label: "Paid Advertising", href: "/services/paid-advertising" },
+const buildLinks = [
+  { label: "Websites", href: "/build/websites" },
+  { label: "Marketing", href: "/build/marketing" },
+  { label: "Platforms", href: "/build/platforms" },
 ];
 
 const resourceLinks = [
@@ -32,10 +28,10 @@ const industryLinks = [
 ];
 
 const navItems = [
-  { label: "Services", href: "/#services", hasDropdown: true },
+  { label: "Build", href: "/build/websites", hasDropdown: true },
   { label: "Resources", href: "/#resources", hasDropdown: true },
-  { label: "Industries", href: "/industries", hasDropdown: true },
-  { label: "About Us", href: "/about", hasDropdown: false },
+  { label: "Work", href: "/work", hasDropdown: false },
+  { label: "About", href: "/about", hasDropdown: false },
   { label: "Contact", href: "/contact", hasDropdown: false },
 ];
 
@@ -119,7 +115,7 @@ export default function Header() {
   };
 
   const getDropdownLinks = (label: string) => {
-    if (label === "Services") return serviceLinks;
+    if (label === "Build") return buildLinks;
     if (label === "Resources") return resourceLinks;
     if (label === "Industries") return industryLinks;
     return null;
@@ -200,7 +196,7 @@ export default function Header() {
             className="hidden lg:flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-[#050A14] text-[14px] font-semibold bg-white hover:bg-[#00D4FF] transition-all duration-500 group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Work With Us
+              Let&apos;s Build
               <ArrowRightIcon className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] skew-x-[-20deg] group-hover:translate-x-[150%] transition-transform duration-700 ease-out" />
@@ -254,7 +250,7 @@ export default function Header() {
                       href={item.href}
                       className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
                       onClick={() =>
-                        item.label !== "Services" &&
+                        item.label !== "Build" &&
                         item.label !== "Resources" &&
                         item.label !== "Industries" &&
                         setMobileMenuOpen(false)
@@ -266,9 +262,9 @@ export default function Header() {
                       )}
                     </Link>
                     {/* Mobile Services Sub-menu */}
-                    {item.label === "Services" && (
+                    {item.label === "Build" && (
                       <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
-                        {serviceLinks.map((service) => (
+                        {buildLinks.map((service) => (
                           <Link
                             key={service.label}
                             href={service.href}
@@ -317,7 +313,7 @@ export default function Header() {
                   className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Work With Us
+                  Let&apos;s Build
                   <ArrowRightIcon className="w-4 h-4" />
                 </Link>
               </nav>

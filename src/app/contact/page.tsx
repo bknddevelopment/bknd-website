@@ -74,16 +74,16 @@ export default function ContactPage() {
 
               <AnimateOnScroll delay={0.1}>
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Let&apos;s talk about{" "}
-                  <span className="text-[#00D4FF]">growth.</span>
+                  Let&apos;s build{" "}
+                  <span className="text-[#00D4FF]">something.</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
                 <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl">
-                  Whether you&apos;re ready to start a project or just want to
-                  explore what&apos;s possible, we&apos;d love to hear from you.
-                  No pressure, no sales pitch. Just a conversation.
+                  Whether you need a website, a marketing system, or a
+                  full platform — we&apos;d love to hear what you&apos;re
+                  building. No pressure, no sales pitch. Just a conversation.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -367,7 +367,7 @@ export default function ContactPage() {
             <div className="max-w-3xl mx-auto text-center">
               <AnimateOnScroll>
                 <p className="text-gray-400 text-sm font-medium tracking-wide uppercase mb-6">
-                  Ready to Start?
+                  Ready to Build?
                 </p>
 
                 <h2 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight mb-6">
@@ -377,7 +377,7 @@ export default function ContactPage() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Every great partnership starts with a conversation.
+                  Every great build starts with a conversation.
                 </p>
               </AnimateOnScroll>
 

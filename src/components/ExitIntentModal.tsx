@@ -50,7 +50,7 @@ export default function ExitIntentModal() {
           name: "",
           consent: true,
           fields: {
-            subject: "Free Growth Audit Request - BKND Development",
+            subject: "Free Blueprint Request - BKND Development",
             message: "",
           },
         }),
@@ -148,7 +148,7 @@ export default function ExitIntentModal() {
                     className="text-[28px] md:text-[32px] font-semibold text-center mb-3 leading-tight tracking-tight"
                     style={{ color: "#1D1D1F" }}
                   >
-                    Get Your Free Growth Audit
+                    Let&apos;s Build Something Together
                   </h2>
 
                   {/* Subheadline - Apple gray */}
@@ -156,13 +156,13 @@ export default function ExitIntentModal() {
                     className="text-center mb-8 text-[17px] leading-relaxed"
                     style={{ color: "#86868B" }}
                   >
-                    Discover untapped opportunities to scale your business with
-                    actionable insights from our experts.
+                    Get a free blueprint showing exactly what we&apos;d build
+                    for your business — and the results you can expect.
                   </p>
 
                   {/* Value props - clean Apple style */}
                   <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8">
-                    {["100% Free", "No Commitment", "Delivered in 48h"].map(
+                    {["100% Free", "No Commitment", "Your Blueprint in 48h"].map(
                       (item) => (
                         <div
                           key={item}
@@ -270,7 +270,7 @@ export default function ExitIntentModal() {
                           <span>Submitting...</span>
                         </>
                       ) : (
-                        "Get My Free Audit"
+                        "Get My Free Blueprint"
                       )}
                     </button>
                   </form>
@@ -310,7 +310,7 @@ export default function ExitIntentModal() {
                     You&apos;re All Set!
                   </h3>
                   <p className="text-[17px]" style={{ color: "#86868B" }}>
-                    Check your inbox for your free growth audit details.
+                    Check your inbox for your free blueprint details.
                   </p>
                 </div>
               )}

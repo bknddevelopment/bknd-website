@@ -4,14 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const footerLinks = {
-  Services: [
-    { label: "AI Solutions", href: "/services/ai" },
-    { label: "SEO Services", href: "/services/seo" },
-    { label: "Content Marketing", href: "/services/content" },
-    { label: "Performance Creative", href: "/services/creative" },
-    { label: "CRO", href: "/services/cro" },
-    { label: "Data & Analytics", href: "/services/analytics" },
-    { label: "Paid Advertising", href: "/services/paid-advertising" },
+  Build: [
+    { label: "Websites", href: "/build/websites" },
+    { label: "Marketing", href: "/build/marketing" },
+    { label: "Platforms", href: "/build/platforms" },
   ],
   Resources: [
     { label: "AI Corner", href: "/ai" },
@@ -29,8 +25,8 @@ const footerLinks = {
     { label: "Restaurant Marketing", href: "/industries/restaurant-marketing" },
   ],
   Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Case Studies", href: "/case-studies" },
+    { label: "About", href: "/about" },
+    { label: "Work", href: "/work" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
