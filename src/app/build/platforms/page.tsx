@@ -83,6 +83,51 @@ export default function BuildPlatformsPage() {
           </div>
         </section>
 
+        {/* Opusite Showcase */}
+        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+          <div className="container-sg">
+            <div className="max-w-5xl mx-auto">
+              <AnimateOnScroll>
+                <div className="bg-[#1D1D1F] rounded-3xl p-8 md:p-12 lg:p-16">
+                  <p className="text-[#00D4FF] text-sm font-medium tracking-wide uppercase mb-4">
+                    Built by us, used every day
+                  </p>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-tight mb-6 leading-[1.1]">
+                    We built our own platform.
+                  </h2>
+                  <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
+                    Opusite is the client management platform we built from
+                    scratch to run our own business — permissions, workflows,
+                    forms, reporting, and client portals. It&apos;s how we manage
+                    15+ clients simultaneously with a team of one.
+                  </p>
+                  <div className="grid sm:grid-cols-3 gap-6 mb-8">
+                    {[
+                      { stat: "15+", label: "Clients managed" },
+                      { stat: "Built in", label: "Next.js + Supabase" },
+                      { stat: "Zero", label: "Off-the-shelf tools" },
+                    ].map((item, i) => (
+                      <div key={i} className="text-center sm:text-left">
+                        <div className="text-2xl font-semibold text-[#00D4FF]">
+                          {item.stat}
+                        </div>
+                        <div className="text-gray-500 text-sm mt-1">
+                          {item.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-gray-500 text-base leading-relaxed border-t border-white/10 pt-8">
+                    This is how we think about every problem. Build the software.
+                    Let the software do the work. If we built it for ourselves,
+                    we can build it for you.
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-[#1D1D1F] py-24 lg:py-32">
           <div className="container-sg">
             <div className="max-w-3xl mx-auto text-center">
