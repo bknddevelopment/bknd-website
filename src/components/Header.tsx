@@ -35,6 +35,8 @@ const navItems = [
   { label: "Contact", href: "/contact", hasDropdown: false },
 ];
 
+const CLIENT_PORTAL_URL = "https://www.opusite.com/request/bknd-development/bknd-development-website-update-ijitr";
+
 // Chevron down icon
 function ChevronDownIcon({ className }: { className?: string }) {
   return (
@@ -190,10 +192,22 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Magnetic CTA Button */}
+          {/* Client Portal + CTA */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href={CLIENT_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full text-[14px] font-medium text-[#00D4FF] border border-[#00D4FF]/30 hover:bg-[#00D4FF]/10 hover:border-[#00D4FF]/60 transition-all duration-300"
+            >
+              Client Portal
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           <Link
             href="/contact"
-            className="hidden lg:flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-[#050A14] text-[14px] font-semibold bg-white hover:bg-[#00D4FF] transition-all duration-500 group relative overflow-hidden"
+            className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-[#050A14] text-[14px] font-semibold bg-white hover:bg-[#00D4FF] transition-all duration-500 group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
               Let&apos;s Build
@@ -201,6 +215,7 @@ export default function Header() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] skew-x-[-20deg] group-hover:translate-x-[150%] transition-transform duration-700 ease-out" />
           </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -308,9 +323,21 @@ export default function Header() {
                     )}
                   </div>
                 ))}
+                <a
+                  href={CLIENT_PORTAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[#00D4FF] text-base font-medium border border-[#00D4FF]/30 hover:bg-[#00D4FF]/10 transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Client Portal
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
                 <Link
                   href="/contact"
-                  className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all"
+                  className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Let&apos;s Build
