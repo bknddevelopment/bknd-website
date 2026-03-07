@@ -91,12 +91,12 @@ export default function Footer() {
       />
 
       {/* Main Footer Content */}
-      <div className="max-w-[980px] mx-auto px-6 lg:px-4 py-14 lg:py-20 relative">
+      <div className="container-sg relative py-14 lg:py-20">
         {/* Top Section: Logo and Social */}
         <div>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-10 border-b border-[#424245]">
+          <div className="flex flex-col gap-6 border-b border-[#424245] pb-10 md:flex-row md:items-center md:justify-between">
             {/* Logo */}
-            <div className="mb-6 md:mb-0">
+            <div>
               <Image
                 src="/images/bknd-logo-new.png"
                 alt="BKND Development"
@@ -121,7 +121,7 @@ export default function Footer() {
 
         {/* Link Columns */}
         <div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-12 border-b border-[#424245]">
+          <div className="grid grid-cols-1 gap-8 border-b border-[#424245] py-12 sm:grid-cols-2 xl:grid-cols-5">
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
                 {/* Column Header */}
@@ -133,13 +133,19 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="group relative text-[#86868B] text-xs hover:text-[#00D4FF] transition-colors duration-200 inline-block"
-                      >
-                        {link.label}
-                        <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-[#00D4FF] transition-all duration-300 group-hover:w-full" />
-                      </Link>
+                      {link.href === "#" ? (
+                        <span className="text-[#86868B] text-xs inline-block">
+                          {link.label}
+                        </span>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="group relative text-[#86868B] text-xs hover:text-[#00D4FF] transition-colors duration-200 inline-block"
+                        >
+                          {link.label}
+                          <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-[#00D4FF] transition-all duration-300 group-hover:w-full" />
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -151,7 +157,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div>
           <div className="pt-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               {/* Copyright */}
               <p className="text-[#86868B] text-[11px]">
                 Copyright &copy; {new Date().getFullYear()} BKND Development.
@@ -159,7 +165,7 @@ export default function Footer() {
               </p>
 
               {/* Legal Links */}
-              <div className="flex flex-wrap items-center gap-x-1 text-[11px]">
+              <div className="flex flex-wrap items-center gap-y-2 text-[11px]">
                 {legalLinks.map((link, index) => (
                   <span key={link.label} className="flex items-center">
                     <Link

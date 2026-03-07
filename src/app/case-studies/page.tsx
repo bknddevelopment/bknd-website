@@ -75,27 +75,29 @@ export default function CaseStudiesPage() {
       <Header />
       <main className="bg-[#F5F5F7] min-h-screen">
         {/* Header Section */}
-        <section className="pt-24 pb-12 md:pt-32 md:pb-16">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+        <section className="page-hero">
+          <div className="container-sg">
+            <div className="mx-auto max-w-4xl text-center">
             <AnimateOnScroll>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1D1D1F] tracking-tight mb-6">
+              <h1 className="mb-6 text-3xl font-semibold tracking-tight text-[#1D1D1F] sm:text-4xl lg:text-6xl">
                 Client Results
               </h1>
-              <p className="text-xl md:text-2xl text-[#86868B] max-w-2xl mx-auto leading-relaxed">
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#86868B] sm:text-xl md:text-2xl">
                 Real results for real businesses. Some clients prefer to remain
                 confidential - reach out to learn more about our full portfolio.
               </p>
             </AnimateOnScroll>
+            </div>
           </div>
         </section>
 
         {/* Case Studies Grid */}
         <section className="pb-16 md:pb-24">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="container-sg">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {caseStudies.map((study, i) => (
                 <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
-                  <div className="bg-white rounded-2xl overflow-hidden group h-full shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
+                  <div className="group h-full overflow-hidden rounded-[28px] bg-white shadow-sm transition-all duration-500 hover:scale-[1.01] hover:shadow-xl">
                     {/* Image Area */}
                     <div className="h-56 relative overflow-hidden">
                       <Image
@@ -129,7 +131,7 @@ export default function CaseStudiesPage() {
                     {/* Content */}
                     <div className="p-6">
                       {/* Stats */}
-                      <div className="flex gap-8 mb-5">
+                      <div className="mb-5 flex flex-wrap gap-5 sm:gap-8">
                         {study.stats.map((stat, j) => (
                           <div key={j}>
                             <div className="text-2xl md:text-3xl font-semibold text-[#00D4FF]">
@@ -179,7 +181,8 @@ export default function CaseStudiesPage() {
 
         {/* Confidential Note */}
         <section className="pb-24 md:pb-32">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="container-sg">
+            <div className="mx-auto max-w-4xl text-center">
             <AnimateOnScroll>
               <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
                 <p className="text-lg md:text-xl text-[#86868B] mb-6">
@@ -207,6 +210,7 @@ export default function CaseStudiesPage() {
                 </Link>
               </div>
             </AnimateOnScroll>
+            </div>
           </div>
         </section>
       </main>

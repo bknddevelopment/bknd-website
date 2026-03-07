@@ -86,31 +86,6 @@ const ArchitectIcon = () => (
   </svg>
 );
 
-const AutomateIcon = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <circle cx="16" cy="16" r="12" stroke="currentColor" strokeWidth="2" />
-    <path
-      d="M16 8v8l6 4"
-      stroke="#00D4FF"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M22 4l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"
-      stroke="#00D4FF"
-      strokeWidth="1.5"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 const OptimizeIcon = () => (
   <svg
     width="32"
@@ -139,78 +114,33 @@ const OptimizeIcon = () => (
   </svg>
 );
 
-const CompoundIcon = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M4 28V16c0-6.627 5.373-12 12-12s12 5.373 12 12v12"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <path
-      d="M8 28V18c0-4.418 3.582-8 8-8s8 3.582 8 8v10"
-      stroke="#00D4FF"
-      strokeWidth="2"
-    />
-    <path
-      d="M12 28V20c0-2.209 1.791-4 4-4s4 1.791 4 4v8"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <circle cx="16" cy="16" r="2" fill="#00D4FF" />
-  </svg>
-);
-
 const steps: Step[] = [
   {
     id: 1,
-    phase: "Week 1-2",
-    title: "Audit & Analyze",
+    phase: "Week 1",
+    title: "Learn",
     description:
-      "AI-powered deep dive into your marketing stack, competitors, and opportunities. We find the gaps others miss.",
+      "Deep dive into your business, competitors, and market. AI-powered research surfaces opportunities humans miss. We understand before we build.",
     icon: <AuditIcon />,
-    highlight: "AI-Powered Analysis",
+    highlight: "AI-Powered Research",
   },
   {
     id: 2,
-    phase: "Week 2-3",
-    title: "Architect",
+    phase: "Weeks 2-4",
+    title: "Build",
     description:
-      "Developer-built strategy with measurable KPIs. Every campaign designed as a system, not a one-off.",
+      "Website, marketing system, or platform — built in code with SEO and performance engineered in from day one. No templates. No shortcuts.",
     icon: <ArchitectIcon />,
-    highlight: "Developer-Built Systems",
+    highlight: "Built in Code",
   },
   {
     id: 3,
-    phase: "Week 3-6",
-    title: "Automate & Accelerate",
-    description:
-      "Launch with AI-enhanced execution at scale. Automated bidding, dynamic creative, programmatic optimization.",
-    icon: <AutomateIcon />,
-    highlight: "AI-Enhanced Execution",
-  },
-  {
-    id: 4,
     phase: "Ongoing",
     title: "Optimize",
     description:
-      "Continuous AI optimization based on real-time data. We adjust faster than your competitors can react.",
+      "Continuous improvement powered by real data. AI handles monitoring and analysis. Every week the system gets smarter and your results compound.",
     icon: <OptimizeIcon />,
-    highlight: "Data-Driven Iteration",
-  },
-  {
-    id: 5,
-    phase: "Always",
-    title: "Compound",
-    description:
-      "Results that build on themselves. Each win creates the foundation for the next. Growth that accelerates.",
-    icon: <CompoundIcon />,
-    highlight: "Compounding Returns",
+    highlight: "Compounding Results",
   },
 ];
 
@@ -233,14 +163,23 @@ function AnimatedCounter({
     // Try to parse numeric values
     const match = value.match(/^(\d+\.?\d*)(.*)/);
     if (!match) {
-      setDisplayed(value);
-      return;
+      const frame = requestAnimationFrame(() => {
+        setDisplayed(value);
+      });
+
+      return () => cancelAnimationFrame(frame);
     }
+
+    const resetFrame = requestAnimationFrame(() => {
+      setDisplayed(`0${match[2]}`);
+    });
 
     const target = parseFloat(match[1]);
     const valueSuffix = match[2];
     const duration = 1400;
     const startTime = performance.now();
+
+    let animationFrame = 0;
 
     const animate = (now: number) => {
       const elapsed = now - startTime;
@@ -255,14 +194,18 @@ function AnimatedCounter({
       }
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
       } else {
         setDisplayed(value);
       }
     };
 
-    setDisplayed(`0${match[2]}`);
-    requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(resetFrame);
+      cancelAnimationFrame(animationFrame);
+    };
   }, [isInView, value]);
 
   return (
@@ -287,7 +230,7 @@ function AnimatedCounter({
   );
 }
 
-function TimelineDot({ index }: { index: number; totalSteps: number }) {
+function TimelineDot({ }: { index: number; totalSteps: number }) {
   return (
     <div className="absolute -top-[52px] left-1/2 transform -translate-x-1/2">
       <div
@@ -322,7 +265,7 @@ export default function Methodology() {
   return (
     <section
       id="methodology"
-      className="relative py-20 lg:py-28 overflow-hidden"
+      className="relative overflow-hidden py-20 lg:py-28"
       style={{
         background: "linear-gradient(180deg, #0a1628 0%, #0f1d32 100%)",
       }}
@@ -359,7 +302,7 @@ export default function Methodology() {
 
       {/* Gradient orbs with drift animation */}
       <div
-        className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
+        className="absolute left-1/4 top-0 h-[58vw] w-[58vw] max-h-[600px] max-w-[600px] rounded-full opacity-20 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%)",
@@ -367,7 +310,7 @@ export default function Methodology() {
         }}
       />
       <div
-        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full opacity-15 blur-3xl"
+        className="absolute bottom-0 right-1/4 h-[42vw] w-[42vw] max-h-[400px] max-w-[400px] rounded-full opacity-15 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%)",
@@ -385,11 +328,11 @@ export default function Methodology() {
             Our Methodology
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 tracking-tight">
-            Marketing Systems, Not Campaigns
+            How We Build
           </h2>
           <p className="text-white/60 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
-            We engineer growth the way developers build software—with
-            architecture, automation, and measurable outcomes at every step.
+            Three phases. No handoffs. Learn your business, build the system,
+            then optimize it forever.
           </p>
         </div>
 
@@ -399,7 +342,7 @@ export default function Methodology() {
           <AnimatedTimelineLine />
 
           {/* Steps Grid */}
-          <div className="grid grid-cols-5 gap-6">
+          <div className="grid grid-cols-3 gap-6">
             {steps.map((step, index) => (
               <div key={step.id}>
                 <div className="group relative">
@@ -459,15 +402,15 @@ export default function Methodology() {
         <div className="lg:hidden">
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#00D4FF]/40 via-[#00D4FF]/20 to-transparent" />
+            <div className="absolute bottom-0 left-5 top-0 w-[2px] bg-gradient-to-b from-[#00D4FF]/40 via-[#00D4FF]/20 to-transparent sm:left-6" />
 
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {steps.map((step) => (
                 <div key={step.id}>
-                  <div className="relative flex gap-6">
+                  <div className="relative flex gap-4 sm:gap-6">
                     {/* Timeline dot */}
                     <div className="relative z-10 flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-[#0a1628] border-2 border-[#00D4FF]/40 flex items-center justify-center">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#00D4FF]/40 bg-[#0a1628] sm:h-12 sm:w-12">
                         <span className="text-[#00D4FF] font-bold text-sm">
                           {step.id}
                         </span>
@@ -475,7 +418,7 @@ export default function Methodology() {
                     </div>
 
                     {/* Card */}
-                    <div className="flex-1 bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-5">
+                    <div className="flex-1 rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm sm:p-5">
                       {/* Phase */}
                       <span
                         className="text-xs font-bold tracking-wider uppercase"
@@ -516,7 +459,7 @@ export default function Methodology() {
 
         {/* Bottom Stats Bar with animated counters */}
         <div className="mt-16 lg:mt-20 pt-10 border-t border-white/10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 gap-6 text-center md:grid-cols-4 md:gap-8">
             <div>
               <AnimatedCounter value="6" />
               <p className="text-white/50 text-sm">Weeks to First Results</p>
@@ -542,9 +485,9 @@ export default function Methodology() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-[#00D4FF] text-white font-medium rounded-full hover:bg-[#00B8E0] transition-all duration-300 shadow-[0_0_30px_rgba(0,212,255,0.3)] hover:shadow-[0_0_40px_rgba(0,212,255,0.5)]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#00D4FF] px-6 py-3.5 font-medium text-white shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300 hover:bg-[#00B8E0] hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] sm:px-8 sm:py-4"
           >
-            Start Your Growth Engine
+            Let&apos;s Build
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
               fill="none"
