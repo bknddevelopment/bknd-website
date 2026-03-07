@@ -286,6 +286,8 @@ The real question is not "how much does a website cost?" It is "what is my websi
 
 Invest in what matters: clear messaging, solid content, good SEO, and a site that actually converts visitors into customers. Everything else is secondary.
 
+For a more detailed breakdown with real project examples, platform-by-platform pricing, and hidden costs nobody mentions, read our [complete website design cost guide for small businesses](/marketing/website-design-cost-small-business).
+
 ---
 
 **Need an honest assessment of what your website should cost?** We build websites for businesses every week and we do not upsell. Tell us what you need and we will give you a straight answer. [Get in touch with BKND](/contact) -- no pressure, no fluff.
@@ -12757,7 +12759,7 @@ Your website is a lead generation machine. Every decision—from page structure 
 
 Start with the fundamentals. Fast load times. Mobile-first design. Clear calls to action. Real photos and testimonials. Then layer in the details: schema markup, [conversion optimization](/services/cro), and ongoing content that attracts search traffic.
 
-Most contractors outsource their website to whoever's cheapest and wonder why it doesn't generate leads. The contractors who dominate their markets treat their website as a critical business asset and invest accordingly.
+Most contractors outsource their website to whoever's cheapest and wonder why it doesn't generate leads. The contractors who dominate their markets treat their website as a critical business asset and invest accordingly. If you are wondering what a professional contractor website should actually cost, read our [website design cost breakdown for small businesses](/marketing/website-design-cost-small-business).
 
 If your current site isn't generating 5-8% conversion rates, something's broken. Usually multiple things.
 
@@ -16419,6 +16421,424 @@ The worst decision is no decision. Both platforms offer free trials. Pick the on
         name: "Overall Value",
         description:
           "Squarespace is the better value for most small businesses, creative professionals, and simple ecommerce. Wix is the better value for businesses needing advanced ecommerce, extensive app integrations, or niche-specific features.",
+      },
+    ],
+  },
+  {
+    slug: "website-design-cost-small-business",
+    title:
+      "How Much Does a Website Cost in 2026? Real Prices From an Agency That Builds Them",
+    date: "2026-03-06",
+    image: "/images/blog/website-design-cost-small-business.jpg",
+    imageAlt:
+      "Small business owner reviewing website design quotes on a laptop — website design cost planning",
+    excerpt:
+      "Website design costs $3,000-$15,000 for most small businesses. An agency that builds them breaks down real pricing, hidden costs, and how to avoid overpaying.",
+    content: `
+Most articles about website costs are written by companies trying to sell you something. Platform companies want you to pick their builder. Affiliate sites earn commissions when you click their links. Enterprise agencies quote six figures because that is their market.
+
+We build websites for small businesses. That is what we do every day. So here is a straightforward answer based on what projects actually cost -- not what someone wants you to spend.
+
+**The short version:** A small business website costs between **$3,000 and $15,000** when built by a professional. A DIY website builder runs **$200 to $600 per year**. A freelancer typically charges **$1,500 to $4,000** for a basic site. According to a [GoodFirms survey of over 100 web development companies](https://www.goodfirms.co/resources/website-construction-cost-survey), 50% of agencies charge between $3,000 and $15,000 per project.
+
+The real question is not "how much does a website cost?" -- it is "what should YOUR website cost given what you need it to do?" This guide breaks that down.
+
+---
+
+## What Determines Your Website Cost
+
+Every website project is different, but costs come down to a handful of factors. Here is what actually moves the price up or down.
+
+### 1. Number of Pages and Complexity
+
+A five-page site for a local service business is a fundamentally different project than a 30-page site with client portals and booking systems. More pages means more design, more content, and more development time.
+
+- **5-7 pages** (Home, About, Services, Contact, maybe a blog): This is the bread and butter of small business web design.
+- **10-20 pages** (multiple service pages, location pages, team bios): Common for businesses that serve multiple areas or offer many services.
+- **20+ pages** (resource libraries, product catalogs, gated content): This is where scope starts expanding significantly.
+
+### 2. Design: Template vs. Custom
+
+Templates get you 80% of the way there at 20% of the cost. Custom design means a designer creates layouts specifically for your brand, your content, and your customers.
+
+- **Template-based design:** $0 to $500. You pick a pre-built layout and customize colors, fonts, and images.
+- **Custom design:** $2,000 to $10,000+. A designer builds pages from scratch based on your brand strategy ([Wix, 2026](https://www.wix.com/blog/how-much-does-a-website-cost)).
+
+Most small businesses do well with a premium template that gets customized by a professional. You get a polished result without paying for fully custom design.
+
+### 3. Platform Choice
+
+Your platform determines your monthly costs and what is possible without custom code. We break this down in detail [later in this article](#web-design-pricing-by-platform), but here is the quick version:
+
+- **Website builders** (Wix, Squarespace): $17 to $159/month. Everything included, limited flexibility.
+- **WordPress** (self-hosted): Free software plus $2 to $50/month for hosting. Maximum flexibility, more maintenance.
+- **Webflow:** $14 to $39/month for site plans. Design freedom with less technical overhead than WordPress.
+- **Shopify:** $39 to $2,300/month. Built specifically for online stores.
+
+If you are trying to choose between platforms, our [Webflow vs Squarespace comparison](/marketing/webflow-vs-squarespace) and [Squarespace vs Wix breakdown](/marketing/squarespace-vs-wix) cover the tradeoffs honestly.
+
+### 4. Ecommerce Needs
+
+Selling products online adds significant cost. You need payment processing, inventory management, shipping calculators, tax handling, and product photography.
+
+- **No ecommerce:** No additional cost.
+- **Basic ecommerce** (under 50 products): Adds $2,000 to $10,000 to a professional build ([GoodFirms, 2025](https://www.goodfirms.co/resources/website-construction-cost-survey)).
+- **Full ecommerce** (large catalog, subscriptions, memberships): $7,000 to $70,000+ depending on complexity ([GoodFirms, 2025](https://www.goodfirms.co/resources/website-construction-cost-survey)).
+
+### 5. Integrations and Features
+
+Every tool your website connects to adds development time. Common integrations include:
+
+- **Booking/scheduling systems:** Calendly, Acuity, or custom booking flows.
+- **CRM connections:** HubSpot, Salesforce, or email marketing platforms.
+- **Payment processing:** Stripe, Square, or PayPal integrations.
+- **Custom forms:** Multi-step forms, conditional logic, file uploads.
+- **Database integrations:** $2,000 to $25,000 depending on complexity ([WebFX, 2026](https://www.webfx.com/web-design/pricing/website-costs/)).
+
+### 6. Content and SEO Setup
+
+Content is the part most people underestimate. Professional copywriting, photography, and search engine optimization are what separate a website that generates leads from one that sits empty.
+
+- **Stock photos and DIY copy:** $0 to $200.
+- **Professional copywriting:** $500 to $3,000 for a full site.
+- **Professional photography:** $300 to $2,000 for a business photo shoot.
+- **SEO setup** (keyword research, meta tags, page structure, schema markup): $500 to $5,000 depending on depth.
+
+### 7. Ongoing Maintenance
+
+Your website is not a "set it and forget it" asset. Every site needs hosting, security updates, content refreshes, and periodic redesigns.
+
+We cover ongoing costs in detail in [the hidden costs section below](#the-hidden-costs-nobody-mentions).
+
+---
+
+## How Much Should a Website Cost?
+
+Here is a clear breakdown of what each investment level gets you. These ranges are based on industry data from [Clutch.co's analysis of 79,260 agencies](https://clutch.co/web-designers/pricing) and [GoodFirms' survey of 100+ web development companies](https://www.goodfirms.co/resources/website-construction-cost-survey).
+
+| Tier | Price Range | What You Get | Best For |
+|------|-------------|-------------|----------|
+| **DIY Builder** | $200-$600/year | Template site, drag-and-drop builder, basic pages, limited customization | Side projects, personal sites, testing an idea |
+| **Budget Professional** | $1,500-$4,000 | Freelancer-built site, template customized to your brand, basic SEO, responsive design | Solopreneurs, very small businesses, tight budgets |
+| **Mid-Range Professional** | $4,000-$10,000 | Custom or heavily customized design, content strategy, SEO setup, CMS training, integrations | Established small businesses ready to grow |
+| **Full-Service Agency** | $8,000-$25,000 | Custom design, conversion optimization, content creation, advanced SEO, ongoing support | Businesses where the website drives significant revenue |
+| **Enterprise / Complex** | $25,000-$100,000+ | Custom application development, complex integrations, multi-language, custom portals | Larger organizations with complex technical needs |
+
+**The sweet spot for most small businesses is $5,000 to $12,000.** According to [industry consensus](https://markbrinker.com/) and [boutique agency data](https://gruffygoat.com/blog/small-business-website-cost), a strategy-driven small business website typically runs $8,500 to $10,000 when you factor in design, development, content, and initial SEO.
+
+That might sound like a lot. But consider this: [40% of businesses with websites say search engines are their number one source of leads](https://clutch.co/resources/state-of-small-business-websites-2025) (Clutch.co, 2025). For businesses without a website, 40% rely on referrals -- a channel you cannot scale.
+
+---
+
+## What Real Small Business Website Projects Look Like
+
+Every other "website cost" article on the internet gives you ranges. Here is what actual small business projects typically look like, based on industry data from [Clutch.co](https://clutch.co/web-designers/pricing) and [GoodFirms](https://www.goodfirms.co/resources/website-construction-cost-survey).
+
+### Example 1: Local Service Business (5-Page Site)
+
+**Client type:** Local home services company (plumber, electrician, HVAC, etc.)
+**Platform:** WordPress or Squarespace
+**Timeline:** 3-4 weeks
+
+| Line Item | Cost |
+|-----------|------|
+| Discovery and strategy | $500-$800 |
+| Design (5 pages) | $1,500-$2,500 |
+| Development and build | $1,000-$2,000 |
+| Content writing | $500-$1,000 |
+| SEO setup | $500-$1,000 |
+| Training and handoff | $200-$400 |
+| **Total** | **$4,200-$7,700** |
+
+This is the most common type of project for small agencies and experienced freelancers. The business gets a professional online presence with proper SEO foundations, clear service descriptions, and a contact flow that converts visitors into leads.
+
+### Example 2: Multi-Service Business With Booking
+
+**Client type:** Wellness studio, consulting firm, or multi-location service business
+**Platform:** Webflow or WordPress
+**Timeline:** 5-8 weeks
+
+| Line Item | Cost |
+|-----------|------|
+| Discovery and strategy | $800-$1,200 |
+| Design (10-15 pages) | $2,500-$4,000 |
+| Development and build | $2,000-$3,500 |
+| Booking system integration | $500-$1,500 |
+| Content writing | $1,000-$2,000 |
+| SEO setup | $800-$1,500 |
+| **Total** | **$7,600-$13,700** |
+
+These projects involve more complexity: multiple service lines, staff bios, scheduling integrations, and often location-specific landing pages. The booking integration alone can range from a simple Calendly embed to a fully custom scheduling flow.
+
+### Example 3: Small Ecommerce Store
+
+**Client type:** Boutique retailer, artisan goods, or niche product brand with under 50 products
+**Platform:** Shopify or WooCommerce
+**Timeline:** 6-10 weeks
+
+| Line Item | Cost |
+|-----------|------|
+| Discovery and strategy | $800-$1,200 |
+| Design (storefront + product pages) | $3,000-$5,000 |
+| Development and ecommerce setup | $2,500-$4,000 |
+| Product photography/catalog | $500-$2,000 |
+| Payment and shipping integration | $500-$1,000 |
+| SEO setup | $800-$1,500 |
+| **Total** | **$8,100-$14,700** |
+
+Ecommerce adds layers of complexity that a standard service site does not have: product photography, inventory management, shipping rules, tax calculations, and checkout optimization. Each of those is a separate line item that adds cost.
+
+*Cost ranges sourced from [GoodFirms (2025)](https://www.goodfirms.co/resources/website-construction-cost-survey), [Clutch.co (2026)](https://clutch.co/web-designers/pricing), and [GruffyGoat (2026)](https://gruffygoat.com/blog/small-business-website-cost).*
+
+---
+
+## DIY vs. Freelancer vs. Agency: An Honest Comparison
+
+Here is where most articles lose credibility. Platform companies tell you that you can do it yourself for $20 per month. Agencies tell you that DIY websites are garbage. Neither is being fully honest.
+
+The truth is that each approach makes sense for different situations.
+
+| Factor | DIY Builder | Freelancer | Agency |
+|--------|------------|------------|--------|
+| **Cost** | $200-$600/year | $1,500-$6,000 | $5,000-$25,000+ |
+| **Timeline** | Days to weeks | 2-6 weeks | 4-12 weeks |
+| **Design Quality** | Template-limited | Good (one designer's style) | Custom (full design process) |
+| **SEO** | Basic (meta tags, sitemaps) | Moderate (if SEO-savvy) | Comprehensive (strategy + execution) |
+| **Ongoing Support** | Self-service | Variable (freelancer availability) | Structured (maintenance plans) |
+| **Scalability** | Limited by platform | Depends on freelancer | Built for growth |
+| **You Own the Code** | No (locked to platform) | Usually yes | Yes (should be in contract) |
+
+*Cost data: [GoodFirms (2025)](https://www.goodfirms.co/resources/website-construction-cost-survey), [GruffyGoat (2026)](https://gruffygoat.com/blog/small-business-website-cost), [Clutch.co (2026)](https://clutch.co/web-designers/pricing)*
+
+### When DIY Makes Sense
+
+- You are testing a business idea and need something up fast.
+- Your budget is genuinely under $1,000.
+- You enjoy the process and have time to learn a builder.
+- Your business does not depend heavily on online lead generation.
+
+### When a Freelancer Makes Sense
+
+- You need a professional look but have a limited budget ($1,500 to $4,000).
+- Your project is straightforward -- a service site with standard pages.
+- You have your own content ready (or can write it).
+- You do not need ongoing maintenance or support.
+
+Freelance web designers typically charge [$25 to $100 per hour, with most experienced freelancers in the $40 to $75 range](https://contra.com/p/6AqqgZm6-freelance-web-designer-vs-agency-in-2025-a-cost-and-value-comparison). A basic five-page site from a freelancer runs about $2,000 to $3,000, while the same project from an agency averages around $8,000 -- about 40-60% less on the freelancer side.
+
+### When an Agency Makes Sense
+
+- Your website is a primary revenue driver.
+- You need strategy, not just a pretty design (keyword research, conversion optimization, content planning).
+- You want someone accountable for results over time.
+- You need multiple skillsets (design, development, SEO, copywriting) working together.
+
+The most common hourly rate for agencies is [$100 to $149 per hour](https://clutch.co/web-designers/pricing), with US agencies ranging from [$80 to $250 per hour](https://www.goodfirms.co/resources/website-construction-cost-survey) depending on location and specialization.
+
+---
+
+## Web Design Pricing by Platform
+
+Every platform has tradeoffs. Here is an honest comparison without affiliate links or hidden agendas.
+
+| Platform | Monthly Cost | Best For | Ecommerce | Learning Curve | Design Flexibility |
+|----------|-------------|----------|-----------|---------------|-------------------|
+| **Wix** | $17-$159/mo | All-in-one simplicity | From $27/mo | Low | Medium |
+| **Squarespace** | $23-$139/mo | Beautiful templates | From $28/mo | Low-Medium | Medium |
+| **WordPress** | Free + $2-$50/mo hosting | Full control and ownership | WooCommerce (free) | Medium-High | Very High |
+| **Webflow** | $14-$39/mo (site plans) | Design + development hybrid | From $42/mo | Medium-High | Very High |
+| **Shopify** | $39-$2,300/mo | Ecommerce-first businesses | All plans | Low | Medium (for stores) |
+
+*Sources: Platform websites ([Wix.com](https://www.wix.com), [Squarespace.com](https://www.squarespace.com), [Webflow.com](https://webflow.com), [Shopify.com](https://www.shopify.com)), [Forbes Advisor (January 2026)](https://www.forbes.com/advisor/business/software/how-much-does-a-website-cost/), [Hostinger Tutorials (February 2026)](https://www.hostinger.com/tutorials/website-cost), [Flowout.com (2026)](https://flowout.com)*
+
+**Our take:** We have worked with all of these platforms. For most small businesses that want a professional, growth-ready website, [Webflow](/marketing/webflow-pricing-explained) or WordPress gives you the most flexibility and the cleanest code. Squarespace and Wix are excellent if you want to manage the site yourself with minimal technical knowledge.
+
+For a deeper comparison, read our [Squarespace vs. Wix guide](/marketing/squarespace-vs-wix) and [Webflow vs. Squarespace breakdown](/marketing/webflow-vs-squarespace).
+
+---
+
+## The Hidden Costs Nobody Mentions
+
+The sticker price of a website is not the whole picture. Every website has ongoing costs that add up. Here is what most articles (and some agencies) leave out.
+
+| Cost | Annual Range | What to Know |
+|------|-------------|-------------|
+| **Domain renewal** | $10-$20/year | Premium domains can cost thousands. Most .coms are $12-$15/year. |
+| **Hosting** | $24-$600/year | Budget shared hosting starts at $24/year. Dedicated hosting runs $2,000+/year. |
+| **SSL certificate** | $0-$100/year | Free with most modern hosts. Do not pay extra unless you need an EV certificate. |
+| **Security and updates** | $100-$500/year | WordPress sites need regular plugin and core updates. Builders handle this for you. |
+| **Content updates** | $500-$5,000/year | Blog posts, page refreshes, seasonal updates. This is what keeps your site relevant. |
+| **SEO maintenance** | $600-$10,000+/year | Monthly SEO ranges from $51 to $10,000+ per month depending on scope. |
+| **Backup and recovery** | $50-$200/year | Critical for business sites. Some hosts include this; some charge extra. |
+
+*Sources: [WebFX (2026)](https://www.webfx.com/web-design/pricing/website-costs/), [Forbes Advisor (2026)](https://www.forbes.com/advisor/business/software/how-much-does-a-website-cost/), [Wix (2026)](https://www.wix.com/blog/how-much-does-a-website-cost)*
+
+**The real annual cost of maintaining a professional small business website is $1,000 to $5,000 per year** beyond the initial build. Budget for it upfront so there are no surprises.
+
+The most common mistake we see: a business spends $8,000 on a great website, then lets it sit unchanged for three years. Search engines reward fresh, updated content. Your competitors are publishing regularly. A website without maintenance is a depreciating asset.
+
+---
+
+## How AI Is Changing Website Costs in 2026
+
+This is the section no other cost guide covers, and it matters for anyone budgeting a website right now.
+
+AI website builders have exploded in 2026. Tools like Framer AI, Durable, and Wix's AI features can generate a functional website in minutes instead of weeks. According to [ChilledSites' analysis of AI website builders (2026)](https://chilledsites.com/blog/how-much-does-ai-website-cost/):
+
+- AI builders reduce development costs by **78%** compared to traditional approaches (approximately $450 vs. $2,040 for equivalent sites).
+- AI cuts development time by **87%** (4 hours vs. 32 hours for a basic site).
+- Monthly costs for AI-built sites range from **$10 to $50 per month**.
+
+That sounds like it should kill the web design industry. It has not. Here is why.
+
+### What AI Does Well
+
+- **Speed:** You can have a functioning website in an afternoon.
+- **Cost:** $10 to $50 per month is genuinely affordable for anyone.
+- **Starting point:** AI-generated sites are great first drafts or prototypes.
+
+### What AI Cannot Do (Yet)
+
+- **Strategy:** AI does not know your customers, your market position, or what makes your business different. It generates generic content that sounds like everyone else.
+- **Conversion optimization:** Getting visitors to actually call you, fill out a form, or buy something requires understanding human psychology and testing. AI generates layouts; it does not optimize funnels.
+- **Brand differentiation:** If your website looks like it was generated by AI -- and they are starting to have a recognizable sameness -- you look like every other business that took the shortcut.
+- **Complex integrations:** Booking systems, CRMs, custom portals, and multi-step workflows still need human developers.
+- **SEO depth:** AI can handle meta tags. It cannot build a content strategy, research your competitive landscape, or structure your site architecture for search dominance.
+
+### Our Honest Advice
+
+If you are testing a business idea or need something up fast, try an AI builder. Seriously. Spend $30 a month and see if the concept works before investing thousands.
+
+If your business is established and your website needs to generate leads, convert visitors, and outrank competitors -- that is where professional strategy and execution make the difference. AI is a powerful tool in a professional's hands. It is a mediocre replacement for one.
+
+---
+
+## How to Calculate Your Website ROI
+
+Every other guide frames a website as a cost. It is an investment. Here is how to think about it.
+
+**The formula:**
+
+> Monthly website visitors x conversion rate x average customer value = monthly revenue from your website
+
+**Example:** A local service business gets 500 organic visitors per month. 3% fill out a contact form (15 leads). They close 30% of leads (about 5 new customers). Average job value is $2,000. That is **$10,000 per month** from a website that cost $8,000 to build.
+
+The payback period? Under 30 days.
+
+This is not hypothetical. [According to Clutch.co's 2025 survey](https://clutch.co/resources/state-of-small-business-websites-2025), 83% of small businesses now have websites -- up from 64% in 2018. And the 40% of those businesses say search engines are their number one lead source. The businesses without websites? They are stuck relying on referrals they cannot control or scale.
+
+**When the ROI math works:** If your average customer is worth $500 or more, and you can close even a small percentage of website leads, a professional website pays for itself within months.
+
+**When it does not:** If you are in a business where relationships and referrals drive everything and online search volume for your services is near zero, a simple DIY site may be all you need.
+
+---
+
+## Red Flags: How to Avoid Getting Ripped Off
+
+After years of building websites and cleaning up messes left by other providers, here are the warning signs that should make you walk away.
+
+### 1. You Do Not Own Your Website
+
+Some companies build your site on their proprietary platform. If you leave, your website stays with them. You start over from scratch. **Always confirm in writing that you own the website files, the domain, and all content.**
+
+### 2. Long-Term Contracts With No Exit
+
+Be cautious of three-year contracts with steep cancellation fees. A good web partner earns your business month to month. Lock-in contracts exist because the provider knows you would leave if you could.
+
+### 3. "Free Website" With Mandatory Monthly Fees
+
+Nothing is free. "Free website" usually means you pay $200 to $500 per month for hosting, maintenance, and platform access -- adding up to $7,200 to $18,000 over three years. A $5,000 website you own outright costs less in the long run.
+
+### 4. No Portfolio or References
+
+Any legitimate web professional has examples of their work. If they cannot show you sites they have built or connect you with past clients, that is a serious red flag.
+
+### 5. Unrealistic Promises
+
+"We will get you to page one of Google in 30 days." No, they will not. SEO takes months of consistent work. Anyone promising instant results is either lying or using tactics that will get your site penalized.
+
+### 6. Vague Pricing With No Written Scope
+
+If you do not have a written agreement detailing exactly what you are getting, what it costs, and what happens if the project scope changes -- stop. Get it in writing before any money changes hands.
+
+---
+
+## What to Do Next
+
+If you have read this far, you are serious about getting a website that works for your business. Here is our suggestion depending on where you are:
+
+**Just starting out?** Try a builder. Set up a Wix or Squarespace site, get your business online, and see what happens. You can always upgrade later.
+
+**Ready to invest in growth?** [Talk to us](/contact). We build websites for small businesses -- not enterprise corporations, not billion-dollar startups. We will give you an honest assessment of what your project should cost and what it will take to make your website your best sales tool.
+
+**Already have a site that is underperforming?** We can look at what you have and tell you whether it needs a refresh, a rebuild, or just better SEO. Sometimes a $2,000 optimization project delivers more value than a $15,000 rebuild.
+
+[See examples of what we build](/work) -- real projects for real businesses.
+    `.trim(),
+    author: "BKND Team",
+    readTime: "18 min read",
+    category: "marketing" as BlogCategory,
+    faqData: [
+      {
+        question: "How much does a website cost for a small business?",
+        answer:
+          "Most small business websites cost between $3,000 and $15,000 when built by a professional, according to a GoodFirms survey of over 100 web development companies. Simple five-page sites start around $1,500 from a freelancer. DIY builders cost $200 to $600 per year. The price depends on the number of pages, design complexity, platform, and features needed.",
+      },
+      {
+        question: "How much should a website cost?",
+        answer:
+          "That depends on what you need it to do. A brochure-style site for a local business should cost $3,000 to $8,000. A website that needs to actively generate leads, handle bookings, or sell products should cost $5,000 to $15,000. According to Clutch.co's analysis of 79,260 agencies, the average web design project costs $38,105 -- but that includes enterprise projects. Most small business projects fall well under $10,000.",
+      },
+      {
+        question: "How much does it cost to hire someone to build a website?",
+        answer:
+          "Freelance web designers charge $25 to $100 per hour, with experienced freelancers in the $40 to $75 range. Agencies typically charge $100 to $149 per hour. For a basic five-page business site, expect $2,000 to $3,000 from a freelancer or $5,000 to $8,000 from an agency.",
+      },
+      {
+        question: "What is the cheapest way to build a business website?",
+        answer:
+          "DIY website builders like Wix ($17-$159/month) and Squarespace ($23-$139/month) are the most affordable option. WordPress with budget hosting can run as low as $2 to $50 per month. AI website builders have pushed costs even lower -- $10 to $50 per month for a functional site.",
+      },
+      {
+        question: "How much does website maintenance cost per year?",
+        answer:
+          "Professional website maintenance costs $3,600 to $50,000 per year depending on the scope. For most small businesses, expect $1,000 to $5,000 annually, covering hosting, security updates, content refreshes, and basic SEO.",
+      },
+      {
+        question: "How much does a website cost per month?",
+        answer:
+          "Monthly website costs range from $17 to $500+ depending on your approach. DIY builders run $17 to $50 per month. Hosting for a custom site runs $2 to $50 per month. Add maintenance and SEO, and most small businesses spend $100 to $500 per month on their website after the initial build.",
+      },
+      {
+        question:
+          "Is it cheaper to build a website myself or hire a professional?",
+        answer:
+          "DIY is cheaper upfront -- $200 to $600 per year vs. $3,000 to $15,000 for a professional build. However, a professional website typically generates more leads and revenue. If your average customer is worth $500+, a professional site often pays for itself within a few months through increased conversions.",
+      },
+      {
+        question: "How much does an ecommerce website cost?",
+        answer:
+          "Ecommerce websites range from $7,000 to $70,000+ depending on the number of products, payment integrations, and custom features needed. A small store with under 50 products typically costs $5,000 to $15,000 when built by a professional. DIY ecommerce through Shopify starts at $39 per month.",
+      },
+      {
+        question: "What are the hidden costs of a website?",
+        answer:
+          "The most commonly overlooked costs include: domain renewal ($10-$20/year), hosting ($24-$600/year), SSL certificates ($0-$100/year), security updates ($100-$500/year), content updates ($500-$5,000/year), and SEO maintenance ($600-$10,000+/year). Budget $1,000 to $5,000 per year for ongoing website maintenance beyond the initial build.",
+      },
+      {
+        question: "How much does a website redesign cost?",
+        answer:
+          "A website redesign typically costs 60-80% of what a new website costs. For a small business, expect $3,000 to $12,000 depending on how much of the existing content and structure can be preserved. If you are switching platforms, add 10-20% for migration work.",
+      },
+      {
+        question: "Can I build a website for free?",
+        answer:
+          "Technically, yes. Platforms like Wix and WordPress.com offer free tiers. However, free websites come with significant limitations: platform branding on your site, no custom domain, limited storage, no ecommerce, and minimal SEO capabilities. For any real business, the minimum viable investment is a custom domain ($12/year) plus a basic hosting or builder plan ($17-$50/month).",
+      },
+      {
+        question: "How is AI changing website costs in 2026?",
+        answer:
+          "AI website builders have reduced development costs by up to 78% and development time by 87% compared to traditional approaches. A site that would have cost $2,000 to build traditionally can now be generated for around $450. However, AI-built sites lack strategic thinking, brand differentiation, conversion optimization, and deep SEO -- the elements that make a website actually drive business results.",
       },
     ],
   },

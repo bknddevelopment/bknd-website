@@ -83,6 +83,29 @@ export default function BuildWebsitesPage() {
           </div>
         </section>
 
+        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <div className="max-w-2xl mx-auto text-center">
+                <h2 className="text-2xl lg:text-3xl font-semibold text-[#1D1D1F] mb-4">
+                  What does a website actually cost?
+                </h2>
+                <p className="text-[#86868B] leading-relaxed mb-6">
+                  We break down real pricing — from DIY builders to full-service
+                  agency builds — so you know exactly what to budget.
+                </p>
+                <Link
+                  href="/marketing/website-design-cost-small-business"
+                  className="text-[#00D4FF] hover:underline font-medium inline-flex items-center gap-2"
+                >
+                  Read the full cost breakdown
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         <section className="bg-[#1D1D1F] py-24 lg:py-32">
           <div className="container-sg">
             <div className="max-w-3xl mx-auto text-center">
