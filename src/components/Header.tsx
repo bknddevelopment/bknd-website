@@ -5,14 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-const serviceLinks = [
-  { label: "AI Solutions", href: "/services/ai" },
-  { label: "SEO", href: "/services/seo" },
-  { label: "Content", href: "/services/content" },
-  { label: "Creative", href: "/services/creative" },
-  { label: "CRO", href: "/services/cro" },
-  { label: "Analytics", href: "/services/analytics" },
-  { label: "Paid Advertising", href: "/services/paid-advertising" },
+const buildLinks = [
+  { label: "Websites", href: "/build/websites" },
+  { label: "Marketing", href: "/build/marketing" },
+  { label: "Platforms", href: "/build/platforms" },
 ];
 
 const resourceLinks = [
@@ -32,11 +28,13 @@ const industryLinks = [
 ];
 
 const navItems = [
-  { label: "Services", href: "/#services", hasDropdown: true },
+  { label: "Build", href: "/#pillars", hasDropdown: true },
+  { label: "Work", href: "/work", hasDropdown: false },
   { label: "Resources", href: "/#resources", hasDropdown: true },
   { label: "Industries", href: "/industries", hasDropdown: true },
-  { label: "About Us", href: "/about", hasDropdown: false },
+  { label: "About", href: "/about", hasDropdown: false },
   { label: "Contact", href: "/contact", hasDropdown: false },
+  { label: "Client Portal", href: "https://www.opusite.com/request/bknd-development/bknd-development-website-update-z1wze", hasDropdown: false, external: true },
 ];
 
 // Chevron down icon
@@ -119,7 +117,7 @@ export default function Header() {
   };
 
   const getDropdownLinks = (label: string) => {
-    if (label === "Services") return serviceLinks;
+    if (label === "Build") return buildLinks;
     if (label === "Resources") return resourceLinks;
     if (label === "Industries") return industryLinks;
     return null;
@@ -150,18 +148,29 @@ export default function Header() {
                 }
                 onMouseLeave={handleMouseLeave}
               >
-                <Link
-                  href={item.href}
-                  className="text-white/80 text-[14px] font-medium tracking-wide hover:text-white transition-colors duration-300 flex items-center gap-1.5"
-                >
-                  {item.label}
-                  {item.hasDropdown && (
-                    <ChevronDownIcon
-                      className={`w-3.5 h-3.5 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180 text-[#00D4FF]" : "text-white/40"
-                        }`}
-                    />
-                  )}
-                </Link>
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 text-[14px] font-medium tracking-wide hover:text-white transition-colors duration-300 flex items-center gap-1.5"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-white/80 text-[14px] font-medium tracking-wide hover:text-white transition-colors duration-300 flex items-center gap-1.5"
+                  >
+                    {item.label}
+                    {item.hasDropdown && (
+                      <ChevronDownIcon
+                        className={`w-3.5 h-3.5 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180 text-[#00D4FF]" : "text-white/40"
+                          }`}
+                      />
+                    )}
+                  </Link>
+                )}
                 {/* Animated Dropdown */}
                 {item.hasDropdown && getDropdownLinks(item.label) && (
                   <AnimatePresence>
@@ -250,32 +259,44 @@ export default function Header() {
               <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
                   <div key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
-                      onClick={() =>
-                        item.label !== "Services" &&
-                        item.label !== "Resources" &&
-                        item.label !== "Industries" &&
-                        setMobileMenuOpen(false)
-                      }
-                    >
-                      {item.label}
-                      {item.hasDropdown && (
-                        <ChevronDownIcon className="w-4 h-4" />
-                      )}
-                    </Link>
-                    {/* Mobile Services Sub-menu */}
-                    {item.label === "Services" && (
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
+                        onClick={() =>
+                          item.label !== "Build" &&
+                          item.label !== "Resources" &&
+                          item.label !== "Industries" &&
+                          setMobileMenuOpen(false)
+                        }
+                      >
+                        {item.label}
+                        {item.hasDropdown && (
+                          <ChevronDownIcon className="w-4 h-4" />
+                        )}
+                      </Link>
+                    )}
+                    {/* Mobile Build Sub-menu */}
+                    {item.label === "Build" && (
                       <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
-                        {serviceLinks.map((service) => (
+                        {buildLinks.map((link) => (
                           <Link
-                            key={service.label}
-                            href={service.href}
+                            key={link.label}
+                            href={link.href}
                             className="block text-sm text-[#86868B] hover:text-[#00D4FF] transition-colors py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {service.label}
+                            {link.label}
                           </Link>
                         ))}
                       </div>
