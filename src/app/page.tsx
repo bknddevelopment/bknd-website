@@ -3,7 +3,8 @@ import Hero from "@/components/Hero";
 import ClientLogoBar from "@/components/ClientLogoBar";
 import WhyUs from "@/components/WhyUs";
 import Services from "@/components/Services";
-import CaseStudies from "@/components/CaseStudies";
+import OpusiteShowcase from "@/components/OpusiteShowcase";
+import Testimonials from "@/components/Testimonials";
 import Methodology from "@/components/Methodology";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -19,7 +20,8 @@ export default function Home() {
         <ClientLogoBar />
         <WhyUs />
         <Services />
-        <CaseStudies />
+        <OpusiteShowcase />
+        <Testimonials />
         <Methodology />
         <Contact />
       </main>

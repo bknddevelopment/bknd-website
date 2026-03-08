@@ -5,25 +5,28 @@ import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const comparisons = [
   {
-    them: "Focus on vanity metrics",
-    us: "Laser-focused on revenue-driving KPIs",
-  },
-  { them: "Incremental improvements", us: "Transformative growth strategies" },
-  {
-    them: "Cookie-cutter approaches",
-    us: "Custom, innovative solutions for each client",
+    them: "15 people, 5 handoffs per task",
+    us: "One person runs strategy and execution end-to-end",
   },
   {
-    them: "Reactive to market trends",
-    us: "Proactive in creating new marketing angles",
+    them: "Junior staff does the work, seniors present it",
+    us: "The person you talk to is the person building it",
   },
   {
-    them: "Limited cross-channel integration",
-    us: "Seamless multi-platform strategies",
+    them: "Changes take weeks through project managers",
+    us: "Changes go live the same day — built directly in code",
   },
   {
-    them: "Manual, time-consuming processes",
-    us: "AI-driven, scalable solutions",
+    them: "Generic templates applied to every client",
+    us: "Custom software and AI tools built for your specific needs",
+  },
+  {
+    them: "Monthly PDF reports with vanity metrics",
+    us: "Real-time dashboards with numbers that tie to revenue",
+  },
+  {
+    them: "Manual processes repeated for each campaign",
+    us: "AI handles the grunt work, human focuses on strategy",
   },
 ];
 
@@ -46,7 +49,7 @@ export default function WhyUs() {
 
         <AnimateOnScroll delay={0.15}>
           <p className="text-[#86868B] text-lg lg:text-xl text-center mb-10 max-w-2xl mx-auto">
-            See how we compare to traditional agencies
+            One person with software vs. a 15-person agency
           </p>
         </AnimateOnScroll>
 

@@ -1,0 +1,23 @@
+{
+  "redirects": [
+    { "source": "/services/seo/new-jersey/", "destination": "/build/marketing/new-jersey/", "statusCode": 301 },
+    { "source": "/services/seo/new-jersey", "destination": "/build/marketing/new-jersey", "statusCode": 301 },
+    { "source": "/services/seo/", "destination": "/build/marketing/", "statusCode": 301 },
+    { "source": "/services/seo", "destination": "/build/marketing", "statusCode": 301 },
+    { "source": "/services/content/", "destination": "/build/marketing/", "statusCode": 301 },
+    { "source": "/services/content", "destination": "/build/marketing", "statusCode": 301 },
+    { "source": "/services/paid-advertising/", "destination": "/build/marketing/", "statusCode": 301 },
+    { "source": "/services/paid-advertising", "destination": "/build/marketing", "statusCode": 301 },
+    { "source": "/services/cro/", "destination": "/build/marketing/", "statusCode": 301 },
+    { "source": "/services/cro", "destination": "/build/marketing", "statusCode": 301 },
+    { "source": "/services/analytics/", "destination": "/build/marketing/", "statusCode": 301 },
+    { "source": "/services/analytics", "destination": "/build/marketing", "statusCode": 301 },
+    { "source": "/services/creative/", "destination": "/build/marketing/", "statusCode": 301 },
+    { "source": "/services/creative", "destination": "/build/marketing", "statusCode": 301 },
+    { "source": "/services/ai/:path*", "destination": "/build/platforms/", "statusCode": 301 },
+    { "source": "/services/ai", "destination": "/build/platforms/", "statusCode": 301 },
+    { "source": "/case-studies/", "destination": "/work/", "statusCode": 301 },
+    { "source": "/case-studies", "destination": "/work", "statusCode": 301 },
+    { "source": "/services/:path*", "destination": "/build/websites/", "statusCode": 301 }
+  ]
+}

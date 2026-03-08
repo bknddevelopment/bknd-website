@@ -158,10 +158,19 @@ export default function Footer() {
         <div>
           <div className="pt-8">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-              {/* Copyright */}
+              {/* Copyright + Opusite */}
               <p className="text-[#86868B] text-[11px]">
                 Copyright &copy; {new Date().getFullYear()} BKND Development.
                 All rights reserved.
+                <span className="text-[#424245] mx-2">·</span>
+                <a
+                  href="https://opusite.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#86868B] hover:text-[#00D4FF] transition-colors duration-200"
+                >
+                  Built on Opusite
+                </a>
               </p>
 
               {/* Legal Links */}
