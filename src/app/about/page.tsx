@@ -2,7 +2,6 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Testimonials from "@/components/Testimonials";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -211,9 +210,6 @@ export default function AboutPage() {
             </AnimateOnScroll>
           </div>
         </section>
-
-        {/* Testimonials */}
-        <Testimonials />
 
         {/* CTA */}
         <section className="bg-[#1D1D1F] py-20 lg:py-28">

@@ -4,7 +4,6 @@ import ClientLogoBar from "@/components/ClientLogoBar";
 import WhyUs from "@/components/WhyUs";
 import Services from "@/components/Services";
 import OpusiteShowcase from "@/components/OpusiteShowcase";
-import Testimonials from "@/components/Testimonials";
 import Methodology from "@/components/Methodology";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,7 +20,6 @@ export default function Home() {
         <WhyUs />
         <Services />
         <OpusiteShowcase />
-        <Testimonials />
         <Methodology />
         <Contact />
       </main>
