@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
@@ -38,13 +39,13 @@ export default function BlogPage() {
       <Header />
       <main>
         {/* Header Section */}
-        <section className="pt-24 pb-12 lg:pt-32 lg:pb-16 bg-white">
+        <section className="page-hero bg-white">
           <div className="container-sg">
             <AnimateOnScroll>
-              <h1 className="text-[40px] lg:text-[56px] font-semibold text-[#1D1D1F] tracking-[-0.02em] mb-4">
+              <h1 className="page-title mb-4 font-semibold text-[#1D1D1F]">
                 Insights
               </h1>
-              <p className="text-[#86868B] text-lg lg:text-xl max-w-xl mb-8">
+              <p className="page-lead mb-8 max-w-xl text-[#86868B]">
                 Practical thinking on marketing that works.
               </p>
 
@@ -69,24 +70,26 @@ export default function BlogPage() {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="pb-24 lg:pb-32 bg-white">
+        <section className="bg-white pb-24 lg:pb-32">
           <div className="container-sg">
             {filteredPosts.length === 0 ? (
               <p className="text-[#86868B] text-lg text-center">
                 No articles found in this category.
               </p>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {filteredPosts.map((post, index) => (
                   <AnimateOnScroll key={post.slug} delay={index * 0.1}>
-                    <Link href={`${categoryToHub[post.category]}/${post.slug}`} className="group block">
-                      <article className="h-full">
+                    <Link href={`${categoryToHub[post.category]}/${post.slug}`} className="group block h-full">
+                      <article className="flex h-full flex-col rounded-[28px] border border-gray-200/80 bg-[#F5F5F7] p-6 transition-all duration-300 hover:border-[#00D4FF]/30 hover:shadow-[0_18px_48px_rgba(0,0,0,0.05)] sm:p-7">
                         {post.image && (
-                          <div className="mb-4 overflow-hidden rounded">
-                            <img
+                          <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-2xl">
+                            <Image
                               src={post.image}
                               alt={post.imageAlt || post.title}
-                              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                              fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                           </div>
                         )}

@@ -70,18 +70,18 @@ export default function IndustriesPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-white">
+        <section className="page-hero relative bg-white">
           <div className="container-sg">
             <div className="max-w-[900px] mx-auto text-center">
               <AnimateOnScroll>
                 <p className="text-[#00D4FF] text-sm font-medium tracking-wide uppercase mb-6">
                   Industry Solutions
                 </p>
-                <h1 className="text-[36px] lg:text-[56px] font-semibold text-[#1D1D1F] tracking-[-0.02em] leading-[1.1] mb-6">
+                <h1 className="page-title mb-6 font-semibold text-[#1D1D1F]">
                   Marketing That Speaks{" "}
                   <span className="text-[#00D4FF]">Your Industry</span>
                 </h1>
-                <p className="text-[18px] lg:text-[21px] text-[#86868B] leading-relaxed mb-8 max-w-[720px] mx-auto">
+                <p className="page-lead mx-auto mb-8 max-w-[720px] text-[#86868B]">
                   Every industry has unique search patterns, customer behavior,
                   and competitive dynamics. We build marketing strategies
                   tailored to how your customers actually search -- not generic
@@ -95,7 +95,7 @@ export default function IndustriesPage() {
         {/* Stats Bar */}
         <section className="py-12 bg-[#1D1D1F]">
           <div className="container-sg">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-2 gap-6 text-center lg:grid-cols-4 lg:gap-8">
               {[
                 { number: "49K+", label: "Monthly Search Volume", icon: TrendingUp },
                 { number: "$200K+", label: "Monthly PPC Value", icon: BarChart3 },
@@ -118,7 +118,7 @@ export default function IndustriesPage() {
         </section>
 
         {/* Industry Cards Grid */}
-        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+        <section className="page-section bg-[#F5F5F7]">
           <div className="container-sg">
             <AnimateOnScroll>
               <div className="max-w-[720px] mx-auto text-center mb-16">
@@ -133,7 +133,7 @@ export default function IndustriesPage() {
               </div>
             </AnimateOnScroll>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1100px] mx-auto">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-[1100px] mx-auto">
               {industries.map((industry, i) => (
                 <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
                   <Link
@@ -169,7 +169,7 @@ export default function IndustriesPage() {
         </section>
 
         {/* Why Industry-Specific Marketing */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="page-section bg-white">
           <div className="container-sg">
             <div className="max-w-[720px] mx-auto">
               <AnimateOnScroll>
@@ -201,19 +201,19 @@ export default function IndustriesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-[#1D1D1F] py-24 lg:py-32">
+        <section className="bg-[#1D1D1F] py-20 lg:py-28">
           <div className="container-sg">
             <div className="max-w-3xl mx-auto text-center">
               <AnimateOnScroll>
                 <p className="text-gray-400 text-sm font-medium tracking-wide uppercase mb-6">
                   Ready to Grow?
                 </p>
-                <h2 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight mb-6">
+                <h2 className="mb-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-6xl">
                   Get a marketing strategy built for
                   <br />
                   <span className="text-[#00D4FF]">your industry.</span>
                 </h2>
-                <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
+                <p className="mx-auto mb-10 max-w-xl text-lg font-normal text-gray-400 sm:text-xl lg:mb-12 lg:text-2xl">
                   Free audit and strategy session. We will show you exactly
                   where the opportunities are in your market.
                 </p>

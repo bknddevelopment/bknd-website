@@ -10987,11 +10987,6 @@ Here's what the JSON-LD should look like:
       "longitude": -97.7431
     },
     "geoRadius": "30 mi"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127"
   }
 }
 \`\`\`

@@ -63,7 +63,7 @@ export default function ContactPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-[#F5F5F7]">
+        <section className="page-hero relative bg-[#F5F5F7]">
           <div className="container-sg">
             <div className="max-w-3xl">
               <AnimateOnScroll>
@@ -73,17 +73,17 @@ export default function ContactPage() {
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.1}>
-                <h1 className="text-[32px] sm:text-[40px] lg:text-[52px] font-semibold text-[#1D1D1F] mb-6 leading-[1.1] tracking-[-0.02em]">
-                  Let&apos;s build{" "}
-                  <span className="text-[#00D4FF]">something.</span>
+                <h1 className="page-title mb-6 font-semibold text-[#1D1D1F]">
+                  Let&apos;s talk about{" "}
+                  <span className="text-[#00D4FF]">growth.</span>
                 </h1>
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={0.2}>
-                <p className="text-[#86868B] text-lg lg:text-xl leading-relaxed max-w-2xl">
-                  Whether you need a website, a marketing system, or a
-                  full platform — we&apos;d love to hear what you&apos;re
-                  building. No pressure, no sales pitch. Just a conversation.
+                <p className="page-lead max-w-2xl text-[#86868B]">
+                  Whether you&apos;re ready to start a project or just want to
+                  explore what&apos;s possible, we&apos;d love to hear from you.
+                  No pressure, no sales pitch. Just a conversation.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -91,9 +91,9 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form + Info Section */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="page-section bg-white">
           <div className="container-sg">
-            <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-16">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,400px)] lg:gap-16">
               {/* Contact Form */}
               <div>
                 <AnimateOnScroll>
@@ -225,7 +225,7 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Info Sidebar */}
-              <div>
+              <div className="lg:sticky lg:top-[calc(var(--header-offset)+1rem)] lg:self-start">
                 <AnimateOnScroll direction="right">
                   <div className="bg-[#1D1D1F] rounded-2xl p-8 lg:p-10 mb-6">
                     <h3 className="text-xl font-semibold text-white mb-6">
@@ -316,7 +316,7 @@ export default function ContactPage() {
         </section>
 
         {/* Map / Location Section */}
-        <section className="py-16 lg:py-24 bg-[#F5F5F7]">
+        <section className="page-section bg-[#F5F5F7]">
           <div className="container-sg">
             <AnimateOnScroll>
               <div className="text-center mb-12">
@@ -362,22 +362,22 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-[#1D1D1F] py-24 lg:py-32">
+        <section className="bg-[#1D1D1F] py-20 lg:py-28">
           <div className="container-sg">
             <div className="max-w-3xl mx-auto text-center">
               <AnimateOnScroll>
                 <p className="text-gray-400 text-sm font-medium tracking-wide uppercase mb-6">
-                  Ready to Build?
+                  Ready to Start?
                 </p>
 
-                <h2 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight mb-6">
+                <h2 className="mb-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-6xl">
                   Let&apos;s build something
                   <br />
                   <span className="text-[#00D4FF]">extraordinary.</span>
                 </h2>
 
-                <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
-                  Every great build starts with a conversation.
+                <p className="mx-auto mb-10 max-w-xl text-lg font-normal text-gray-400 sm:text-xl lg:mb-12 lg:text-2xl">
+                  Every great partnership starts with a conversation.
                 </p>
               </AnimateOnScroll>
 

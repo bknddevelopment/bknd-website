@@ -3,15 +3,17 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export function StickyCtaBar() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 600 && !isDismissed) {
+      if (window.scrollY > 600 && !isDismissed && pathname !== "/contact") {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -19,8 +21,9 @@ export function StickyCtaBar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isDismissed]);
+  }, [isDismissed, pathname]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -40,16 +43,16 @@ export function StickyCtaBar() {
             damping: 25,
             mass: 0.8,
           }}
-          className="fixed bottom-0 left-0 right-0 z-40 md:bottom-auto md:top-20 bg-white/70 backdrop-blur-2xl border-t border-neutral-200/40 md:border-t-0 md:border-b md:border-neutral-200/40"
+          className="fixed bottom-3 left-3 right-3 z-40 rounded-2xl border border-white/20 bg-[#ffffffeb] shadow-[0_16px_48px_rgba(0,0,0,0.18)] backdrop-blur-2xl md:bottom-auto md:left-0 md:right-0 md:top-20 md:rounded-none md:border-x-0 md:border-b md:border-t-0 md:border-neutral-200/40"
           style={{
             boxShadow:
-              "0 -4px 20px rgba(0, 0, 0, 0.06), 0 -1px 4px rgba(0, 0, 0, 0.04)",
+              "0 12px 34px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.04)",
           }}
         >
           <div className="container-sg">
-            <div className="flex items-center justify-between gap-4 py-3">
+            <div className="flex items-center justify-between gap-3 py-3">
               {/* Logo/Brand */}
-              <div className="flex items-center">
+              <div className="hidden items-center sm:flex">
                 <Image
                   src="/images/bknd-logo-new.png"
                   alt="BKND Development"
@@ -60,19 +63,24 @@ export function StickyCtaBar() {
               </div>
 
               {/* Value Prop + CTA */}
-              <div className="flex items-center gap-4">
-                <span className="text-neutral-500 text-sm hidden md:block">
-                  Ready to build?
-                </span>
+              <div className="flex min-w-0 flex-1 items-center justify-end gap-3 sm:justify-between">
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-neutral-900">
+                    Start your next build
+                  </p>
+                  <p className="hidden text-sm text-neutral-500 md:block">
+                    Websites, marketing systems, and custom software.
+                  </p>
+                </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 bg-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#00D4FF]/90 transition-all hover:shadow-md"
+                  className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-[#00D4FF] px-4 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#00D4FF]/90 hover:shadow-md md:px-5"
                   style={{
                     boxShadow: "0 0 16px rgba(0, 212, 255, 0.3)",
                     animation: "stickyCtaPulse 3s ease-in-out infinite",
                   }}
                 >
-                  Let&apos;s Build
+                  Get Started
                   <svg
                     className="w-3.5 h-3.5"
                     fill="none"
@@ -91,7 +99,7 @@ export function StickyCtaBar() {
                 {/* Close Button */}
                 <button
                   onClick={handleDismiss}
-                  className="text-neutral-400 hover:text-neutral-600 transition-colors p-1 rounded-full hover:bg-neutral-100"
+                  className="rounded-full p-1 text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600"
                   aria-label="Dismiss"
                 >
                   <svg
