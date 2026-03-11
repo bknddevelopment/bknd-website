@@ -2,6 +2,7 @@
 
 import { Check, X, ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "./AnimateOnScroll";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 const comparisons = [
   {
@@ -110,13 +111,12 @@ export default function WhyUs() {
         {/* CTA Button */}
         <AnimateOnScroll delay={0.7}>
           <div className="text-center mt-12">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full transition-all duration-300 hover:bg-[#000000] hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] hover:scale-[1.03]"
+            <OpusiteFormTrigger
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full transition-all duration-300 hover:bg-[#000000] hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] hover:scale-[1.03] cursor-pointer"
             >
               Get Your Custom Growth Strategy
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
+            </OpusiteFormTrigger>
           </div>
         </AnimateOnScroll>
       </div>

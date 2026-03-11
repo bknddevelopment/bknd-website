@@ -1,56 +1,10 @@
 "use client";
 
-import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const OPUSITE_WEBHOOK =
-  "https://www.opusite.com/api/forms/webhook/cd52152b-ae9c-4171-a67f-a3d62e32e268";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 export default function Hero() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      const response = await fetch(OPUSITE_WEBHOOK, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          name: "",
-          consent: true,
-          fields: {
-            subject: "New Lead from Hero Section - BKND Development",
-            message: "",
-          },
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setEmail("");
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-16 pt-[calc(var(--header-offset)+2rem)] md:pb-20">
       {/* Premium Cinematic Background */}
@@ -129,61 +83,25 @@ export default function Hero() {
             </motion.p>
           </div>
 
-          {/* Form & Actions */}
+          {/* CTA Button */}
           <motion.div
             className="max-w-[640px]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col gap-3 sm:flex-row sm:items-stretch"
+            <OpusiteFormTrigger
+              className="group relative h-[58px] w-full overflow-hidden rounded-xl bg-white px-8 text-[16px] font-semibold text-[#050A14] transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] sm:h-[60px] sm:w-auto sm:px-10"
             >
-              <div className="relative flex-1 group">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF]/20 to-[#8A2BE2]/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your work email..."
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  disabled={isSubmitting}
-                  className="relative h-[58px] w-full rounded-xl border border-white/10 bg-[#050A14]/80 px-5 py-4 text-[16px] text-white shadow-[inset_0_2px_4px_rgba(255,255,255,0.02)] backdrop-blur-xl transition-all placeholder:text-white/30 focus:border-[#00D4FF]/50 focus:outline-none sm:h-[60px] sm:px-6"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="group relative h-[58px] w-full overflow-hidden rounded-xl bg-white px-6 text-[16px] font-semibold text-[#050A14] transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] disabled:opacity-50 sm:h-[60px] sm:w-auto sm:px-8"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#0088CC] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative z-10 flex items-center justify-center gap-2 group-hover:text-white transition-colors duration-500">
-                  {isSubmitting ? "Initiating..." : "See What We Build"}
-                  {!isSubmitting && (
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-500 group-hover:translate-x-1">
-                      <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                </span>
-              </button>
-            </form>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#0088CC] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="relative z-10 flex items-center justify-center gap-2 group-hover:text-white transition-colors duration-500">
+                Start Your Project
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-500 group-hover:translate-x-1">
+                  <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </OpusiteFormTrigger>
           </motion.div>
-
-          {/* Form Status Messages */}
-          <div className="mt-4 min-h-[24px]">
-            {submitStatus === "success" && (
-              <motion.p className="text-[#00D4FF] text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                System request received. We&apos;ll be in touch.
-              </motion.p>
-            )}
-            {submitStatus === "error" && (
-              <motion.p className="text-red-400 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                Failed to initialize connection. Please try again.
-              </motion.p>
-            )}
-          </div>
           </div>
         </div>
       </div>

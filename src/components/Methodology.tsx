@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 interface Step {
   id: number;
@@ -483,9 +484,8 @@ export default function Methodology() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#00D4FF] px-6 py-3.5 font-medium text-white shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300 hover:bg-[#00B8E0] hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] sm:px-8 sm:py-4"
+          <OpusiteFormTrigger
+            className="group inline-flex items-center gap-3 rounded-full bg-[#00D4FF] px-6 py-3.5 font-medium text-white shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300 hover:bg-[#00B8E0] hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] sm:px-8 sm:py-4 cursor-pointer"
           >
             Let&apos;s Build
             <svg
@@ -501,7 +501,7 @@ export default function Methodology() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </OpusiteFormTrigger>
           <p className="text-white/40 text-sm mt-4">
             Free 30-minute strategy call. No commitment required.
           </p>

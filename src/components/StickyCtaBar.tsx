@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 export function StickyCtaBar() {
   const pathname = usePathname();
@@ -72,9 +72,8 @@ export function StickyCtaBar() {
                     Websites, marketing systems, and custom software.
                   </p>
                 </div>
-                <Link
-                  href="/contact"
-                  className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-[#00D4FF] px-4 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#00D4FF]/90 hover:shadow-md md:px-5"
+                <OpusiteFormTrigger
+                  className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-[#00D4FF] px-4 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#00D4FF]/90 hover:shadow-md md:px-5 cursor-pointer"
                   style={{
                     boxShadow: "0 0 16px rgba(0, 212, 255, 0.3)",
                     animation: "stickyCtaPulse 3s ease-in-out infinite",
@@ -94,7 +93,7 @@ export function StickyCtaBar() {
                       d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                     />
                   </svg>
-                </Link>
+                </OpusiteFormTrigger>
 
                 {/* Close Button */}
                 <button

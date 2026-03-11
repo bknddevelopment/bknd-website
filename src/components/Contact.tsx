@@ -1,54 +1,8 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-
-const OPUSITE_WEBHOOK =
-  "https://www.opusite.com/api/forms/webhook/cd52152b-ae9c-4171-a67f-a3d62e32e268";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 export default function Contact() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      const response = await fetch(OPUSITE_WEBHOOK, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          name: "",
-          consent: true,
-          fields: {
-            subject: "New Contact Request - BKND Development",
-            message: "",
-          },
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setEmail("");
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="relative">
       {/* Full-width dark background with gradient mesh */}
@@ -109,51 +63,21 @@ export default function Contact() {
             </div>
 
             <div>
-              {/* Clean email form */}
-              <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    className="flex-1 rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-base text-white backdrop-blur-sm transition-all placeholder:text-gray-500 focus:border-[#06B6D4]/60 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-[#06B6D4]/30 disabled:opacity-50"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    disabled={isSubmitting}
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="relative rounded-xl bg-[#06B6D4] px-8 py-4 font-semibold whitespace-nowrap text-white transition-all duration-200 hover:bg-[#0891B2] disabled:cursor-not-allowed disabled:opacity-50"
-                    style={{
-                      boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
-                      animation: "ctaPulse 3s ease-in-out infinite",
-                    }}
-                  >
-                    {isSubmitting ? "Sending..." : "Get in Touch"}
-                  </button>
-                </div>
-
-                {/* Form Status Messages */}
-                {submitStatus === "success" && (
-                  <p className="text-green-400 text-sm mt-4">
-                    Thanks for reaching out! We&apos;ll be in touch soon.
-                  </p>
-                )}
-                {submitStatus === "error" && (
-                  <p className="text-red-400 text-sm mt-4">
-                    Something went wrong. Please try again or email us directly.
-                  </p>
-                )}
-
-                {/* Simple reassurance */}
-                {submitStatus === "idle" && (
-                  <p className="text-gray-500 text-sm mt-6">
-                    We typically respond within 24 hours.
-                  </p>
-                )}
-              </form>
+              {/* CTA Button */}
+              <div className="max-w-md mx-auto">
+                <OpusiteFormTrigger
+                  className="relative rounded-xl bg-[#06B6D4] px-8 py-4 font-semibold whitespace-nowrap text-white transition-all duration-200 hover:bg-[#0891B2]"
+                  style={{
+                    boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
+                    animation: "ctaPulse 3s ease-in-out infinite",
+                  }}
+                >
+                  Get in Touch
+                </OpusiteFormTrigger>
+                <p className="text-gray-500 text-sm mt-6">
+                  We typically respond within 24 hours.
+                </p>
+              </div>
             </div>
 
             {/* Alternative contact option */}
