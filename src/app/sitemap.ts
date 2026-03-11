@@ -31,6 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/build/websites`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/build/marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/build/platforms`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    // Product page
+    { url: `${BASE_URL}/opusite`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     // Services (legacy — still live, will redirect later)
     { url: `${BASE_URL}/services/ai`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/services/ai/geo`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

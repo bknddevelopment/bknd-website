@@ -10,6 +10,7 @@ const buildLinks = [
   { label: "Websites", href: "/build/websites" },
   { label: "Marketing", href: "/build/marketing" },
   { label: "Platforms", href: "/build/platforms" },
+  { label: "Opusite", href: "/opusite" },
 ];
 
 const resourceLinks = [
