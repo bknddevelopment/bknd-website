@@ -2715,6 +2715,8 @@ The question is no longer whether to use AI for business. It is whether you are 
     slug: "chatgpt-ads-launch-what-marketers-need-to-know",
     title: "ChatGPT Ads Are Here: What This Means for Digital Marketing",
     date: "2026-02-04",
+    image: "/images/blog/chatgpt-ads-launch.jpg",
+    imageAlt: "AI-powered advertising technology concept",
     excerpt:
       "OpenAI begins testing impression-based ads in ChatGPT with 800 million weekly users. This marks a seismic shift in how consumers discover products and how marketers must adapt their strategies.",
     content: `
@@ -2837,6 +2839,8 @@ Yes. OpenAI has stated they will always offer ad-free options, including their P
     title:
       "Google's Universal Commerce Protocol: The New Standard for AI Shopping",
     date: "2026-02-04",
+    image: "/images/blog/google-universal-commerce.jpg",
+    imageAlt: "E-commerce technology on tablet screen",
     excerpt:
       "Google unveils UCP, an open standard for AI-powered commerce backed by Shopify, Walmart, Visa, and 20+ major companies. This could fundamentally change how products are discovered and purchased online.",
     content: `
@@ -2968,6 +2972,8 @@ Direct Offers is Google's pilot program for promotional ads within AI Mode. Avai
     title:
       "Meta's Andromeda Algorithm: The Complete Shift to AI-Controlled Advertising",
     date: "2026-02-04",
+    image: "/images/blog/meta-andromeda.jpg",
+    imageAlt: "Social media advertising on smartphone",
     excerpt:
       "Meta's new Andromeda algorithm flips the advertising dynamic. The platform now controls targeting using your creative to determine audiences. Lookalike audiences are being phased out. Manual controls are fading. Here is what advertisers need to know.",
     content: `
@@ -3112,6 +3118,8 @@ Not yet, but this is the direction. Meta's Generative Ad Model (GEM) will allow 
     title:
       "TikTok US Deal Closes: What the New Ownership Means for Advertisers",
     date: "2026-02-04",
+    image: "/images/blog/tiktok-us-deal.jpg",
+    imageAlt: "Social media app on mobile device",
     excerpt:
       "The TikTok US deal finalized January 22, 2026, creating a new joint venture with Oracle, Silver Lake, and MGX. New privacy policies, algorithm changes, and user backlash create uncertainty for advertisers. Here is what you need to know.",
     content: `
@@ -3258,6 +3266,8 @@ There is significant social media backlash against the new privacy policies, but
     title:
       "Google AI Overviews Now Show Ads in 40% of Results: What Advertisers Must Know",
     date: "2026-02-04",
+    image: "/images/blog/google-ai-overviews-ads.jpg",
+    imageAlt: "Google search on laptop screen",
     excerpt:
       "Ads in Google's AI Overviews have grown from 3% to 40% of results in under a year. This is no longer an experiment. It is the reality of search in 2026. Here is how to adapt your strategy.",
     content: `
@@ -3404,6 +3414,8 @@ For many queries, AI Overviews appear above traditional results but do not repla
     title:
       "Google February 2026 Core Update: Recovery Guide",
     date: "2026-02-04",
+    image: "/images/blog/google-core-update.jpg",
+    imageAlt: "Search analytics graph on laptop",
     excerpt:
       "Google's February 2026 Core Update shifted to AI-powered quality evaluation. What actually changed and how to recover your rankings.",
     content: `
@@ -3612,6 +3624,8 @@ The fundamental checklist is: comprehensive topic coverage, original insights an
     slug: "ai-overviews-zero-click-seo-strategy-2026",
     title: "AI Overviews and Zero-Click SEO: Winning When Nobody Clicks",
     date: "2026-02-04",
+    image: "/images/blog/ai-overviews-zero-click.jpg",
+    imageAlt: "AI technology abstract circuit board",
     excerpt:
       "60% of searches now end without a click. AI Overviews have cut organic CTR by 61%. The old traffic-focused SEO playbook is broken. Here is how to win visibility in a zero-click world.",
     content: `
@@ -3855,6 +3869,8 @@ This is a business decision with tradeoffs. Blocking AI crawlers preserves your 
     title:
       "Core Web Vitals INP Optimization: The Metric Most Sites Are Failing",
     date: "2026-02-04",
+    image: "/images/blog/core-web-vitals.jpg",
+    imageAlt: "Website code on laptop screen",
     excerpt:
       "INP replaced FID as a Core Web Vital in 2024, and most sites are still failing it. Here is how to measure, diagnose, and fix Interaction to Next Paint to meet Google's 200ms threshold.",
     content: `
@@ -4115,6 +4131,8 @@ If your INP is poor (over 500ms), fix it first—it creates a terrible user expe
     slug: "eeat-seo-strategy-2026-content-quality-signals",
     title: "E-E-A-T in 2026: The Content Quality Signals That Actually Matter",
     date: "2026-02-04",
+    image: "/images/blog/eeat-seo-strategy.jpg",
+    imageAlt: "Person writing quality content in notebook",
     excerpt:
       "E-E-A-T is not a ranking factor, but content without visible experience, expertise, and trust signals will not rank. Here is how to demonstrate quality in ways Google's systems can detect.",
     content: `
@@ -4417,6 +4435,8 @@ They make E-E-A-T signals machine-readable, which helps algorithms understand yo
     title:
       "Internal Linking Architecture for Topical Authority",
     date: "2026-02-04",
+    image: "/images/blog/internal-linking.jpg",
+    imageAlt: "Abstract interconnected structure",
     excerpt:
       "Internal linking tells Google what your site is about. How to build a linking architecture that establishes topical authority and ranks.",
     content: `
@@ -4741,6 +4761,8 @@ Major audit quarterly. Quick checks for orphaned pages and broken links monthly.
     slug: "llm-visibility-ai-search-optimization-guide",
     title: "LLM Visibility: How to Get Your Brand Cited in AI Search Results",
     date: "2026-02-04",
+    image: "/images/blog/llm-visibility.jpg",
+    imageAlt: "Neural network technology rendering",
     excerpt:
       "94% of B2B buyers now use LLMs during their purchase journey. If your brand is not visible in AI-generated answers, you are losing pipeline before you can measure it. Here is how to fix that.",
     content: `
@@ -4956,6 +4978,8 @@ Content updates can influence AI citations within 3-6 months due to freshness si
     title:
       "First-Party Data Strategy: Building Your Marketing Foundation for the Post-Cookie Era",
     date: "2026-02-04",
+    image: "/images/blog/first-party-data-strategy.jpg",
+    imageAlt: "Data analytics on laptop with charts",
     excerpt:
       "Third-party cookies are dying. Privacy regulations are expanding. Platform algorithms change weekly. The businesses thriving in 2026 share one thing: they own their audience data. Here is how to build that foundation.",
     content: `
@@ -5202,6 +5226,8 @@ First-party data enables precise targeting based on actual behavior rather than 
     title:
       "Employee Advocacy for B2B: The Untapped Channel Delivering 8x More Engagement",
     date: "2026-02-04",
+    image: "/images/blog/employee-advocacy-b2b.jpg",
+    imageAlt: "Business team meeting discussion",
     excerpt:
       "Your employees have 10x more connections than your company page. Content they share gets 8x more engagement. Leads they generate convert 7x more often. Here is how to build an employee advocacy program that actually works.",
     content: `
@@ -5451,6 +5477,8 @@ Yes. Executive content carries different weight and reaches different audiences.
     title:
       "Account-Based Experience (ABX): The Evolution Beyond ABM That Drives 76% Higher ROI",
     date: "2026-02-04",
+    image: "/images/blog/account-based-experience.jpg",
+    imageAlt: "Business strategy meeting presentation",
     excerpt:
       "Traditional ABM focused on targeting accounts. ABX focuses on the entire experience across every touchpoint. Companies implementing ABX see 76% higher ROI and 40% faster revenue growth. Here is how to make the shift.",
     content: `
@@ -5722,6 +5750,8 @@ Treating it as a marketing initiative rather than a go-to-market transformation.
     title:
       "AI Marketing Automation: The 90-Day Implementation Roadmap to Measurable ROI",
     date: "2026-02-04",
+    image: "/images/blog/ai-marketing-automation-90day.jpg",
+    imageAlt: "Planning notes on whiteboard",
     excerpt:
       "AI marketing automation increases ROI by 32-48% depending on industry. But 70-85% of AI projects fail. This is the practical, phase-by-phase roadmap that separates successful implementations from expensive experiments.",
     content: `
@@ -6036,6 +6066,8 @@ Always include human review in your workflow. AI should create drafts and sugges
     slug: "ai-roi-reckoning-2026-accountability",
     title: "The AI ROI Reckoning: Why 2026 Is the Year of Accountability",
     date: "2026-02-04",
+    image: "/images/blog/ai-roi-reckoning.jpg",
+    imageAlt: "Business analytics on laptop screen",
     excerpt:
       "MIT reports a 95% failure rate for enterprise GenAI projects. With 61% of leaders facing pressure to prove AI value, 2026 marks the shift from experimentation to execution.",
     content: `
@@ -6213,6 +6245,8 @@ Start by instrumenting specific use cases rather than trying to measure everythi
     slug: "agentic-ai-enterprise-2026",
     title: "Agentic AI in Enterprise: From Copilots to Autonomous Workflows",
     date: "2026-02-04",
+    image: "/images/blog/agentic-ai-enterprise.jpg",
+    imageAlt: "Futuristic digital circuit technology",
     excerpt:
       "Gartner predicts 40% of enterprise apps will feature AI agents by end of 2026, up from 5% in 2025. As organizations move beyond copilots to autonomous systems, the enterprise is being reimagined.",
     content: `
@@ -6388,6 +6422,8 @@ By 2026, Gartner predicts 40% of enterprise applications will include AI agents.
     slug: "ai-compliance-tsunami-2026",
     title: "The AI Compliance Tsunami: Navigating 2026 Regulations",
     date: "2026-02-04",
+    image: "/images/blog/ai-compliance.jpg",
+    imageAlt: "Scales of justice representing regulation",
     excerpt:
       "With the EU AI Act taking effect, Texas and Colorado laws active, and 42 state attorneys general coordinating enforcement, 2026 marks the end of AI self-regulation.",
     content: `
@@ -6622,6 +6658,8 @@ The European Commission is publishing AI Act guidance throughout 2026. US state 
     slug: "multimodal-ai-marketing-2026",
     title: "Multimodal AI Marketing: Beyond Text to Total Brand Experience",
     date: "2026-02-04",
+    image: "/images/blog/multimodal-ai-marketing.jpg",
+    imageAlt: "AI concept 3D rendering",
     excerpt:
       "With multimodal AI showing 60% higher engagement and 45% better conversion rates, 2026 marks the shift from text-first to experience-first marketing.",
     content: `
@@ -6818,6 +6856,8 @@ Compare production time and cost before and after multimodal AI implementation. 
     slug: "ai-first-strategy-2026",
     title: "AI-First or Die: Why Operating Models Matter More Than Tools",
     date: "2026-02-04",
+    image: "/images/blog/ai-first-strategy.jpg",
+    imageAlt: "Business strategy planning on whiteboard",
     excerpt:
       "Gartner predicts AI-first organizations will achieve 25% better business outcomes by 2028. But becoming AI-first requires transforming operating models, not just buying technology.",
     content: `
@@ -7052,6 +7092,8 @@ Track both leading and lagging indicators. Leading indicators include AI conside
     slug: "ai-powered-agencies-vs-traditional-marketing",
     title: "Why AI-Powered Agencies Outperform Traditional Marketing Agencies",
     date: "2026-01-28",
+    image: "/images/blog/ai-powered-agencies.jpg",
+    imageAlt: "Professional business meeting",
     excerpt:
       "Traditional agencies are struggling to keep up. With 88% of marketers now using AI daily and companies reporting 300% ROI from AI marketing, the question is no longer whether to use AI, but whether your agency knows how.",
     content: `
@@ -7245,6 +7287,8 @@ Research shows companies using AI marketing achieve 22% higher ROI, 47% better c
     slug: "marketing-automation-ai-guide-2025",
     title: "Marketing Automation with AI: The Complete 2025 Guide",
     date: "2026-01-28",
+    image: "/images/blog/marketing-automation-ai.jpg",
+    imageAlt: "Marketing technology on laptop",
     excerpt:
       "AI-powered marketing automation delivers 20-30% higher ROI than traditional tools. Learn how leading brands like Nike and L'Oreal use predictive analytics, smart email optimization, and intelligent workflows to dominate their markets.",
     content: `
@@ -7491,6 +7535,8 @@ Ready to implement AI-powered automation for your marketing? [Our AI automation 
     slug: "ai-marketing-methodology",
     title: "How We Use AI to 3x Client Results: The BKND Methodology",
     date: "2026-01-28",
+    image: "/images/blog/ai-marketing-methodology.jpg",
+    imageAlt: "Brand strategy design planning",
     excerpt:
       "AI is not autopilot for marketing. It is an amplifier. Here is how BKND combines AI capabilities with human expertise to deliver 300% ROI for clients—and why the hybrid approach beats both pure AI and traditional agencies.",
     content: `
@@ -7782,6 +7828,8 @@ Most "AI agencies" either use AI superficially (just for content generation) or 
     title:
       "Marketing Automation for Small Service Businesses: The Developer-Led Approach",
     date: "2026-01-26",
+    image: "/images/blog/marketing-automation-small-business.jpg",
+    imageAlt: "Small business marketing content planning",
     excerpt:
       "You cannot scale a service business by manually following up with every lead. Here is the automation stack that actually works for contractors and home service companies, from someone who builds these systems.",
     content: `
@@ -8218,6 +8266,8 @@ And if building this yourself sounds like a lot, [that is what we do](/contact).
     title:
       "Call Tracking Setup Guide for Contractors: From Zero to Full Attribution",
     date: "2026-01-26",
+    image: "/images/blog/call-tracking-setup.jpg",
+    imageAlt: "Business person using tablet for tracking",
     excerpt:
       "Phone calls drive revenue for contractors. This technical guide walks through setting up call tracking from scratch—DNI, tracking pools, platform selection, GA4 integration, and keyword-level attribution.",
     content: `
@@ -8662,6 +8712,8 @@ If you need help setting this up properly—or want someone to audit your curren
     slug: "plumber-marketing",
     title: "Plumber Marketing: Digital Strategies That Generate Calls in 2026",
     date: "2026-01-26",
+    image: "/images/blog/plumber-marketing.jpg",
+    imageAlt: "Professional plumber installing pipe fittings",
     excerpt:
       "Plumbing marketing operates on different rules than other trades. Emergency calls, 24/7 availability, and trust signals matter more than anywhere else. Here is the complete playbook.",
     content: `
@@ -9078,6 +9130,8 @@ For broader marketing strategies, read our [complete home services marketing gui
     slug: "google-ads-for-contractors",
     title: "Google Ads for Contractors: Budget, Bidding, and Best Practices",
     date: "2026-01-26",
+    image: "/images/blog/google-ads-contractors.jpg",
+    imageAlt: "Digital marketing on screen",
     excerpt:
       "Google Ads can drain your budget fast or fill your pipeline with qualified leads. The difference comes down to campaign structure, keyword strategy, and bidding. Here is what actually works for contractors.",
     content: `
@@ -9468,6 +9522,8 @@ But if you're doing it yourself, this guide is the playbook. Follow it step by s
     title:
       "How to Market a Roofing Company: 15 Strategies",
     date: "2026-01-26",
+    image: "/images/blog/roofing-company-marketing.jpg",
+    imageAlt: "Construction workers on building site",
     excerpt:
       "15 roofing marketing strategies that account for seasonality, storm chasing, and the trust problem. From companies doing $400K to $8M.",
     content: `
@@ -9927,6 +9983,8 @@ If you want help building out these systems properly, implementing tracking that
     slug: "contractor-marketing-ideas",
     title: "Contractor Marketing Ideas That Actually Work in 2026",
     date: "2026-01-26",
+    image: "/images/blog/contractor-marketing-ideas.jpg",
+    imageAlt: "Construction workers renovating house",
     excerpt:
       "Forget the generic marketing advice. Here are the contractor marketing ideas that actually generate phone calls, backed by data and real implementation details.",
     content: `
@@ -10358,6 +10416,8 @@ For more on what actually drives results for home service businesses, read our [
     slug: "hvac-marketing",
     title: "HVAC Marketing: How to Fill Your Schedule Year-Round",
     date: "2026-01-26",
+    image: "/images/blog/hvac-marketing.jpg",
+    imageAlt: "HVAC technician inspecting outdoor unit",
     excerpt:
       "HVAC businesses face brutal seasonality. Here's the complete marketing playbook to generate leads during slow seasons and capture emergency calls when demand spikes.",
     content: `
@@ -10739,6 +10799,8 @@ If you want help building this system instead of figuring it out yourself, that'
     slug: "local-seo-for-contractors",
     title: "Local SEO for Contractors: The Complete 2026 Guide",
     date: "2026-01-26",
+    image: "/images/blog/local-seo-contractors.jpg",
+    imageAlt: "Business strategy meeting",
     excerpt:
       "Most contractors are invisible to homeowners searching online. Here's the technical playbook to fix that—from Google Business Profile hacks to schema markup that actually moves rankings.",
     content: `
@@ -11115,6 +11177,8 @@ If you want help implementing this—building the technical foundation, setting 
     slug: "marketing-roi-measurement",
     title: "How to Measure Marketing ROI for Service Businesses",
     date: "2026-01-26",
+    image: "/images/blog/marketing-roi-measurement.jpg",
+    imageAlt: "Business graph and chart analytics",
     excerpt:
       "Service businesses face unique measurement challenges: phone calls, long sales cycles, and offline conversions. Here's the developer-led approach to tracking what actually matters.",
     content: `
@@ -11464,6 +11528,8 @@ If you're ready to stop guessing about your marketing ROI, read our [complete ho
     slug: "home-services-marketing-guide",
     title: "The Home Services Marketing Guide That Actually Works",
     date: "2026-01-26",
+    image: "/images/blog/home-services-marketing.jpg",
+    imageAlt: "Handyman installing window in house",
     excerpt:
       "Most marketing advice is written for tech startups and e-commerce. Here's what actually moves the needle for roofers, HVAC contractors, and home service businesses.",
     content: `
@@ -11828,6 +11894,8 @@ If you want help implementing this—actually building the tracking, setting up 
     slug: "marketing-agency-lying-to-you",
     title: "Your Marketing Agency is Lying to You",
     date: "2026-01-26",
+    image: "/images/blog/marketing-agency-lying.jpg",
+    imageAlt: "Business handshake representing trust",
     excerpt:
       'That $3,000/month report full of "impressions" and "reach"? It might be hiding the fact that you\'re getting nothing in return.',
     content: `
@@ -11927,6 +11995,8 @@ If that sounds refreshing, we should talk. If you like the mystery, there are pl
     slug: "the-real-cost-of-vanity-metrics",
     title: "The Real Cost of Vanity Metrics",
     date: "2026-01-15",
+    image: "/images/blog/vanity-metrics.jpg",
+    imageAlt: "Analytics graph on laptop screen",
     excerpt:
       "Impressions and engagement rates feel good to report, but they can hide the truth about whether your marketing is actually working.",
     content: `
@@ -11976,6 +12046,8 @@ But once you make the shift, you'll wonder how you ever operated any other way.
     slug: "attribution-is-harder-than-you-think",
     title: "Attribution Is Harder Than You Think",
     date: "2026-01-10",
+    image: "/images/blog/attribution-harder.jpg",
+    imageAlt: "Marketing analytics on laptop",
     excerpt:
       "Understanding which marketing channels actually drive revenue requires more than just looking at last-click data.",
     content: `
@@ -12019,6 +12091,8 @@ But imperfect attribution based on solid methodology is infinitely better than l
     slug: "marketing-dashboard-service-companies",
     title: "Building a Marketing Dashboard for Service Companies",
     date: "2026-01-26",
+    image: "/images/blog/marketing-dashboard.jpg",
+    imageAlt: "Analytics dashboard on laptop screen",
     excerpt:
       "Stop guessing which marketing channels work. Build a dashboard that shows exactly where your leads come from, what they cost, and which ones turn into paying jobs.",
     content: `
@@ -12360,6 +12434,8 @@ If you need help building custom dashboards or connecting complex data sources, 
     slug: "home-services-website-design",
     title: "Home Services Website Design: Conversion-Focused Best Practices",
     date: "2026-01-26",
+    image: "/images/blog/home-services-website-design.jpg",
+    imageAlt: "Website design on laptop",
     excerpt:
       "Most contractor websites look fine but fail at their one job: generating phone calls. Here are the technical specifics that actually convert visitors into customers.",
     content: `
@@ -12768,6 +12844,8 @@ For a deeper dive into the full marketing stack beyond your website, read our [c
     slug: "ga4-setup-home-services",
     title: "How to Set Up Google Analytics 4 for Home Service Businesses",
     date: "2026-01-26",
+    image: "/images/blog/ga4-setup-home-services.jpg",
+    imageAlt: "Analytics graph on laptop screen",
     excerpt:
       "GA4 setup for service businesses requires tracking what actually matters: phone calls, form submissions, and quote requests. This technical guide covers event configuration, GTM implementation, conversion tracking, and building reports that show real business impact.",
     content: `
@@ -13340,6 +13418,8 @@ Looking for the bigger picture on marketing your home service business? Our [com
     slug: "marketing-attribution-lead-gen",
     title: "Marketing Attribution for Lead Gen: What Actually Matters",
     date: "2026-01-26",
+    image: "/images/blog/marketing-attribution-lead-gen.jpg",
+    imageAlt: "Person analyzing business charts",
     excerpt:
       "Attribution is harder for lead generation than e-commerce. Offline conversions, phone calls, and long sales cycles break most tracking. Here is what actually works for service businesses.",
     content: `
@@ -13813,6 +13893,8 @@ For a broader view of marketing strategy beyond attribution, check out our [comp
     slug: "crm-integration-home-services",
     title: "CRM Integration for Home Services: Connecting Marketing to Revenue",
     date: "2026-01-26",
+    image: "/images/blog/crm-integration-home-services.jpg",
+    imageAlt: "Person with tablet and laptop",
     excerpt:
       "Your ad spend means nothing if you cannot trace it to closed jobs. This technical guide covers CRM integration for contractors: webhook setup, call tracking connections, closed-loop reporting, and the specific integrations that let you know which marketing dollars actually produce revenue.",
     content: `
@@ -14357,6 +14439,8 @@ The goal is not data for data's sake. It is knowing which marketing dollars come
     title:
       "Lead Generation for Contractors: 12 Proven Methods",
     date: "2026-01-26",
+    image: "/images/blog/lead-generation-contractors.jpg",
+    imageAlt: "Team meeting overhead view",
     excerpt:
       "12 contractor lead generation methods ranked by what works versus what sounds good. Written for people who actually close jobs.",
     content: `
@@ -14870,6 +14954,8 @@ Within 5 minutes during business hours. Research shows that leads contacted with
     slug: "geo-future-of-seo",
     title: "GEO: The Future of SEO (And Why You Need Both)",
     date: "2026-01-28",
+    image: "/images/blog/geo-future-seo.jpg",
+    imageAlt: "Glowing AI chip technology",
     excerpt:
       "AI search is not replacing Google. It is creating a new discovery channel where only 2-7 sources get cited instead of 10 blue links. Here is what Generative Engine Optimization means for your business and why ignoring it costs you customers.",
     content: `
@@ -15086,6 +15172,8 @@ AI-referred traffic converts at 4.4-23x the rate of traditional search traffic. 
     slug: "ai-chatbots-roi-guide",
     title: "AI Chatbots for Business: The Complete ROI Guide",
     date: "2026-01-28",
+    image: "/images/blog/ai-chatbots-roi.jpg",
+    imageAlt: "Chatbot on mobile device",
     excerpt:
       "AI chatbots deliver an average of $8 return for every $1 invested. This guide breaks down the real costs, timelines, and ROI metrics for implementing chatbots in your business, plus the mistakes that cause 35% of projects to fail.",
     content: `
@@ -16842,6 +16930,8 @@ If you have read this far, you are serious about getting a website that works fo
     title:
       "Best Jira Alternatives in 2026: 10 Project Management Tools Compared",
     date: "2026-03-10",
+    image: "/images/blog/jira-alternatives.jpg",
+    imageAlt: "Project management kanban board software",
     excerpt:
       "Looking for a Jira alternative? We compared 10 project management tools on features, pricing, and ease of use. See which one fits your team best.",
     content: `
@@ -18102,6 +18192,8 @@ The software itself is free and open source, but self-hosting has real costs. Yo
     title:
       "Free Jira Alternatives in 2026: Open Source & Free Project Management Tools",
     date: "2026-03-10",
+    image: "/images/blog/free-jira-alternatives.jpg",
+    imageAlt: "Free project management collaboration tools",
     excerpt:
       "Jira is powerful but expensive and complex. We found 8 genuinely free and open source project management tools that handle tasks, boards, and team collaboration without the price tag.",
     content: `
