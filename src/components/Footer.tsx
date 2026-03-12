@@ -150,6 +150,25 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Member Badge */}
+        <div className="flex items-center gap-3 border-b border-[#424245] py-6">
+          <span className="text-[#86868B] text-xs">Member of</span>
+          <a
+            href="https://www.elizabethchamber.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/90 rounded-md px-2 py-1 hover:bg-white transition-colors duration-200"
+          >
+            <Image
+              src="/images/gecc-badge.png"
+              alt="Greater Elizabeth Chamber of Commerce"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
+          </a>
+        </div>
+
         {/* Bottom Bar */}
         <div>
           <div className="pt-8">
