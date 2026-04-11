@@ -10,6 +10,16 @@ import bestFreeWebsiteBuilder from './best-free-website-builder';
 import bestSocialMediaManagementTools from './best-social-media-management-tools';
 import bestInvoicingSoftware from './best-invoicing-software';
 import bestLandingPageBuilder from './best-landing-page-builder';
+import bestChatbotForWebsite from './best-chatbot-for-website';
+import bestSchedulingSoftware from './best-scheduling-software';
+import bestTimeTrackingSoftware from './best-time-tracking-software';
+import bestVideoConferencingTools from './best-video-conferencing-tools';
+import bestPasswordManagers from './best-password-managers';
+import bestVpnForBusiness from './best-vpn-for-business';
+import bestFormBuilder from './best-form-builder';
+import bestEcommercePlatforms from './best-ecommerce-platforms';
+import bestAnalyticsTools from './best-analytics-tools';
+import bestAiImageGenerators from './best-ai-image-generators';
 
 export const bestOf: BestOfPost[] = [
   bestCrmSmallBusiness,
@@ -22,4 +32,14 @@ export const bestOf: BestOfPost[] = [
   bestSocialMediaManagementTools,
   bestInvoicingSoftware,
   bestLandingPageBuilder,
+  bestChatbotForWebsite,
+  bestSchedulingSoftware,
+  bestTimeTrackingSoftware,
+  bestVideoConferencingTools,
+  bestPasswordManagers,
+  bestVpnForBusiness,
+  bestFormBuilder,
+  bestEcommercePlatforms,
+  bestAnalyticsTools,
+  bestAiImageGenerators,
 ];
