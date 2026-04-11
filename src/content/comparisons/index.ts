@@ -9,6 +9,16 @@ import zoomVsGoogleMeet from './zoom-vs-google-meet';
 import hubspotVsSalesforce from './hubspot-vs-salesforce';
 import notionVsClickup from './notion-vs-clickup';
 import quickbooksVsFreshbooks from './quickbooks-vs-freshbooks';
+import stripeVsPaypal from './stripe-vs-paypal';
+import canvaVsAdobeExpress from './canva-vs-adobe-express';
+import mondayVsAsana from './monday-vs-asana';
+import godaddyVsSquarespace from './godaddy-vs-squarespace';
+import bluehostVsSiteground from './bluehost-vs-siteground';
+import figmaVsCanva from './figma-vs-canva';
+import shopifyVsBigcommerce from './shopify-vs-bigcommerce';
+import mailchimpVsKlaviyo from './mailchimp-vs-klaviyo';
+import wixVsGodaddy from './wix-vs-godaddy';
+import semrushVsAhrefs from './semrush-vs-ahrefs';
 
 export const comparisons: ComparisonPost[] = [
   wixVsSquarespace,
@@ -21,4 +31,14 @@ export const comparisons: ComparisonPost[] = [
   hubspotVsSalesforce,
   notionVsClickup,
   quickbooksVsFreshbooks,
+  stripeVsPaypal,
+  canvaVsAdobeExpress,
+  mondayVsAsana,
+  godaddyVsSquarespace,
+  bluehostVsSiteground,
+  figmaVsCanva,
+  shopifyVsBigcommerce,
+  mailchimpVsKlaviyo,
+  wixVsGodaddy,
+  semrushVsAhrefs,
 ];
