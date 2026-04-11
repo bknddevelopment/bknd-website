@@ -1,8 +1,14 @@
 import type { IndustryGuidePost } from '@/lib/content-types';
+import lawFirmMarketing from './law-firm-marketing';
+import realEstateMarketing from './real-estate-marketing';
+import fitnessGymMarketing from './fitness-gym-marketing';
+import autoRepairMarketing from './auto-repair-marketing';
+import landscapingMarketing from './landscaping-marketing';
 
-// As posts are added, import them here and add to the array.
-// Example:
-// import restaurantMarketing from './restaurant-marketing-guide';
-// export const industryGuides: IndustryGuidePost[] = [restaurantMarketing];
-
-export const industryGuides: IndustryGuidePost[] = [];
+export const industryGuides: IndustryGuidePost[] = [
+  lawFirmMarketing,
+  realEstateMarketing,
+  fitnessGymMarketing,
+  autoRepairMarketing,
+  landscapingMarketing,
+];
