@@ -1,8 +1,15 @@
 import type { BestOfPost } from '@/lib/content-types';
 
-// As posts are added, import them here and add to the array.
-// Example:
-// import bestAiTools from './best-ai-tools';
-// export const bestOf: BestOfPost[] = [bestAiTools];
+import bestCrmSmallBusiness from './best-crm-small-business';
+import bestAiWebsiteBuilder from './best-ai-website-builder';
+import bestProjectManagementTools from './best-project-management-tools';
+import bestSeoTools from './best-seo-tools';
+import bestEmailMarketingTools from './best-email-marketing-tools';
 
-export const bestOf: BestOfPost[] = [];
+export const bestOf: BestOfPost[] = [
+  bestCrmSmallBusiness,
+  bestAiWebsiteBuilder,
+  bestProjectManagementTools,
+  bestSeoTools,
+  bestEmailMarketingTools,
+];
