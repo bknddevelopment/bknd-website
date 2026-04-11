@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import StickyCtaBar from "@/components/StickyCtaBar";
 import ExitIntentModal from "@/components/ExitIntentModal";
+import { KnowledgeHub } from "@/components/shared/KnowledgeHub";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <CaseStudies />
         <Methodology />
         <Contact />
+        <KnowledgeHub />
       </main>
       <Footer />
       <StickyCtaBar />
