@@ -51,9 +51,19 @@ export function getRelatedContent(post: ContentPost, limit = 3): ContentPost[] {
   const postTags = new Set(post.tags);
 
   // Posts explicitly linked via relatedSlugs take priority
+  // Supports "category/slug" format for cross-pillar refs, or plain slugs (same-pillar preferred)
   const explicit = post.relatedSlugs
-    .map((slug) => allContent.find((p) => p.slug === slug))
-    .filter((p): p is ContentPost => p !== undefined);
+    .map((ref) => {
+      if (ref.includes('/')) {
+        const [cat, s] = ref.split('/');
+        return allContent.find((p) => p.category === cat && p.slug === s);
+      }
+      return (
+        allContent.find((p) => p.pillar === post.pillar && p.slug === ref) ||
+        allContent.find((p) => p.slug === ref)
+      );
+    })
+    .filter((p): p is ContentPost => p !== undefined && p.slug !== post.slug);
 
   // Fill remaining slots with same-pillar or shared-tag posts
   const implicit = allContent.filter(
