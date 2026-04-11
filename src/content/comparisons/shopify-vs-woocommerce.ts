@@ -34,7 +34,7 @@ const shopifyVsWoocommerce: ComparisonPost = {
   comparisonTable: [
     {
       feature: 'Starting Price',
-      platformA: '$29/month (Basic Shopify)',
+      platformA: '$29/month (Basic)',
       platformB: 'Free plugin; hosting from ~$10/month',
     },
     {
@@ -146,11 +146,11 @@ const shopifyVsWoocommerce: ComparisonPost = {
     <p>Shopify's plans (billed annually) in 2026:</p>
     <ul>
       <li><strong>Basic:</strong> $29/month — 2 staff accounts, basic reports, 2.9% + 30¢ online transaction fee with Shopify Payments</li>
-      <li><strong>Shopify:</strong> $79/month — 5 staff accounts, professional reports, 2.6% + 30¢</li>
+      <li><strong>Grow:</strong> $79/month — 5 staff accounts, professional reports, 2.6% + 30¢</li>
       <li><strong>Advanced:</strong> $299/month — 15 staff accounts, advanced reports, custom pricing, 2.4% + 30¢</li>
       <li><strong>Shopify Plus:</strong> From $2,300/month — enterprise features, dedicated support, unlimited staff</li>
     </ul>
-    <p>Critical note: if you use a payment processor other than Shopify Payments, Shopify charges an additional transaction fee of 2% (Basic), 1% (Shopify), or 0.5% (Advanced) on top of whatever your gateway charges. On high-volume stores, this fee alone can cost thousands per month.</p>
+    <p>Critical note: if you use a payment processor other than Shopify Payments, Shopify charges an additional transaction fee of 2% (Basic), 1% (Grow), or 0.5% (Advanced) on top of whatever your gateway charges. On high-volume stores, this fee alone can cost thousands per month.</p>
 
     <h3>WooCommerce Pricing</h3>
     <p>WooCommerce core is free. Your costs:</p>

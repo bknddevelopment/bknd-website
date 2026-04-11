@@ -35,7 +35,7 @@ const godaddyVsSquarespace: ComparisonPost = {
     {
       feature: 'Starting Price',
       platformA: 'Basic: $9.99/month (billed annually) — website only',
-      platformB: 'Personal: $16/month (billed annually)',
+      platformB: 'Basic: $16/month (billed annually)',
     },
     {
       feature: 'Free Trial',
@@ -65,7 +65,7 @@ const godaddyVsSquarespace: ComparisonPost = {
     {
       feature: 'E-Commerce Transaction Fees',
       platformA: 'None on Commerce plans',
-      platformB: '3% on Business plan; 0% on Commerce Basic/Advanced',
+      platformB: '3% on Core plan; 0% on Plus/Advanced',
     },
     {
       feature: 'Domain & Hosting',
@@ -97,7 +97,7 @@ const godaddyVsSquarespace: ComparisonPost = {
     {
       question: 'Is GoDaddy or Squarespace cheaper?',
       answer:
-        "GoDaddy's entry pricing is lower — Basic at $9.99/month vs Squarespace Personal at $16/month. However, the comparison isn't straightforward. GoDaddy's cheapest plan has limited features, and many businesses end up on higher tiers. Squarespace's pricing is more transparent — you get a fully-featured website builder on every paid plan. For e-commerce specifically, Squarespace's Business plan at $23/month includes commerce capabilities, while GoDaddy charges for the Commerce plan separately. Over a full year, the difference is smaller than the entry prices suggest.",
+        "GoDaddy's entry pricing is lower — Basic at $9.99/month vs Squarespace Basic at $16/month. However, the comparison isn't straightforward. GoDaddy's cheapest plan has limited features, and many businesses end up on higher tiers. Squarespace's pricing is more transparent — you get a fully-featured website builder on every paid plan. For e-commerce specifically, Squarespace's Core plan at $23/month includes commerce capabilities, while GoDaddy charges for the Commerce plan separately. Over a full year, the difference is smaller than the entry prices suggest.",
     },
     {
       question: 'Which is better for a local service business?',
@@ -143,10 +143,10 @@ const godaddyVsSquarespace: ComparisonPost = {
     <h3>Squarespace Pricing</h3>
     <p>Squarespace plans in 2026 (billed annually):</p>
     <ul>
-      <li><strong>Personal:</strong> $16/month — unlimited pages, SSL, basic website features, no e-commerce</li>
-      <li><strong>Business:</strong> $23/month — e-commerce with 3% transaction fee, promotional pop-ups, advanced analytics, custom code injection</li>
-      <li><strong>Commerce Basic:</strong> $28/month — 0% transaction fees, product reviews, customer accounts, merchandising</li>
-      <li><strong>Commerce Advanced:</strong> $52/month — subscriptions, abandoned cart recovery, advanced shipping, discounts API</li>
+      <li><strong>Basic:</strong> $16/month — unlimited pages, SSL, basic website features, no e-commerce</li>
+      <li><strong>Core:</strong> $23/month — e-commerce with 3% transaction fee, promotional pop-ups, advanced analytics, custom code injection</li>
+      <li><strong>Plus:</strong> $39/month — 0% transaction fees, product reviews, customer accounts, merchandising</li>
+      <li><strong>Advanced:</strong> $99/month — subscriptions, abandoned cart recovery, advanced shipping, discounts API</li>
     </ul>
     <p>All Squarespace annual plans include a free custom domain for the first year. The pricing is straightforward — what you see is what you pay, with no add-on surprises.</p>
 
@@ -186,7 +186,7 @@ const godaddyVsSquarespace: ComparisonPost = {
     <h2>E-Commerce</h2>
     <h3>Squarespace Commerce</h3>
     <p>Squarespace's e-commerce is a genuine strength. Product pages are beautifully designed by default — Squarespace's image presentation, product galleries, and zoom functionality showcase merchandise effectively. The platform supports physical products, digital downloads, subscription products, service bookings, and gift cards.</p>
-    <p>Key commerce features: inventory management, flexible shipping rules, tax calculation, customer accounts, product reviews, abandoned cart recovery (Commerce Advanced), and integration with major payment processors (Stripe, PayPal, Square, Afterpay). The 0% transaction fee on Commerce plans (Basic and Advanced) is competitive.</p>
+    <p>Key commerce features: inventory management, flexible shipping rules, tax calculation, customer accounts, product reviews, abandoned cart recovery (Advanced plan), and integration with major payment processors (Stripe, PayPal, Square, Afterpay). The 0% transaction fee on Plus and Advanced plans is competitive.</p>
 
     <h3>GoDaddy Commerce</h3>
     <p>GoDaddy's commerce offering on the Commerce plan handles the essentials: product listings, inventory, shipping, and payment processing. For simple online stores selling physical products, it works. The design of GoDaddy product pages is functional but lacks the visual quality that Squarespace delivers.</p>

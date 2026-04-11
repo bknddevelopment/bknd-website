@@ -157,7 +157,7 @@ const wordpressVsWix: ComparisonPost = {
       <li><strong>Free:</strong> Wix branding, wixsite.com subdomain, very limited</li>
       <li><strong>Light:</strong> $17/month — custom domain, no Wix ads, 2GB storage</li>
       <li><strong>Core:</strong> $29/month — 50GB storage, basic e-commerce</li>
-      <li><strong>Business:</strong> $36/month — full e-commerce, 100GB storage</li>
+      <li><strong>Business:</strong> $39/month — full e-commerce, 100GB storage</li>
       <li><strong>Business Elite:</strong> $159/month — unlimited storage, priority support</li>
     </ul>
     <p>Wix's pricing is predictable. WordPress's pricing is flexible but requires more active management. For a simple site, total cost ends up similar. As you add functionality, WordPress generally becomes cheaper because you're not locked into plan upgrades.</p>

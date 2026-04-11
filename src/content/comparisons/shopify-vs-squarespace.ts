@@ -37,8 +37,8 @@ const shopifyVsSquarespace: ComparisonPost = {
   comparisonTable: [
     {
       feature: 'Pricing',
-      platformA: 'From $39/month (Basic Shopify)',
-      platformB: 'From $23/month (Commerce Basic)',
+      platformA: 'From $29/month (Basic)',
+      platformB: 'From $39/month (Plus)',
     },
     {
       feature: 'Transaction Fees',
@@ -101,7 +101,7 @@ const shopifyVsSquarespace: ComparisonPost = {
     {
       question: 'Is Shopify or Squarespace better for a small online store?',
       answer:
-        "For a small store with a simple catalog — say, under 50 products — both platforms work well. Squarespace is cheaper (Commerce Basic at $23/month vs Shopify Basic at $39/month) and offers better design out of the box. Shopify gives you more powerful inventory tools, more payment options, and a larger app ecosystem even on the entry plan. If design and content matter as much as selling, choose Squarespace. If you expect to grow your catalog quickly, start on Shopify.",
+        "For a small store with a simple catalog — say, under 50 products — both platforms work well. Squarespace is cheaper (Plus at $39/month vs Shopify Basic at $29/month) and offers better design out of the box. Shopify gives you more powerful inventory tools, more payment options, and a larger app ecosystem even on the entry plan. If design and content matter as much as selling, choose Squarespace. If you expect to grow your catalog quickly, start on Shopify.",
     },
     {
       question: 'Does Shopify charge transaction fees?',
@@ -139,13 +139,13 @@ const shopifyVsSquarespace: ComparisonPost = {
 <p>Squarespace is an all-in-one website builder known for its award-winning design templates and ease of use. Commerce functionality was added to the platform and has grown significantly — you can now run a full online store, manage subscriptions, sell digital products, and handle member area access. But Squarespace is still fundamentally a website builder with commerce added, not a commerce platform with a website builder attached. That difference matters when you start pushing the limits of what each platform can do.</p>
 
 <h2>Pricing Comparison</h2>
-<p>Squarespace Commerce plans start at <strong>$23/month</strong> (Commerce Basic) and go up to <strong>$49/month</strong> (Commerce Advanced), billed annually. Both plans include all core store features — the main differences are advanced discounting, abandoned cart recovery, and selling subscriptions on the higher tier.</p>
+<p>Squarespace Commerce plans start at <strong>$39/month</strong> (Plus) and go up to <strong>$99/month</strong> (Advanced), billed annually. Both plans include all core store features — the main differences are advanced discounting, abandoned cart recovery, and selling subscriptions on the higher tier.</p>
 
 <p>Shopify's main plans are:</p>
 <ul>
-  <li><strong>Basic:</strong> $39/month — suited for new stores</li>
-  <li><strong>Shopify:</strong> $105/month — adds professional reports and lower transaction fees</li>
-  <li><strong>Advanced:</strong> $399/month — for scaling stores needing advanced reporting and third-party shipping rates</li>
+  <li><strong>Basic:</strong> $29/month — suited for new stores</li>
+  <li><strong>Grow:</strong> $79/month — adds professional reports and lower transaction fees</li>
+  <li><strong>Advanced:</strong> $299/month — for scaling stores needing advanced reporting and third-party shipping rates</li>
 </ul>
 <p>Shopify is more expensive at every tier. However, the transaction fee structure changes the real cost equation. Shopify charges 0.5–2% on top of payment processing fees when you use a third-party gateway instead of Shopify Payments. Squarespace charges no additional transaction fees with any payment processor. For high-volume stores, these fee differences can be significant.</p>
 <p><strong>Winner: Squarespace</strong> on price for smaller stores. Shopify's higher price reflects its deeper e-commerce feature set.</p>
@@ -213,7 +213,7 @@ const shopifyVsSquarespace: ComparisonPost = {
 <h2>Shipping and Fulfillment</h2>
 <p>Shopify offers real-time shipping rates from major carriers (UPS, USPS, DHL), built-in shipping label printing at discounted rates through Shopify Shipping, and integrations with third-party fulfillment services. The Shopify Fulfillment Network (in the US) lets you store inventory in Shopify's warehouses and have orders picked, packed, and shipped automatically. For merchants who want to streamline operations, Shopify's shipping tools save real time and money.</p>
 
-<p>Squarespace supports basic shipping configuration: flat rates, free shipping thresholds, and carrier-calculated rates (on Commerce Advanced). You can connect a ShipStation extension for label printing, but it's not native. Multi-carrier rate shopping, automatic fulfillment workflows, and fulfillment center integrations aren't available natively.</p>
+<p>Squarespace supports basic shipping configuration: flat rates, free shipping thresholds, and carrier-calculated rates (on the Advanced plan). You can connect a ShipStation extension for label printing, but it's not native. Multi-carrier rate shopping, automatic fulfillment workflows, and fulfillment center integrations aren't available natively.</p>
 <p><strong>Winner: Shopify</strong> — purpose-built shipping and fulfillment infrastructure.</p>
 
 <h2>Scalability</h2>

@@ -62,7 +62,7 @@ const squarespaceVsWordpress: ComparisonPost = {
     },
     {
       feature: 'E-Commerce',
-      platformA: 'Built-in store on Commerce plans from $23/month',
+      platformA: 'Built-in store on Commerce plans from $39/month (Plus)',
       platformB: 'WooCommerce is fully featured and extensible',
     },
     {
@@ -139,7 +139,7 @@ const squarespaceVsWordpress: ComparisonPost = {
 <p>WordPress is open-source content management software that powers roughly 43% of all websites on the internet. When most people say "WordPress," they mean WordPress.org — the self-hosted version where you download the software for free and install it on a hosting provider of your choice. This is different from WordPress.com, which is a hosted service with more restrictions. The self-hosted version gives you complete control: you can install any theme, any plugin, and modify every line of code. That power comes with responsibility — maintenance, updates, and security are yours to manage.</p>
 
 <h2>Pricing Comparison</h2>
-<p>Squarespace plans (billed annually) start at <strong>$16/month</strong> for the Personal plan and go up to <strong>$49/month</strong> for the Advanced Commerce plan. Every plan includes hosting, SSL, a free custom domain for one year, and 24/7 customer support. There are no hidden renewal fees for essential features.</p>
+<p>Squarespace plans (billed annually) start at <strong>$16/month</strong> for the Basic plan and go up to <strong>$99/month</strong> for the Advanced plan. Every plan includes hosting, SSL, a free custom domain for one year, and 24/7 customer support. There are no hidden renewal fees for essential features.</p>
 
 <p>WordPress.org software is free, but you pay for:</p>
 <ul>
@@ -176,7 +176,7 @@ const squarespaceVsWordpress: ComparisonPost = {
 <p><strong>Winner: WordPress</strong> — more powerful for high-volume or professionally managed editorial workflows.</p>
 
 <h2>E-Commerce</h2>
-<p>Squarespace Commerce (available on the Business plan and above) is a genuinely capable store builder. It supports physical and digital products, subscriptions, member areas, restaurant ordering, and service bookings. Checkout is built in, and Squarespace integrates directly with Stripe, PayPal, and Square. For small to mid-size stores — say, under a few hundred SKUs — Squarespace Commerce is fast to set up and easy to manage.</p>
+<p>Squarespace Commerce (available on the Core plan and above) is a genuinely capable store builder. It supports physical and digital products, subscriptions, member areas, restaurant ordering, and service bookings. Checkout is built in, and Squarespace integrates directly with Stripe, PayPal, and Square. For small to mid-size stores — say, under a few hundred SKUs — Squarespace Commerce is fast to set up and easy to manage.</p>
 
 <p>WooCommerce, the leading WordPress e-commerce plugin, is more powerful in almost every dimension. It supports unlimited products, complex shipping rules, subscription billing, wholesale pricing, product variations, and thousands of payment gateways. The plugin ecosystem extends it endlessly. WooCommerce is free to install, though payment gateway fees and premium extensions add up. For stores with large catalogs or specialized requirements, WooCommerce (or Shopify) gives you room to grow that Squarespace can't match.</p>
 <p><strong>Winner: WordPress (WooCommerce)</strong> — more extensible for complex or high-volume stores. Squarespace wins for simplicity on smaller catalogs.</p>

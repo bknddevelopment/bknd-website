@@ -37,7 +37,7 @@ const slackVsMicrosoftTeams: ComparisonPost = {
   comparisonTable: [
     {
       feature: 'Pricing',
-      platformA: 'Free tier; Pro $8.75/user/month; Business+ $15/user/month',
+      platformA: 'Free tier; Pro $8.75/user/month; Business+ $18/user/month',
       platformB: 'Free tier; Essentials $4/user/month; Microsoft 365 Business Basic $6/user/month',
     },
     {

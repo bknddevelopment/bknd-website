@@ -39,7 +39,7 @@ const wixVsSquarespace: ComparisonPost = {
     {
       feature: 'Starting Price',
       platformA: '$17/month (Light, billed annually)',
-      platformB: '$16/month (Personal, billed annually)',
+      platformB: '$16/month (Basic, billed annually)',
     },
     {
       feature: 'Free Plan',
@@ -64,7 +64,7 @@ const wixVsSquarespace: ComparisonPost = {
     {
       feature: 'E-commerce',
       platformA: 'Wix eCommerce — from Core plan ($29/mo)',
-      platformB: 'Squarespace Commerce — from $36/mo',
+      platformB: 'Squarespace Commerce — from $39/mo (Plus plan)',
     },
     {
       feature: 'SEO Tools',
@@ -118,6 +118,7 @@ const wixVsSquarespace: ComparisonPost = {
       question: 'Is Wix cheaper than Squarespace?',
       answer:
         'They are very similarly priced at entry level — Wix starts at $17/month and Squarespace at $16/month (both billed annually). The key difference is that Wix offers a free plan with platform branding, while Squarespace only offers a 14-day free trial. For business and e-commerce tiers, Wix tends to offer slightly more features per dollar, but Squarespace Commerce includes more polished tools for selling.',
+
     },
     {
       question: 'Which platform is better for online stores?',
@@ -139,16 +140,16 @@ const wixVsSquarespace: ComparisonPost = {
 <ul>
   <li><strong>Light — $17/month:</strong> 2 collaborators, 2 GB storage, custom domain, no ads. Good for simple personal sites or portfolios.</li>
   <li><strong>Core — $29/month:</strong> 5 GB storage, e-commerce enabled, accept payments, basic analytics. The first plan worth considering for a business site.</li>
-  <li><strong>Business — $36/month:</strong> 50 GB storage, subscriptions, pricing plans, multiple currencies. For growing online stores and service businesses.</li>
+  <li><strong>Business — $39/month:</strong> 50 GB storage, subscriptions, pricing plans, multiple currencies. For growing online stores and service businesses.</li>
   <li><strong>Business Elite — $159/month:</strong> Unlimited storage, priority support, enterprise-grade features. For high-volume operations.</li>
 </ul>
 <p>Wix also offers a free plan — you get a fully functional site with Wix branding and a Wix subdomain. It is a useful way to test the platform before committing, but not suitable for a real business site.</p>
 <h3>Squarespace Pricing (2026, billed annually)</h3>
 <ul>
-  <li><strong>Personal — $16/month:</strong> Unlimited pages, SSL, basic metrics. No e-commerce. Good for portfolios and personal sites.</li>
-  <li><strong>Business — $33/month:</strong> E-commerce enabled, but with a 3% transaction fee on sales. Custom CSS and code injection available.</li>
-  <li><strong>Commerce Basic — $36/month:</strong> No transaction fees, customer accounts, point-of-sale. The first plan suited to serious selling.</li>
-  <li><strong>Commerce Advanced — $65/month:</strong> Abandoned cart recovery, subscriptions, advanced shipping. For stores that have found product-market fit and are scaling.</li>
+  <li><strong>Basic — $16/month:</strong> Unlimited pages, SSL, basic metrics. No e-commerce. Good for portfolios and personal sites.</li>
+  <li><strong>Core — $23/month:</strong> E-commerce enabled, but with a 3% transaction fee on sales. Custom CSS and code injection available.</li>
+  <li><strong>Plus — $39/month:</strong> No transaction fees, customer accounts, point-of-sale. The first plan suited to serious selling.</li>
+  <li><strong>Advanced — $99/month:</strong> Abandoned cart recovery, subscriptions, advanced shipping. For stores that have found product-market fit and are scaling.</li>
 </ul>
 <p>Squarespace does not offer a free plan — only a 14-day free trial. If you want to test it properly before paying, plan your trial time wisely. Both platforms charge more when billed monthly, so if you are committing to a platform, the annual plan is worth it from day one.</p>
 
@@ -185,7 +186,7 @@ const wixVsSquarespace: ComparisonPost = {
 <h2>E-commerce</h2>
 <p>If selling products online is central to your business, the e-commerce comparison matters more than any other factor.</p>
 <h3>Squarespace Commerce</h3>
-<p>Squarespace Commerce is the cleaner, more polished option for product-based businesses. The storefront templates are beautiful, the checkout experience is streamlined, and features like inventory management, digital product delivery, and integrated shipping are built in natively. There are no transaction fees on Commerce plans (Basic and above). Squarespace supports PayPal, Stripe, Apple Pay, and Afterpay/Clearpay. Abandoned cart recovery is available on Commerce Advanced ($65/month).</p>
+<p>Squarespace Commerce is the cleaner, more polished option for product-based businesses. The storefront templates are beautiful, the checkout experience is streamlined, and features like inventory management, digital product delivery, and integrated shipping are built in natively. There are no transaction fees on Plus and Advanced plans. Squarespace supports PayPal, Stripe, Apple Pay, and Afterpay/Clearpay. Abandoned cart recovery is available on the Advanced plan ($99/month).</p>
 <p>Product limits: unlimited products on all Commerce plans. Subscriptions and membership gating are available, making Squarespace a solid choice for content creators and service businesses offering recurring access.</p>
 <h3>Wix eCommerce</h3>
 <p>Wix eCommerce is enabled from the Core plan ($29/month) and offers a wider range of apps and integrations through the Wix App Market. Wix supports more payment processors out of the box, which is useful if you are selling internationally. There are no transaction fees on any paid Wix plan.</p>
