@@ -920,4 +920,762 @@ export const glossaryTerms: GlossaryTermData[] = [
       },
     ],
   },
+
+  // ── Marketing — new (8) ──────────────────────────────────────────────────
+  {
+    slug: 'email-marketing',
+    term: 'Email Marketing',
+    shortDefinition:
+      'Email marketing is the practice of sending targeted messages to a list of subscribers to nurture relationships, promote products or services, and drive conversions. It remains one of the highest-ROI digital marketing channels, with every dollar spent generating an average return of $36 or more.',
+    fullDefinition: `<p>Email marketing gives businesses a direct, owned channel to reach customers and prospects. Unlike social media, where algorithms control who sees your content, email lands in a subscriber's inbox — a space they actively choose to visit. This direct access is why email consistently outperforms most other channels in conversion rate and ROI.</p>
+<p>Effective email marketing divides into two main categories: <strong>broadcast emails</strong> (newsletters, promotions, announcements sent to the full list) and <strong>automated sequences</strong> (triggered flows based on subscriber behavior — welcome series, abandoned cart reminders, re-engagement campaigns). Automated sequences tend to outperform broadcasts because they reach subscribers at moments of relevant intent.</p>
+<p>List quality matters more than list size. A list of 2,000 engaged subscribers who regularly open and click will generate more revenue than a list of 20,000 inactive addresses. Maintaining list hygiene — removing unengaged contacts, segmenting by behavior, and sending relevant content — keeps deliverability rates high and spam folder placement low.</p>`,
+    examples: [
+      'An e-commerce store sends an abandoned cart email three hours after a user leaves items unpurchased — recovering 15% of carts that would otherwise be lost.',
+      'A B2B SaaS company runs a five-email welcome sequence for all new trial signups, walking them through key features. Trial-to-paid conversion rate increases by 28%.',
+      'A local restaurant sends a monthly email newsletter with seasonal menu updates and a member-only discount code — driving 40 additional covers per month from repeat customers.',
+    ],
+    whyItMatters:
+      'Email is one of the few marketing channels you truly own. Your social media following can disappear if a platform changes its algorithm or bans your account. Your email list is a durable, portable asset that consistently delivers the highest ROI of any marketing channel. Building and maintaining a healthy email list should be a priority for any business serious about long-term growth.',
+    relatedTerms: ['lead-generation', 'marketing-automation', 'conversion-rate', 'content-marketing', 'call-to-action'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'How often should I send marketing emails?',
+        answer:
+          'Frequency depends on your audience and content quality. For B2C, 1–4 emails per month is common for newsletters. For automated sequences, send as many emails as it takes to deliver genuine value. Monitor unsubscribe rates — if they spike, you\'re emailing too frequently or the content isn\'t resonating.',
+      },
+      {
+        question: 'What email marketing platform should I use?',
+        answer:
+          'Mailchimp, Klaviyo, ActiveCampaign, and ConvertKit are the most widely used. Klaviyo is favored by e-commerce; ActiveCampaign and ConvertKit for B2B and content creators. For simple newsletters, Mailchimp\'s free tier is hard to beat. Choose based on the automation complexity you need, not just the feature list.',
+      },
+    ],
+  },
+  {
+    slug: 'social-media-marketing',
+    term: 'Social Media Marketing',
+    shortDefinition:
+      'Social media marketing is the use of platforms like Instagram, LinkedIn, TikTok, Facebook, and X (Twitter) to promote a brand, build an audience, and drive traffic or sales. It combines organic content — regular posts that build presence over time — and paid social advertising, which targets specific audiences with promoted content.',
+    fullDefinition: `<p>Social media marketing gives businesses access to audiences where they're already spending attention — billions of users across platforms with detailed demographic and interest data. The discipline spans organic content strategy (building a following through consistent, valuable posts), community management (responding to comments, DMs, and mentions), influencer partnerships, and paid social advertising.</p>
+<p>Each platform has its own character and best-performing content types. LinkedIn rewards professional, insight-driven content and is the dominant B2B platform. Instagram and TikTok favor visual and video content, with short-form video (Reels, TikTok clips) receiving the highest organic reach. Facebook has the largest advertising infrastructure and is particularly effective for local business and broad consumer targeting. X (Twitter) suits real-time commentary and thought leadership.</p>
+<p>Organic social media reach has declined significantly on most platforms as they push businesses toward paid promotion. This makes the strategy choice important: use organic social primarily for brand building and community, and use paid social for direct-response campaigns where you can measure cost per lead or cost per sale. Combining both gives you the branding benefit of organic plus the scale of paid.</p>`,
+    examples: [
+      'A home renovation contractor posts before-and-after project photos on Instagram consistently for six months, growing a local following of 4,500 and generating 12 inbound inquiries per month.',
+      'A B2B software company publishes weekly LinkedIn thought leadership posts from its CEO, building credibility with enterprise buyers and directly attributing three new enterprise deals to the channel.',
+      'A D2C product brand tests five different video hooks on TikTok with $50 each, identifies the winning creative, and scales it to $10,000 spend — generating a 4:1 ROAS.',
+    ],
+    whyItMatters:
+      'Social media is where your customers and prospects spend hours of attention every day. A brand with no social presence is invisible to this audience. Even modest, consistent organic activity builds familiarity and trust that shortens the sales cycle when prospects do encounter you elsewhere. For certain industries (hospitality, fashion, home goods, personal services), social is a primary discovery channel that drives significant revenue.',
+    relatedTerms: ['content-marketing', 'influencer-marketing', 'remarketing', 'brand-identity', 'lead-generation'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'Which social media platform is best for my business?',
+        answer:
+          'Go where your customers already are. B2B companies typically get the best ROI from LinkedIn. Local service businesses often see the best results from Facebook and Instagram. Businesses targeting under-35 consumers should be on TikTok. Don\'t spread yourself thin across all platforms — dominate one or two rather than maintaining a mediocre presence everywhere.',
+      },
+      {
+        question: 'Is organic social media still worth it without paid promotion?',
+        answer:
+          'Yes, but expectations need to be calibrated. Organic reach is lower than it was five years ago, but content that genuinely resonates still gets amplified by shares, saves, and comments. Organic social is most valuable for brand building, community engagement, and remarketing to people who already know you — not for reaching cold audiences at scale.',
+      },
+    ],
+  },
+  {
+    slug: 'influencer-marketing',
+    term: 'Influencer Marketing',
+    shortDefinition:
+      'Influencer marketing is a strategy where brands partner with individuals who have established audiences on social media or other platforms to promote their products or services. Influencers lend credibility because their followers trust their recommendations — making it a form of word-of-mouth marketing at scale.',
+    fullDefinition: `<p>Influencer marketing works because trust is the scarcest resource in advertising. People are skeptical of brand messages but highly receptive to recommendations from voices they follow and trust. An influencer who has built a loyal audience in a specific niche carries genuine authority with that audience — authority brands can access through partnership.</p>
+<p>Influencers are typically categorized by audience size: <strong>nano influencers</strong> (1K–10K followers) have small but highly engaged audiences and are cost-effective for local or niche campaigns; <strong>micro influencers</strong> (10K–100K) offer the best balance of reach and engagement; <strong>macro influencers</strong> (100K–1M) have broader reach but lower engagement rates; and <strong>mega or celebrity influencers</strong> (1M+) deliver massive reach but at premium cost and often the lowest engagement per follower.</p>
+<p>Successful influencer campaigns require alignment between the influencer's audience and the brand's target customer, authentic integration (not just a scripted read), and clear metrics for measurement. The most common pitfall is prioritizing follower count over audience relevance and engagement rate — a micro influencer with 20,000 highly engaged followers in your exact niche will typically outperform a macro influencer with 500,000 disengaged followers.</p>`,
+    examples: [
+      'A skincare brand partners with 50 micro influencers in the beauty niche, each posting an honest review. The campaign generates 8,000 website visits and 400 sales at a lower CPA than paid social.',
+      'A B2B software company sponsors a popular YouTube channel that reviews productivity tools. Their sponsored segment reaches 80,000 targeted viewers — decision-makers in their exact ICP.',
+      'A local restaurant works with five food bloggers in their city to create content. Three of the posts appear in Google search results for "best [cuisine] in [city]" — driving lasting organic traffic.',
+    ],
+    whyItMatters:
+      'Influencer marketing can deliver something no amount of paid advertising can buy directly: genuine social proof from a trusted voice. For product launches, brand awareness campaigns, and reaching audiences who actively avoid traditional advertising, influencer partnerships provide access at scale. The key is treating it as a relationship investment, not a transactional ad buy.',
+    relatedTerms: ['social-media-marketing', 'brand-identity', 'content-marketing', 'affiliate-marketing', 'remarketing'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'How do I find the right influencers for my brand?',
+        answer:
+          'Start with manual discovery — search hashtags and keywords your customers use on Instagram, TikTok, and YouTube. Tools like AspireIQ, Grin, and Creator.co automate this at scale. Prioritize relevance (does their audience match your buyer?) and engagement rate (likes + comments ÷ followers) over raw follower count.',
+      },
+      {
+        question: 'How much does influencer marketing cost?',
+        answer:
+          'Costs vary enormously. Nano influencers may work for free product. Micro influencers typically charge $200–$2,000 per post. Macro influencers range from $5,000–$50,000. Celebrity influencers can cost six figures per post. Micro influencer campaigns often deliver better ROI than macro because cost scales faster than impact.',
+      },
+    ],
+  },
+  {
+    slug: 'affiliate-marketing',
+    term: 'Affiliate Marketing',
+    shortDefinition:
+      'Affiliate marketing is a performance-based marketing model where businesses pay commissions to third-party partners (affiliates) who promote their products and drive sales or leads. Affiliates earn a percentage of each sale they generate through a unique tracking link — meaning the brand only pays when results are delivered.',
+    fullDefinition: `<p>Affiliate marketing creates a distributed sales force that only costs money when it produces results. Publishers (bloggers, review sites, YouTube channels, newsletters) join an affiliate program, promote a brand using unique tracking links, and earn a commission on every sale or lead that comes through their link. The brand benefits from marketing at scale without upfront costs; the affiliate benefits from monetizing their audience.</p>
+<p>The affiliate ecosystem includes several types of partners: <strong>content affiliates</strong> (bloggers who write product reviews or comparison articles), <strong>coupon and deal sites</strong> (platforms like RetailMeNot that drive purchase intent with discount codes), <strong>email affiliates</strong> (newsletter publishers promoting offers to their list), and <strong>comparison sites</strong> (platforms that review products in a category and link to the top-rated ones). Each brings different traffic quality and intent.</p>
+<p>Managing an affiliate program requires tracking technology (typically an affiliate network like ShareASale, CJ Affiliate, or Impact, or a direct integration like Partnerstack for B2B SaaS), competitive commission rates, promotional materials for affiliates, and fraud detection. The two biggest risks are affiliate fraud (fake clicks or sales) and brand safety (affiliates promoting your product in ways that damage your reputation).</p>`,
+    examples: [
+      'An online software tool launches an affiliate program offering 30% recurring commission. Within 12 months, affiliates drive 25% of all new sign-ups — with zero upfront marketing cost.',
+      'A travel gear company partners with outdoor adventure bloggers. Their detailed gear review posts rank in Google and consistently drive purchase traffic, earning both the affiliate and the brand long-term value.',
+      'An e-learning platform pays affiliates $50 per course enrollment. A popular podcast promotes the platform to 100,000 listeners, generating 300 enrollments and $15,000 in affiliate commissions in one week.',
+    ],
+    whyItMatters:
+      'Affiliate marketing is one of the most capital-efficient acquisition channels because it\'s purely performance-based — you only pay for results, not for reach or impressions. For businesses with healthy margins, a well-run affiliate program can become a significant growth driver without the financial risk of traditional advertising. It scales naturally as more affiliates join and top performers are identified.',
+    relatedTerms: ['influencer-marketing', 'content-marketing', 'lead-generation', 'conversion-rate', 'roi'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'What commission rate should I offer affiliates?',
+        answer:
+          'Commission rates vary by industry. Physical products typically offer 5–20% of sale value. Digital products and SaaS often offer 20–50% given lower marginal costs. Subscription products sometimes offer 20–30% recurring monthly. Research what competitors offer — affiliates choose programs based on commission rates, and being below market means you won\'t attract top partners.',
+      },
+      {
+        question: 'What is the difference between affiliate marketing and influencer marketing?',
+        answer:
+          'Influencer marketing is typically paid upfront (a flat fee for a post or campaign) regardless of results. Affiliate marketing is purely performance-based — the affiliate only earns money when a sale or lead occurs. Some partnerships blur the lines, paying a flat fee plus commissions, but the distinction matters for budget planning and risk management.',
+      },
+    ],
+  },
+  {
+    slug: 'brand-identity',
+    term: 'Brand Identity',
+    shortDefinition:
+      'Brand identity is the visual and verbal system a company uses to present itself consistently — logo, colors, typography, tone of voice, and messaging. It\'s the deliberate set of signals that make a brand recognizable and convey what it stands for. Strong brand identity builds trust, commands premium pricing, and creates a lasting impression.',
+    fullDefinition: `<p>Brand identity is the set of deliberate design and communication choices that determine how a business looks, sounds, and feels to its audience. It goes beyond a logo: it encompasses the full system of visual elements (colors, typography, imagery style, iconography, layout patterns) and verbal elements (tone of voice, key messages, value proposition, and brand story) that work together to create a coherent, recognizable impression.</p>
+<p>A strong brand identity serves multiple business functions. It creates <strong>recognition</strong> — customers identify your brand immediately across all touchpoints. It signals <strong>quality and professionalism</strong> — consistent, thoughtful design implies operational competence. It communicates <strong>values and personality</strong> — whether your brand is playful or serious, premium or accessible, technical or approachable. And it builds <strong>trust over time</strong> — familiarity reduces perceived risk for buyers.</p>
+<p>Brand identity is distinct from brand image (how customers actually perceive you, which may or may not match your intent) and brand strategy (the positioning decisions that inform identity). Building effective brand identity starts with clear positioning: who are you for, what do you offer, and what makes you different? Identity expresses that strategy visually and verbally.</p>`,
+    examples: [
+      'Apple\'s brand identity — minimal design, precise typography, white space, and a tone that values simplicity and craftsmanship — commands premium pricing and deep customer loyalty despite competing in markets with cheaper alternatives.',
+      'A local law firm rebrands from a generic serif logo and beige website to a bold, modern identity that signals competence and approachability — consultation request rates increase 40% with no other changes.',
+      'A startup\'s inconsistent visual presence (different colors on the website, pitch deck, and social media) makes them look unprofessional to investors. A brand identity system fixes this, improving perceived credibility.',
+    ],
+    whyItMatters:
+      'In a market where products and services are increasingly similar, brand is often the differentiator. Buyers choose familiar brands when they have limited information. Strong brand identity compounds over time — every customer interaction, marketing asset, and product touchpoint either reinforces or dilutes the brand. Businesses that invest in identity early build a durable competitive asset that becomes harder to replicate as the brand grows.',
+    relatedTerms: ['content-marketing', 'social-media-marketing', 'remarketing', 'conversion-rate', 'landing-page'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'What should a brand identity system include?',
+        answer:
+          'At minimum: logo (with variations for different contexts), color palette (primary + secondary + neutrals with hex codes), typography (heading font, body font), photography or illustration style guidelines, and a brief tone-of-voice guide. Larger organizations add icon libraries, motion guidelines, and detailed component specifications.',
+      },
+      {
+        question: 'How much does brand identity development cost?',
+        answer:
+          'Costs vary widely. A freelance designer might charge $2,000–$10,000 for a core identity. A mid-tier agency typically charges $15,000–$50,000. Enterprise rebrand projects with strategy and large organizations can exceed $500,000. For most small businesses, $3,000–$8,000 buys a solid, professionally executed identity system.',
+      },
+    ],
+  },
+  {
+    slug: 'remarketing',
+    term: 'Remarketing',
+    shortDefinition:
+      'Remarketing (also called retargeting) is the practice of showing targeted ads to people who have previously visited your website or interacted with your brand. Because these audiences are already familiar with you, remarketing ads convert at significantly higher rates than cold-audience ads — making it one of the most efficient uses of an advertising budget.',
+    fullDefinition: `<p>Most people who visit a website for the first time don't convert. They're researching, comparing options, or simply not ready to buy yet. Remarketing lets you stay in front of these warm prospects as they browse other sites, use apps, and scroll social media — reminding them of your offer at the moment they're most likely to return and convert.</p>
+<p>Remarketing works through tracking pixels — small code snippets (like Meta Pixel or Google Tag) that drop an anonymous cookie in a visitor's browser. Ad platforms read these cookies and serve your ads specifically to people who've visited your site, viewed specific products, added items to cart, or started but didn't complete a form. This precise targeting is what makes remarketing so efficient: you're not paying to reach random strangers, but specifically the people who've already shown interest.</p>
+<p>Effective remarketing campaigns use segmented audiences and tailored creative. Someone who viewed your pricing page gets different messaging than someone who just read a blog post. Cart abandoners respond well to product-specific ads with a discount incentive. Visitors who spent significant time on your site but didn't convert may respond to social proof ads featuring customer testimonials. The more the ad matches where the user was in their journey, the higher the conversion rate.</p>`,
+    examples: [
+      'An online retailer shows product-specific ads to users who viewed a product but didn\'t purchase — these remarketing ads convert at 5× the rate of standard prospecting ads.',
+      'A B2B software company retargets website visitors with LinkedIn ads featuring a customer case study — moving prospects from awareness to consideration more efficiently than outbound email.',
+      'A real estate agency retargets property listing page visitors with ads highlighting similar listings — staying top of mind during the extended research phase of home buying.',
+    ],
+    whyItMatters:
+      'Remarketing captures revenue that would otherwise be lost. The average website converts less than 3% of visitors on the first visit — remarketing is the systematic way to re-engage the other 97%. Because these audiences have already demonstrated intent by visiting your site, remarketing budgets consistently deliver lower cost-per-conversion than cold-audience campaigns. For any business running paid advertising, remarketing should be a foundational component of the media mix.',
+    relatedTerms: ['conversion-rate', 'landing-page', 'brand-identity', 'social-media-marketing', 'marketing-automation'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'What is the difference between remarketing and retargeting?',
+        answer:
+          'The terms are used interchangeably in most contexts. Technically, Google coined "remarketing" for its ad products, while "retargeting" is the broader industry term used across all platforms. In practice, both refer to serving ads to people who have previously interacted with your brand.',
+      },
+      {
+        question: 'How long should I remarket to someone?',
+        answer:
+          'Remarketing window length depends on your sales cycle. For e-commerce impulse purchases, 7–30 days is typical. For high-consideration B2B products, 30–90 days or longer may be appropriate. After a certain point, continued exposure to someone who hasn\'t converted becomes annoying rather than persuasive — frequency caps and exclusion lists for recent converters are essential.',
+      },
+    ],
+  },
+  {
+    slug: 'marketing-automation',
+    term: 'Marketing Automation',
+    shortDefinition:
+      'Marketing automation is the use of software to execute repetitive marketing tasks automatically based on predefined triggers and workflows. It enables businesses to send the right message to the right person at the right time — at scale — without manual execution. Common examples include welcome email sequences, lead nurturing flows, and cart abandonment reminders.',
+    fullDefinition: `<p>Marketing automation replaces manual, repetitive marketing tasks with software-driven workflows that run automatically based on user behavior, time, or data conditions. When a prospect fills out a form, an automated sequence begins. When a customer hasn't engaged in 90 days, a re-engagement campaign fires. When a lead's score reaches a threshold, a sales rep is notified. All of this happens without anyone manually clicking "send."</p>
+<p>The core components of marketing automation are: <strong>triggers</strong> (conditions that start a workflow — a form fill, a page visit, an email open), <strong>actions</strong> (the things the system does — send an email, update a CRM field, add to a segment, notify a salesperson), and <strong>conditions</strong> (logic that branches workflows based on user behavior — "if opened email 2, send email 3A; if didn't open, send email 3B"). Combined, these create intelligent, personalized communications that respond to individual behavior.</p>
+<p>Tools like HubSpot, ActiveCampaign, Marketo, Klaviyo, and Pardot power marketing automation at various scales. The power grows with data quality — automation that draws on rich behavioral data (pages visited, content consumed, products viewed) can be highly personalized. Automation that relies only on basic demographic data tends to feel generic. The technology is the enabler; the strategy and data architecture are what determine whether it actually works.</p>`,
+    examples: [
+      'A SaaS company builds an onboarding automation: new users receive a 10-email sequence over 30 days that adapts based on which features they\'ve activated — users who complete onboarding convert from trial to paid at 2× the rate of those who don\'t.',
+      'An e-commerce brand automates a three-email abandoned cart sequence (reminder at 1 hour, social proof at 24 hours, discount offer at 72 hours) — recovering 18% of abandoned carts automatically.',
+      'A B2B company uses lead scoring automation: when a lead visits the pricing page + opens three emails + is from a company with 50+ employees, the CRM automatically creates a task for a sales rep to call within 24 hours.',
+    ],
+    whyItMatters:
+      'Marketing automation is the difference between a marketing function that scales and one that hits a ceiling. Without automation, every new lead requires manual follow-up, every campaign requires manual sending, and response time depends on staff availability. With automation, a small team can execute sophisticated, personalized marketing at the scale of a much larger organization — maintaining consistency, speed, and relevance across thousands of simultaneous customer journeys.',
+    relatedTerms: ['email-marketing', 'lead-generation', 'crm', 'conversion-rate', 'remarketing'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'Is marketing automation only for large businesses?',
+        answer:
+          'No. Even solo entrepreneurs benefit from email welcome sequences, cart abandonment flows, and lead nurturing automations. Tools like Mailchimp, ConvertKit, and ActiveCampaign offer automation features on affordable plans. The complexity of automation should match your business stage — start simple and add sophistication as your data and processes mature.',
+      },
+      {
+        question: 'What is the biggest marketing automation mistake?',
+        answer:
+          'Over-automating without maintaining relevance. Automated sequences that feel generic, ignore obvious behavioral signals, or continue messaging people who\'ve clearly lost interest damage your brand and deliverability. Good automation feels personal and timely; bad automation feels like spam with a fancy trigger.',
+      },
+    ],
+  },
+  {
+    slug: 'call-to-action',
+    term: 'Call to Action',
+    shortDefinition:
+      'A call to action (CTA) is a prompt that tells a website visitor, email reader, or ad viewer exactly what to do next — "Get a Free Quote," "Start Your Trial," "Download the Guide." It\'s the moment where marketing intent meets user action. A clear, compelling CTA is one of the biggest determinants of conversion rate on any marketing asset.',
+    fullDefinition: `<p>Every piece of marketing content should have a goal, and a call to action is the mechanism that turns that goal into user behavior. Without a clear CTA, even the most compelling content leaves the user wondering what to do next — and most will do nothing. CTAs appear on websites (buttons, banners, inline links), in emails (text links and buttons), in ads (button labels), and in videos (end screens, annotations).</p>
+<p>Effective CTAs share several characteristics: they're <strong>specific</strong> (not just "Click Here" but "Get My Free Estimate"), they communicate <strong>value</strong> (what the user gets, not what they have to do), they create <strong>clarity about the next step</strong> (clicking this button will do exactly X), and they often use <strong>first-person framing</strong> ("Start My Free Trial" outperforms "Start Your Free Trial" in most tests). Placement, size, contrast, and surrounding context all influence how well a CTA performs.</p>
+<p>CTA optimization is a rich area for A/B testing. Small changes — button color, copy, position on the page, surrounding whitespace — can produce significant differences in conversion rate. The highest-performing CTAs typically combine a low-friction request ("get a free quote" instead of "buy now"), clear benefit framing, and visual prominence that makes the next step obvious without being aggressive.</p>`,
+    examples: [
+      'A landing page changes its CTA from "Submit" to "Get My Custom Proposal" — form completion rates increase by 31% with no other changes.',
+      'An email campaign tests "Learn More" vs. "See How It Works" as the button CTA — the specific, benefit-oriented version generates 44% more clicks.',
+      'A homepage has three competing CTAs (Book a Call, Watch a Demo, Read the Blog). Simplifying to one primary CTA increases consultation bookings by 22%.',
+    ],
+    whyItMatters:
+      'Every marketing asset is only as effective as the action it drives. A beautifully designed webpage that doesn\'t clearly tell visitors what to do next is a missed opportunity at every point of the sales funnel. Optimizing CTAs is one of the fastest wins in conversion rate optimization — changes are cheap, the feedback loop is short, and the impact flows directly to leads and revenue.',
+    relatedTerms: ['conversion-rate', 'landing-page', 'email-marketing', 'ab-testing', 'lead-generation'],
+    category: 'marketing',
+    faq: [
+      {
+        question: 'How many CTAs should a page have?',
+        answer:
+          'Generally, one primary CTA per page — or at most one primary and one secondary. Multiple equal-priority CTAs create "decision paralysis" where the user, faced with too many choices, picks none. If you need multiple CTAs (e.g., "Book a Call" and "Watch a Demo"), make one visually dominant and the other clearly secondary.',
+      },
+      {
+        question: 'Does button color matter for CTAs?',
+        answer:
+          'Color contrast matters more than any specific color. A button must stand out visually from the surrounding page — if your site is predominantly white and blue, an orange CTA button will often outperform a blue one simply because of contrast. That said, the copy on the button typically has more influence on conversion rate than color alone.',
+      },
+    ],
+  },
+
+  // ── SEO — new (8) ────────────────────────────────────────────────────────
+  {
+    slug: 'link-building',
+    term: 'Link Building',
+    shortDefinition:
+      'Link building is the deliberate process of earning or acquiring hyperlinks from other websites to your own. Since backlinks are one of Google\'s strongest ranking signals, building a high-quality backlink profile is one of the most effective ways to improve organic search rankings. It requires creating content worth linking to and actively promoting it.',
+    fullDefinition: `<p>Link building is how websites earn the authority signals that Google uses to determine rankings. When high-quality websites link to your pages, they pass "link equity" — a measure of trust and relevance — that improves your ability to rank for competitive keywords. Without a deliberate link building strategy, most sites struggle to rank against competitors who are actively acquiring links.</p>
+<p>Effective link building tactics include: <strong>content-led link building</strong> (creating research, guides, or tools so valuable that other sites link to them naturally); <strong>digital PR</strong> (pitching stories, data, or commentary to journalists and publishers to earn editorial links); <strong>guest posting</strong> (contributing articles to industry publications in exchange for a link); <strong>broken link building</strong> (finding broken links on other sites and offering your content as a replacement); and <strong>resource page outreach</strong> (getting your content listed on curated resource pages in your niche).</p>
+<p>Quality over quantity is the governing principle. A single editorial link from a major industry publication outweighs hundreds of links from low-quality directories or guest posts on obscure sites. Google's algorithms are sophisticated at distinguishing earned editorial links from manufactured links — manipulative link schemes can result in penalties that cause dramatic ranking drops.</p>`,
+    examples: [
+      'A fintech startup publishes an original annual report on small business lending trends. Industry publications and news sites cite it, generating 60 editorial backlinks in three months.',
+      'An agency identifies 200 broken links on competitor\'s resource pages and emails curated replacements from their content library — earning 35 backlinks with a 17% response rate.',
+      'A SaaS company gets featured in a "Top 10 Tools for Marketers" roundup on a DA 70 industry blog, generating a high-authority backlink and 800 referral visits.',
+    ],
+    whyItMatters:
+      'In competitive search markets, content quality alone is rarely enough to rank — you also need the authority that backlinks provide. Link building is the lever that separates companies that appear on page one from those stuck on page five. A sustained link building program compounds over time, as each new link strengthens the overall authority of the domain and makes future content easier to rank.',
+    relatedTerms: ['backlinks', 'domain-authority', 'seo', 'on-page-seo', 'technical-seo'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'Is buying backlinks safe?',
+        answer:
+          'No. Google explicitly prohibits paid links that pass PageRank in its Webmaster Guidelines. Sites caught with paid link schemes face manual penalties that can cause catastrophic ranking drops. The risk-reward ratio is unfavorable, and the resources spent on buying links are almost always better invested in content that earns links naturally.',
+      },
+      {
+        question: 'How long does link building take to impact rankings?',
+        answer:
+          'Google needs to discover, crawl, and index new links before they affect rankings — which typically takes 2–8 weeks. After that, the ranking impact may take another 1–3 months to fully materialize. Link building is a long-term strategy; expect 3–6 months before consistently seeing results from a new campaign.',
+      },
+    ],
+  },
+  {
+    slug: 'on-page-seo',
+    term: 'On-Page SEO',
+    shortDefinition:
+      'On-page SEO refers to all the optimizations made directly on a webpage to improve its search engine rankings. It covers content quality, keyword usage, heading structure, meta tags, internal linking, image alt text, and page experience. These are the factors you control directly on your own site.',
+    fullDefinition: `<p>On-page SEO is the practice of optimizing the content and HTML elements of individual web pages to rank higher and earn more relevant traffic from search engines. Unlike off-page SEO (which depends on external signals like backlinks) or technical SEO (which concerns site infrastructure), on-page SEO is entirely within your direct control — making it the most accessible starting point for improving search visibility.</p>
+<p>The core on-page factors are: <strong>content quality</strong> (does the page thoroughly answer the search query?), <strong>keyword optimization</strong> (is the primary keyword used naturally in the title, headings, and body text?), <strong>heading structure</strong> (are H1, H2, H3 tags used logically to organize content?), <strong>meta title and description</strong> (do they accurately represent the page and encourage clicks?), <strong>internal linking</strong> (does the page link to and receive links from other relevant pages on the site?), and <strong>image optimization</strong> (do images have descriptive alt text and compressed file sizes?).</p>
+<p>Modern on-page SEO goes beyond keyword density — Google evaluates topical depth, whether the page addresses related sub-topics and questions, and whether the content satisfies the user's underlying intent. A page optimized for "best running shoes" needs to actually help someone choose the best running shoes for their needs, not just contain the phrase multiple times.</p>`,
+    examples: [
+      'A service page with the title "Our Services" is updated to "Professional HVAC Repair & Installation | [City]" — the page moves from position 18 to position 6 within 45 days.',
+      'A blog post is restructured with clear H2/H3 headings that map to the questions users are actually asking, improving the page\'s chances of earning featured snippet placement.',
+      'Adding descriptive alt text to all product images on an e-commerce site results in a 35% increase in traffic from Google Image Search over three months.',
+    ],
+    whyItMatters:
+      'On-page SEO is the foundation every other SEO investment builds on. If your pages aren\'t structured clearly, don\'t address search intent, or lack the signals that tell Google what they\'re about, no amount of link building will compensate. On-page optimization is also fast to implement and produces results quickly — making it one of the highest-priority starting points for any new SEO engagement.',
+    relatedTerms: ['seo', 'meta-tags', 'technical-seo', 'keyword-research', 'off-page-seo'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How many times should I use my keyword on a page?',
+        answer:
+          'There is no magic number. Write naturally for readers first — if your content thoroughly covers a topic, keyword mentions will occur organically. As a rough check: your primary keyword should appear in the title, the first paragraph, at least one H2 heading, and the meta description. Avoid "keyword stuffing" — repeating keywords unnaturally reduces readability and can trigger spam signals.',
+      },
+      {
+        question: 'What is keyword cannibalization?',
+        answer:
+          'Keyword cannibalization happens when multiple pages on your site target the same keyword, causing them to compete with each other in search results. Google gets confused about which page to rank, often ranking neither strongly. The fix is to consolidate content onto one authoritative page or clearly differentiate what each page targets.',
+      },
+    ],
+  },
+  {
+    slug: 'off-page-seo',
+    term: 'Off-Page SEO',
+    shortDefinition:
+      'Off-page SEO refers to all the actions taken outside your own website that improve its search engine rankings — primarily building backlinks from other websites. It also includes brand mentions, social signals, and digital PR. Off-page authority signals tell Google that other sites find your content valuable enough to link to.',
+    fullDefinition: `<p>While on-page SEO shapes how search engines read your individual pages, off-page SEO builds the external authority and credibility signals that determine how much Google trusts your domain overall. The stronger your off-page signals, the easier it is to rank any new content you publish — even before you've actively promoted it.</p>
+<p>Backlinks are the dominant off-page signal — and not all links are equal. A single editorial link from a high-authority, relevant publication carries far more weight than dozens of links from low-quality directories. Beyond backlinks, off-page factors include: <strong>brand mentions</strong> (references to your brand across the web, even without a link), <strong>social signals</strong> (shares and engagement on social platforms, though their direct ranking impact is debated), <strong>digital PR</strong> (press coverage that drives both links and brand awareness), and <strong>local citations</strong> (for local businesses, consistent NAP listings across directories).</p>
+<p>Off-page SEO is slower to influence than on-page changes — links take time to acquire and even more time to flow through to ranking improvements. It's also less directly controllable: you can create great content and actively pitch for coverage, but ultimately other sites decide whether to link to you. This combination of high impact and limited control is why off-page SEO requires a long-term strategic commitment.</p>`,
+    examples: [
+      'A brand\'s blog post is cited in a Forbes article on industry trends — the resulting editorial backlink lifts the entire domain\'s authority, improving rankings for multiple target keywords.',
+      'A company builds a link-earning content asset (an original salary survey for their industry) specifically to attract links from HR publications, earning 45 backlinks in the first quarter.',
+      'A local business maintains consistent NAP (name, address, phone) citations across 50+ online directories, building the off-page local signals that contribute to Local Pack rankings.',
+    ],
+    whyItMatters:
+      'Content and technical SEO get you to a ceiling — off-page authority is what breaks through it. In competitive markets, two sites with similar on-page optimization will be ranked according to their domain authority, which is built entirely through off-page signals. Businesses serious about organic growth treat link acquisition as an ongoing investment, not a one-time project.',
+    relatedTerms: ['backlinks', 'link-building', 'domain-authority', 'seo', 'on-page-seo'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How is off-page SEO different from link building?',
+        answer:
+          'Link building is a tactic within off-page SEO. Off-page SEO is the broader category of external signals, which includes brand mentions, social engagement, digital PR, reviews (for local businesses), and citations. Link building — the deliberate acquisition of backlinks — is the most impactful off-page tactic, which is why the terms are sometimes used interchangeably.',
+      },
+      {
+        question: 'Can I do off-page SEO without building backlinks?',
+        answer:
+          'Technically yes, but it would be severely limited. Brand mentions and social signals provide some value, but backlinks remain the dominant off-page ranking signal by a wide margin. A strategy that actively earns editorial links will consistently outperform one that relies only on brand mentions or social activity.',
+      },
+    ],
+  },
+  {
+    slug: 'featured-snippet',
+    term: 'Featured Snippet',
+    shortDefinition:
+      'A featured snippet is a special search result Google shows at the very top of the page — "position zero" — that directly answers a query with an excerpt, table, or list pulled from a webpage. Earning a featured snippet dramatically increases visibility and click-through rate, even for pages that rank in positions 2 through 10.',
+    fullDefinition: `<p>Featured snippets appear above all other organic results (hence "position zero") and are designed to answer a search query directly on the results page without requiring a click. They commonly appear for informational queries — "how to," "what is," "best way to" — and take several formats: paragraph snippets (a text excerpt), list snippets (numbered or bulleted lists), table snippets (data formatted in a table), and video snippets (a YouTube video with a timestamp answering the query).</p>
+<p>Google automatically selects which content to feature in snippets — there is no direct application or configuration. However, content can be <strong>optimized for snippets</strong> by: clearly stating the question being answered (often in a heading), providing a concise direct answer in 40–60 words immediately after the heading, structuring lists and step-by-step content with HTML list tags, and using tables for comparison or data content. Pages that already rank on the first page are most likely to earn snippet positions.</p>
+<p>The click-through impact of featured snippets is debated. On one hand, they dramatically increase SERP visibility and branded impressions. On the other, some users get their answer from the snippet without clicking — so organic clicks may actually decrease for the featured page. The overall verdict from most studies is positive: featured snippets increase total traffic because of higher visibility, even accounting for zero-click behavior.</p>`,
+    examples: [
+      'A marketing agency writes a concise answer to "what is a conversion rate?" beneath an H2 heading — Google pulls this as a featured snippet, increasing organic traffic to the page by 65% despite ranking position 3.',
+      'An e-commerce site\'s sizing guide earns a table snippet for "women\'s shoe size conversion chart" — appearing above all competitors for a query with 40,000 monthly searches.',
+      'A how-to article restructured with numbered HTML steps earns a list snippet for a "how to" query, generating 3× the impressions it received as a regular listing.',
+    ],
+    whyItMatters:
+      'Featured snippets hand you the most visible real estate in Google search results without requiring you to rank #1. For informational queries relevant to your business — how-to questions, definitions, comparisons — optimizing for snippets can drive significant traffic from positions you couldn\'t otherwise reach. In voice search (Google Home, Siri), featured snippets are typically the only result read aloud, making them even more valuable.',
+    relatedTerms: ['seo', 'on-page-seo', 'keyword-research', 'schema-markup', 'search-console'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'Can any page earn a featured snippet?',
+        answer:
+          'Only pages that already rank on the first page of Google (typically within the top 10 results) are eligible to earn featured snippets. Getting to page one first is a prerequisite. Once there, proper content structuring significantly increases the likelihood of being selected for the snippet position.',
+      },
+      {
+        question: 'How do I lose a featured snippet?',
+        answer:
+          'Competitors can displace your snippet by publishing better-optimized content. Google may also remove a snippet if it determines the answer quality has degraded or if the query now better suits a different result format. Monitoring your featured snippets in Google Search Console lets you catch losses quickly.',
+      },
+    ],
+  },
+  {
+    slug: 'google-analytics',
+    term: 'Google Analytics',
+    shortDefinition:
+      'Google Analytics is a free web analytics platform from Google that tracks and reports on website traffic, user behavior, and conversions. It shows who is visiting your site, where they came from, what they do while there, and whether they complete goals. It\'s the most widely used analytics tool on the web and the standard starting point for data-driven marketing decisions.',
+    fullDefinition: `<p>Google Analytics (GA4 is the current version) provides a comprehensive view of your website's performance by tracking user interactions — page views, sessions, scroll depth, button clicks, form submissions, purchases — and attributing them to traffic sources. At its core, it answers the fundamental questions every website owner needs to understand: how many people are visiting, from where, and what are they doing?</p>
+<p>Beyond basic traffic reporting, Google Analytics enables <strong>goal tracking</strong> (measuring how many users complete specific conversions), <strong>audience analysis</strong> (demographics, interests, devices, and geography of your visitors), <strong>acquisition analysis</strong> (which channels — organic search, paid, social, direct, email — are driving the most valuable traffic), and <strong>behavior flow analysis</strong> (the paths users take through your site, including where they drop off).</p>
+<p>GA4 (the current generation, launched in 2020 to replace Universal Analytics) introduced an event-based data model that tracks any user interaction as an "event" rather than the session-based pageview model of its predecessor. GA4 also integrates more natively with Google Ads for conversion tracking and audience creation. Setting up GA4 correctly — with proper goal tracking and filtered views — is the prerequisite for any meaningful marketing analytics work.</p>`,
+    examples: [
+      'An e-commerce site uses Google Analytics to discover that mobile users have a 60% higher bounce rate than desktop — revealing a mobile experience problem that, once fixed, increases mobile conversion rate by 40%.',
+      'A B2B company tracks "Request a Demo" form submissions as a conversion goal, enabling them to see exactly which traffic channels produce qualified leads — shifting budget from high-traffic, low-conversion channels to low-traffic, high-conversion ones.',
+      'A blog uses GA4 audience reports to discover its highest-converting readers are 35–44 year old women from the Northeast, informing a content and paid media pivot that increases lead quality significantly.',
+    ],
+    whyItMatters:
+      'Making marketing decisions without data is guesswork. Google Analytics gives you the visibility to know what\'s working — which channels drive revenue, which pages lose visitors, which content generates leads. Without it, you\'re flying blind. Setting up proper goal tracking in Google Analytics transforms it from a traffic counter into a business intelligence tool that directly informs where to invest marketing resources.',
+    relatedTerms: ['seo', 'search-console', 'conversion-rate', 'kpi', 'ab-testing'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'What is the difference between Google Analytics and Google Search Console?',
+        answer:
+          'Google Analytics tracks user behavior on your website — sessions, pages visited, conversions, and traffic sources. Google Search Console tracks your site\'s performance in Google search specifically — impressions, click-through rates, keyword rankings, crawl errors, and indexing issues. They answer different questions and are most powerful when used together.',
+      },
+      {
+        question: 'Is Google Analytics 4 free?',
+        answer:
+          'Yes. Google Analytics 4 is free for the standard version, which is sufficient for the vast majority of businesses. Google Analytics 360 (the enterprise paid version) provides higher data limits, service-level agreements, and advanced features for very high-traffic sites — it starts at approximately $50,000/year.',
+      },
+    ],
+  },
+  {
+    slug: 'search-console',
+    term: 'Google Search Console',
+    shortDefinition:
+      'Google Search Console (GSC) is a free tool from Google that shows how your website performs in Google Search. It reports on which keywords drive impressions and clicks, which pages are indexed, crawl errors, mobile usability issues, and Core Web Vitals scores. It\'s the most direct window into how Google sees and interacts with your site.',
+    fullDefinition: `<p>Google Search Console is the essential SEO diagnostic tool for any website — it provides data directly from Google about how your site is crawled, indexed, and ranked. Unlike third-party SEO tools that estimate data, Search Console reports actual data from Google's systems, making it the most authoritative source of truth for your site's organic search performance.</p>
+<p>The key reports in Search Console include: <strong>Performance</strong> (impressions, clicks, average CTR, and average ranking position for every keyword you appear for in Google), <strong>Coverage</strong> (which pages are indexed and which have errors preventing indexing), <strong>Core Web Vitals</strong> (real-user performance scores from Chrome users), <strong>Mobile Usability</strong> (issues affecting the mobile user experience), <strong>Links</strong> (top linking domains and most-linked pages), and <strong>Enhancements</strong> (structured data errors and rich result eligibility).</p>
+<p>One of the most valuable uses of Search Console is identifying "opportunity keywords" — queries where your pages already rank in positions 11–20 with reasonable impressions. These pages are close to page one and often require only on-page improvements or a few additional links to break through. Search Console turns this from guesswork into a data-driven prioritization process.</p>`,
+    examples: [
+      'An SEO manager reviews Search Console and finds a blog post averaging position 12 for a high-value keyword with 3,000 monthly impressions. After on-page improvements, it moves to position 4 — increasing clicks from 40 to 280 per month.',
+      'A site notices a spike in coverage errors after a redesign. Search Console reveals 500 pages returning 404 errors because URLs changed without redirects — the issue is fixed immediately.',
+      'A business discovers through Search Console that 40% of impressions come from branded queries (people searching the company name) — confirming strong brand awareness but indicating the need for more non-branded keyword targeting.',
+    ],
+    whyItMatters:
+      'Google Search Console is non-negotiable for any site that cares about organic search. It\'s the only tool that tells you exactly which keywords are driving impressions and clicks, how Google is reading your pages, and what errors are preventing performance. Every SEO decision — what content to update, what technical issues to fix, which keywords to prioritize — should start with Search Console data.',
+    relatedTerms: ['seo', 'google-analytics', 'technical-seo', 'indexing', 'featured-snippet'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How do I set up Google Search Console?',
+        answer:
+          'Go to search.google.com/search-console and add your property. You\'ll need to verify ownership — the easiest method is adding a DNS record (if your host supports it) or uploading an HTML file to your server. Connect Google Analytics to Search Console for integrated reporting. Then wait 2–3 days for data to start populating.',
+      },
+      {
+        question: 'How accurate are Google Search Console keyword rankings?',
+        answer:
+          'Search Console reports the average ranking position across all queries, users, and devices — so the number may differ from what you see doing a manual Google search (which varies by location, device, and personalization). Think of it as an accurate trend indicator, not an exact real-time position. Changes over time are the most useful signal.',
+      },
+    ],
+  },
+  {
+    slug: 'indexing',
+    term: 'Indexing',
+    shortDefinition:
+      'Indexing is the process by which search engines discover, analyze, and store a web page\'s content in their database so it can appear in search results. A page that isn\'t indexed won\'t rank in Google — it\'s effectively invisible to organic search. Indexing requires pages to be crawlable, properly configured, and free of directives that block indexing.',
+    fullDefinition: `<p>Before Google can rank a page, it must find it (crawling) and store a copy of its content in its search index (indexing). The index is a massive database — hundreds of billions of documents — that Google queries in milliseconds when someone performs a search. If a page isn't in the index, it simply doesn't exist in Google's search results, no matter how good the content is.</p>
+<p>Several conditions must be met for a page to be indexed: the page must be <strong>crawlable</strong> (not blocked by robots.txt), it must not have a <strong>noindex meta tag</strong> (which explicitly tells Google not to index it), the page must return a <strong>200 OK HTTP status code</strong> (not a 404 or 301 redirect), and it should ideally be <strong>linked from other pages</strong> (so Googlebot can discover it through link-following). Even with all conditions met, indexing can take days to weeks for new pages, and there's no guarantee Google will index every page it crawls.</p>
+<p>Common indexing problems include: pages accidentally set to noindex (often by staging configurations copied to production), low-quality pages that Google deems not worth indexing, server errors that prevent crawling, and thin or duplicate content that Google chooses not to index. Google Search Console's Coverage report is the primary tool for diagnosing indexing issues.</p>`,
+    examples: [
+      'A site migrates to a new domain but forgets to submit the new sitemap to Google. Pages go unindexed for six weeks until the issue is discovered via Search Console.',
+      'A developer copies the staging environment\'s robots.txt (which blocks all crawlers) to production. The entire site is deindexed within days — a critical incident caught and fixed quickly.',
+      'An e-commerce site has 10,000 products but Google is only indexing 2,000. Investigation reveals thin product descriptions on 8,000 pages that Google has chosen not to index — a content improvement campaign follows.',
+    ],
+    whyItMatters:
+      'Indexing is the prerequisite for all SEO. No amount of optimization, link building, or content investment produces results if your pages aren\'t in Google\'s index. Monitoring indexing health through Google Search Console — watching for sudden drops in indexed pages, new coverage errors, or unexpectedly excluded pages — should be part of any ongoing SEO monitoring routine.',
+    relatedTerms: ['technical-seo', 'sitemap', 'search-console', 'seo', 'canonical-url'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How long does it take Google to index a new page?',
+        answer:
+          'For established sites with regular crawling, new pages can be indexed in hours to a few days. For newer or lower-authority sites, indexing may take 1–4 weeks. You can request expedited indexing for individual URLs using the "URL Inspection" tool in Google Search Console. Submitting an updated sitemap also helps.',
+      },
+      {
+        question: 'Should every page on my site be indexed?',
+        answer:
+          'No. Low-value pages — duplicate content, thin pages, internal search result pages, thank-you pages, staging pages — should be excluded from indexing using noindex tags. Indexing low-quality pages can dilute your site\'s overall quality signal in Google\'s eyes. Only index pages that provide genuine value to searchers.',
+      },
+    ],
+  },
+  {
+    slug: 'sitemap',
+    term: 'Sitemap',
+    shortDefinition:
+      'A sitemap is a file (usually XML) that lists all the important URLs on your website, helping search engines discover and index your pages more efficiently. Submitting a sitemap to Google Search Console is one of the first technical SEO steps for any site — it tells Google exactly which pages you want crawled and how frequently they change.',
+    fullDefinition: `<p>A sitemap is essentially a map of your website for search engines. While Googlebot can discover pages by following links, a sitemap provides a direct, organized inventory of all pages you want indexed — especially useful for new sites with limited inbound links, large sites with many pages, sites with complex URL structures, or pages that aren't easily discovered through normal link-following.</p>
+<p>XML sitemaps are the standard format for search engines. Each URL entry can include optional metadata: <strong>lastmod</strong> (when the page was last updated), <strong>changefreq</strong> (how often it changes), and <strong>priority</strong> (relative importance among your pages). While Google doesn't guarantee it will honor all metadata, including it is still best practice. Most modern CMS platforms (WordPress, Shopify, Webflow) generate sitemaps automatically — typically accessible at yourdomain.com/sitemap.xml.</p>
+<p>Beyond a standard sitemap, specialized sitemaps exist for: <strong>image sitemaps</strong> (help Google index images), <strong>video sitemaps</strong> (for video content), and <strong>news sitemaps</strong> (for publishers who want articles indexed in Google News). For large sites, sitemap index files can split a site into multiple sitemap files, each covering different sections.</p>`,
+    examples: [
+      'A new website launches with 50 pages. Without a sitemap, Google discovers only 15 pages via link-following in the first month. After submitting a sitemap, all 50 are indexed within a week.',
+      'An e-commerce site with 50,000 products uses dynamic sitemaps that automatically update as new products are added — ensuring Google always has a current, complete inventory to crawl.',
+      'A blog accidentally excludes its most important category pages from the sitemap after a theme update. Search Console shows these pages as "discovered but not indexed" — adding them back to the sitemap resolves the issue.',
+    ],
+    whyItMatters:
+      'Submitting a sitemap is one of the simplest and most impactful technical SEO actions available. It removes discovery uncertainty for search engines, ensures important pages aren\'t overlooked, and gives you a mechanism (via Search Console\'s sitemap report) to verify what Google has discovered and indexed. For any site with more than 20–30 pages, a properly maintained sitemap is not optional — it\'s foundational.',
+    relatedTerms: ['indexing', 'technical-seo', 'search-console', 'seo', 'canonical-url'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How do I submit a sitemap to Google?',
+        answer:
+          'Log into Google Search Console, go to Sitemaps in the left navigation, enter the URL of your sitemap (typically /sitemap.xml), and click Submit. Google will confirm receipt and begin processing it. You can return to this section to see how many URLs were submitted vs. indexed.',
+      },
+      {
+        question: 'Should I include every page in my sitemap?',
+        answer:
+          'Only include pages you want indexed in Google. Exclude duplicate pages, thin content pages, admin pages, noindex pages, and any URLs with parameters that create duplicates. A clean sitemap containing only high-value pages sends a stronger quality signal than one bloated with hundreds of low-value URLs.',
+      },
+    ],
+  },
+
+  // ── AI — new (5) ─────────────────────────────────────────────────────────
+  {
+    slug: 'large-language-model',
+    term: 'Large Language Model',
+    shortDefinition:
+      'A large language model (LLM) is an AI system trained on vast amounts of text data to understand and generate human language. LLMs like GPT-4, Claude, and Gemini power chatbots, writing assistants, code generators, and summarization tools. Their ability to follow complex instructions and produce fluent, contextually appropriate text is what makes them transformative.',
+    fullDefinition: `<p>Large language models are neural networks trained on hundreds of billions of tokens of text — web pages, books, code, academic papers — to learn the statistical patterns of language. This training enables them to predict likely next words with enough sophistication to generate coherent, contextually appropriate responses to virtually any text input. The "large" in LLM refers to the scale of both training data and model parameters (the internal weights that encode learned patterns), which now number in the hundreds of billions.</p>
+<p>LLMs work through a mechanism called the <strong>Transformer architecture</strong>, which enables the model to weigh the relevance of all parts of an input when generating each word of the output. This "attention" mechanism is what allows LLMs to maintain coherence over long passages, follow complex multi-step instructions, and adapt their tone and style to context. The models are initially trained on general text, then fine-tuned with human feedback to follow instructions reliably and avoid harmful outputs.</p>
+<p>The leading LLMs include OpenAI's GPT-4 and o-series models (powering ChatGPT), Anthropic's Claude series, Google's Gemini, and Meta's open-source Llama family. Each model family has different strengths — some excel at coding, others at reasoning, others at following nuanced instructions. Businesses use LLMs directly through chat interfaces or via API to build LLM-powered features into their own products.</p>`,
+    examples: [
+      'A legal firm deploys an LLM-powered contract review tool that reads contracts, flags non-standard clauses, and summarizes key terms — cutting junior associate review time from 2 hours to 15 minutes per contract.',
+      'A customer support platform routes incoming tickets through an LLM that classifies intent, drafts a suggested response, and routes to the appropriate team — deflecting 55% of routine tickets without human involvement.',
+      'A developer integrates an LLM API into a writing tool that suggests completions, rewrites in different tones, and condenses long drafts — reducing content production time by 40%.',
+    ],
+    whyItMatters:
+      'LLMs are the infrastructure layer of the current AI wave. Understanding what they are — and what they\'re not — is essential for evaluating AI vendor claims, deciding whether to build or buy AI features, and setting appropriate expectations for AI-assisted workflows. As LLMs become embedded in standard business software (email, CRM, spreadsheets, customer support), they will increasingly automate tasks currently requiring human knowledge work.',
+    relatedTerms: ['artificial-intelligence', 'generative-ai', 'chatgpt', 'retrieval-augmented-generation', 'ai-chatbot'],
+    category: 'ai',
+    faq: [
+      {
+        question: 'What is the difference between an LLM and ChatGPT?',
+        answer:
+          'A large language model is the underlying AI technology. ChatGPT is a product built on top of an LLM (OpenAI\'s GPT-4). The relationship is similar to how "a search engine" is the technology and "Google" is a product built using that technology. Other products built on LLMs include Claude, Gemini, and thousands of specialized AI tools.',
+      },
+      {
+        question: 'Can LLMs be wrong?',
+        answer:
+          'Yes — and this is their most critical limitation. LLMs can "hallucinate" — producing confidently stated but factually incorrect information. This happens because LLMs predict likely text based on patterns, not because they "understand" or "fact-check" their outputs. All LLM outputs used for factual claims should be verified by a human expert in the relevant domain.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-chatbot',
+    term: 'AI Chatbot',
+    shortDefinition:
+      'An AI chatbot is a software application that uses artificial intelligence — typically a large language model — to simulate human conversation. Unlike rule-based chatbots that follow decision trees, AI chatbots understand natural language, handle unexpected questions, and generate contextually appropriate responses. They\'re used for customer support, lead qualification, onboarding, and internal knowledge retrieval.',
+    fullDefinition: `<p>AI chatbots represent a significant evolution beyond the scripted, flow-based chatbots of earlier years. Powered by large language models, modern AI chatbots can understand nuanced questions phrased in any way, maintain context across a multi-turn conversation, handle topics they weren't explicitly trained to answer, and generate responses that feel genuinely helpful rather than robotic.</p>
+<p>AI chatbots are deployed in several business contexts: <strong>customer support</strong> (handling tier-1 inquiries, FAQs, order status, and account questions), <strong>lead qualification</strong> (engaging website visitors, collecting contact information, and routing qualified leads to sales), <strong>e-commerce assistance</strong> (helping customers find products, answering sizing questions, processing returns), and <strong>internal knowledge retrieval</strong> (employees querying HR policies, product documentation, or internal wikis through a chat interface).</p>
+<p>The most capable business AI chatbots combine an LLM with <strong>retrieval-augmented generation (RAG)</strong> — a technique where the chatbot queries a knowledge base of company-specific documents before generating a response. This grounds the chatbot's answers in your actual business data rather than the LLM's general training, dramatically reducing hallucinations on business-specific topics.</p>`,
+    examples: [
+      'An insurance company deploys an AI chatbot on their website that handles 70% of common customer queries (coverage questions, claims status, payment info) without agent involvement — reducing support costs by 35% in the first year.',
+      'A SaaS onboarding chatbot guides new users through setup, answers product questions in context, and routes complex issues to a human with full conversation history — increasing activation rates by 22%.',
+      'An e-commerce brand\'s AI chatbot recommends products based on customer descriptions ("I need a gift for a 10-year-old who likes science"), resulting in higher average order values than browsing without assistance.',
+    ],
+    whyItMatters:
+      'AI chatbots let businesses provide instant, 24/7 assistance that scales without adding headcount. For customer-facing applications, they reduce support costs and improve response times. For internal applications, they make institutional knowledge accessible in seconds instead of minutes spent searching through documentation. As LLM quality improves, the gap between AI chatbot and human agent capability continues to narrow for a growing range of interactions.',
+    relatedTerms: ['large-language-model', 'artificial-intelligence', 'retrieval-augmented-generation', 'natural-language-processing', 'ai-automation'],
+    category: 'ai',
+    faq: [
+      {
+        question: 'How do I build an AI chatbot for my website?',
+        answer:
+          'Options range from no-code (tools like Intercom, Drift, or Tidio with AI features) to low-code (configuring a chatbot on Botpress or Voiceflow) to custom development (building directly on an LLM API with a RAG knowledge base). Start with a no-code or low-code option to validate use cases before investing in custom development.',
+      },
+      {
+        question: 'What stops an AI chatbot from giving wrong answers?',
+        answer:
+          'Guardrails, grounding, and human oversight. Good chatbot design limits the topics the bot answers (reducing off-topic hallucinations), grounds responses in verified documents via RAG (reducing factual errors), includes confidence thresholds that escalate to humans when uncertainty is high, and monitors conversations for quality issues requiring correction.',
+      },
+    ],
+  },
+  {
+    slug: 'natural-language-processing',
+    term: 'Natural Language Processing',
+    shortDefinition:
+      'Natural Language Processing (NLP) is the branch of AI that enables computers to understand, interpret, and generate human language. It powers technologies like search engines, AI chatbots, translation tools, sentiment analysis, and voice assistants. NLP bridges the gap between how humans communicate and how computers process information.',
+    fullDefinition: `<p>Natural Language Processing is the technical discipline that teaches machines to work with human language — a task that is deceptively complex. Human language is ambiguous, context-dependent, full of idiom and implication, and constantly evolving. NLP algorithms process text (and increasingly, spoken audio) to extract meaning, intent, structure, and sentiment from what is inherently unstructured data.</p>
+<p>Core NLP tasks include: <strong>text classification</strong> (categorizing text by topic, intent, or sentiment — e.g., spam detection, customer sentiment analysis); <strong>named entity recognition</strong> (identifying people, places, organizations, and dates in text); <strong>machine translation</strong> (converting text between languages); <strong>question answering</strong> (extracting answers to questions from a body of text); <strong>summarization</strong> (condensing long documents into key points); and <strong>text generation</strong> (producing coherent human-like text — the core capability of large language models).</p>
+<p>Modern NLP is dominated by Transformer-based models — the same architecture underlying LLMs like GPT-4 and Claude. Pre-trained models that are then fine-tuned on specific tasks have replaced the specialized, task-specific models that previously required separate development. This means the same foundational model can be applied to sentiment analysis, translation, and text generation with only task-specific fine-tuning required.</p>`,
+    examples: [
+      'Google\'s search engine uses NLP to understand query intent — recognizing that "apple" in a music context refers to the record label, not the fruit, and serving relevant results accordingly.',
+      'A customer feedback analysis system uses NLP to automatically categorize thousands of monthly support tickets by issue type and sentiment — surfacing product problems weeks earlier than manual review would detect them.',
+      'A legal tech tool uses NLP to extract key clauses, parties, and dates from thousands of contracts automatically, reducing contract due diligence from weeks to hours.',
+    ],
+    whyItMatters:
+      'NLP is the technology that makes AI useful for the text-heavy knowledge work that most businesses run on. Emails, support tickets, contracts, reviews, meeting transcripts, and documents are all NLP inputs. As NLP quality improves and costs decrease, an increasing number of tasks that previously required human reading and categorization are becoming automatable — making NLP a key technology for operational efficiency.',
+    relatedTerms: ['artificial-intelligence', 'large-language-model', 'ai-chatbot', 'machine-learning', 'generative-ai'],
+    category: 'ai',
+    faq: [
+      {
+        question: 'Is NLP the same as machine learning?',
+        answer:
+          'NLP is a subset of AI, and modern NLP heavily uses machine learning — specifically deep learning. But not all machine learning is NLP. Machine learning is a general approach to training systems from data; NLP specifically applies that approach to language-related tasks. Today, most NLP systems are built on large pre-trained language models fine-tuned with ML techniques.',
+      },
+      {
+        question: 'What is sentiment analysis?',
+        answer:
+          'Sentiment analysis is an NLP technique that automatically classifies text as expressing positive, negative, or neutral sentiment. Businesses use it to analyze customer reviews, social media mentions, and support tickets at scale — identifying patterns in customer satisfaction without manually reading thousands of individual messages.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-automation',
+    term: 'AI Automation',
+    shortDefinition:
+      'AI automation is the use of artificial intelligence to perform tasks that previously required human effort — from sorting emails and extracting data from documents to generating content, routing customer inquiries, and making decisions. Unlike traditional automation that follows rigid rules, AI automation handles unstructured inputs and judgment-based tasks.',
+    fullDefinition: `<p>Traditional automation (macros, scripts, rule-based bots) excels at structured, repetitive tasks where inputs and outputs are predictable. AI automation extends this to tasks involving ambiguity, natural language, and judgment — tasks that previously required a human to reason about unstructured inputs. This distinction is significant: AI automation can handle the long tail of business work that rule-based systems couldn't touch.</p>
+<p>AI automation typically involves connecting AI models (LLMs, computer vision, speech recognition) with workflow orchestration tools. The AI provides the perception and reasoning layer — reading an email and understanding what action is needed — and the workflow tool executes the downstream action (updating a CRM, sending a response, routing to a queue). Platforms like Make, Zapier (with AI features), n8n, and purpose-built AI agent frameworks enable these workflows without requiring deep engineering.</p>
+<p>High-value AI automation use cases include: <strong>document processing</strong> (extracting structured data from invoices, contracts, or forms), <strong>customer communication</strong> (drafting response emails, classifying and routing support tickets), <strong>data enrichment</strong> (researching and appending information to CRM records), <strong>content operations</strong> (generating first drafts, summarizing research, formatting for publication), and <strong>internal operations</strong> (meeting summaries, policy lookups, report generation).</p>`,
+    examples: [
+      'An accounting firm automates invoice data extraction using an AI vision model — pulling line items, totals, and vendor information from PDFs automatically, eliminating 20 hours per week of manual data entry.',
+      'A sales team uses AI automation to research each inbound lead (company size, recent news, technology stack) and automatically populate CRM fields before the first call — cutting pre-call research time by 80%.',
+      'A marketing agency automates first-draft generation: brief → AI draft → human editor review. Content production velocity doubles without adding headcount.',
+    ],
+    whyItMatters:
+      'AI automation is the practical bridge between the theoretical potential of AI and business results. Every business has high-volume, judgment-intensive tasks that consume staff time without necessarily requiring human creativity or relationship management. Identifying and automating those tasks — email triage, data entry, research, report generation — frees capacity for higher-value work. The businesses that systematically audit and automate such tasks gain a structural efficiency advantage.',
+    relatedTerms: ['artificial-intelligence', 'large-language-model', 'ai-chatbot', 'machine-learning', 'marketing-automation'],
+    category: 'ai',
+    faq: [
+      {
+        question: 'What is the difference between AI automation and traditional automation (RPA)?',
+        answer:
+          'Robotic Process Automation (RPA) automates structured, rule-based processes — clicking through predefined screens, extracting data from fixed-format spreadsheets, filling out forms. It breaks when inputs vary. AI automation handles unstructured inputs (natural language, variable document formats, images) using AI perception and reasoning — it can handle variation that would break RPA.',
+      },
+      {
+        question: 'Where do I start with AI automation?',
+        answer:
+          'Audit your team\'s most time-consuming recurring tasks. Identify tasks that: (1) have consistent inputs and outputs even if inputs are unstructured, (2) require reading and categorizing information more than creative judgment, and (3) run at high enough volume that automating them saves meaningful hours. Start with one clear use case, build a working automation, measure the time saved, then expand.',
+      },
+    ],
+  },
+  {
+    slug: 'retrieval-augmented-generation',
+    term: 'Retrieval-Augmented Generation',
+    shortDefinition:
+      'Retrieval-Augmented Generation (RAG) is a technique that improves AI outputs by giving the language model access to a specific, up-to-date knowledge base before generating a response. Instead of relying solely on training data, the AI retrieves relevant documents from a database and uses them as context — producing more accurate, grounded, and current answers.',
+    fullDefinition: `<p>Large language models have a significant limitation: their knowledge is frozen at their training cutoff date, and they have no access to your company's specific documents, products, policies, or data. Retrieval-Augmented Generation (RAG) solves this by adding a retrieval step before generation: when a user asks a question, the system first searches a knowledge base for relevant documents, then feeds those documents to the LLM as context, then generates a response grounded in that retrieved information.</p>
+<p>The RAG architecture consists of three components: an <strong>indexer</strong> that processes and stores your documents (splitting them into chunks, converting them to vector embeddings — numerical representations of meaning — and storing them in a vector database like Pinecone, Weaviate, or pgvector), a <strong>retriever</strong> that finds the most relevant chunks for a given query using semantic similarity search, and a <strong>generator</strong> (the LLM) that synthesizes the retrieved context into a coherent response.</p>
+<p>RAG dramatically reduces hallucinations on business-specific topics by grounding the AI in actual source documents rather than statistical pattern prediction from training data. It also enables responses to include citations (pointing back to the source document), which adds auditability and trust. Keeping the knowledge base current (re-indexing updated documents) is much cheaper than retraining or fine-tuning a model.</p>`,
+    examples: [
+      'A company builds an internal AI assistant that employees can query about HR policies, expense procedures, and benefits. Using RAG with the HR documentation, answers are accurate and cite the relevant policy page — vs. a general LLM that would hallucinate company-specific details.',
+      'A customer support chatbot is grounded via RAG in the company\'s product documentation and knowledge base. When customers ask technical questions, the AI finds the relevant help article and synthesizes a direct answer — reducing hallucinations by 85% compared to a non-RAG approach.',
+      'A financial services firm uses RAG to let analysts query thousands of earnings transcripts using natural language, retrieving and synthesizing relevant excerpts for specific questions — turning a weeks-long research task into minutes.',
+    ],
+    whyItMatters:
+      'RAG is what makes LLMs practically useful for business-specific applications. Without RAG, AI assistants have no access to your products, policies, customers, or current events — making them useful only for general knowledge tasks. With RAG, you can build AI applications that accurately answer questions about your specific business, dramatically expanding the range of valuable applications. For any business building AI tools on proprietary data, RAG is the foundational technique.',
+    relatedTerms: ['large-language-model', 'ai-chatbot', 'artificial-intelligence', 'natural-language-processing', 'generative-ai'],
+    category: 'ai',
+    faq: [
+      {
+        question: 'Is RAG better than fine-tuning?',
+        answer:
+          'They serve different purposes. Fine-tuning changes the model\'s behavior and knowledge by training on new examples — it\'s expensive and requires retraining when information changes. RAG connects the model to an updatable external knowledge base — it\'s cheaper, more maintainable, and better suited for factual retrieval tasks. For most business applications (answering questions from documents), RAG is preferred. Fine-tuning is better for adjusting style, format, or reasoning patterns.',
+      },
+      {
+        question: 'What is a vector database?',
+        answer:
+          'A vector database stores text documents as numerical vectors (embeddings) that capture semantic meaning. This enables similarity search: instead of keyword matching, the database finds documents that are semantically similar to a query even if they use different words. Pinecone, Weaviate, Qdrant, and pgvector (Postgres extension) are common vector database options used in RAG systems.',
+      },
+    ],
+  },
+
+  // ── Business — new (4) ───────────────────────────────────────────────────
+  {
+    slug: 'customer-acquisition-cost',
+    term: 'Customer Acquisition Cost',
+    shortDefinition:
+      'Customer Acquisition Cost (CAC) is the total cost of acquiring a single new customer — including all marketing and sales expenses divided by the number of new customers acquired in a given period. It\'s one of the most important unit economics metrics for any business, determining whether your growth is sustainable or money-losing at scale.',
+    fullDefinition: `<p>Customer Acquisition Cost is calculated simply: take all the money spent on sales and marketing in a period (ad spend, staff salaries, tool subscriptions, events, content production) and divide it by the number of new customers acquired in that period. If you spent $50,000 in a month across all acquisition activities and acquired 100 new customers, your CAC is $500.</p>
+<p>CAC is most meaningful when compared against <strong>Lifetime Value (LTV)</strong> — the total revenue a customer generates over their relationship with you. The LTV/CAC ratio is a key indicator of business health: a ratio of 3:1 (LTV is 3× CAC) is commonly cited as the minimum for a sustainable business. Ratios below 1:1 mean you're losing money on every customer you acquire — a situation that requires either reducing CAC or increasing LTV to survive.</p>
+<p>CAC varies dramatically by acquisition channel. Organic SEO and referrals typically produce the lowest CAC because there's no direct media spend per customer. Paid search and social advertising often have higher, more predictable CAC. Enterprise sales with long cycles and high headcount have the highest CAC but are offset by high contract values. Understanding CAC by channel enables smarter budget allocation — shifting investment toward channels with the best LTV/CAC ratios.</p>`,
+    examples: [
+      'A SaaS company spends $80,000/month on marketing and sales and acquires 40 new customers — a $2,000 CAC. With an average contract value of $12,000/year and 3-year average retention, LTV is $36,000 — an 18:1 LTV/CAC ratio indicating a highly efficient growth engine.',
+      'An e-commerce brand discovers its CAC from paid social is $45 but from SEO-driven organic traffic is $8. This insight shifts 40% of the paid budget toward content and SEO — reducing overall blended CAC significantly.',
+      'A startup realizes their CAC has crept from $150 to $400 over 12 months as ad costs increased. They calculate the LTV/CAC ratio has dropped below 2:1 — a signal to immediately audit acquisition efficiency.',
+    ],
+    whyItMatters:
+      'Businesses that don\'t track CAC don\'t know if their growth is creating value or destroying it. Rapidly acquiring customers at a CAC higher than their LTV is a path to insolvency dressed up as growth. Tracking CAC by channel also reveals where to invest and where to cut — it\'s the core metric for making marketing budget allocation rational rather than intuitive.',
+    relatedTerms: ['lifetime-value', 'roi', 'churn-rate', 'saas', 'lead-generation'],
+    category: 'business',
+    faq: [
+      {
+        question: 'What counts as a marketing and sales expense in CAC calculation?',
+        answer:
+          'All direct acquisition costs: paid advertising, sales team salaries and commissions, marketing team salaries (prorated for acquisition work), tools and software used for acquisition (CRM, ad platforms, SEO tools), event and conference costs, and content production costs. Exclude costs serving existing customers (support, account management, product).',
+      },
+      {
+        question: 'What is a good LTV/CAC ratio?',
+        answer:
+          'A ratio of 3:1 is generally considered the minimum for a sustainable SaaS or subscription business — meaning you recover your acquisition investment 3× over a customer\'s lifetime. Ratios of 5:1 or higher indicate strong unit economics. Ratios below 2:1 are warning signs. The payback period — how many months until CAC is recovered — is an equally important secondary metric, with 12 months or less being the typical benchmark.',
+      },
+    ],
+  },
+  {
+    slug: 'lifetime-value',
+    term: 'Lifetime Value',
+    shortDefinition:
+      'Lifetime Value (LTV or CLV — Customer Lifetime Value) is the total revenue a business can expect from a single customer over the entire duration of their relationship. It\'s the counterpart to Customer Acquisition Cost — together they determine whether a business is profitable at the unit level. High LTV justifies higher CAC and longer payback periods.',
+    fullDefinition: `<p>Lifetime Value represents the cumulative economic contribution of a customer from acquisition through churn. For a subscription business, it's calculated as Average Revenue Per User (ARPU) × Average Customer Lifetime (1 ÷ monthly churn rate). For e-commerce, it's average order value × purchase frequency × average customer lifespan. Both give you a single number: how much, on average, is a new customer worth to you over time?</p>
+<p>LTV directly governs how much it makes sense to spend to acquire a customer. If your LTV is $500, spending $400 in CAC leaves only $100 margin before accounting for cost of goods and overhead — the business is likely marginal or unprofitable. If your LTV is $5,000 and CAC is $500, you have room to grow aggressively. This is why premium products with high LTV (enterprise software, luxury goods, financial services) can sustain much higher acquisition costs than commodity products.</p>
+<p>Improving LTV is often more impactful than reducing CAC. Increasing average order value, improving retention (reducing churn), expanding revenue from existing customers (upsell and cross-sell), and building products customers return to repeatedly all increase LTV. A 10% improvement in retention can increase LTV by 30% or more, depending on the shape of the churn curve.</p>`,
+    examples: [
+      'A subscription software company has $100/month ARPU and 2% monthly churn — an average customer lifetime of 50 months (1 ÷ 0.02). LTV = $100 × 50 = $5,000. They can justify a CAC up to ~$1,650 for a 3:1 LTV/CAC ratio.',
+      'An e-commerce brand discovers that customers who make a second purchase within 60 days of the first have 4× the LTV of one-time buyers. This drives a focused retention program on the critical 60-day window.',
+      'A gym calculates LTV at $1,200 (12-month average retention × $100/month). Knowing this, they invest in a personal training upsell program that increases average monthly revenue to $130 — raising LTV to $1,560 and making higher-cost acquisition channels viable.',
+    ],
+    whyItMatters:
+      'LTV is the anchor metric that determines the economics of your business at scale. Without knowing what a customer is worth, every CAC budget decision is guesswork. Businesses with high LTV have durable competitive advantages — they can outbid competitors for customers in paid acquisition channels, invest more in customer experience, and grow faster without sacrificing unit economics. Increasing LTV through retention and expansion is often the highest-leverage growth lever available.',
+    relatedTerms: ['customer-acquisition-cost', 'churn-rate', 'saas', 'roi', 'kpi'],
+    category: 'business',
+    faq: [
+      {
+        question: 'What is the difference between LTV and ARPU?',
+        answer:
+          'ARPU (Average Revenue Per User) is a point-in-time metric — how much a customer generates in a given period (monthly, annually). LTV is a cumulative projection — total expected revenue over the entire customer relationship. ARPU × expected customer lifetime = a simple LTV calculation. LTV is more useful for strategic decisions; ARPU is more useful for operational tracking.',
+      },
+      {
+        question: 'Should I use revenue LTV or profit LTV?',
+        answer:
+          'Profit LTV (also called Customer Lifetime Profit or gross margin LTV) is more accurate because it accounts for costs. Revenue LTV overstates the true value if margins vary significantly across products, customers, or time. For early-stage companies with consistent margins, revenue LTV is an acceptable proxy. For mature businesses making nuanced allocation decisions, gross margin LTV is the more reliable number.',
+      },
+    ],
+  },
+  {
+    slug: 'churn-rate',
+    term: 'Churn Rate',
+    shortDefinition:
+      'Churn rate is the percentage of customers or subscribers who cancel or stop doing business with a company in a given time period. It\'s a critical health metric for subscription businesses — high churn erodes the recurring revenue base faster than new customers can replenish it. Reducing churn is often the fastest path to improving business economics.',
+    fullDefinition: `<p>Churn rate measures how quickly you\'re losing customers. Monthly churn rate is calculated as: (customers lost during the month ÷ customers at the start of the month) × 100. A 5% monthly churn rate means 5 out of every 100 customers cancel each month — which compounded means you\'re replacing your entire customer base roughly every 20 months just to stay flat.</p>
+<p>Churn comes in two forms: <strong>voluntary churn</strong> (customers actively cancel because they\'re not getting value, found a competitor, or their budget changed) and <strong>involuntary churn</strong> (customers are lost due to payment failures — credit card declines, expired cards — without an intent to cancel). Involuntary churn often accounts for 20–40% of total churn for subscription businesses and is the easiest to recover through dunning sequences and payment retry logic.</p>
+<p>Beyond simple customer churn, subscription businesses track <strong>revenue churn</strong> — the percentage of MRR lost due to cancellations and downgrades. If high-value customers are churning at higher rates than low-value customers, revenue churn will exceed customer churn. <strong>Net revenue retention (NRR)</strong> adds expansion revenue (upsells, seat additions) to the picture — a NRR above 100% means existing customers are generating more revenue over time, creating growth even without new customer acquisition.</p>`,
+    examples: [
+      'A SaaS company with 2% monthly churn and 1,000 customers loses 20 customers per month. Reducing churn to 1% means losing only 10 — the same effect on the customer base as acquiring 10 additional customers each month, but typically at much lower cost.',
+      'A gym analyzes churn data and finds 60% of cancellations happen in months 2 and 3 — members who never established a routine. They implement a proactive check-in program in weeks 3–6. Churn drops 22% overall.',
+      'A subscription box company discovers 30% of churn is involuntary (failed payments). Implementing an automated card-update and retry sequence recovers 40% of those churns — a high-ROI fix requiring minimal ongoing effort.',
+    ],
+    whyItMatters:
+      'Churn is the leak in the revenue bucket. Businesses with high churn are essentially pouring water into a bucket with holes — growth spend goes to replacing lost customers rather than building the base. Reducing churn improves LTV, lowers the effective CAC needed for growth, and extends the runway of every customer acquisition dollar. For subscription businesses, reducing monthly churn by even 0.5% can increase enterprise value by 25% or more.',
+    relatedTerms: ['lifetime-value', 'customer-acquisition-cost', 'saas', 'kpi', 'crm'],
+    category: 'business',
+    faq: [
+      {
+        question: 'What is a good monthly churn rate for SaaS?',
+        answer:
+          'Best-in-class B2B SaaS companies target under 1% monthly churn (under 12% annually). A 2% monthly rate is acceptable for early-stage companies but should be treated as a problem to solve, not a baseline. Consumer subscription businesses typically run higher churn (3–8% monthly) due to more price-sensitive, less sticky buyers. Compare against cohort benchmarks in your specific category.',
+      },
+      {
+        question: 'What is the difference between churn rate and retention rate?',
+        answer:
+          'They are complements of each other. If your monthly churn rate is 3%, your monthly retention rate is 97% (100% − 3%). Retention rate is often preferred when framing the metric positively — "we retain 97% of customers monthly" — while churn is more common in financial modeling. Annual retention rate is churn rate\'s inverse: 1% monthly churn = ~88% annual retention.',
+      },
+    ],
+  },
+  {
+    slug: 'b2b',
+    term: 'B2B',
+    shortDefinition:
+      'B2B (Business-to-Business) refers to companies that sell products or services to other businesses rather than to individual consumers (B2C). B2B sales are typically larger in contract value, longer in sales cycle, involve multiple decision-makers, and require relationship-driven sales and marketing approaches distinct from consumer marketing.',
+    fullDefinition: `<p>B2B describes the commercial relationship where one business is the customer of another. Examples include a law firm that bills other companies for legal services, a SaaS platform that sells project management software to enterprise teams, a wholesale supplier that sells to retailers, or a marketing agency that serves business clients. The buyer is a company — and typically a committee of stakeholders — not an individual consumer.</p>
+<p>B2B marketing and sales have distinct characteristics shaped by the buying process. Decisions involve multiple stakeholders (a champion who wants the product, a financial approver, often a technical evaluator, sometimes legal and procurement). Sales cycles are longer — weeks to years for enterprise deals. Purchases are justified by ROI and business outcomes, not emotional impulse. And relationships and trust play a larger role than in B2C transactions, where brand and convenience often dominate.</p>
+<p>B2B marketing channels reflect these realities: LinkedIn is the dominant social platform, content marketing and thought leadership build credibility with decision-makers over time, SEO drives inbound discovery, and outbound sales (cold email, LinkedIn outreach, phone) plays a larger role than in B2C. Metrics differ too — the focus is on pipeline value, CAC, LTV, and sales cycle length rather than the traffic, conversion, and retention metrics that dominate B2C analytics.</p>`,
+    examples: [
+      'A software company sells a project management tool to marketing teams at enterprise companies — a B2B sale with a $5,000/year contract, 60-day sales cycle, and three-person buying committee.',
+      'A graphic design agency serves ten B2B clients — accounting firms, law practices, and tech startups — each on monthly retainer. Their marketing focuses on LinkedIn thought leadership and inbound case study content.',
+      'A wholesale food distributor sells to restaurants and grocery stores (B2B), not to end consumers directly — requiring route-based sales reps, volume pricing, and net-30 payment terms typical of B2B transactions.',
+    ],
+    whyItMatters:
+      'Understanding whether your business is B2B, B2C, or a hybrid fundamentally shapes every strategy decision — from which channels to invest in, to how to structure sales, to what metrics predict success. B2B businesses that apply consumer marketing tactics often waste budget on channels that don\'t reach business decision-makers or don\'t respect the extended evaluation process B2B buyers require.',
+    relatedTerms: ['saas', 'crm', 'lead-generation', 'customer-acquisition-cost', 'lifetime-value'],
+    category: 'business',
+    faq: [
+      {
+        question: 'What is the difference between B2B and B2C?',
+        answer:
+          'B2B sells to businesses; B2C sells to individual consumers. B2B transactions are typically higher value, longer cycle, multi-stakeholder, and more logic/ROI-driven. B2C transactions are typically lower value, faster, single-decision-maker, and more emotion/convenience-driven. Marketing, sales motion, pricing, and product design all differ significantly between the two models.',
+      },
+      {
+        question: 'What is B2B2C?',
+        answer:
+          'B2B2C (Business-to-Business-to-Consumer) is a model where a company sells to a business, which then delivers the product or service to end consumers. A white-label SaaS platform sold to banks that offer it to their customers is B2B2C. The first business (the bank) is your direct customer; the end consumer uses the product but doesn\'t buy from you directly.',
+      },
+    ],
+  },
 ];
