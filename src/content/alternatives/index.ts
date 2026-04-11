@@ -9,6 +9,16 @@ import trelloAlternatives from './trello-alternatives';
 import wordpressAlternatives from './wordpress-alternatives';
 import zoomAlternatives from './zoom-alternatives';
 import googleAnalyticsAlternatives from './google-analytics-alternatives';
+import hootsuiteAlternatives from './hootsuite-alternatives';
+import squarespaceAlternatives from './squarespace-alternatives';
+import clickupAlternatives from './clickup-alternatives';
+import ahrefsAlternatives from './ahrefs-alternatives';
+import semrushAlternatives from './semrush-alternatives';
+import asanaAlternatives from './asana-alternatives';
+import notionAlternatives from './notion-alternatives';
+import figmaAlternatives from './figma-alternatives';
+import calendlyAlternatives from './calendly-alternatives';
+import docusignAlternatives from './docusign-alternatives';
 
 export const alternatives: AlternativesPost[] = [
   canvaAlternatives,
@@ -21,4 +31,14 @@ export const alternatives: AlternativesPost[] = [
   wordpressAlternatives,
   zoomAlternatives,
   googleAnalyticsAlternatives,
+  hootsuiteAlternatives,
+  squarespaceAlternatives,
+  clickupAlternatives,
+  ahrefsAlternatives,
+  semrushAlternatives,
+  asanaAlternatives,
+  notionAlternatives,
+  figmaAlternatives,
+  calendlyAlternatives,
+  docusignAlternatives,
 ];
