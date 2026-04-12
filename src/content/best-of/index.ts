@@ -20,6 +20,21 @@ import bestFormBuilder from './best-form-builder';
 import bestEcommercePlatforms from './best-ecommerce-platforms';
 import bestAnalyticsTools from './best-analytics-tools';
 import bestAiImageGenerators from './best-ai-image-generators';
+import bestFreeCrm from './best-free-crm';
+import bestAiWritingTools from './best-ai-writing-tools';
+import bestStockPhotoSites from './best-stock-photo-sites';
+import bestSurveyTools from './best-survey-tools';
+import bestHeatmapTools from './best-heatmap-tools';
+import bestNoteTakingApps from './best-note-taking-apps';
+import bestScreenRecordingSoftware from './best-screen-recording-software';
+import bestFreeLogoMakers from './best-free-logo-makers';
+import bestPdfEditors from './best-pdf-editors';
+import bestAiVoiceGenerators from './best-ai-voice-generators';
+import bestBudgetApps from './best-budget-apps';
+import bestTeamChatApps from './best-team-chat-apps';
+import bestFreelancePlatforms from './best-freelance-platforms';
+import bestDomainRegistrars from './best-domain-registrars';
+import bestMockupTools from './best-mockup-tools';
 
 export const bestOf: BestOfPost[] = [
   bestCrmSmallBusiness,
@@ -42,4 +57,19 @@ export const bestOf: BestOfPost[] = [
   bestEcommercePlatforms,
   bestAnalyticsTools,
   bestAiImageGenerators,
+  bestFreeCrm,
+  bestAiWritingTools,
+  bestStockPhotoSites,
+  bestSurveyTools,
+  bestHeatmapTools,
+  bestNoteTakingApps,
+  bestScreenRecordingSoftware,
+  bestFreeLogoMakers,
+  bestPdfEditors,
+  bestAiVoiceGenerators,
+  bestBudgetApps,
+  bestTeamChatApps,
+  bestFreelancePlatforms,
+  bestDomainRegistrars,
+  bestMockupTools,
 ];
