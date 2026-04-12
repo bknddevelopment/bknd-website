@@ -44,6 +44,21 @@ import nextVsReact from './next-vs-react';
 import claudeVsChatgpt from './claude-vs-chatgpt';
 import midjourneyVsDalle from './midjourney-vs-dalle';
 import canvaVsFigma from './canva-vs-figma';
+import godaddyVsBluehost from './godaddy-vs-bluehost';
+import hostgatorVsBluehost from './hostgator-vs-bluehost';
+import awsVsGcp from './aws-vs-gcp';
+import azureVsGcp from './azure-vs-gcp';
+import postgresVsMysql from './postgres-vs-mysql';
+import mongodbVsPostgres from './mongodb-vs-postgres';
+import pythonVsJavascript from './python-vs-javascript';
+import kotlinVsJava from './kotlin-vs-java';
+import swiftVsObjectiveC from './swift-vs-objective-c';
+import dockerVsKubernetes from './docker-vs-kubernetes';
+import jenkinsVsGithubActions from './jenkins-vs-github-actions';
+import perplexityVsChatgpt from './perplexity-vs-chatgpt';
+import geminiVsChatgpt from './gemini-vs-chatgpt';
+import copilotVsCursor from './copilot-vs-cursor';
+import upworkVsFiverr from './upwork-vs-fiverr';
 
 export const comparisons: ComparisonPost[] = [
   wixVsSquarespace,
@@ -91,4 +106,19 @@ export const comparisons: ComparisonPost[] = [
   claudeVsChatgpt,
   midjourneyVsDalle,
   canvaVsFigma,
+  godaddyVsBluehost,
+  hostgatorVsBluehost,
+  awsVsGcp,
+  azureVsGcp,
+  postgresVsMysql,
+  mongodbVsPostgres,
+  pythonVsJavascript,
+  kotlinVsJava,
+  swiftVsObjectiveC,
+  dockerVsKubernetes,
+  jenkinsVsGithubActions,
+  perplexityVsChatgpt,
+  geminiVsChatgpt,
+  copilotVsCursor,
+  upworkVsFiverr,
 ];
