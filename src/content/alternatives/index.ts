@@ -19,6 +19,21 @@ import notionAlternatives from './notion-alternatives';
 import figmaAlternatives from './figma-alternatives';
 import calendlyAlternatives from './calendly-alternatives';
 import docusignAlternatives from './docusign-alternatives';
+import dropboxAlternatives from './dropbox-alternatives';
+import grammarlyAlternatives from './grammarly-alternatives';
+import loomAlternatives from './loom-alternatives';
+import typeformAlternatives from './typeform-alternatives';
+import mondayAlternatives from './monday-alternatives';
+import zapierAlternatives from './zapier-alternatives';
+import intercomAlternatives from './intercom-alternatives';
+import quickbooksAlternatives from './quickbooks-alternatives';
+import teamviewerAlternatives from './teamviewer-alternatives';
+import evernoteAlternatives from './evernote-alternatives';
+import pipedriveAlternatives from './pipedrive-alternatives';
+import freshbooksAlternatives from './freshbooks-alternatives';
+import clioAlternatives from './clio-alternatives';
+import basecampAlternatives from './basecamp-alternatives';
+import bufferAlternatives from './buffer-alternatives';
 
 export const alternatives: AlternativesPost[] = [
   canvaAlternatives,
@@ -41,4 +56,19 @@ export const alternatives: AlternativesPost[] = [
   figmaAlternatives,
   calendlyAlternatives,
   docusignAlternatives,
+  dropboxAlternatives,
+  grammarlyAlternatives,
+  loomAlternatives,
+  typeformAlternatives,
+  mondayAlternatives,
+  zapierAlternatives,
+  intercomAlternatives,
+  quickbooksAlternatives,
+  teamviewerAlternatives,
+  evernoteAlternatives,
+  pipedriveAlternatives,
+  freshbooksAlternatives,
+  clioAlternatives,
+  basecampAlternatives,
+  bufferAlternatives,
 ];
