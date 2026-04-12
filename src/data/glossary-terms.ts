@@ -1678,4 +1678,126 @@ export const glossaryTerms: GlossaryTermData[] = [
       },
     ],
   },
+
+  // ── SEO — expanded (12) ──────────────────────────────────────────────────
+  {
+    slug: 'local-seo-citations',
+    term: 'Local SEO Citations',
+    shortDefinition:
+      'Local SEO citations are online mentions of a business\'s name, address, and phone number (NAP) across directories, review sites, and local platforms. Consistent citations across sites like Yelp, Apple Maps, and industry directories are a key local ranking signal that helps Google verify a business\'s legitimacy and location.',
+    fullDefinition: `<p>A citation is any online mention of your business\'s core contact information — name, address, and phone number (NAP). Citations don\'t need to include a link to your website to count; even an unlinked mention on a directory site sends trust signals to Google. The more consistent and widespread your NAP citations, the more confident Google is that your business is legitimate and located where you say it is.</p>
+<p>Citations fall into two categories: <strong>structured citations</strong> (your business listed in a directory like Yelp, Yellow Pages, Google Business Profile, or an industry-specific directory with a defined business name/address/phone field) and <strong>unstructured citations</strong> (a blog post or news article that mentions your business name and location without a formal directory listing). Both types contribute, but structured citations in authoritative directories carry more weight.</p>
+<p>Inconsistent NAP data — a different phone number on Yelp than on your website, an old address on a directory — confuses both search engines and potential customers. Auditing and correcting citation inconsistencies is often one of the fastest wins in a local SEO engagement, and tools like BrightLocal and Moz Local automate the monitoring and cleanup process.</p>`,
+    examples: [
+      'A plumber ensures their NAP is identical on Google Business Profile, Yelp, Angi, HomeAdvisor, and the local Chamber of Commerce directory — strengthening local ranking signals.',
+      'A restaurant discovers their address is listed differently on 12 directories after a relocation — fixing all inconsistencies leads to a measurable improvement in Local Pack rankings within 60 days.',
+      'A law firm builds citations on legal-specific directories (Avvo, FindLaw, Justia) in addition to general directories, boosting relevance signals for practice area keywords.',
+    ],
+    whyItMatters:
+      'Citations are foundational to local SEO. Businesses with more consistent, widespread citations outrank those with sparse or inconsistent listings in the Local Pack. For service-area businesses without a high-authority website, citations are often the primary off-page lever available to improve local rankings.',
+    relatedTerms: ['local-seo', 'seo', 'off-page-seo', 'schema-markup', 'backlinks'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How many citations do I need for local SEO?',
+        answer:
+          'There is no fixed number, but being listed on the top 50–70 general and industry-specific directories is a strong baseline. Prioritize accuracy over quantity — 30 consistent citations outperform 100 inconsistent ones. Compare your citation count and sources to top-ranking competitors in your local market using a tool like BrightLocal.',
+      },
+      {
+        question: 'Do citations need a link back to my website?',
+        answer:
+          'No. Unlinked citations (NAP mentions without a hyperlink) still contribute to local SEO. That said, a citation with a link provides the added benefit of a backlink, making it more valuable. Most major directories include a website link field — always fill it in.',
+      },
+    ],
+  },
+  {
+    slug: 'keyword-difficulty',
+    term: 'Keyword Difficulty',
+    shortDefinition:
+      'Keyword difficulty is a score (typically 0–100) that estimates how hard it is to rank on the first page of Google for a given keyword. It factors in the authority and backlink profiles of pages currently ranking for that term. Higher scores indicate stronger competition and more link equity needed to compete.',
+    fullDefinition: `<p>Keyword difficulty (KD) is a metric provided by SEO tools like Ahrefs, SEMrush, and Moz to help prioritize keyword targeting decisions. The score estimates the competitive landscape for a keyword by analyzing the domain authority, number of backlinks, and content quality of the pages currently ranking in the top 10 results. A keyword with KD 80 means the first page is dominated by high-authority sites that are difficult to displace.</p>
+<p>Keyword difficulty is one input in keyword selection, not the only one. A keyword with KD 20 and 50 monthly searches may be worth targeting for a new site. A keyword with KD 60 and 50,000 monthly searches may be worth the long-term investment for an established domain. The key ratio is: does your current domain authority give you a realistic chance of ranking within a reasonable timeframe?</p>
+<p>Different tools calculate KD differently, so scores are not directly comparable across platforms. Ahrefs KD focuses heavily on the backlink profiles of ranking pages. Moz\'s KD (called "Keyword Difficulty" or "Priority") also incorporates on-page factors. SEMrush\'s "Keyword Difficulty" blends multiple signals. Use one tool consistently for comparisons within the same research session.</p>`,
+    examples: [
+      'A new blog targeting "best project management software" (KD 85) would struggle to rank — instead they target "project management software for remote teams under 10 people" (KD 22) and gain traction.',
+      'An SEO strategist filters a keyword list to KD under 40 for a six-month roadmap, reserving higher-difficulty terms for year two after the domain has built more authority.',
+      'A competitor analysis reveals a rival ranks for a KD 55 keyword despite having lower domain authority — indicating their content quality is unusually strong and a content-focused attack strategy is viable.',
+    ],
+    whyItMatters:
+      'Targeting keywords you can realistically rank for is the difference between a content strategy that generates traffic and one that produces content that sits on page 10 forever. Keyword difficulty scores let you match ambition to capability — finding the intersection of valuable keywords and attainable rankings for your current domain strength.',
+    relatedTerms: ['keyword-research', 'seo', 'domain-authority', 'backlinks', 'on-page-seo'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'Is keyword difficulty the same as competition in Google Ads?',
+        answer:
+          'No. Google Ads "competition" measures how many advertisers are bidding on a keyword for paid placement. SEO keyword difficulty measures how hard it is to rank organically. A keyword can have low paid competition but high organic difficulty, or vice versa. They are separate metrics for separate channels.',
+      },
+      {
+        question: 'What keyword difficulty should I target as a new website?',
+        answer:
+          'New sites (domain rating under 20) should focus on keywords with KD under 20–25, especially long-tail variants with clear intent. Building topical authority and earning backlinks in the first 6–12 months will gradually make higher-KD keywords attainable. Trying to rank for high-difficulty terms too early wastes content investment.',
+      },
+    ],
+  },
+  {
+    slug: 'seo-audit',
+    term: 'SEO Audit',
+    shortDefinition:
+      'An SEO audit is a comprehensive review of a website\'s technical health, on-page optimization, content quality, and backlink profile to identify issues preventing strong search rankings. It produces a prioritized list of fixes and improvements. Audits are the starting point for any new SEO engagement and should be run annually or after major site changes.',
+    fullDefinition: `<p>An SEO audit is a systematic diagnostic process that evaluates every factor affecting how a website ranks in search engines. It goes beyond surface-level observations to uncover technical issues (crawl errors, page speed problems, broken redirects), on-page deficiencies (missing or weak meta tags, thin content, poor heading structure), content gaps (topics competitors rank for that you don\'t), and backlink profile weaknesses.</p>
+<p>A thorough SEO audit covers four main areas: <strong>technical SEO</strong> (crawlability, indexability, Core Web Vitals, mobile usability, HTTPS, structured data), <strong>on-page SEO</strong> (meta tags, heading hierarchy, content quality, internal linking, keyword targeting), <strong>off-page SEO</strong> (backlink profile quality, toxic links, competitor link gaps), and <strong>content audit</strong> (which pages are performing, which are thin, which should be merged or removed).</p>
+<p>The output of a good audit is not just a list of problems — it\'s a prioritized action plan that distinguishes quick wins (fix these 5 technical issues this week) from long-term projects (build topical authority over 12 months). Common tools include Screaming Frog, Ahrefs, SEMrush, and Google Search Console. Many agencies run audits as the first deliverable in an engagement to establish a clear baseline and justify the work ahead.</p>`,
+    examples: [
+      'A new SEO agency runs an audit on a client site and discovers 3,000 pages accidentally blocked from indexing — fixing this single issue recovers 60% of previously lost organic traffic within 30 days.',
+      'An annual SEO audit reveals a competitor has built 200 new backlinks to a page that now outranks the client for their most valuable keyword — triggering a targeted link building campaign.',
+      'A site audit finds 40 near-duplicate service pages that are cannibalizing each other. Consolidating them into 8 comprehensive pages increases average ranking position for target keywords by 11 spots.',
+    ],
+    whyItMatters:
+      'You cannot fix what you cannot see. An SEO audit provides the full picture of what is holding your site back — and separates minor cosmetic issues from structural problems that are costing you rankings and traffic. Skipping an audit means prioritizing SEO work based on guesswork rather than evidence, which is how budgets get spent on the wrong things.',
+    relatedTerms: ['technical-seo', 'seo', 'on-page-seo', 'backlinks', 'core-web-vitals'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'How often should I run an SEO audit?',
+        answer:
+          'At minimum, run a full audit annually. Also run one any time you make significant changes: site redesign, platform migration, new URL structure, or major content reorganization. Monthly lightweight checks via Google Search Console can catch acute issues between full audits.',
+      },
+      {
+        question: 'Can I do an SEO audit myself?',
+        answer:
+          'A basic audit is learnable with free tools (Google Search Console, PageSpeed Insights) and a crawl tool like Screaming Frog\'s free tier. A comprehensive audit covering backlinks, content gaps, and competitor analysis requires paid tools and SEO expertise to interpret. For most small businesses, a professional audit every 1–2 years is a worthwhile investment.',
+      },
+    ],
+  },
+  {
+    slug: 'anchor-text',
+    term: 'Anchor Text',
+    shortDefinition:
+      'Anchor text is the visible, clickable text of a hyperlink. When other sites link to yours, the words they use as anchor text signal to Google what your page is about. Relevant anchor text from authoritative sites helps rank for target keywords, but over-optimized exact-match anchor text from low-quality sites can trigger spam penalties.',
+    fullDefinition: `<p>Every hyperlink has two components: the URL (where it points) and the anchor text (the visible text a user clicks). When Google crawls a link, it reads the anchor text as a relevance signal — if many high-quality sites link to your page using the words "best accounting software for freelancers," Google gets a strong signal that your page should rank for that phrase.</p>
+<p>Anchor text types include: <strong>exact match</strong> (the anchor text exactly matches a target keyword — "best running shoes"), <strong>partial match</strong> (the anchor includes the keyword plus other words — "check out these best running shoes"), <strong>branded</strong> (the anchor is your brand name — "Nike"), <strong>naked URL</strong> (the anchor is the URL itself — "nike.com/shoes"), and <strong>generic</strong> ("click here," "read more"). A natural backlink profile contains a mix of all these types.</p>
+<p>The danger zone is anchor text manipulation: artificially building many links with exact-match commercial anchor text (e.g., dozens of links all saying "buy cheap insurance") is a pattern Google\'s Penguin algorithm targets. Sites with over-optimized anchor profiles can face manual or algorithmic penalties. Natural link acquisition typically produces diverse anchor text without deliberate manipulation.</p>`,
+    examples: [
+      'A blog post about CRM software earns 15 editorial backlinks — 6 with branded anchors, 4 with naked URLs, 3 with partial-match anchors, and 2 with generic anchors. This natural profile is healthy.',
+      'An SEO agency deliberately builds 50 links all using the exact anchor "affordable web design services" — triggering a Penguin penalty that drops the site from page 1 to page 6.',
+      'A resource page link using "content marketing guide" as anchor text for a cornerstone guide page contributes directly to ranking improvements for that keyword cluster.',
+    ],
+    whyItMatters:
+      'Anchor text is one of the clearest signals search engines receive about what a page is about. A well-diversified anchor text profile from relevant, authoritative sites is a strong ranking asset. Understanding anchor text also helps you evaluate link building tactics — any approach that produces suspiciously uniform exact-match anchors at scale is a red flag.',
+    relatedTerms: ['backlinks', 'link-building', 'off-page-seo', 'seo', 'domain-authority'],
+    category: 'seo',
+    faq: [
+      {
+        question: 'Should I control the anchor text when building links?',
+        answer:
+          'You can suggest anchor text in outreach, but natural variation is healthiest. Aim for a profile where roughly 40–50% is branded, 20–30% is naked URL or generic, and only 10–20% is keyword-focused. Diversity signals naturalness; uniformity signals manipulation.',
+      },
+      {
+        question: 'Does internal link anchor text matter for SEO?',
+        answer:
+          'Yes — internal link anchor text is a strong on-page SEO signal you have full control over. Using descriptive, keyword-relevant anchor text for internal links helps search engines understand page topics and distributes link equity effectively. Avoid generic "click here" or "read more" for internal links.',
+      },
+    ],
+  },
 ];

@@ -35,6 +35,16 @@ import bestTeamChatApps from './best-team-chat-apps';
 import bestFreelancePlatforms from './best-freelance-platforms';
 import bestDomainRegistrars from './best-domain-registrars';
 import bestMockupTools from './best-mockup-tools';
+import bestHrSoftware from './best-hr-software';
+import bestPayrollSoftware from './best-payroll-software';
+import bestLiveChatSoftware from './best-live-chat-software';
+import bestProjectTracking from './best-project-tracking';
+import bestHelpDeskSoftware from './best-help-desk-software';
+import bestMeditationApps from './best-meditation-apps';
+import bestLearningPlatforms from './best-learning-platforms';
+import bestGrammarChecker from './best-grammar-checker';
+import bestAiCodeAssistants from './best-ai-code-assistants';
+import bestESignatureSoftware from './best-e-signature-software';
 
 export const bestOf: BestOfPost[] = [
   bestCrmSmallBusiness,
@@ -72,4 +82,14 @@ export const bestOf: BestOfPost[] = [
   bestFreelancePlatforms,
   bestDomainRegistrars,
   bestMockupTools,
+  bestHrSoftware,
+  bestPayrollSoftware,
+  bestLiveChatSoftware,
+  bestProjectTracking,
+  bestHelpDeskSoftware,
+  bestMeditationApps,
+  bestLearningPlatforms,
+  bestGrammarChecker,
+  bestAiCodeAssistants,
+  bestESignatureSoftware,
 ];
