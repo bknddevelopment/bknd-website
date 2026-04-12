@@ -29,6 +29,21 @@ import jiraVsAsana from './jira-vs-asana';
 import intercomVsZendesk from './intercom-vs-zendesk';
 import calendlyVsCalCom from './calendly-vs-cal-com';
 import loomVsVidyard from './loom-vs-vidyard';
+import googleWorkspaceVsMicrosoft365 from './google-workspace-vs-microsoft-365';
+import awsVsAzure from './aws-vs-azure';
+import dropboxVsGoogleDrive from './dropbox-vs-google-drive';
+import onePasswordVsLastpass from './1password-vs-lastpass';
+import bitwardenVs1Password from './bitwarden-vs-1password';
+import nordvpnVsExpressvpn from './nordvpn-vs-expressvpn';
+import githubVsGitlab from './github-vs-gitlab';
+import vercelVsNetlify from './vercel-vs-netlify';
+import supabaseVsFirebase from './supabase-vs-firebase';
+import tailwindVsBootstrap from './tailwind-vs-bootstrap';
+import reactVsVue from './react-vs-vue';
+import nextVsReact from './next-vs-react';
+import claudeVsChatgpt from './claude-vs-chatgpt';
+import midjourneyVsDalle from './midjourney-vs-dalle';
+import canvaVsFigma from './canva-vs-figma';
 
 export const comparisons: ComparisonPost[] = [
   wixVsSquarespace,
@@ -61,4 +76,19 @@ export const comparisons: ComparisonPost[] = [
   intercomVsZendesk,
   calendlyVsCalCom,
   loomVsVidyard,
+  googleWorkspaceVsMicrosoft365,
+  awsVsAzure,
+  dropboxVsGoogleDrive,
+  onePasswordVsLastpass,
+  bitwardenVs1Password,
+  nordvpnVsExpressvpn,
+  githubVsGitlab,
+  vercelVsNetlify,
+  supabaseVsFirebase,
+  tailwindVsBootstrap,
+  reactVsVue,
+  nextVsReact,
+  claudeVsChatgpt,
+  midjourneyVsDalle,
+  canvaVsFigma,
 ];
