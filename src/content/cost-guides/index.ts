@@ -20,6 +20,16 @@ import customSoftwareDevelopmentCost from './custom-software-development-cost';
 import itSupportCostSmallBusiness from './it-support-cost-small-business';
 import marketingAgencyCost from './marketing-agency-cost';
 import appMaintenanceCost from './app-maintenance-cost';
+import seoAuditCost from './seo-audit-cost';
+import brandRedesignCost from './brand-redesign-cost';
+import conversionRateOptimizationCost from './conversion-rate-optimization-cost';
+import websiteMigrationCost from './website-migration-cost';
+import adaComplianceCost from './ada-compliance-cost';
+import localSeoCost from './local-seo-cost';
+import linkBuildingCost from './link-building-cost';
+import tiktokAdsCost from './tiktok-ads-cost';
+import linkedinAdsCost from './linkedin-ads-cost';
+import youtubeAdsCost from './youtube-ads-cost';
 
 export const costGuides: CostGuidePost[] = [
   googleAdsCost,
@@ -42,4 +52,14 @@ export const costGuides: CostGuidePost[] = [
   itSupportCostSmallBusiness,
   marketingAgencyCost,
   appMaintenanceCost,
+  seoAuditCost,
+  brandRedesignCost,
+  conversionRateOptimizationCost,
+  websiteMigrationCost,
+  adaComplianceCost,
+  localSeoCost,
+  linkBuildingCost,
+  tiktokAdsCost,
+  linkedinAdsCost,
+  youtubeAdsCost,
 ];
