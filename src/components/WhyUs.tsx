@@ -2,28 +2,32 @@
 
 import { Check, X, ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "./AnimateOnScroll";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 const comparisons = [
   {
-    them: "Focus on vanity metrics",
-    us: "Laser-focused on revenue-driving KPIs",
-  },
-  { them: "Incremental improvements", us: "Transformative growth strategies" },
-  {
-    them: "Cookie-cutter approaches",
-    us: "Custom, innovative solutions for each client",
+    them: "15 people, 5 handoffs per task",
+    us: "One person runs strategy and execution end-to-end",
   },
   {
-    them: "Reactive to market trends",
-    us: "Proactive in creating new marketing angles",
+    them: "Junior staff does the work, seniors present it",
+    us: "The person you talk to is the person building it",
   },
   {
-    them: "Limited cross-channel integration",
-    us: "Seamless multi-platform strategies",
+    them: "Changes take weeks through project managers",
+    us: "Changes go live the same day — built directly in code",
   },
   {
-    them: "Manual, time-consuming processes",
-    us: "AI-driven, scalable solutions",
+    them: "Generic templates applied to every client",
+    us: "Custom software and AI tools built for your specific needs",
+  },
+  {
+    them: "Monthly PDF reports with vanity metrics",
+    us: "Real-time dashboards with numbers that tie to revenue",
+  },
+  {
+    them: "Manual processes repeated for each campaign",
+    us: "AI handles the grunt work, human focuses on strategy",
   },
 ];
 
@@ -46,7 +50,7 @@ export default function WhyUs() {
 
         <AnimateOnScroll delay={0.15}>
           <p className="text-[#86868B] text-lg lg:text-xl text-center mb-10 max-w-2xl mx-auto">
-            See how we compare to traditional agencies
+            One person with software vs. a 15-person agency
           </p>
         </AnimateOnScroll>
 
@@ -107,13 +111,12 @@ export default function WhyUs() {
         {/* CTA Button */}
         <AnimateOnScroll delay={0.7}>
           <div className="text-center mt-12">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full transition-all duration-300 hover:bg-[#000000] hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] hover:scale-[1.03]"
+            <OpusiteFormTrigger
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D1D1F] text-white font-medium rounded-full transition-all duration-300 hover:bg-[#000000] hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] hover:scale-[1.03] cursor-pointer"
             >
               Get Your Custom Growth Strategy
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
+            </OpusiteFormTrigger>
           </div>
         </AnimateOnScroll>
       </div>

@@ -1,61 +1,15 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-
-const OPUSITE_WEBHOOK =
-  "https://www.opusite.com/api/forms/webhook/cd52152b-ae9c-4171-a67f-a3d62e32e268";
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
 
 export default function Contact() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      const response = await fetch(OPUSITE_WEBHOOK, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          name: "",
-          consent: true,
-          fields: {
-            subject: "New Contact Request - BKND Development",
-            message: "",
-          },
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setEmail("");
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="relative">
       {/* Full-width dark background with gradient mesh */}
-      <div className="bg-[#1D1D1F] py-24 lg:py-32 relative overflow-hidden">
+      <div className="relative overflow-hidden bg-[#1D1D1F] py-20 lg:py-28">
         {/* Gradient mesh background effects */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full pointer-events-none"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[70vw] w-[88vw] max-h-[600px] max-w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full"
           style={{
             background:
               "radial-gradient(ellipse at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%)",
@@ -63,14 +17,14 @@ export default function Contact() {
         />
         {/* Floating decorative orbs */}
         <div
-          className="absolute top-20 left-[15%] w-[300px] h-[300px] rounded-full pointer-events-none"
+          className="pointer-events-none absolute left-[8%] top-16 hidden h-[260px] w-[260px] rounded-full md:block"
           style={{
             background:
               "radial-gradient(circle, rgba(6, 182, 212, 0.04) 0%, transparent 70%)",
           }}
         />
         <div
-          className="absolute bottom-20 right-[10%] w-[400px] h-[400px] rounded-full pointer-events-none"
+          className="pointer-events-none absolute bottom-12 right-[4%] hidden h-[320px] w-[320px] rounded-full md:block"
           style={{
             background:
               "radial-gradient(circle, rgba(0, 212, 255, 0.03) 0%, transparent 70%)",
@@ -86,7 +40,7 @@ export default function Contact() {
               </p>
 
               {/* Main headline */}
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight mb-6">
+              <h2 className="mb-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-6xl">
                 Let&apos;s build something
                 <br />
                 <span
@@ -103,62 +57,32 @@ export default function Contact() {
               </h2>
 
               {/* Subtitle */}
-              <p className="text-xl lg:text-2xl text-gray-400 font-normal mb-12 max-w-xl mx-auto">
+              <p className="mx-auto mb-10 max-w-xl text-lg font-normal text-gray-400 sm:text-xl lg:mb-12 lg:text-2xl">
                 Share your vision with us and discover what&apos;s possible.
               </p>
             </div>
 
             <div>
-              {/* Clean email form */}
-              <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#06B6D4]/60 focus:ring-1 focus:ring-[#06B6D4]/30 focus:bg-white/10 transition-all text-base disabled:opacity-50"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    disabled={isSubmitting}
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="relative bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
-                    style={{
-                      boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
-                      animation: "ctaPulse 3s ease-in-out infinite",
-                    }}
-                  >
-                    {isSubmitting ? "Sending..." : "Get in Touch"}
-                  </button>
-                </div>
-
-                {/* Form Status Messages */}
-                {submitStatus === "success" && (
-                  <p className="text-green-400 text-sm mt-4">
-                    Thanks for reaching out! We&apos;ll be in touch soon.
-                  </p>
-                )}
-                {submitStatus === "error" && (
-                  <p className="text-red-400 text-sm mt-4">
-                    Something went wrong. Please try again or email us directly.
-                  </p>
-                )}
-
-                {/* Simple reassurance */}
-                {submitStatus === "idle" && (
-                  <p className="text-gray-500 text-sm mt-6">
-                    We typically respond within 24 hours.
-                  </p>
-                )}
-              </form>
+              {/* CTA Button */}
+              <div className="max-w-md mx-auto">
+                <OpusiteFormTrigger
+                  className="relative rounded-xl bg-[#06B6D4] px-8 py-4 font-semibold whitespace-nowrap text-white transition-all duration-200 hover:bg-[#0891B2]"
+                  style={{
+                    boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
+                    animation: "ctaPulse 3s ease-in-out infinite",
+                  }}
+                >
+                  Get in Touch
+                </OpusiteFormTrigger>
+                <p className="text-gray-500 text-sm mt-6">
+                  We typically respond within 24 hours.
+                </p>
+              </div>
             </div>
 
             {/* Alternative contact option */}
             <div>
-              <div className="mt-16 pt-12 border-t border-white/10">
+              <div className="mt-14 border-t border-white/10 pt-10 sm:mt-16 sm:pt-12">
                 <p className="text-gray-400 text-base mb-4">
                   Prefer to talk directly?
                 </p>

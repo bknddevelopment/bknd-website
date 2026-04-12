@@ -10,16 +10,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BKND Development | Marketing Built Like Software",
+  title: "BKND Development | We Build Through Software",
   description:
-    "Developer-built campaigns. Data-driven decisions. Revenue you can measure. BKND Development is the marketing agency for measurable results.",
+    "Websites, marketing systems, and custom software — built in code and powered by AI. One person delivering what agencies need 15 people to do.",
   keywords: [
-    "digital marketing agency",
-    "developer marketing",
-    "growth marketing",
-    "paid advertising",
+    "software built websites",
+    "ai powered marketing",
+    "custom software development",
+    "web development",
     "SEO",
-    "performance marketing",
+    "ai marketing agency",
   ],
   authors: [{ name: "BKND Development" }],
   verification: {
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "BKND Development | Marketing Built Like Software",
+    title: "BKND Development | We Build Through Software",
     description:
-      "Developer-built campaigns. Data-driven decisions. Revenue you can measure.",
+      "Websites, marketing systems, and custom software — built in code and powered by AI.",
     type: "website",
     locale: "en_US",
     siteName: "BKND Development",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BKND Development | Marketing Built Like Software",
+    title: "BKND Development | We Build Through Software",
     description:
-      "Developer-built campaigns. Data-driven decisions. Revenue you can measure.",
+      "Websites, marketing systems, and custom software — built in code and powered by AI.",
     images: ["/images/bknd-logo-new.png"],
   },
   robots: {
@@ -116,7 +116,7 @@ const jsonLd = {
       url: "https://bknddevelopment.com/",
       name: "BKND Development",
       description:
-        "Marketing Built Like Software - Developer-built campaigns with data-driven decisions.",
+        "We Build Through Software - Websites, marketing, and platforms built in code and powered by AI.",
       publisher: {
         "@id": "https://bknddevelopment.com/#organization",
       },
@@ -126,7 +126,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://bknddevelopment.com/#webpage",
       url: "https://bknddevelopment.com/",
-      name: "BKND Development | Marketing Built Like Software",
+      name: "BKND Development | We Build Through Software",
       description:
         "Developer-built campaigns. Data-driven decisions. Revenue you can measure.",
       isPartOf: {

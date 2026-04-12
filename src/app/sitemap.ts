@@ -48,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/build/websites`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/build/marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/build/platforms`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    // Product page
+    { url: `${BASE_URL}/opusite`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/opusite/crm`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/opusite/e-signatures`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/opusite/team-chat`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/opusite/project-management`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Services
     { url: `${BASE_URL}/services/ai`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/services/ai/geo`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

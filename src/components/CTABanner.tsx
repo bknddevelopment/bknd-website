@@ -1,3 +1,7 @@
+"use client";
+
+import { OpusiteFormTrigger } from "@/components/OpusiteFormPopup";
+
 export default function CTABanner() {
   return (
     <section className="py-16 bg-[#F27038]">
@@ -6,13 +10,12 @@ export default function CTABanner() {
           <p className="text-white text-2xl font-bold text-center md:text-left">
             Ready to Skyrocket Your Growth?
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-white text-[#F27038] px-8 py-4 rounded-md font-semibold hover:bg-white/90 transition-colors"
+          <OpusiteFormTrigger
+            className="inline-flex items-center gap-2 bg-white text-[#F27038] px-8 py-4 rounded-md font-semibold hover:bg-white/90 transition-colors cursor-pointer"
           >
             Work With Us
             <span>↗</span>
-          </a>
+          </OpusiteFormTrigger>
         </div>
       </div>
     </section>

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "About Us | BKND Development",
+  title: "About | BKND Development",
   description:
-    "BKND Development is a marketing agency built by developers. We combine technical expertise with data-driven strategy to deliver measurable growth for businesses.",
+    "One person with AI and custom software delivering what agencies need 15 people to do. Websites, marketing, and platforms — built in code by Charwin at BKND Development.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Us | BKND Development",
+    title: "About | BKND Development",
     description:
-      "Marketing agency built by developers. Technical expertise meets data-driven strategy.",
+      "One person with AI and software delivering full agency results. Meet BKND Development.",
     type: "website",
     url: "https://bknddevelopment.com/about",
     images: [
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | BKND Development",
+    title: "About | BKND Development",
     description:
-      "Marketing agency built by developers. Technical expertise meets data-driven strategy.",
+      "One person with AI and software delivering full agency results. Meet BKND Development.",
     images: ["/images/bknd-logo-new.png"],
   },
 };

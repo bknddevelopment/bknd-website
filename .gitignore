@@ -50,3 +50,4 @@ next-env.d.ts
 
 # screenshots/local images in root
 *.png
+!public/images/**/*.png

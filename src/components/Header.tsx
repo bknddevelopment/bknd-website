@@ -1,25 +1,28 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const buildLinks = [
+  { label: "Overview", href: "/#pillars" },
   { label: "Websites", href: "/build/websites" },
   { label: "Marketing", href: "/build/marketing" },
   { label: "Platforms", href: "/build/platforms" },
+  { label: "Opusite", href: "/opusite" },
 ];
 
 const resourceLinks = [
+  { label: "All Resources", href: "/blog" },
   { label: "AI Corner", href: "/ai" },
   { label: "Marketing Hub", href: "/marketing" },
   { label: "SEO Insights", href: "/seo-insights" },
   { label: "Industry News", href: "/industry-news" },
-  { label: "All Articles", href: "/blog" },
 ];
 
 const industryLinks = [
+  { label: "All Industries", href: "/industries" },
   { label: "HVAC Marketing", href: "/industries/hvac-marketing" },
   { label: "Dental Marketing", href: "/industries/dental-marketing" },
   { label: "Roofing Marketing", href: "/industries/roofing-marketing" },
@@ -28,16 +31,20 @@ const industryLinks = [
 ];
 
 const navItems = [
-  { label: "Build", href: "/build/websites", hasDropdown: true },
-  { label: "Resources", href: "/#resources", hasDropdown: true },
-  { label: "Work", href: "/work", hasDropdown: false },
+  { label: "Build", href: "/#pillars", hasDropdown: true },
+  { label: "Work", href: "/case-studies", hasDropdown: false },
+  { label: "Resources", href: "/blog", hasDropdown: true },
+  { label: "Industries", href: "/industries", hasDropdown: true },
   { label: "About", href: "/about", hasDropdown: false },
   { label: "Contact", href: "/contact", hasDropdown: false },
+  {
+    label: "Client Portal",
+    href: "https://www.opusite.com/request/bknd-development/bknd-development-website-update-ijitr",
+    hasDropdown: false,
+    external: true,
+  },
 ];
 
-const CLIENT_PORTAL_URL = "https://www.opusite.com/request/bknd-development/bknd-development-website-update-ijitr";
-
-// Chevron down icon
 function ChevronDownIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -56,7 +63,6 @@ function ChevronDownIcon({ className }: { className?: string }) {
   );
 }
 
-// Arrow right icon
 function ArrowRightIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -78,8 +84,8 @@ function ArrowRightIcon({ className }: { className?: string }) {
 const dropdownVariants = {
   hidden: {
     opacity: 0,
-    scale: 0.95,
-    y: -4,
+    scale: 0.96,
+    y: -6,
     transition: { duration: 0.15, ease: [0.4, 0, 1, 1] as const },
   },
   visible: {
@@ -91,18 +97,58 @@ const dropdownVariants = {
 };
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      setMobileMenuOpen(false);
+      setOpenDropdown(null);
+      setOpenMobileGroup(null);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuOpen(false);
+        setOpenMobileGroup(null);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   const handleMouseEnter = (label: string) => {
@@ -113,7 +159,7 @@ export default function Header() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 150);
+    }, 120);
   };
 
   const getDropdownLinks = (label: string) => {
@@ -124,230 +170,268 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`w-full fixed top-0 z-50 transition-all duration-500 pt-4 px-6 ${scrolled
-          ? "transform translate-y-0"
-          : "transform translate-y-2"
+    <>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.button
+            type="button"
+            aria-label="Close menu"
+            className="fixed inset-0 z-40 bg-[#02050b]/72 backdrop-blur-sm lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setMobileMenuOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <header
+        className={`fixed top-0 z-50 w-full px-4 pt-3 sm:px-5 lg:px-6 transition-all duration-500 ${
+          scrolled ? "translate-y-0" : "translate-y-1"
         }`}
-    >
-      <div className="container-sg">
-        <div className={`flex items-center justify-between h-[70px] px-8 rounded-full border transition-all duration-500 ${scrolled ? 'bg-[#050A14]/70 backdrop-blur-2xl border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5),0_0_15px_rgba(0,212,255,0.05)]' : 'bg-[#050A14]/40 backdrop-blur-xl border-white/5 shadow-[0_4px_24px_rgba(0,0,0,0.3)]'}`}>
-          {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <span className="text-white text-xl font-bold tracking-tight group-hover:text-[#00D4FF] transition-colors duration-500">BKND.</span>
-          </Link>
+      >
+        <div className="container-sg">
+          <div
+            className={`relative flex items-center justify-between rounded-[26px] border px-4 py-3 sm:px-5 lg:rounded-full lg:px-8 ${
+              scrolled
+                ? "bg-[#050A14]/78 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.45),0_0_18px_rgba(0,212,255,0.06)] backdrop-blur-2xl"
+                : "bg-[#050A14]/52 border-white/6 shadow-[0_4px_22px_rgba(0,0,0,0.28)] backdrop-blur-xl"
+            }`}
+          >
+            <Link
+              href="/"
+              className="flex items-center group"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="text-lg font-bold tracking-tight text-white transition-colors duration-500 group-hover:text-[#00D4FF] sm:text-xl">
+                BKND.
+              </span>
+            </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-10">
-            {navItems.map((item) => (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() =>
-                  item.hasDropdown && handleMouseEnter(item.label)
-                }
-                onMouseLeave={handleMouseLeave}
-              >
-                <Link
-                  href={item.href}
-                  className="text-white/80 text-[14px] font-medium tracking-wide hover:text-white transition-colors duration-300 flex items-center gap-1.5"
+            <nav className="hidden items-center gap-7 lg:flex xl:gap-10">
+              {navItems.map((item) => (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() =>
+                    item.hasDropdown && handleMouseEnter(item.label)
+                  }
+                  onMouseLeave={handleMouseLeave}
                 >
-                  {item.label}
-                  {item.hasDropdown && (
-                    <ChevronDownIcon
-                      className={`w-3.5 h-3.5 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180 text-[#00D4FF]" : "text-white/40"
-                        }`}
-                    />
-                  )}
-                </Link>
-                {/* Animated Dropdown */}
-                {item.hasDropdown && getDropdownLinks(item.label) && (
-                  <AnimatePresence>
-                    {openDropdown === item.label && (
-                      <motion.div
-                        className="absolute top-full left-0 pt-2"
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
-                        variants={dropdownVariants}
-                      >
-                        <div className="bg-[#050A14]/90 backdrop-blur-2xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.6)] border border-white/10 py-3 min-w-[220px] overflow-hidden relative">
-                          {/* Inner glow */}
-                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-[#00D4FF]/20 blur-md rounded-full" />
-                          {getDropdownLinks(item.label)!.map((link) => (
-                            <Link
-                              key={link.label}
-                              href={link.href}
-                              className="block px-5 py-2.5 text-[14px] text-white/70 hover:bg-white/5 hover:text-[#00D4FF] hover:translate-x-1 transition-all duration-300"
-                            >
-                              {link.label}
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* Client Portal + CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={CLIENT_PORTAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full text-[14px] font-medium text-[#00D4FF] border border-[#00D4FF]/30 hover:bg-[#00D4FF]/10 hover:border-[#00D4FF]/60 transition-all duration-300"
-            >
-              Client Portal
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          <Link
-            href="/contact"
-            className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-[#050A14] text-[14px] font-semibold bg-white hover:bg-[#00D4FF] transition-all duration-500 group relative overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              Let&apos;s Build
-              <ArrowRightIcon className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] skew-x-[-20deg] group-hover:translate-x-[150%] transition-transform duration-700 ease-out" />
-          </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white p-2 hover:text-[#00D4FF] transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              className="lg:hidden py-4 border-t border-black/5"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <nav className="flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <div key={item.label}>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-[14px] font-medium tracking-wide text-white/80 transition-colors duration-300 hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
                     <Link
                       href={item.href}
-                      className="text-[#1D1D1F] hover:text-[#1D1D1F]/60 transition-colors py-2 flex items-center gap-1"
-                      onClick={() =>
-                        item.label !== "Build" &&
-                        item.label !== "Resources" &&
-                        item.label !== "Industries" &&
-                        setMobileMenuOpen(false)
-                      }
+                      className="flex items-center gap-1.5 text-[14px] font-medium tracking-wide text-white/80 transition-colors duration-300 hover:text-white"
                     >
                       {item.label}
                       {item.hasDropdown && (
-                        <ChevronDownIcon className="w-4 h-4" />
+                        <ChevronDownIcon
+                          className={`h-3.5 w-3.5 transition-transform duration-300 ${
+                            openDropdown === item.label
+                              ? "rotate-180 text-[#00D4FF]"
+                              : "text-white/40"
+                          }`}
+                        />
                       )}
                     </Link>
-                    {/* Mobile Services Sub-menu */}
-                    {item.label === "Build" && (
-                      <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
-                        {buildLinks.map((service) => (
-                          <Link
-                            key={service.label}
-                            href={service.href}
-                            className="block text-sm text-[#86868B] hover:text-[#00D4FF] transition-colors py-1"
+                  )}
+
+                  {item.hasDropdown && getDropdownLinks(item.label) && (
+                    <AnimatePresence>
+                      {openDropdown === item.label && (
+                        <motion.div
+                          className="absolute left-0 top-full pt-3"
+                          initial="hidden"
+                          animate="visible"
+                          exit="hidden"
+                          variants={dropdownVariants}
+                        >
+                          <div className="relative min-w-[240px] overflow-hidden rounded-2xl border border-white/10 bg-[#050A14]/92 py-3 shadow-[0_12px_36px_rgba(0,0,0,0.55)] backdrop-blur-2xl">
+                            <div className="absolute left-1/2 top-0 h-1 w-1/2 -translate-x-1/2 rounded-full bg-[#00D4FF]/20 blur-md" />
+                            {getDropdownLinks(item.label)!.map((link) => (
+                              <Link
+                                key={link.label}
+                                href={link.href}
+                                className="block px-5 py-2.5 text-[14px] text-white/72 transition-all duration-300 hover:translate-x-1 hover:bg-white/5 hover:text-[#00D4FF]"
+                              >
+                                {link.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Link
+                href="/contact"
+                className="group hidden items-center justify-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-[14px] font-semibold text-[#050A14] transition-all duration-500 hover:bg-[#00D4FF] lg:flex"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Work With Us
+                  <ArrowRightIcon className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+                </span>
+              </Link>
+
+              <button
+                type="button"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/4 text-white transition-colors hover:text-[#00D4FF] lg:hidden"
+                onClick={() => setMobileMenuOpen((value) => !value)}
+                aria-expanded={mobileMenuOpen}
+                aria-label="Toggle menu"
+              >
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {mobileMenuOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                className="relative z-50 mt-3 overflow-hidden rounded-[28px] border border-white/10 bg-[#050A14]/95 p-4 shadow-[0_16px_48px_rgba(0,0,0,0.55)] backdrop-blur-2xl lg:hidden"
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.18 }}
+              >
+                <nav className="max-h-[calc(100vh-7.5rem)] overflow-y-auto pr-1">
+                  <div className="space-y-2">
+                    {navItems.map((item) => {
+                      const links = item.hasDropdown
+                        ? getDropdownLinks(item.label)
+                        : null;
+                      const isOpen = openMobileGroup === item.label;
+
+                      if (item.external) {
+                        return (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between rounded-2xl border border-white/6 px-4 py-3 text-[15px] font-medium text-white/88 transition-colors hover:border-white/10 hover:text-white"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {service.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                    {/* Mobile Resources Sub-menu */}
-                    {item.label === "Resources" && (
-                      <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
-                        {resourceLinks.map((resource) => (
+                            {item.label}
+                            <ArrowRightIcon className="h-4 w-4 text-white/40" />
+                          </a>
+                        );
+                      }
+
+                      if (!links) {
+                        return (
                           <Link
-                            key={resource.label}
-                            href={resource.href}
-                            className="block text-sm text-[#86868B] hover:text-[#00D4FF] transition-colors py-1"
+                            key={item.label}
+                            href={item.href}
+                            className="flex items-center justify-between rounded-2xl border border-white/6 px-4 py-3 text-[15px] font-medium text-white/88 transition-colors hover:border-white/10 hover:text-white"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {resource.label}
+                            {item.label}
+                            <ArrowRightIcon className="h-4 w-4 text-white/40" />
                           </Link>
-                        ))}
-                      </div>
-                    )}
-                    {/* Mobile Industries Sub-menu */}
-                    {item.label === "Industries" && (
-                      <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00D4FF]/30">
-                        {industryLinks.map((industry) => (
-                          <Link
-                            key={industry.label}
-                            href={industry.href}
-                            className="block text-sm text-[#86868B] hover:text-[#00D4FF] transition-colors py-1"
-                            onClick={() => setMobileMenuOpen(false)}
+                        );
+                      }
+
+                      return (
+                        <div
+                          key={item.label}
+                          className="rounded-[24px] border border-white/6 bg-white/[0.02] px-3 py-2"
+                        >
+                          <button
+                            type="button"
+                            className="flex w-full items-center justify-between px-1 py-2 text-left text-[15px] font-medium text-white"
+                            onClick={() =>
+                              setOpenMobileGroup((value) =>
+                                value === item.label ? null : item.label,
+                              )
+                            }
+                            aria-expanded={isOpen}
                           >
-                            {industry.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                            <span>{item.label}</span>
+                            <ChevronDownIcon
+                              className={`h-4 w-4 text-white/50 transition-transform duration-300 ${
+                                isOpen ? "rotate-180 text-[#00D4FF]" : ""
+                              }`}
+                            />
+                          </button>
+
+                          <AnimatePresence initial={false}>
+                            {isOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.18 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="space-y-1 pb-2 pt-2">
+                                  {links.map((link) => (
+                                    <Link
+                                      key={link.label}
+                                      href={link.href}
+                                      className="block rounded-2xl px-3 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-[#00D4FF]"
+                                      onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                      {link.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      );
+                    })}
                   </div>
-                ))}
-                <a
-                  href={CLIENT_PORTAL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[#00D4FF] text-base font-medium border border-[#00D4FF]/30 hover:bg-[#00D4FF]/10 transition-all"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Client Portal
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-                <Link
-                  href="/contact"
-                  className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-white text-base font-medium bg-[#00D4FF] hover:bg-[#00B8E0] transition-all"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Let&apos;s Build
-                  <ArrowRightIcon className="w-4 h-4" />
-                </Link>
-              </nav>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </header>
+
+                  <Link
+                    href="/contact"
+                    className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#00D4FF] px-5 py-3 text-base font-semibold text-[#04101d] transition-colors hover:bg-[#00b8e0]"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Work With Us
+                    <ArrowRightIcon className="h-4 w-4" />
+                  </Link>
+                </nav>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </header>
+    </>
   );
 }
