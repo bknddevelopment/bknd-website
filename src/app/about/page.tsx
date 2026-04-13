@@ -177,7 +177,7 @@ export default function AboutPage() {
                 {
                   title: "Lower Overhead",
                   description:
-                    "No office. No middle management. No sales team. You pay for results, not headcount.",
+                    "No office. No middle management. No bloated layers. You pay for results, not headcount.",
                 },
               ].map((item, i) => (
                 <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
