@@ -45,7 +45,7 @@ const jsonLd = {
       isPartOf: { "@id": "https://bknddevelopment.com/#website" },
       about: { "@id": "https://bknddevelopment.com/#organization" },
       datePublished: "2026-01-26",
-      dateModified: "2026-02-23",
+      dateModified: "2026-04-13",
     },
     {
       "@type": "BreadcrumbList",
