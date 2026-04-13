@@ -31,7 +31,7 @@ const teamMembers = [
 const stats = [
   { value: "15+", label: "Active Clients" },
   { value: "5,000+", label: "Pages Built" },
-  { value: "1", label: "Person Running It All" },
+  { value: "1", label: "Point of Contact" },
   { value: "0", label: "Account Managers" },
 ];
 
