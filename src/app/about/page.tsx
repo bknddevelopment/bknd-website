@@ -4,12 +4,34 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
+const teamMembers = [
+  {
+    name: "Charwin Vanryck deGroot",
+    role: "Founder & CEO",
+    image: "/images/team/founder-avatar.jpg",
+    bio: "Developer-turned-marketer who built the system. Writes the code, runs the SEO, builds the content, and talks to you directly.",
+  },
+  {
+    name: "Ocyrus Jean Baptiste",
+    role: "Head of Sales",
+    image: "/images/team/ocyrus-headshot.jpg",
+    bio: "Consultative approach to client growth. Connects businesses with the right marketing and AI solutions.",
+  },
+  {
+    name: "Dean Holland",
+    role: "Head of AI Innovation",
+    image: "/images/team/dean-headshot.jpg",
+    bio: "Architects the intelligent systems behind client results — predictive analytics, automation, and optimization.",
+  },
+];
 
 const stats = [
   { value: "15+", label: "Active Clients" },
   { value: "5,000+", label: "Pages Built" },
-  { value: "1", label: "Person Running It All" },
+  { value: "1", label: "Point of Contact" },
   { value: "0", label: "Account Managers" },
 ];
 
@@ -155,7 +177,7 @@ export default function AboutPage() {
                 {
                   title: "Lower Overhead",
                   description:
-                    "No office. No middle management. No sales team. You pay for results, not headcount.",
+                    "No office. No middle management. No bloated layers. You pay for results, not headcount.",
                 },
               ].map((item, i) => (
                 <AnimateOnScroll key={i} delay={0.1 + i * 0.1}>
@@ -165,6 +187,63 @@ export default function AboutPage() {
                     </h3>
                     <p className="text-[#86868B] leading-relaxed">
                       {item.description}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* The Team — Minority-Owned */}
+        <section className="page-section bg-white">
+          <div className="container-sg">
+            <AnimateOnScroll>
+              <div className="flex justify-center mb-6">
+                <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#00D4FF]/30 bg-[#00D4FF]/5 text-[#00D4FF] text-xs font-semibold tracking-widest uppercase">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M7 1L8.5 4.5L12.5 5L9.75 7.5L10.5 11.5L7 9.5L3.5 11.5L4.25 7.5L1.5 5L5.5 4.5L7 1Z" fill="#00D4FF" />
+                  </svg>
+                  Minority-Owned Business
+                </span>
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1D1D1F] text-center mb-4 tracking-tight">
+                The People Behind BKND
+              </h2>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <p className="text-[#86868B] text-lg text-center mb-14 max-w-xl mx-auto leading-relaxed">
+                Diverse perspectives, real expertise. No layers, no handoffs
+                — just the people doing the work.
+              </p>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-[960px] mx-auto">
+              {teamMembers.map((member, i) => (
+                <AnimateOnScroll key={i} delay={0.2 + i * 0.12}>
+                  <div className="group text-center">
+                    <div className="relative aspect-[4/5] w-full max-w-[260px] mx-auto mb-6 rounded-2xl overflow-hidden bg-[#F5F5F7]">
+                      <Image
+                        src={member.image}
+                        alt={`${member.name}, ${member.role} at BKND Development`}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                        sizes="(max-width: 768px) 280px, 260px"
+                      />
+                      <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5 group-hover:ring-[#00D4FF]/20 transition-all duration-500" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#1D1D1F] mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-[#00D4FF] font-medium text-sm mb-3">
+                      {member.role}
+                    </p>
+                    <p className="text-[#86868B] leading-relaxed text-[13px] max-w-[260px] mx-auto">
+                      {member.bio}
                     </p>
                   </div>
                 </AnimateOnScroll>
